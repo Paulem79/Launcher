@@ -1,0 +1,160 @@
+{
+    "mods": [
+        {
+            "name": "phosphor-1.12.2-0.2.6%2Bbuild50-universal.jar",
+            "downloadURL": "https://mediafilez.forgecdn.net/files/2747/710/phosphor-1.12.2-0.2.6%2Bbuild50-universal.jar",
+            "sha1": "d4781f46fb18f0c6ed03893465244e7ec7dc8b8c",
+            "size": "1082311"
+        },
+        {
+            "name": "%5b___MixinCompat-0.8___%5d.jar",
+            "downloadURL": "https://mediafilez.forgecdn.net/files/3045/381/%5b___MixinCompat-0.8___%5d.jar",
+            "sha1": "b70fe3fa98be2c0ffb673e88505dada51c1b12d5",
+            "size": "867296"
+        },
+        {
+            "name": "Clumps-3.1.2.jar",
+            "downloadURL": "https://mediafilez.forgecdn.net/files/2666/198/Clumps-3.1.2.jar",
+            "sha1": "6ea78bea8006e3924bc37c2aef0115134c8af07b",
+            "size": "13792"
+        },
+        {
+            "name": "RenderLib-1.12.2-1.2.7.jar",
+            "downloadURL": "https://mediafilez.forgecdn.net/files/4432/638/RenderLib-1.12.2-1.2.7.jar",
+            "sha1": "7589f72ffa0897e2ee65e3b0d6dcde3b3eef3656",
+            "size": "143708"
+        },
+        {
+            "name": "_MixinBootstrap-1.1.0.jar",
+            "downloadURL": "https://mediafilez.forgecdn.net/files/3437/402/_MixinBootstrap-1.1.0.jar",
+            "sha1": "f9173708d3d2850ab8df778b9594b81cb94b1df8",
+            "size": "1119478"
+        },
+		{
+        	"name": "ReachFix-1.12.2-1.0.8.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/4344/825/ReachFix-1.12.2-1.0.8.jar",
+        	"sha1": "65b4d8c99b49cb5ac5437dbbf36757540461c836",
+        	"size": "48954"
+		},
+		{
+        	"name": "JustEnoughResources-1.12.2-0.9.2.60.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2728/585/JustEnoughResources-1.12.2-0.9.2.60.jar",
+        	"sha1": "3d4c9b8bb4ad948c7e26b7becd1c836f8cb34d07",
+        	"size": "222270"
+		},
+		{
+        	"name": "AppleSkin-mc1.12-1.0.14.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2987/247/AppleSkin-mc1.12-1.0.14.jar",
+        	"sha1": "d798af79de48be0f00c772943e5ec5a2fb5659fa",
+        	"size": "33683"
+		},
+		{
+        	"name": "durabilitytooltip-1.1.4-forge-mc1.12.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/4016/218/durabilitytooltip-1.1.4-forge-mc1.12.jar",
+        	"sha1": "aa6b07aed3bbbc1bde90f77c27103adf2531bfce",
+        	"size": "16312"
+		},
+		{
+        	"name": "jei_1.12.2-4.16.1.301.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/3040/523/jei_1.12.2-4.16.1.301.jar",
+        	"sha1": "3045e8440ea44071d8b83c4e7b3c190348fdc527",
+        	"size": "653211"
+		},
+		{
+        	"name": "overloadedarmorbar-1.0.4g.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2719/400/overloadedarmorbar-1.0.4g.jar",
+        	"sha1": "f9d557a6bb00e765984f39eec87eed9b5e873c7b",
+        	"size": "18649"
+		},
+		{
+        	"name": "stg-1.12.2-1.2.3.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2508/268/stg-1.12.2-1.2.3.jar",
+        	"sha1": "d79494b27d6b9193714fbad2f054951dc9c2320f",
+        	"size": "24024"
+		},
+		{
+        	"name": "randompatches-1.12.2-1.22.1.10.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/3133/651/randompatches-1.12.2-1.22.1.10.jar",
+        	"sha1": "d45d3cadbbab3f2222059b2acb68d9620c6839a8",
+        	"size": "293231"
+		},
+		{
+        	"name": "BedBugs-1.12-1.0.1.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2443/328/BedBugs-1.12-1.0.1.jar",
+        	"sha1": "2f7349104b91d7210c752c222123eb8f218dac61",
+        	"size": "17363"
+		},
+		{
+        	"name": "DupeFixProject-1.12.2-3.1.6.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/3424/173/DupeFixProject-1.12.2-3.1.6.jar",
+        	"sha1": "048b80d1e70d35faacccf8a22f6aed9e92866848",
+        	"size": "954636"
+		},
+		{
+        	"name": "Surge-1.12.2-2.0.77.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2665/849/Surge-1.12.2-2.0.77.jar",
+        	"sha1": "d0efa575c6e43031622aa52c1f4836aa552322da",
+        	"size": "1042621"
+		},
+		{
+        	"name": "particleculling-1.12.2-v1.3.1.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/3608/582/particleculling-1.12.2-v1.3.1.jar",
+        	"sha1": "aef29745d35544a30d010fd31a8c64f9002509ae",
+        	"size": "15289"
+		},
+		{
+        	"name": "mcmouser-1.12.2-forge-1.0.2.jar",
+        	"downloadURL": "https://cdn-raw.modrinth.com/data/aXReRvgU/versions/1.12.2-forge-1.0.2/mcmouser-1.12.2-forge-1.0.2.jar",
+        	"sha1": "bb4077cd098e3c179dec443b42bcc52d58228895",
+        	"size": "206679"
+		},
+		{
+        	"name": "AttributeFix-1.12.2-1.0.4.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2643/711/AttributeFix-1.12.2-1.0.4.jar",
+        	"sha1": "8f01beef89eaed28eb4241fb83944f1a3e2c7cc8",
+        	"size": "6796"
+		},
+		{
+        	"name": "FastFurnace-1.12.2-1.3.1.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2706/111/FastFurnace-1.12.2-1.3.1.jar",
+        	"sha1": "3091f2d5cb91c384b39729102e30abbda909b880",
+        	"size": "10035"
+		},
+		{
+        	"name": "FastWorkbench-1.12.2-1.7.4.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/4030/366/FastWorkbench-1.12.2-1.7.4.jar",
+        	"sha1": "cb783cacf4a367dc462af0e2b28a7e6306067bcb",
+        	"size": "26635"
+		},
+		{
+        	"name": "Optifine.jar",
+        	"downloadURL": "https://paulem.000webhostapp.com/Optifine.jar",
+        	"sha1": "ca3aea3a09ce215906c346fe190907fe0347b0c4",
+        	"size": "2669107"
+		},
+		{
+        	"name": "CustomNPCs_1.12.2-(05Jul20).jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/2996/912/CustomNPCs_1.12.2-(05Jul20).jar",
+        	"sha1": "a5469076df8b1d9db4e483131dc94e270b8bc7cd",
+        	"size": "9911871"
+		},
+		{
+        	"name": "supermartijn642configlib-1.1.6-forge-mc1.12.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/3862/959/supermartijn642configlib-1.1.6-forge-mc1.12.jar",
+        	"sha1": "de781a5564c05a147e6d7c1be663a9adb109c3df",
+        	"size": "204741"
+		},
+		{
+        	"name": "ICBM-classic-1.12.2-4.2.1.jar",
+        	"downloadURL": "https://mediafilez.forgecdn.net/files/4406/83/ICBM-classic-1.12.2-4.2.1.jar",
+        	"sha1": "66d00f17f878e5550caf121ef70a1ecdcdc8a380",
+        	"size": "6818328"
+		},
+		{
+        	"name": "portalsupercache-0.2.jar",
+        	"downloadURL": "https://github.com/LucunJi/PortalSuperCacheForge112/releases/download/Alpha-0.2/portalsupercache-0.2.jar",
+        	"sha1": "aac464f626538ce2f4baad09bf6f8b6a9e308581",
+        	"size": "12534"
+		}
+    ]
+}
