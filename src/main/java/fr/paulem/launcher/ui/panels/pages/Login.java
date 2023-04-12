@@ -1,15 +1,11 @@
 package fr.paulem.launcher.ui.panels.pages;
 
+import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
+import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
+import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.paulem.launcher.ui.panel.Panel;
-import fr.litarvan.openauth.AuthPoints;
-import fr.litarvan.openauth.AuthenticationException;
-import fr.litarvan.openauth.Authenticator;
-import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
-import fr.litarvan.openauth.model.AuthAgent;
-import fr.litarvan.openauth.model.AuthProfile;
-import fr.litarvan.openauth.model.response.AuthResponse;
 import fr.theshark34.openlauncherlib.minecraft.AuthInfos;
 import fr.theshark34.openlauncherlib.util.Saver;
 import javafx.application.Platform;
@@ -137,7 +133,13 @@ public class Login extends Panel {
         btnLogin.setMaxWidth(300);
         btnLogin.setTranslateY(40d);
         btnLogin.getStyleClass().add("login-log-btn");
-        btnLogin.setOnMouseClicked(e -> this.authenticate(userField.getText(), passwordField.getText()));
+        btnLogin.setOnMouseClicked(e -> {
+            try {
+                this.authenticate();
+            } catch (MicrosoftAuthenticationException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         setCanTakeAllSize(authModeChk);
         setCenterV(authModeChk);
@@ -204,36 +206,27 @@ public class Login extends Panel {
         btnLogin.setDisable(!(userField.getText().length() > 0 && (offlineAuth.get() || passwordField.getText().length() > 0)));
     }
 
-    public void authenticate(String user, String password) {
+    public void authenticate() throws MicrosoftAuthenticationException {
         if (!offlineAuth.get()) {
-            Authenticator authenticator = new Authenticator(Authenticator.MOJANG_AUTH_URL, AuthPoints.NORMAL_AUTH_POINTS);
+            MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
+            MicrosoftAuthResult response = authenticator.loginWithWebview();
 
-            try {
-                AuthResponse response = authenticator.authenticate(AuthAgent.MINECRAFT, user, password, null);
+            saver.set("accessToken", response.getAccessToken());
+            saver.set("clientToken", response.getRefreshToken());
+            saver.save();
 
-                saver.set("accessToken", response.getAccessToken());
-                saver.set("clientToken", response.getClientToken());
-                saver.save();
+            AuthInfos infos = new AuthInfos(
+                    response.getProfile().getName(),
+                    response.getAccessToken(),
+                    response.getRefreshToken(),
+                    response.getProfile().getId()
+            );
 
-                AuthInfos infos = new AuthInfos(
-                        response.getSelectedProfile().getName(),
-                        response.getAccessToken(),
-                        response.getClientToken(),
-                        response.getSelectedProfile().getId()
-                );
+            Launcher.getInstance().setAuthInfos(infos);
 
-                Launcher.getInstance().setAuthInfos(infos);
+            this.logger.info("Hello " + infos.getUsername());
 
-                this.logger.info("Hello " + infos.getUsername());
-
-                panelManager.showPanel(new App());
-            } catch (AuthenticationException e) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Erreur");
-                alert.setHeaderText("Une erreur est survenu lors de la connexion");
-                alert.setContentText(e.getMessage());
-                alert.show();
-            }
+            panelManager.showPanel(new App());
         } else {
             AuthInfos infos = new AuthInfos(
                     userField.getText(),
@@ -272,9 +265,7 @@ public class Login extends Panel {
             ));
             this.logger.info("Bienvenue " + response.getProfile().getName());
 
-            Platform.runLater(() -> {
-                panelManager.showPanel(new App());
-            });
+            Platform.runLater(() -> panelManager.showPanel(new App()));
         });
     }
 }
