@@ -1,9 +1,5 @@
 package fr.paulem.launcher;
 
-import fr.paulem.launcher.ui.PanelManager;
-import fr.paulem.launcher.ui.panel.IPanel;
-import fr.paulem.launcher.ui.panels.pages.App;
-import fr.paulem.launcher.ui.panels.pages.Login;
 import fr.flowarg.flowlogger.ILogger;
 import fr.flowarg.flowlogger.Logger;
 import fr.litarvan.openauth.AuthPoints;
@@ -13,6 +9,9 @@ import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
 import fr.litarvan.openauth.model.response.RefreshResponse;
+import fr.paulem.launcher.ui.PanelManager;
+import fr.paulem.launcher.ui.panels.pages.App;
+import fr.paulem.launcher.ui.panels.pages.Login;
 import fr.theshark34.openlauncherlib.minecraft.AuthInfos;
 import fr.theshark34.openlauncherlib.minecraft.util.GameDirGenerator;
 import fr.theshark34.openlauncherlib.util.Saver;
@@ -20,7 +19,6 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.util.UUID;
 
@@ -29,7 +27,6 @@ public class Launcher extends Application {
     private final ILogger logger;
     private final Path launcherDir = GameDirGenerator.createGameDir("paulem", true);
     private final Saver saver;
-    private PanelManager panelManager;
     private AuthInfos authInfos = null;
 
     public Launcher() {
@@ -52,15 +49,15 @@ public class Launcher extends Application {
     @Override
     public void start(Stage stage) {
         this.logger.info("Lancement du launcher...");
-        this.panelManager = new PanelManager(this, stage);
-        this.panelManager.init();
+        PanelManager panelManager = new PanelManager(this, stage);
+        panelManager.init();
 
         if (this.isUserAlreadyLoggedIn()) {
             logger.info("Bienvenue " + authInfos.getUsername());
 
-            this.panelManager.showPanel(new App());
+            panelManager.showPanel(new App());
         } else {
-            this.panelManager.showPanel(new Login());
+            panelManager.showPanel(new Login());
         }
     }
 
@@ -137,9 +134,5 @@ public class Launcher extends Application {
     public void stop() {
         Platform.exit();
         System.exit(0);
-    }
-
-    public void hideWindow() {
-        this.panelManager.getStage().hide();
     }
 }

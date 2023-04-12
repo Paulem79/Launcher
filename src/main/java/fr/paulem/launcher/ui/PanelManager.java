@@ -17,7 +17,6 @@ import javafx.stage.StageStyle;
 public class PanelManager {
     private final Launcher launcher;
     private final Stage stage;
-    private GridPane layout;
     private final GridPane contentPane = new GridPane();
 
     public PanelManager(Launcher launcher, Stage stage) {
@@ -34,16 +33,16 @@ public class PanelManager {
         this.stage.centerOnScreen();
         this.stage.getIcons().add(new Image("images/icon.png"));
 
-        this.layout = new GridPane();
+        GridPane layout = new GridPane();
 
         if (Platform.isOnLinux()) {
-            Scene scene = new Scene(this.layout);
+            Scene scene = new Scene(layout);
             this.stage.setScene(scene);
         } else {
             this.stage.initStyle(StageStyle.UNDECORATED);
 
             TopBar topBar = new TopBar();
-            BorderlessScene scene = new BorderlessScene(this.stage, StageStyle.UNDECORATED, this.layout);
+            BorderlessScene scene = new BorderlessScene(this.stage, StageStyle.UNDECORATED, layout);
             scene.setResizable(true);
             scene.setMoveControl(topBar.getLayout());
             scene.removeDefaultCSS();
@@ -54,12 +53,12 @@ public class PanelManager {
             topPaneContraints.setValignment(VPos.TOP);
             topPaneContraints.setMinHeight(25);
             topPaneContraints.setMaxHeight(25);
-            this.layout.getRowConstraints().addAll(topPaneContraints, new RowConstraints());
-            this.layout.add(topBar.getLayout(), 0, 0);
+            layout.getRowConstraints().addAll(topPaneContraints, new RowConstraints());
+            layout.add(topBar.getLayout(), 0, 0);
             topBar.init(this);
         }
 
-        this.layout.add(this.contentPane, 0, 1);
+        layout.add(this.contentPane, 0, 1);
         GridPane.setVgrow(this.contentPane, Priority.ALWAYS);
         GridPane.setHgrow(this.contentPane, Priority.ALWAYS);
 

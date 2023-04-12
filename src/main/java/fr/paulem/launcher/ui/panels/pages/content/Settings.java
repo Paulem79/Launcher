@@ -78,7 +78,7 @@ public class Settings extends ContentPanel {
         ComboBox<String> comboBox = new ComboBox<>();
         comboBox.getStyleClass().add("ram-selector");
         for(int i = 512; i <= Math.ceil(memory.getTotal() / Math.pow(1024, 2)); i+=512) {
-            comboBox.getItems().add(i/1024.0+" Go");
+            comboBox.getItems().add(i/1024.0+" GB");
         }
 
         int val = 1024;
@@ -93,10 +93,10 @@ public class Settings extends ContentPanel {
             saver.save();
         }
 
-        if (comboBox.getItems().contains(val/1024.0+" Go")) {
-            comboBox.setValue(val / 1024.0 + " Go");
+        if (comboBox.getItems().contains(val/1024.0+" GB")) {
+            comboBox.setValue(val / 1024.0 + " GB");
         } else {
-            comboBox.setValue("1.0 Go");
+            comboBox.setValue("1.0 GB");
         }
 
         setLeft(comboBox);
@@ -119,7 +119,7 @@ public class Settings extends ContentPanel {
         setBottom(saveBtn);
         setCenterH(saveBtn);
         saveBtn.setOnMouseClicked(e -> {
-            double _val = Double.parseDouble(comboBox.getValue().replace(" Go", ""));
+            double _val = Double.parseDouble(comboBox.getValue().replace(" GB", ""));
             _val *= 1024;
             saver.set("maxRam", String.valueOf((int) _val));
             saveBtn.setGraphic(iconCheck);
