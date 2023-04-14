@@ -10,7 +10,6 @@ compileJava {
 }
 
 group 'fr.paulem.launcher'
-version '1.5'
 
 repositories {
     mavenCentral()
@@ -25,7 +24,8 @@ repositories {
 
 jar {
     manifest {
-        attributes('Main-Class': 'fr.paulem.launcher.Main')
+        attributes('Main-Class': 'fr.paulem.launcher.Main',
+                'Version': '8')
     }
 }
 
