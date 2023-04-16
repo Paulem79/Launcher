@@ -30,7 +30,7 @@ jar {
 }
 
 dependencies {
-    implementation 'fr.litarvan:openauth:1+'
+    implementation 'com.github.Litarvan:OpenAuth:518589d222'
     implementation 'de.jensd:fontawesomefx:8+'
 
     implementation 'fr.flowarg:flowupdater:1+'

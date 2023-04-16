@@ -208,26 +208,6 @@ public class Login extends Panel {
 
     public void authenticate() throws MicrosoftAuthenticationException {
         if (!offlineAuth.get()) {
-            /*MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
-            MicrosoftAuthResult response = authenticator.loginWithWebview();
-
-            saver.set("accessToken", response.getAccessToken());
-            saver.set("clientToken", response.getRefreshToken());
-            saver.save();
-
-            AuthInfos infos = new AuthInfos(
-                    response.getProfile().getName(),
-                    response.getAccessToken(),
-                    response.getRefreshToken(),
-                    response.getProfile().getId()
-            );
-
-            Launcher.getInstance().setAuthInfos(infos);
-
-            this.logger.info("Hello " + infos.getUsername());
-
-            panelManager.showPanel(new App());*/
-
             MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
             MicrosoftAuthResult result = authenticator.loginWithCredentials(userField.getText(), passwordField.getText());
 
@@ -277,7 +257,9 @@ public class Login extends Panel {
             Launcher.getInstance().setAuthInfos(new AuthInfos(
                     response.getProfile().getName(),
                     response.getAccessToken(),
-                    response.getProfile().getId()
+                    response.getProfile().getId(),
+                    response.getXuid(),
+                    response.getClientId()
             ));
             this.logger.info("Bienvenue " + response.getProfile().getName());
 
