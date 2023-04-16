@@ -137,7 +137,7 @@ public class Login extends Panel {
             try {
                 this.authenticate();
             } catch (MicrosoftAuthenticationException ex) {
-                throw new RuntimeException(ex);
+                userErrorLabel.setText("Ce compte Minecraft n'existe pas !");
             }
         });
 
@@ -208,7 +208,7 @@ public class Login extends Panel {
 
     public void authenticate() throws MicrosoftAuthenticationException {
         if (!offlineAuth.get()) {
-            MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
+            /*MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
             MicrosoftAuthResult response = authenticator.loginWithWebview();
 
             saver.set("accessToken", response.getAccessToken());
@@ -220,6 +220,22 @@ public class Login extends Panel {
                     response.getAccessToken(),
                     response.getRefreshToken(),
                     response.getProfile().getId()
+            );
+
+            Launcher.getInstance().setAuthInfos(infos);
+
+            this.logger.info("Hello " + infos.getUsername());
+
+            panelManager.showPanel(new App());*/
+
+            MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
+            MicrosoftAuthResult result = authenticator.loginWithCredentials(userField.getText(), passwordField.getText());
+
+            AuthInfos infos = new AuthInfos(
+                    result.getProfile().getName(),
+                    result.getAccessToken(),
+                    result.getRefreshToken(),
+                    result.getProfile().getId()
             );
 
             Launcher.getInstance().setAuthInfos(infos);

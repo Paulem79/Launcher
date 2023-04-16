@@ -21,11 +21,6 @@ public class TopBar extends Panel {
     }
 
     @Override
-    public String getStylesheetPath() {
-        return null;
-    }
-
-    @Override
     public void init(PanelManager panelManager) {
         super.init(panelManager);
         GridPane topBar = this.layout;

@@ -2,25 +2,20 @@ package fr.paulem.launcher.ui.panels.pages.content;
 
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
+import fr.flowarg.flowupdater.FlowUpdater;
 import fr.flowarg.flowupdater.download.DownloadList;
+import fr.flowarg.flowupdater.download.IProgressCallback;
+import fr.flowarg.flowupdater.download.Step;
+import fr.flowarg.flowupdater.download.json.Mod;
 import fr.flowarg.flowupdater.utils.ModFileDeleter;
+import fr.flowarg.flowupdater.versions.AbstractForgeVersion;
+import fr.flowarg.flowupdater.versions.ForgeVersionBuilder;
+import fr.flowarg.flowupdater.versions.VanillaVersion;
 import fr.flowarg.openlauncherlib.NoFramework;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.game.MinecraftInfos;
 import fr.paulem.launcher.ui.PanelManager;
-import fr.flowarg.flowupdater.FlowUpdater;
-import fr.flowarg.flowupdater.download.IProgressCallback;
-import fr.flowarg.flowupdater.download.Step;
-import fr.flowarg.flowupdater.download.json.CurseFileInfo;
-import fr.flowarg.flowupdater.download.json.Mod;
-import fr.flowarg.flowupdater.utils.UpdaterOptions;
-import fr.flowarg.flowupdater.versions.AbstractForgeVersion;
-import fr.flowarg.flowupdater.versions.ForgeVersionBuilder;
-import fr.flowarg.flowupdater.versions.VanillaVersion;
-import fr.theshark34.openlauncherlib.LaunchException;
-import fr.theshark34.openlauncherlib.external.ExternalLaunchProfile;
-import fr.theshark34.openlauncherlib.external.ExternalLauncher;
-import fr.theshark34.openlauncherlib.minecraft.*;
+import fr.theshark34.openlauncherlib.minecraft.GameFolder;
 import fr.theshark34.openlauncherlib.util.Saver;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -31,7 +26,6 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
 
-import java.awt.*;
 import java.nio.file.Path;
 import java.text.DecimalFormat;
 import java.util.List;
@@ -213,6 +207,7 @@ public class Home extends ContentPanel {
         return isDownloading;
     }
 
+    @SuppressWarnings("unused")
     public enum StepInfo {
         INTEGRATION("Chargement des intégrations"),
         READ("Lecture du fichier json..."),
