@@ -1,7 +1,7 @@
 package fr.paulem.launcher.ui.panels.pages;
 
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.paulem.launcher.ui.panel.Panel;
@@ -94,7 +94,7 @@ public class App extends Panel {
         // Navigation
         homeBtn = new Button("Accueil");
         homeBtn.getStyleClass().add("sidemenu-nav-btn");
-        homeBtn.setGraphic(new MaterialDesignIconView(MaterialDesignIcon.HOME));
+        homeBtn.setGraphic(new MaterialDesignIconView<>(MaterialDesignIcon.H.HOME));
         setCanTakeAllSize(homeBtn);
         setTop(homeBtn);
         homeBtn.setTranslateY(90d);
@@ -102,7 +102,7 @@ public class App extends Panel {
 
         settingsBtn = new Button("Paramètres");
         settingsBtn.getStyleClass().add("sidemenu-nav-btn");
-        settingsBtn.setGraphic(new MaterialDesignIconView(MaterialDesignIcon.SETTINGS));
+        settingsBtn.setGraphic(new MaterialDesignIconView<>(MaterialDesignIcon.C.COG));
         setCanTakeAllSize(settingsBtn);
         setTop(settingsBtn);
         settingsBtn.setTranslateY(130d);
@@ -146,7 +146,7 @@ public class App extends Panel {
             userPane.getChildren().add(usernameLabel);
 
             Button logoutBtn = new Button();
-            MaterialDesignIconView logoutIcon = new MaterialDesignIconView(MaterialDesignIcon.LOGOUT);
+            final var logoutIcon = new MaterialDesignIconView<>(MaterialDesignIcon.L.LOGOUT);
             logoutIcon.getStyleClass().add("logout-icon");
             setCanTakeAllSize(logoutBtn);
             setCenterV(logoutBtn);

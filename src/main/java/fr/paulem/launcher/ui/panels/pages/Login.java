@@ -1,8 +1,11 @@
 package fr.paulem.launcher.ui.panels.pages;
 
-import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
-import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
+import fr.litarvan.openauth.AuthPoints;
+import fr.litarvan.openauth.AuthenticationException;
+import fr.litarvan.openauth.Authenticator;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
+import fr.litarvan.openauth.model.AuthAgent;
+import fr.litarvan.openauth.model.response.AuthResponse;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.paulem.launcher.ui.panel.Panel;
@@ -10,7 +13,13 @@ import fr.theshark34.openlauncherlib.minecraft.AuthInfos;
 import fr.theshark34.openlauncherlib.util.Saver;
 import javafx.application.Platform;
 import javafx.geometry.HPos;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.Separator;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
@@ -77,7 +86,7 @@ public class Login extends Panel {
         /*
          * Login sidebar
          */
-        Label title = new Label("Launcher MC");
+        Label title = new Label("JavaFX Launcher");
         title.setFont(Font.font("Consolas", FontWeight.BOLD, FontPosture.REGULAR, 30f));
         title.getStyleClass().add("login-title");
         setCenterH(title);
@@ -133,13 +142,7 @@ public class Login extends Panel {
         btnLogin.setMaxWidth(300);
         btnLogin.setTranslateY(40d);
         btnLogin.getStyleClass().add("login-log-btn");
-        btnLogin.setOnMouseClicked(e -> {
-            try {
-                this.authenticate();
-            } catch (MicrosoftAuthenticationException ex) {
-                userErrorLabel.setText("Ce compte Minecraft n'existe pas !");
-            }
-        });
+        btnLogin.setOnMouseClicked(e -> this.authenticate(userField.getText(), passwordField.getText()));
 
         setCanTakeAllSize(authModeChk);
         setCenterV(authModeChk);
@@ -157,7 +160,7 @@ public class Login extends Panel {
                 userField.setPromptText("Adresse E-Mail");
             }
 
-            btnLogin.setDisable(!(userField.getText().length() > 0 && (offlineAuth.get() || passwordField.getText().length() > 0)));
+            btnLogin.setDisable(!(!userField.getText().isEmpty() && (offlineAuth.get() || !passwordField.getText().isEmpty())));
         });
 
         Separator separator = new Separator();
@@ -197,32 +200,45 @@ public class Login extends Panel {
     public void updateLoginBtnState(TextField textField, Label errorLabel) {
         if (offlineAuth.get() && textField == passwordField) return;
 
-        if (textField.getText().length() == 0) {
+        if (textField.getText().isEmpty()) {
             errorLabel.setText("Le champ ne peut être vide");
         } else {
             errorLabel.setText("");
         }
 
-        btnLogin.setDisable(!(userField.getText().length() > 0 && (offlineAuth.get() || passwordField.getText().length() > 0)));
+        btnLogin.setDisable(!(!userField.getText().isEmpty() && (offlineAuth.get() || !passwordField.getText().isEmpty())));
     }
 
-    public void authenticate() throws MicrosoftAuthenticationException {
+    public void authenticate(String user, String password) {
         if (!offlineAuth.get()) {
-            MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
-            MicrosoftAuthResult result = authenticator.loginWithCredentials(userField.getText(), passwordField.getText());
+            Authenticator authenticator = new Authenticator(Authenticator.MOJANG_AUTH_URL, AuthPoints.NORMAL_AUTH_POINTS);
 
-            AuthInfos infos = new AuthInfos(
-                    result.getProfile().getName(),
-                    result.getAccessToken(),
-                    result.getRefreshToken(),
-                    result.getProfile().getId()
-            );
+            try {
+                AuthResponse response = authenticator.authenticate(AuthAgent.MINECRAFT, user, password, null);
 
-            Launcher.getInstance().setAuthInfos(infos);
+                saver.set("accessToken", response.getAccessToken());
+                saver.set("clientToken", response.getClientToken());
+                saver.save();
 
-            this.logger.info("Hello " + infos.getUsername());
+                AuthInfos infos = new AuthInfos(
+                        response.getSelectedProfile().getName(),
+                        response.getAccessToken(),
+                        response.getClientToken(),
+                        response.getSelectedProfile().getId()
+                );
 
-            panelManager.showPanel(new App());
+                Launcher.getInstance().setAuthInfos(infos);
+
+                this.logger.info("Hello " + infos.getUsername());
+
+                panelManager.showPanel(new App());
+            } catch (AuthenticationException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erreur");
+                alert.setHeaderText("Une erreur est survenu lors de la connexion");
+                alert.setContentText(e.getMessage());
+                alert.show();
+            }
         } else {
             AuthInfos infos = new AuthInfos(
                     userField.getText(),
@@ -233,7 +249,7 @@ public class Login extends Panel {
             saver.save();
             Launcher.getInstance().setAuthInfos(infos);
 
-            this.logger.info("Bienvenue " + infos.getUsername());
+            this.logger.info("Hello " + infos.getUsername());
 
             panelManager.showPanel(new App());
         }
@@ -244,10 +260,13 @@ public class Login extends Panel {
         authenticator.loginWithAsyncWebview().whenComplete((response, error) -> {
             if (error != null) {
                 Launcher.getInstance().getLogger().err(error.toString());
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Erreur");
-                alert.setContentText(error.getMessage());
-                alert.show();
+                Platform.runLater(()-> {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Erreur");
+                    alert.setContentText(error.getMessage());
+                    alert.show();
+                });
+
                 return;
             }
 
@@ -261,7 +280,8 @@ public class Login extends Panel {
                     response.getXuid(),
                     response.getClientId()
             ));
-            this.logger.info("Bienvenue " + response.getProfile().getName());
+
+            Launcher.getInstance().getLogger().info("Hello " + response.getProfile().getName());
 
             Platform.runLater(() -> panelManager.showPanel(new App()));
         });

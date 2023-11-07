@@ -19,22 +19,31 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.UUID;
 
 public class Launcher extends Application {
     private static Launcher instance;
     private final ILogger logger;
-    private final Path launcherDir = GameDirGenerator.createGameDir("paulem", true);
+    private final Path launcherDir = GameDirGenerator.createGameDir("launcher-fx", true);
     private final Saver saver;
+    private PanelManager panelManager;
     private AuthInfos authInfos = null;
 
     public Launcher() {
         instance = this;
-        this.logger = new Logger("[Launcher]", this.launcherDir.resolve("launcher.log"));
-        if (!this.launcherDir.toFile().exists()) {
-            if (!this.launcherDir.toFile().mkdir()) {
+        this.logger = new Logger("[LauncherFX]", this.launcherDir.resolve("launcher.log"));
+        if (Files.notExists(this.launcherDir))
+        {
+            try
+            {
+                Files.createDirectory(this.launcherDir);
+            } catch (IOException e)
+            {
                 this.logger.err("Unable to create launcher folder");
+                this.logger.printStackTrace(e);
             }
         }
 
@@ -48,16 +57,16 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) {
-        this.logger.info("Lancement du launcher...");
-        PanelManager panelManager = new PanelManager(this, stage);
-        panelManager.init();
+        this.logger.info("Starting launcher");
+        this.panelManager = new PanelManager(this, stage);
+        this.panelManager.init();
 
         if (this.isUserAlreadyLoggedIn()) {
-            logger.info("Bienvenue " + authInfos.getUsername());
+            logger.info("Hello " + authInfos.getUsername());
 
-            panelManager.showPanel(new App());
+            this.panelManager.showPanel(new App());
         } else {
-            panelManager.showPanel(new Login());
+            this.panelManager.showPanel(new Login());
         }
     }
 
@@ -94,7 +103,9 @@ public class Launcher extends Application {
                 this.setAuthInfos(new AuthInfos(
                         response.getProfile().getName(),
                         response.getAccessToken(),
-                        response.getProfile().getId()
+                        response.getProfile().getId(),
+                        response.getXuid(),
+                        response.getClientId()
                 ));
                 return true;
             } catch (MicrosoftAuthenticationException e) {
@@ -134,5 +145,9 @@ public class Launcher extends Application {
     public void stop() {
         Platform.exit();
         System.exit(0);
+    }
+
+    public void hideWindow() {
+        this.panelManager.getStage().hide();
     }
 }

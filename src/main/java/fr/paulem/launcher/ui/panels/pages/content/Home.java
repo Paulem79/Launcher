@@ -1,16 +1,12 @@
 package fr.paulem.launcher.ui.panels.pages.content;
 
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import fr.flowarg.flowupdater.FlowUpdater;
 import fr.flowarg.flowupdater.download.DownloadList;
 import fr.flowarg.flowupdater.download.IProgressCallback;
 import fr.flowarg.flowupdater.download.Step;
-import fr.flowarg.flowupdater.download.json.Mod;
-import fr.flowarg.flowupdater.utils.ModFileDeleter;
-import fr.flowarg.flowupdater.versions.AbstractForgeVersion;
-import fr.flowarg.flowupdater.versions.ForgeVersionBuilder;
 import fr.flowarg.flowupdater.versions.VanillaVersion;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import fr.flowarg.openlauncherlib.NoFramework;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.game.MinecraftInfos;
@@ -28,7 +24,6 @@ import javafx.scene.layout.RowConstraints;
 
 import java.nio.file.Path;
 import java.text.DecimalFormat;
-import java.util.List;
 
 public class Home extends ContentPanel {
     private final Saver saver = Launcher.getInstance().getSaver();
@@ -79,13 +74,13 @@ public class Home extends ContentPanel {
         setCenterH(fileLabel);
         setCanTakeAllSize(fileLabel);
 
-        this.showContent();
+        this.showPlayButton();
     }
 
-    private void showContent() {
+    private void showPlayButton() {
         boxPane.getChildren().clear();
         Button playBtn = new Button("Jouer");
-        MaterialDesignIconView playIcon = new MaterialDesignIconView(MaterialDesignIcon.PLAY);
+        final var playIcon = new MaterialDesignIconView<>(MaterialDesignIcon.G.GAMEPAD);
         playIcon.getStyleClass().add("play-icon");
         setCanTakeAllSize(playBtn);
         setCenterH(playBtn);
@@ -102,7 +97,7 @@ public class Home extends ContentPanel {
         setProgress(0, 0);
         boxPane.getChildren().addAll(progressBar, stepLabel, fileLabel);
 
-        Platform.runLater(() -> new Thread(this::update).start());
+        new Thread(this::update).start();
     }
 
     public void update() {
@@ -122,11 +117,9 @@ public class Home extends ContentPanel {
             @Override
             public void update(DownloadList.DownloadInfo info) {
                 Platform.runLater(() -> {
-                    final long downloaded = info.getDownloadedBytes();
-                    final long max = info.getTotalToDownloadBytes();
-                    percentTxt = decimalFormat.format(downloaded * 100.d / max) + "%";
+                    percentTxt = decimalFormat.format(info.getDownloadedBytes() * 100.d / info.getTotalToDownloadBytes()) + "%";
                     setStatus(String.format("%s (%s)", stepTxt, percentTxt));
-                    setProgress(downloaded, max);
+                    setProgress(info.getDownloadedBytes(), info.getTotalToDownloadBytes());
                 });
             }
 
@@ -144,39 +137,44 @@ public class Home extends ContentPanel {
                     .withName(MinecraftInfos.GAME_VERSION)
                     .build();
 
-            List<Mod> mods = Mod.getModsFromJson(MinecraftInfos.MODS_LIST_URL);
-
-            final AbstractForgeVersion forge = new ForgeVersionBuilder(MinecraftInfos.FORGE_VERSION_TYPE)
-                    .withForgeVersion(MinecraftInfos.FORGE_VERSION)
-                    .withMods(mods)
-                    .withFileDeleter(new ModFileDeleter(true))
-                    .build();
-
             final FlowUpdater updater = new FlowUpdater.FlowUpdaterBuilder()
                     .withVanillaVersion(vanillaVersion)
-                    .withModLoaderVersion(forge)
+                    .withModLoaderVersion(MinecraftInfos.GAME)
                     .withLogger(Launcher.getInstance().getLogger())
                     .withProgressCallback(callback)
                     .build();
 
             updater.update(Launcher.getInstance().getLauncherDir());
-            this.startGame();
-        } catch (Exception exception) {
-            Launcher.getInstance().getLogger().err(exception.toString());
-            exception.printStackTrace();
-            Platform.runLater(() -> panelManager.getStage().show());
+            this.startGame(updater.getVanillaVersion().getName());
+        } catch (Exception e) {
+            Launcher.getInstance().getLogger().printStackTrace(e);
+            Platform.runLater(() -> this.panelManager.getStage().show());
         }
     }
 
-    public void startGame() {
-        NoFramework noFramework = new NoFramework(Launcher.getInstance().getLauncherDir(), Launcher.getInstance().getAuthInfos(), GameFolder.FLOW_UPDATER);
-        noFramework.getAdditionalVmArgs().add(this.getRamArgsFromSaver());
+    public void startGame(String gameVersion) {
         try {
-            noFramework.launch(MinecraftInfos.GAME_VERSION, MinecraftInfos.FORGE_VERSION.split("-")[1], NoFramework.ModLoader.FORGE);
+            NoFramework noFramework = new NoFramework(
+                    Launcher.getInstance().getLauncherDir(),
+                    Launcher.getInstance().getAuthInfos(),
+                    GameFolder.FLOW_UPDATER
+            );
+
+            noFramework.getAdditionalVmArgs().add(this.getRamArgsFromSaver());
+
+            Process p = noFramework.launch(gameVersion, MinecraftInfos.MODLOADER_VERSION.split("-")[1], MinecraftInfos.MODLOADER);
+
+            Platform.runLater(() -> {
+                try {
+                    p.waitFor();
+                    Platform.exit();
+                } catch (InterruptedException e) {
+                    Launcher.getInstance().getLogger().printStackTrace(e);
+                }
+            });
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            Launcher.getInstance().getLogger().printStackTrace(e);
         }
-        Platform.runLater(Platform::exit);
     }
 
     public String getRamArgsFromSaver() {
@@ -207,18 +205,20 @@ public class Home extends ContentPanel {
         return isDownloading;
     }
 
-    @SuppressWarnings("unused")
     public enum StepInfo {
-        INTEGRATION("Chargement des intégrations"),
         READ("Lecture du fichier json..."),
         DL_LIBS("Téléchargement des libraries..."),
         DL_ASSETS("Téléchargement des ressources..."),
         EXTRACT_NATIVES("Extraction des natives..."),
-        MOD_LOADER("Installation de forge..."),
+        FORGE("Installation de forge..."),
+        FABRIC("Installation de fabric..."),
         MODS("Téléchargement des mods..."),
         EXTERNAL_FILES("Téléchargement des fichier externes..."),
         POST_EXECUTIONS("Exécution post-installation..."),
-        END("Terminé !");
+        MOD_LOADER("Installation du mod loader..."),
+        INTEGRATION("Intégration des mods..."),
+        END("Fini !");
+
         final String details;
 
         StepInfo(String details) {

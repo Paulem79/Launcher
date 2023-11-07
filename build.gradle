@@ -1,13 +1,11 @@
 plugins {
     id 'idea'
-    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'java-library'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
 }
-
-compileJava {
-    sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
-    options.encoding = 'UTF-8'
-}
+apply plugin: 'org.openjfx.javafxplugin'
 
 group 'fr.paulem.launcher'
 
@@ -18,24 +16,37 @@ repositories {
         name = 'JitPack'
     }
     maven {
-        url 'https://litarvan.github.io/maven'
-    }
-}
-
-jar {
-    manifest {
-        attributes('Main-Class': 'fr.paulem.launcher.Main',
-                'Version': '8')
+        url = 'https://litarvan.github.io/maven'
+        name = 'LitarvanMaven'
     }
 }
 
 dependencies {
-    implementation 'com.github.Litarvan:OpenAuth:518589d222'
-    implementation 'de.jensd:fontawesomefx:8+'
+    implementation 'fr.litarvan:openauth:1.1.6'
+    implementation 'fr.flowarg:materialdesignfontfx:7.2.96-2'
 
     implementation 'fr.flowarg:flowupdater:1+'
     implementation 'fr.flowarg:openlauncherlib:3+'
 
     implementation 'com.github.goxr3plus:FX-BorderlessScene:4+'
     implementation 'com.github.oshi:oshi-core:5+'
+}
+
+jar {
+    manifest {
+        attributes('Version': '17')
+    }
+}
+
+application {
+    getMainClass().set('fr.paulem.launcher.Main')
+}
+
+javafx {
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.swing']
+}
+
+compileJava {
+    //sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+    options.encoding = 'UTF-8'
 }

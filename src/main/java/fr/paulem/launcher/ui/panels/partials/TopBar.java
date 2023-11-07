@@ -1,7 +1,7 @@
 package fr.paulem.launcher.ui.panels.partials;
 
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.paulem.launcher.ui.panel.Panel;
 import javafx.scene.control.Label;
@@ -56,9 +56,9 @@ public class TopBar extends Panel {
         /*
          * TopBar buttons configuration
          */
-        MaterialDesignIconView closeBtn = new MaterialDesignIconView(MaterialDesignIcon.WINDOW_CLOSE);
-        MaterialDesignIconView fullscreenBtn = new MaterialDesignIconView(MaterialDesignIcon.WINDOW_MAXIMIZE);
-        MaterialDesignIconView minimizeBtn = new MaterialDesignIconView(MaterialDesignIcon.WINDOW_MINIMIZE);
+        final var closeBtn = new MaterialDesignIconView<>(MaterialDesignIcon.W.WINDOW_CLOSE);
+        final var fullscreenBtn = new MaterialDesignIconView<>(MaterialDesignIcon.W.WINDOW_MAXIMIZE);
+        final var minimizeBtn = new MaterialDesignIconView<>(MaterialDesignIcon.W.WINDOW_MINIMIZE);
         setCanTakeAllWidth(closeBtn, fullscreenBtn, minimizeBtn);
 
         closeBtn.setFill(Color.WHITE);

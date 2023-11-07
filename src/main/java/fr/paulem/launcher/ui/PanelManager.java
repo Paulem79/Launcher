@@ -26,10 +26,7 @@ public class PanelManager {
 
     public void init() {
         this.stage.setTitle("Launcher");
-        this.stage.setMinWidth(854);
-        this.stage.setMinHeight(480);
-        this.stage.setWidth(1280);
-        this.stage.setHeight(720);
+        this.stage.setFullScreen(true);
         this.stage.centerOnScreen();
         this.stage.getIcons().add(new Image("images/icon.png"));
 

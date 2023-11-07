@@ -1,7 +1,7 @@
 package fr.paulem.launcher.ui.panels.pages.content;
 
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIcon;
-import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
+import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.theshark34.openlauncherlib.util.Saver;
@@ -111,8 +111,8 @@ public class Settings extends ContentPanel {
          */
         Button saveBtn = new Button("Enregistrer");
         saveBtn.getStyleClass().add("save-btn");
-        MaterialDesignIconView iconView = new MaterialDesignIconView(MaterialDesignIcon.FLOPPY);
-        MaterialDesignIconView iconCheck = new MaterialDesignIconView(MaterialDesignIcon.CHECK);
+        final var iconView = new MaterialDesignIconView<>(MaterialDesignIcon.F.FLOPPY);
+        final var iconCheck = new MaterialDesignIconView<>(MaterialDesignIcon.C.CHECK);
         iconView.getStyleClass().add("save-icon");
         saveBtn.setGraphic(iconView);
         setCanTakeAllSize(saveBtn);
