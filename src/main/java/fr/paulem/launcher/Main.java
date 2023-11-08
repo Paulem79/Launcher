@@ -12,7 +12,7 @@ public class Main {
         } catch (ClassNotFoundException e) {
             JOptionPane.showMessageDialog(
                     null,
-                    "Erreur:\n" + e.getMessage() + " not found",
+                    "Votre version de Java ne semble pas être la bonne, veuillez utiliser Java 17 !",
                     "Erreur",
                     JOptionPane.ERROR_MESSAGE
             );

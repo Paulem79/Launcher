@@ -9,12 +9,12 @@
     -fx-background-color: #330085;
 }
 
-.play-icon {
-    -fx-fill: white;
-}
-
 .play-btn:hover {
     -fx-background-color: #866dba;
+}
+
+.play-icon {
+    -fx-fill: white;
 }
 
 .download-progress {

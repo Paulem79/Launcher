@@ -69,7 +69,6 @@
 
 .login-mode-chk .box {
     -fx-border-width: 0;
-    -fx-border-radius: 10px;
     -fx-background-color: rgb(220, 225, 225);
 }
 
