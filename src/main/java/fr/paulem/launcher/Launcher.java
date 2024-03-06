@@ -27,7 +27,7 @@ import java.util.UUID;
 public class Launcher extends Application {
     private static Launcher instance;
     private final ILogger logger;
-    private final Path launcherDir = GameDirGenerator.createGameDir("launcher-fx", true);
+    private final Path launcherDir = GameDirGenerator.createGameDir("paulem-launcher", true);
     private final Saver saver;
     private PanelManager panelManager;
     private AuthInfos authInfos = null;

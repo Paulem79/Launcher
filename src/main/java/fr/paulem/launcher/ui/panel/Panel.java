@@ -32,11 +32,6 @@ public abstract class Panel implements IPanel, IMovable, ITakePLace {
 
     @Override
     public void onShow() {
-        FadeTransition transition = new FadeTransition(Duration.seconds(1), this.layout);
-        transition.setFromValue(0);
-        transition.setToValue(1);
-        transition.setAutoReverse(true);
-        transition.play();
     }
 
     @Override

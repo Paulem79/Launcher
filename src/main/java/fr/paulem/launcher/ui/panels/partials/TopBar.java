@@ -31,12 +31,12 @@ public class TopBar extends Panel {
          * TopBar separation
          */
         // TopBar: left side
-        ImageView imageView = new ImageView();
+        /*ImageView imageView = new ImageView();
         imageView.setImage(new Image("images/icon.png"));
         imageView.setPreserveRatio(true);
         imageView.setFitHeight(25);
         setLeft(imageView);
-        this.layout.getChildren().add(imageView);
+        this.layout.getChildren().add(imageView);*/
 
         // TopBar: center
         Label title = new Label("Launcher MC");

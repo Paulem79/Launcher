@@ -10,9 +10,10 @@ public class Main {
             Class.forName("javafx.application.Application");
             Application.launch(fr.paulem.launcher.Launcher.class, args);
         } catch (ClassNotFoundException e) {
+            // Mauvaise version de java
             JOptionPane.showMessageDialog(
                     null,
-                    "Votre version de Java ne semble pas être la bonne, veuillez utiliser Java 17 !",
+                    "Votre version de Java ne semble pas être la bonne !",
                     "Erreur",
                     JOptionPane.ERROR_MESSAGE
             );
