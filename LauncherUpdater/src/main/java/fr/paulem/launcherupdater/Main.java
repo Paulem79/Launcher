@@ -4,13 +4,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-import javax.swing.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.file.Files;
@@ -26,27 +20,34 @@ import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        downloadFromGithub();
+    public static void main(String[] args) {
+        try {
+            downloadFromGithub();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public static void launch() throws IOException {
-        final JarFile jarFile = new JarFile("Launcher.jar");
-        final Manifest manifest = jarFile.getManifest();
-        final Attributes attributes = manifest.getMainAttributes();
-        final String javaVersion = attributes.getValue("Version");
+    public static void launch() {
+        try (JarFile jarFile = new JarFile("Launcher.jar")) {
+            final Manifest manifest = jarFile.getManifest();
+            final Attributes attributes = manifest.getMainAttributes();
+            final String javaVersion = attributes.getValue("Version");
 
-        if (javaVersion.isEmpty())
-            throw new IllegalStateException("Version isn't specified, ask paulem on Discord!");
+            if (javaVersion.isEmpty())
+                throw new IllegalStateException("Version isn't specified, ask paulem on Discord!");
 
-        if (javaVersion.equals("8"))
-            new ProcessBuilder("j8\\bin\\java.exe", "-jar", "Launcher.jar").start();
+            if (javaVersion.equals("8"))
+                new ProcessBuilder("j8\\bin\\java.exe", "-jar", "Launcher.jar").start();
 
-        else if (javaVersion.equals("17"))
-            new ProcessBuilder("j17\\bin\\java.exe", "-jar", "Launcher.jar").start();
+            else if (javaVersion.equals("17"))
+                new ProcessBuilder("j17\\bin\\java.exe", "-jar", "Launcher.jar").start();
 
-        else
-            throw new IllegalStateException("Error with java " + javaVersion);
+            else
+                throw new IllegalStateException("Error with java " + javaVersion);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void downloadFromGithub() throws Exception {
@@ -61,7 +62,6 @@ public class Main {
     }
 
     public static void downloadFile(final String url) throws IOException {
-        //final JFrame jframe = showUpdateWindow();
         final Path localFilePath = Paths.get("Launcher.jar");
         final URL fileUrl = new URL(url);
         final HttpURLConnection connection = (HttpURLConnection)fileUrl.openConnection();
@@ -74,8 +74,6 @@ public class Main {
                 out.write(dataBuffer, 0, bytesRead);
             }
         }
-
-        //jframe.dispose();
     }
 
     public static String getJsonStringFromUrl(final String url) throws IOException, NoSuchAlgorithmException, KeyManagementException {
@@ -121,22 +119,6 @@ public class Main {
         return jsonString.substring(endIndex, endIndex2);
     }
 
-    public static void showUpdateWindow() {
-        JOptionPane.showMessageDialog(null, "Mise à jour du launcher", "Launcher", JOptionPane.INFORMATION_MESSAGE);
-        /*final JLabel comp = new JLabel("Mise a jour du launcher !", SwingConstants.CENTER);
-        comp.setFont(new Font("Arial", Font.PLAIN, 14));
-
-        final JFrame frame = new JFrame();
-        frame.setUndecorated(true);
-        frame.add(comp);
-        frame.setSize(200, 50);
-        frame.getContentPane().setBackground(Color.LIGHT_GRAY);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-
-        return frame;*/
-    }
-
     public static byte[] getSha256Hash(final InputStream inputStream) throws Exception {
         final MessageDigest digest = MessageDigest.getInstance("SHA-256");
         final byte[] buffer = new byte[8192];
@@ -150,16 +132,13 @@ public class Main {
 
     public static void compareFile(final HttpURLConnection connection, final String downloadUrl) throws Exception {
         final File localFile = new File("Launcher.jar");
-        if (localFile.exists() && localFile.isFile()) {
-            final int responseCode = connection.getResponseCode();
-            if (responseCode == 200) {
-                try (final InputStream remoteStream = connection.getInputStream();
-                     final InputStream localStream = Files.newInputStream(localFile.toPath())) {
-                    final byte[] remoteFileHash = getSha256Hash(remoteStream);
-                    final byte[] localFileHash = getSha256Hash(localStream);
-                    if (!MessageDigest.isEqual(remoteFileHash, localFileHash))
-                        downloadFile(downloadUrl);
-                }
+        if (localFile.exists() && localFile.isFile() && connection.getResponseCode() == 200) {
+            try (final InputStream remoteStream = connection.getInputStream();
+                 final InputStream localStream = Files.newInputStream(localFile.toPath())) {
+                final byte[] remoteFileHash = getSha256Hash(remoteStream);
+                final byte[] localFileHash = getSha256Hash(localStream);
+                if (!MessageDigest.isEqual(remoteFileHash, localFileHash))
+                    downloadFile(downloadUrl);
             }
         }
         else {
