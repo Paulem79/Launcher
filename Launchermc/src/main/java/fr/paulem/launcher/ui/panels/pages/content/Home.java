@@ -117,9 +117,14 @@ public class Home extends ContentPanel {
             @Override
             public void update(DownloadList.DownloadInfo info) {
                 Platform.runLater(() -> {
-                    percentTxt = decimalFormat.format(info.getDownloadedBytes() * 100.d / info.getTotalToDownloadBytes()) + "%";
-                    setStatus(String.format("%s (%s)", stepTxt, percentTxt));
+                    percentTxt = decimalFormat.format(info.getDownloadedBytes() * 100.d / info.getTotalToDownloadBytes());
                     setProgress(info.getDownloadedBytes(), info.getTotalToDownloadBytes());
+                    if(!percentTxt.matches(".*\\d.*")) {
+                        percentTxt = "100";
+                        setProgress(1, 1);
+                    }
+                    percentTxt += "%";
+                    setStatus(String.format("%s (%s)", stepTxt, percentTxt));
                 });
             }
 
@@ -161,8 +166,9 @@ public class Home extends ContentPanel {
             );
 
             noFramework.getAdditionalVmArgs().add(this.getRamArgsFromSaver());
-
-            Process p = noFramework.launch(gameVersion, MinecraftInfos.MODLOADER_VERSION.split("-")[1], MinecraftInfos.MODLOADER);
+            Process p = noFramework.launch(gameVersion,
+                    MinecraftInfos.MODLOADER_VERSION.split("-").length >= 2 ? MinecraftInfos.MODLOADER_VERSION.split("-")[1] : MinecraftInfos.MODLOADER_VERSION,
+                    MinecraftInfos.MODLOADER);
 
             Platform.runLater(() -> {
                 try {

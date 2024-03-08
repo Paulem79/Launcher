@@ -2,13 +2,9 @@ package fr.paulem.launcher;
 
 import fr.flowarg.flowlogger.ILogger;
 import fr.flowarg.flowlogger.Logger;
-import fr.litarvan.openauth.AuthPoints;
-import fr.litarvan.openauth.AuthenticationException;
-import fr.litarvan.openauth.Authenticator;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
-import fr.litarvan.openauth.model.response.RefreshResponse;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.paulem.launcher.ui.panels.pages.App;
 import fr.paulem.launcher.ui.panels.pages.Login;
@@ -71,28 +67,7 @@ public class Launcher extends Application {
     }
 
     public boolean isUserAlreadyLoggedIn() {
-        if (saver.get("accessToken") != null && saver.get("clientToken") != null) {
-            Authenticator authenticator = new Authenticator(Authenticator.MOJANG_AUTH_URL, AuthPoints.NORMAL_AUTH_POINTS);
-
-            try {
-                RefreshResponse response = authenticator.refresh(saver.get("accessToken"), saver.get("clientToken"));
-                saver.set("accessToken", response.getAccessToken());
-                saver.set("clientToken", response.getClientToken());
-                saver.save();
-                this.setAuthInfos(new AuthInfos(
-                        response.getSelectedProfile().getName(),
-                        response.getAccessToken(),
-                        response.getClientToken(),
-                        response.getSelectedProfile().getId()
-                ));
-
-                return true;
-            } catch (AuthenticationException ignored) {
-                saver.remove("accessToken");
-                saver.remove("clientToken");
-                saver.save();
-            }
-        } else if (saver.get("msAccessToken") != null && saver.get("msRefreshToken") != null) {
+        if (saver.get("msAccessToken") != null && saver.get("msRefreshToken") != null) {
             try {
                 MicrosoftAuthenticator authenticator = new MicrosoftAuthenticator();
                 MicrosoftAuthResult response = authenticator.loginWithRefreshToken(saver.get("msRefreshToken"));
