@@ -9,3 +9,4 @@ LauncherUpdater/.idea
 LauncherUpdater/build
 Setup
 installer.log
+.gitignore
