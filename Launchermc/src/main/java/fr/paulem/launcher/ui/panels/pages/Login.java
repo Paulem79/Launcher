@@ -22,15 +22,15 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Login extends Panel {
-    GridPane loginCard = new GridPane();
+    final GridPane loginCard = new GridPane();
 
-    Saver saver = Launcher.getInstance().getSaver();
-    AtomicBoolean offlineAuth = new AtomicBoolean(false);
+    final Saver saver = Launcher.getInstance().getSaver();
+    final AtomicBoolean offlineAuth = new AtomicBoolean(false);
 
-    TextField userField = new TextField();
-    Label userErrorLabel = new Label();
-    Button btnLogin = new Button("Connexion");
-    Button msLoginBtn = new Button();
+    final TextField userField = new TextField();
+    final Label userErrorLabel = new Label();
+    final Button btnLogin = new Button("Connexion");
+    final Button msLoginBtn = new Button();
 
     @Override
     public String getName() {

@@ -27,10 +27,10 @@ import java.text.DecimalFormat;
 
 public class Home extends ContentPanel {
     private final Saver saver = Launcher.getInstance().getSaver();
-    GridPane boxPane = new GridPane();
-    ProgressBar progressBar = new ProgressBar();
-    Label stepLabel = new Label();
-    Label fileLabel = new Label();
+    final GridPane boxPane = new GridPane();
+    final ProgressBar progressBar = new ProgressBar();
+    final Label stepLabel = new Label();
+    final Label fileLabel = new Label();
     boolean isDownloading = false;
 
     @Override

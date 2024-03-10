@@ -3,16 +3,14 @@ package fr.paulem.launcher.ui.panel;
 import fr.paulem.launcher.Launcher;
 import fr.paulem.launcher.ui.PanelManager;
 import fr.flowarg.flowlogger.ILogger;
-import javafx.animation.FadeTransition;
 import javafx.geometry.HPos;
 import javafx.geometry.VPos;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
-import javafx.util.Duration;
 
 public abstract class Panel implements IPanel, IMovable, ITakePLace {
     protected final ILogger logger;
-    protected GridPane layout = new GridPane();
+    protected final GridPane layout = new GridPane();
     protected PanelManager panelManager;
 
     public Panel() {

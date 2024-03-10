@@ -23,20 +23,19 @@ public class TopBar extends Panel {
     @Override
     public void init(PanelManager panelManager) {
         super.init(panelManager);
-        GridPane topBar = this.layout;
         this.layout.setStyle("-fx-background-color: rgb(35, 40, 40);");
-        setCanTakeAllWidth(topBar);
+        setCanTakeAllWidth(this.layout);
 
         /*
          * TopBar separation
          */
         // TopBar: left side
-        /*ImageView imageView = new ImageView();
+        ImageView imageView = new ImageView();
         imageView.setImage(new Image("images/icon.png"));
         imageView.setPreserveRatio(true);
         imageView.setFitHeight(25);
         setLeft(imageView);
-        this.layout.getChildren().add(imageView);*/
+        this.layout.getChildren().add(imageView);
 
         // TopBar: center
         Label title = new Label("Launcher MC");

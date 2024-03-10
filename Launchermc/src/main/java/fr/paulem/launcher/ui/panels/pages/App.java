@@ -23,15 +23,15 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 
 public class App extends Panel {
-    GridPane sidemenu = new GridPane();
-    GridPane navContent = new GridPane();
+    final GridPane sidemenu = new GridPane();
+    final GridPane navContent = new GridPane();
 
     Node activeLink = null;
     ContentPanel currentPage = null;
 
     Button homeBtn, settingsBtn;
 
-    Saver saver = Launcher.getInstance().getSaver();
+    final Saver saver = Launcher.getInstance().getSaver();
 
     @Override
     public String getName() {
