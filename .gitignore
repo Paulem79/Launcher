@@ -4,6 +4,7 @@ Launchermc/.git
 Launchermc/.gradle
 Launchermc/.idea
 Launchermc/build
+Launchermc/src/main/java/fr/paulem/launcher/game/MinecraftInfos.java
 LauncherUpdater/.gradle
 LauncherUpdater/.idea
 LauncherUpdater/build
