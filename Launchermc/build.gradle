@@ -34,7 +34,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes('Version': '17')
+        attributes('Version': JAVA_VERSION)
     }
 }
 
