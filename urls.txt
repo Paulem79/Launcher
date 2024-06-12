@@ -1,2 +1,2 @@
-https://google.com
-https://github.com
+https://github.com/Paulem79/Launcher/releases/download/1.0/setup.zip
+https://github.com/Paulem79/Launcher/releases/download/1.0/Launcher.jar
