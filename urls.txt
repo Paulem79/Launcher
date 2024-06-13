@@ -1,2 +1,4 @@
 https://github.com/Paulem79/Launcher/releases/download/1.0/setup.zip
 https://github.com/Paulem79/Launcher/releases/download/1.0/Launcher.jar
+F84574FDB2F4EC67F074B338AC71B7C9
+90FA0A54E8B90F94F1F5E2D323F33E66
