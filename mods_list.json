@@ -1,4 +1,10 @@
 {
     "mods": [
+        {
+            "name": "auto-connect-2.1.2.jar",
+            "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.2.jar",
+            "sha1": "8d0ee09faa88573c01b1896061d78aac3cfda00e",
+            "size": 11638
+        }
     ]
 }
