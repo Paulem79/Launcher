@@ -11,6 +11,222 @@
             "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/HXzEJYgV/fabric-api-0.100.1%2B1.21.jar",
             "sha1": "63848b365c036a89e4aba51d14d6dc8301e32b27",
             "size": 2219441
+        },
+        {
+            "name": "sodium-fabric-0.5.9%2Bmc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/AANobbMI/versions/dNHeFokL/sodium-fabric-0.5.9%2Bmc1.21.jar",
+            "sha1": "3b1ad241af59c32f6ed016c8a285429bfb5c5f86",
+            "size": 979834
+        },
+        {
+            "name": "iris-1.7.1%2Bmc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/YL57xq9U/versions/RYnrr5zv/iris-1.7.1%2Bmc1.21.jar",
+            "sha1": "e098699f4d22b34f4b8ab773e2f3eca98640008c",
+            "size": 2707221
+        },
+        {
+            "name": "modmenu-11.0.0-beta.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/9FL4cmP7/modmenu-11.0.0-beta.1.jar",
+            "sha1": "57958151898eec96499ad0d221c8c3c3f4390e36",
+            "size": 754430
+        },
+        {
+            "name": "sodium-extra-0.5.7%2Bmc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/PtjYWJkn/versions/uuhVlRGv/sodium-extra-0.5.7%2Bmc1.21.jar",
+            "sha1": "13a65186e5ba363e0ed3216303bc67a173c050fe",
+            "size": 375625
+        },
+        {
+            "name": "ImmediatelyFast-Fabric-1.2.18%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/5ZwdcRci/versions/DA0kxiSe/ImmediatelyFast-Fabric-1.2.18%2B1.21.jar",
+            "sha1": "84e6c85124cae35d298d5fada7ec91d794c74639",
+            "size": 248677
+        },
+        {
+            "name": "reeses_sodium_options-1.7.2%2Bmc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/Bh37bMuy/versions/DNJFe2me/reeses_sodium_options-1.7.2%2Bmc1.21.jar",
+            "sha1": "cc4e16bba55547494667ec257349f66695e029de",
+            "size": 77428
+        },
+        {
+            "name": "continuity-3.0.0-beta.5%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/1IjD5062/versions/NksUpFjf/continuity-3.0.0-beta.5%2B1.21.jar",
+            "sha1": "16d31a39e85dc10cdff4e06198a1bb26b4b82427",
+            "size": 1007136
+        },
+        {
+            "name": "dynamic-fps-3.4.3%2Bminecraft-1.21.0-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/jeq5Pk2P/dynamic-fps-3.4.3%2Bminecraft-1.21.0-fabric.jar",
+            "sha1": "40fa85ae61c152a417aaee0a0d012ffb632c16e8",
+            "size": 94499
+        },
+        {
+            "name": "modernfix-fabric-5.18.2%2Bmc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/f3UzsGPb/modernfix-fabric-5.18.2%2Bmc1.21.jar",
+            "sha1": "17c498a5c0481836127754cd67cdbc688cb88c1d",
+            "size": 434062
+        },
+        {
+            "name": "entity_texture_features_fabric_1.21-6.1.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/BVzZfTc1/versions/JvRwC1fO/entity_texture_features_fabric_1.21-6.1.1.jar",
+            "sha1": "7d4a81b46b02c4292247e69d0113fd6a61b9c8d0",
+            "size": 598709
+        },
+        {
+            "name": "voicechat-fabric-1.21-2.5.16.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/9eGKb6K1/versions/SvnPXNSs/voicechat-fabric-1.21-2.5.16.jar",
+            "sha1": "1be8a6506a101663189a827e0cb058352acae807",
+            "size": 6557448
+        },
+        {
+            "name": "entity_model_features_fabric_1.21-pre3-test.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/4I1XuqiY/versions/zQC8LMqE/entity_model_features_fabric_1.21-pre3-test.jar",
+            "sha1": "82aa26ed7c17566849f54f5dfc84d9467be59aba",
+            "size": 394954
+        },
+        {
+            "name": "PresenceFootsteps-1.10.0%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/rcTfTZr3/versions/4CjXUG8M/PresenceFootsteps-1.10.0%2B1.21.jar",
+            "sha1": "bb166be2790dbcd57427534c8fed18c305d2fd6b",
+            "size": 5732453
+        },
+        {
+            "name": "enhancedblockentities-0.10.1%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/OVuFYfre/versions/8OuTJDGd/enhancedblockentities-0.10.1%2B1.21.jar",
+            "sha1": "36045df5f1b3e7645a5dd450fa305a8134dd7c51",
+            "size": 200698
+        },
+        {
+            "name": "language-reload-1.6.1%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/uLbm7CG6/versions/fpDBBXvT/language-reload-1.6.1%2B1.21.jar",
+            "sha1": "c7988fea2a258a5afdfa193615d3b5261c1e58bb",
+            "size": 68960
+        },
+        {
+            "name": "sound-physics-remastered-fabric-1.21-1.4.3.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/qyVF9oeo/versions/5gC41Itp/sound-physics-remastered-fabric-1.21-1.4.3.jar",
+            "sha1": "281266d1d35308405e7b8edf1b818b2c42f8f3ab",
+            "size": 195286
+        },
+        {
+            "name": "c2me-fabric-mc1.21-0.2.0%2Balpha.11.98.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/VSNURh3q/versions/CblFko5j/c2me-fabric-mc1.21-0.2.0%2Balpha.11.98.jar",
+            "sha1": "d5562e5fc45b5529060c8846374f3825bc47c21d",
+            "size": 1257660
+        },
+        {
+            "name": "Jade-1.21-Fabric-15.0.4.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/nvQzSEkH/versions/ZMaraV5t/Jade-1.21-Fabric-15.0.4.jar",
+            "sha1": "8115485007aaebe4cb99defd66bd44cb6ce9a65f",
+            "size": 658572
+        },
+        {
+            "name": "fallingleaves-1.16.0%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/WhbRG4iK/versions/U3JJC6zk/fallingleaves-1.16.0%2B1.21.jar",
+            "sha1": "721a02e2b4b526c8377abec3ea95b161853fc5a5",
+            "size": 162495
+        },
+        {
+            "name": "fabricskyboxes-0.7.4%2Bmc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/YBz7DOs8/versions/yhQrKNAJ/fabricskyboxes-0.7.4%2Bmc1.21.jar",
+            "sha1": "d7c80f23792afc6018da2477d46804114529afca",
+            "size": 206127
+        },
+        {
+            "name": "animatica-0.6.1%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/PRN43VSY/versions/LHBm6fEV/animatica-0.6.1%2B1.21.jar",
+            "sha1": "fd805fa03e25013b9fe824bf43f7d8a90f565c84",
+            "size": 71502
+        },
+        {
+            "name": "morechathistory-1.3.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/8qkXwOnk/versions/3siYJiWG/morechathistory-1.3.1.jar",
+            "sha1": "b4337ef9dc0a6cdf31d8f3df68a6542f64f3625e",
+            "size": 3573
+        },
+        {
+            "name": "fsb-interop-1.4.0%2Bmc1.21-build.54.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/HpdHOPOp/versions/A3n8pliV/fsb-interop-1.4.0%2Bmc1.21-build.54.jar",
+            "sha1": "ebd6d9f048b591cee8bbf90b23246f3369161868",
+            "size": 73307
+        },
+        {
+            "name": "dynamiccrosshair-8.0%2B1.21-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/ZcR9weSm/versions/f5ZXlx3Q/dynamiccrosshair-8.0%2B1.21-fabric.jar",
+            "sha1": "49e153efedf976b6b8895755f1d8f53aa35edf03",
+            "size": 495822
+        },
+        {
+            "name": "CraftPresence-2.4.0%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/3Udkfl92/CraftPresence-2.4.0%2B1.21.jar",
+            "sha1": "5b1be2622d0610685fe9ee69e0be74e28c820f95",
+            "size": 2463591
+        },
+        {
+            "name": "rrls-5.0.0%2Bmc1.21-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/ZP7xHXtw/versions/sQBrz3ML/rrls-5.0.0%2Bmc1.21-fabric.jar",
+            "sha1": "d923bbf2271915d36bc1229cb650d08f027a484a",
+            "size": 164891
+        },
+        {
+            "name": "cloth-config-15.0.127-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/9s6osm5g/versions/Yc8omJNb/cloth-config-15.0.127-fabric.jar",
+            "sha1": "d2cef696bbf70a07075b798e541e8c98c34ddd2d",
+            "size": 1144382
+        },
+        {
+            "name": "Controlify-2.0.0-beta.12%2B1.21-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/DOUdJVEm/versions/WtY06yYw/Controlify-2.0.0-beta.12%2B1.21-fabric.jar",
+            "sha1": "436e2dd95d2dfad9279841fad524d3ed92cf0ef1",
+            "size": 2725372
+        },
+        {
+            "name": "YetAnotherConfigLib-3.5.0%2B1.21-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/1eAoo2KR/versions/Y8Wa10Re/YetAnotherConfigLib-3.5.0%2B1.21-fabric.jar",
+            "sha1": "c58dab87a7b62d0b3812c97fa69381ae041a1439",
+            "size": 1150467
+        },
+        {
+            "name": "sodium-shadowy-path-blocks-3.3.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/EIa1eiMm/versions/hnQBKLCn/sodium-shadowy-path-blocks-3.3.0.jar",
+            "sha1": "96e0844be3843e3973ffe5eabf17a67affe66e61",
+            "size": 55302
+        },
+        {
+            "name": "BadOptimizations-2.1.3-1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/eCxTPnVB/BadOptimizations-2.1.3-1.21.jar",
+            "sha1": "33bc48900ab19e5d31ff737872bbd06b93bc40c2",
+            "size": 91218
+        },
+        {
+            "name": "DetailArmorBar-2.6.3%2B1.21-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/hAt6ty93/versions/s06JVdiG/DetailArmorBar-2.6.3%2B1.21-fabric.jar",
+            "sha1": "3df7ada08111284541ec4892e2f37d84cf131b7a",
+            "size": 52793
+        },
+        {
+            "name": "Resourcify%20%281.21%2B-fabric%29-1.4.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/RLzHAoZe/versions/xU2rikgu/Resourcify%20%281.21%2B-fabric%29-1.4.0.jar",
+            "sha1": "6ffa2d142f874181e59b8daf7116b137b41fafb2",
+            "size": 2427164
+        },
+        {
+            "name": "fabric-language-kotlin-1.11.0%2Bkotlin.2.0.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/Ha28R6CL/versions/afsFajDC/fabric-language-kotlin-1.11.0%2Bkotlin.2.0.0.jar",
+            "sha1": "4f5b3f0d773c4cc9e79d2f5ede3a637e78737f6d",
+            "size": 7015315
+        },
+        {
+            "name": "forcecloseloadingscreen-2.2.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/blWBX5n1/versions/UwDrIjNb/forcecloseloadingscreen-2.2.2.jar",
+            "sha1": "18d775e4539d65ea80c422f3b576a5590af4cce1",
+            "size": 112406
+        },
+        {
+            "name": "explosive-enhancement-1.2.3-1.21.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/OSQ8mw2r/versions/JLYnnbUi/explosive-enhancement-1.2.3-1.21.0.jar",
+            "sha1": "9bcbc4ee4def3da192735f9cbd04c17569df3fb0",
+            "size": 99370
         }
     ]
 }
