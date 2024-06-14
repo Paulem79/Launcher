@@ -257,6 +257,12 @@
             "downloadURL": "https://cdn.modrinth.com/data/na1dL51S/versions/xoq7hD8B/durabilityplus_1.20.5-1.1.0.jar",
             "sha1": "a88ed1d86039a47b79e68c73c43631a3835f14e7",
             "size": 8210
+        },
+        {
+            "name": "Zoomify-2.13.5+1.21.jar",
+            "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/Zoomify-2.13.5+1.21.jar",
+            "sha1": "9d2ef80899877c54c24c35b0fb2965de8311126a",
+            "size": 991274
         }
     ]
 }
