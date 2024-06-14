@@ -5,6 +5,12 @@
             "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.2.jar",
             "sha1": "8d0ee09faa88573c01b1896061d78aac3cfda00e",
             "size": 11638
+        },
+        {
+            "name": "fabric-api-0.100.1%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/HXzEJYgV/fabric-api-0.100.1%2B1.21.jar",
+            "sha1": "63848b365c036a89e4aba51d14d6dc8301e32b27",
+            "size": 2219441
         }
     ]
 }
