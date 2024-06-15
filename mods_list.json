@@ -462,6 +462,18 @@
             "sha1": "7d01b39bdb2efcc487fedbdf2eff86315a600946",
             "size": 659540
         },
+        {
+            "name": "basicweapons-1.2.6.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/sc2Pektv/versions/JsONNvkB/basicweapons-1.2.6.jar",
+            "sha1": "8aa4db5508cf2648621ac01b0f520c40eb44aa20",
+            "size": 151847
+        },
+        {
+            "name": "blockus-2.9.1%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/zFiY2Go0/versions/LSQaGN5A/blockus-2.9.1%2B1.21.jar",
+            "sha1": "862b7045afaf33956d17d3cbe22bdeec726ee5e4",
+            "size": 6056982
+        }
     ],
     "curseFiles": [
         {
