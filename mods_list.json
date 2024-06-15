@@ -49,12 +49,6 @@
             "size": 77428
         },
         {
-            "name": "continuity-3.0.0-beta.5%2B1.21.jar",
-            "downloadURL": "https://cdn.modrinth.com/data/1IjD5062/versions/NksUpFjf/continuity-3.0.0-beta.5%2B1.21.jar",
-            "sha1": "16d31a39e85dc10cdff4e06198a1bb26b4b82427",
-            "size": 1007136
-        },
-        {
             "name": "dynamic-fps-3.4.3%2Bminecraft-1.21.0-fabric.jar",
             "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/jeq5Pk2P/dynamic-fps-3.4.3%2Bminecraft-1.21.0-fabric.jar",
             "sha1": "40fa85ae61c152a417aaee0a0d012ffb632c16e8",
@@ -413,6 +407,12 @@
             "downloadURL": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/XYBqWKD2/BadOptimizations-2.1.4-1.21.jar",
             "sha1": "2338c2382537de70388a2f0f2a7b60ee0512afce",
             "size": 91292
+        },
+        {
+            "name": "Philips-Ruins1.21-1.2%5BFabric%5D.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/iUUUhSx8/Philips-Ruins1.21-1.2%5BFabric%5D.jar",
+            "sha1": "bb06a44cf42bb4a8f3a71ca9523204c722bd88cc",
+            "size": 1487056
         }
     ]
 }
