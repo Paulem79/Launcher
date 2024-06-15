@@ -269,6 +269,157 @@
             "downloadURL": "https://cdn.modrinth.com/data/ZcR9weSm/versions/8QA0JAbA/dynamiccrosshair-8.0.1%2B1.21-fabric.jar",
             "sha1": "21432e3d36fddbe4d85ddd7d9f82796aeb0a984d",
             "size": 495859
+        },
+        
+        {
+            "name": "areas-1.21.0-5.8.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/NWvsqJ2Z/versions/lZp5IcJ2/areas-1.21.0-5.8.jar",
+            "sha1": "ac1e6872123a4565cc723c690f53470f47e9055c",
+            "size": 105149
+        },
+        {
+            "name": "advancednetherite-fabric-2.1.5-1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/CFX9ftUJ/versions/tbzPiOQy/advancednetherite-fabric-2.1.5-1.21.jar",
+            "sha1": "5d3452676c4fca886ead9da516cb6d9f1de54c5c",
+            "size": 504938
+        },
+        {
+            "name": "amethystequipment-v1.0.2-fabric-1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/UUffNxLR/versions/IExmVBYf/amethystequipment-v1.0.2-fabric-1.21.jar",
+            "sha1": "f08fc77d2ef15a445ed715d30572d605c54d69ff",
+            "size": 205721
+        },
+        {
+            "name": "architectury-13.0.1-fabric.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/4JZAlpn7/architectury-13.0.1-fabric.jar",
+            "sha1": "13e7a2613832a438707beb780447149f807c24b6",
+            "size": 600756
+        },
+        {
+            "name": "WilderWild-2.4.3-Fabric%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/AtHRJSUW/versions/YOM7p2mQ/WilderWild-2.4.3-Fabric%2B1.21.jar",
+            "sha1": "54e60632275c5c289dbd5d7d2bc746ed3cdaad8d",
+            "size": 56453257
+        },
+        {
+            "name": "waystones-fabric-1.21-21.0.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/tFOFXxNF/waystones-fabric-1.21-21.0.1.jar",
+            "sha1": "7723269d13942084c7031bac415757cd2c6af45a",
+            "size": 832290
+        },
+        {
+            "name": "toms_storage_fabric-1.21-2.0.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/fbgYsydq/toms_storage_fabric-1.21-2.0.0.jar",
+            "sha1": "c10a34ae928db3f145d0551abef2c253887aa946",
+            "size": 1839049
+        },
+        {
+            "name": "stackrefill-1.21.0-4.4.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/mQWkB9ON/versions/xn9KY6LE/stackrefill-1.21.0-4.4.jar",
+            "sha1": "18314154238cdd79033082d9c40b548c8fcd3b8f",
+            "size": 46563
+        },
+        {
+            "name": "snowyleavesplus-mc1.21-pre4-0.1.11.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/of7wIinq/versions/WaKMtlji/snowyleavesplus-mc1.21-pre4-0.1.11.jar",
+            "sha1": "2feaf048ba6e10b8ffe4d0b3443a7125b754e055",
+            "size": 171458
+        },
+        {
+            "name": "SnowRealMagic-1.21-Fabric-11.0.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/iJNje1E8/versions/HG18S1WB/SnowRealMagic-1.21-Fabric-11.0.0.jar",
+            "sha1": "863c70b871f64ea4f641d9e73fd4877b43967d6b",
+            "size": 184713
+        },
+        {
+            "name": "SimpleCopperPipes-2.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/9r4ZkgSN/versions/8WV3U3dD/SimpleCopperPipes-2.0.jar",
+            "sha1": "150bb66fa93d48a8809eb02abc7b889cc38b46ce",
+            "size": 1616519
+        },
+        {
+            "name": "FrozenLib-1.7.3-Fabric%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/9KawNmQc/versions/9IWKUNG5/FrozenLib-1.7.3-Fabric%2B1.21.jar",
+            "sha1": "2d7bb4ce6c1ebc4b221174bb795f218e69e42c8c",
+            "size": 1387817
+        },
+        {
+            "name": "realisticbees-1.21.0-3.9.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/tG6HkcWx/versions/O8HVT0z4/realisticbees-1.21.0-3.9.jar",
+            "sha1": "1e556c4a232762f7d5694ddcfc9e1e72f8a2583f",
+            "size": 57628
+        },
+        {
+            "name": "randomvillagenames-1.21.0-3.6.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/N0ytbukx/versions/q1uOElBJ/randomvillagenames-1.21.0-3.6.jar",
+            "sha1": "fd71e05dc40288d9ffd7eb2666fe0d9af73291c2",
+            "size": 43845
+        },
+        {
+            "name": "raknetify-fabric-0.1.0%2Balpha.5.128-all.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/5IovSY3u/versions/gchRoKmg/raknetify-fabric-0.1.0%2Balpha.5.128-all.jar",
+            "sha1": "9f3e9018352ee331e61ebb010e91b6c3b41a0972",
+            "size": 687820
+        },
+        {
+            "name": "passiveshield-1.21.0-3.4.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/iQBrasyH/versions/kwfX67rG/passiveshield-1.21.0-3.4.jar",
+            "sha1": "42f7c68dc63931394ad3970c16db47d42fec55f4",
+            "size": 44746
+        },
+        {
+            "name": "Necronomicon-Fabric-1.4.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/P1Kv5EAO/versions/twWimVNr/Necronomicon-Fabric-1.4.2.jar",
+            "sha1": "563eef8154c73e099012f58f1b12a011e9d2b5b2",
+            "size": 56083
+        },
+        {
+            "name": "Kiwi-1.21-Fabric-15.0.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/ufdDoWPd/versions/w2J0gwoG/Kiwi-1.21-Fabric-15.0.1.jar",
+            "sha1": "eb1d3b36963e973b271fa0e2b7f75f19b2575272",
+            "size": 914724
+        },
+        {
+            "name": "guardvillagers-2.1.0-1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/59rkB3YY/versions/agfIZx8L/guardvillagers-2.1.0-1.21.jar",
+            "sha1": "23f0f462177ebe9963099341c430c597c8df9ae8",
+            "size": 305619
+        },
+        {
+            "name": "GrassOverhaul-MC1.21-Fabric-1.0.0.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/Eeb4VkF6/versions/1b9JitHi/GrassOverhaul-MC1.21-Fabric-1.0.0.jar",
+            "sha1": "2ab17b3061f4a0cb6dc05bc71938adf115bba4d5",
+            "size": 111726
+        },
+        {
+            "name": "enchanted-vertical-slabs-2.0.0-fabric-mc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/TG1cHkRf/versions/qziN1DyP/enchanted-vertical-slabs-2.0.0-fabric-mc1.21.jar",
+            "sha1": "326e2dcaebae79000359a09a5d3d561f993702b8",
+            "size": 233846
+        },
+        {
+            "name": "connectiblechains-2.4.1%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/ykSfIgTw/versions/cb9rzzkK/connectiblechains-2.4.1%2B1.21.jar",
+            "sha1": "f4093d1e834f8e6102c0604b5e4f72997b77d352",
+            "size": 147465
+        },
+        {
+            "name": "collective-1.21.0-7.61.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/rfJmYdeg/collective-1.21.0-7.61.jar",
+            "sha1": "434ee4c690220f144a9edd2ae4be8f8eec3b2869",
+            "size": 862148
+        },
+        {
+            "name": "cinderscapes-5.0.0-beta.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/QC4wcUXZ/versions/MHELy3iO/cinderscapes-5.0.0-beta.2.jar",
+            "sha1": "7da9032a3eeacada275ee1e6a6cbebdba82cf480",
+            "size": 14813869
+        },
+        {
+            "name": "chisel%2Bfabric%2B1.21-1.7.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/fMWIAdOc/chisel%2Bfabric%2B1.21-1.7.2.jar",
+            "sha1": "6ab0f554b0410fb9ccdbb2bb8155e77d3b85a1c9",
+            "size": 7875210
         }
     ]
 }
