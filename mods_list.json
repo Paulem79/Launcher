@@ -151,12 +151,6 @@
             "size": 73307
         },
         {
-            "name": "dynamiccrosshair-8.0%2B1.21-fabric.jar",
-            "downloadURL": "https://cdn.modrinth.com/data/ZcR9weSm/versions/f5ZXlx3Q/dynamiccrosshair-8.0%2B1.21-fabric.jar",
-            "sha1": "49e153efedf976b6b8895755f1d8f53aa35edf03",
-            "size": 495822
-        },
-        {
             "name": "CraftPresence-2.4.0%2B1.21.jar",
             "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/3Udkfl92/CraftPresence-2.4.0%2B1.21.jar",
             "sha1": "5b1be2622d0610685fe9ee69e0be74e28c820f95",
@@ -185,12 +179,6 @@
             "downloadURL": "https://cdn.modrinth.com/data/EIa1eiMm/versions/hnQBKLCn/sodium-shadowy-path-blocks-3.3.0.jar",
             "sha1": "96e0844be3843e3973ffe5eabf17a67affe66e61",
             "size": 55302
-        },
-        {
-            "name": "BadOptimizations-2.1.3-1.21.jar",
-            "downloadURL": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/eCxTPnVB/BadOptimizations-2.1.3-1.21.jar",
-            "sha1": "33bc48900ab19e5d31ff737872bbd06b93bc40c2",
-            "size": 91218
         },
         {
             "name": "DetailArmorBar-2.6.3%2B1.21-fabric.jar",
@@ -379,12 +367,6 @@
             "size": 914724
         },
         {
-            "name": "guardvillagers-2.1.0-1.21.jar",
-            "downloadURL": "https://cdn.modrinth.com/data/59rkB3YY/versions/agfIZx8L/guardvillagers-2.1.0-1.21.jar",
-            "sha1": "23f0f462177ebe9963099341c430c597c8df9ae8",
-            "size": 305619
-        },
-        {
             "name": "GrassOverhaul-MC1.21-Fabric-1.0.0.jar",
             "downloadURL": "https://cdn.modrinth.com/data/Eeb4VkF6/versions/1b9JitHi/GrassOverhaul-MC1.21-Fabric-1.0.0.jar",
             "sha1": "2ab17b3061f4a0cb6dc05bc71938adf115bba4d5",
@@ -425,6 +407,12 @@
             "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/nEvbheGT/balm-fabric-1.21-21.0.5.jar",
             "sha1": "c6a8449af7be7e527d2b59d0620d57387f5fce78",
             "size": 425887
+        },
+        {
+            "name": "BadOptimizations-2.1.4-1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/XYBqWKD2/BadOptimizations-2.1.4-1.21.jar",
+            "sha1": "2338c2382537de70388a2f0f2a7b60ee0512afce",
+            "size": 91292
         }
     ]
 }
