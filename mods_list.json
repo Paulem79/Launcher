@@ -413,6 +413,60 @@
             "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/iUUUhSx8/Philips-Ruins1.21-1.2%5BFabric%5D.jar",
             "sha1": "bb06a44cf42bb4a8f3a71ca9523204c722bd88cc",
             "size": 1487056
+        },
+        {
+            "name": "appleskin-fabric-mc1.21-3.0.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/EsAfCjCV/versions/YxFxnyd4/appleskin-fabric-mc1.21-3.0.2.jar",
+            "sha1": "d807aee0e14788789ecbef2979fb1807adc1bd96",
+            "size": 1080749
+        },
+        {
+            "name": "BiomesOPlenty-fabric-1.21-21.0.0.3.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/HXF82T3G/versions/ZOXXDdBL/BiomesOPlenty-fabric-1.21-21.0.0.3.jar",
+            "sha1": "a4b2472a2f0a679090b89bca424d822344309124",
+            "size": 22330769
+        },
+        {
+            "name": "GlitchCore-fabric-1.21-2.0.0.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/s3dmwKy5/versions/2WNlbRbv/GlitchCore-fabric-1.21-2.0.0.1.jar",
+            "sha1": "da53c54d37a3909e90202a2bc6bbd8208437e1e0",
+            "size": 329183
+        },
+        {
+            "name": "TerraBlender-fabric-1.21-4.0.0.1.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/kkmrDlKT/versions/lN4iXEkx/TerraBlender-fabric-1.21-4.0.0.1.jar",
+            "sha1": "1b49d9d5768ca415f144229a555afe621af1f122",
+            "size": 332041
+        },
+        {
+            "name": "elytratrims-fabric-3.2.0%2B1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/XpzGz7KD/versions/BgLzQbAt/elytratrims-fabric-3.2.0%2B1.21.jar",
+            "sha1": "74a254af2c72810e4b9e98656d96f68a0fde479c",
+            "size": 566565
+        },
+        {
+            "name": "nerb-1.21-0.4-FABRIC.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/bQh7xzFq/versions/bXw1XdeN/nerb-1.21-0.4-FABRIC.jar",
+            "sha1": "e2384e2c4528c0a91c99f271e0b30d6f5ef715af",
+            "size": 10598
+        },
+        {
+            "name": "SereneSeasons-fabric-1.21-10.0.0.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/e0bNACJD/versions/kCqKV59a/SereneSeasons-fabric-1.21-10.0.0.2.jar",
+            "sha1": "75b4af38a4edb2de2bdb85d847548fa4d80508a9",
+            "size": 384330
+        },
+        {
+            "name": "ToughAsNails-fabric-1.21-10.0.0.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/ge1sOdFH/versions/8YR110HE/ToughAsNails-fabric-1.21-10.0.0.2.jar",
+            "sha1": "7d01b39bdb2efcc487fedbdf2eff86315a600946",
+            "size": 659540
+        },
+    ],
+    "curseFiles": [
+        {
+            "projectID": "636540",
+            "fileID": "5424923"
         }
     ]
 }
