@@ -473,6 +473,12 @@
             "downloadURL": "https://cdn.modrinth.com/data/zFiY2Go0/versions/LSQaGN5A/blockus-2.9.1%2B1.21.jar",
             "sha1": "862b7045afaf33956d17d3cbe22bdeec726ee5e4",
             "size": 6056982
+        },
+        {
+            "name": "CullLessLeaves-1.3.0.jar",
+            "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/CullLessLeaves-1.3.0.jar",
+            "sha1": "8971434d3120ebcfd7908e383db4c5de1817fff3",
+            "size": 23228
         }
     ],
     "curseFiles": [
