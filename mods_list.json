@@ -25,12 +25,6 @@
             "size": 2707221
         },
         {
-            "name": "modmenu-11.0.0-beta.1.jar",
-            "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/9FL4cmP7/modmenu-11.0.0-beta.1.jar",
-            "sha1": "57958151898eec96499ad0d221c8c3c3f4390e36",
-            "size": 754430
-        },
-        {
             "name": "sodium-extra-0.5.7%2Bmc1.21.jar",
             "downloadURL": "https://cdn.modrinth.com/data/PtjYWJkn/versions/uuhVlRGv/sodium-extra-0.5.7%2Bmc1.21.jar",
             "sha1": "13a65186e5ba363e0ed3216303bc67a173c050fe",
@@ -367,12 +361,6 @@
             "size": 111726
         },
         {
-            "name": "enchanted-vertical-slabs-2.0.0-fabric-mc1.21.jar",
-            "downloadURL": "https://cdn.modrinth.com/data/TG1cHkRf/versions/qziN1DyP/enchanted-vertical-slabs-2.0.0-fabric-mc1.21.jar",
-            "sha1": "326e2dcaebae79000359a09a5d3d561f993702b8",
-            "size": 233846
-        },
-        {
             "name": "connectiblechains-2.4.1%2B1.21.jar",
             "downloadURL": "https://cdn.modrinth.com/data/ykSfIgTw/versions/cb9rzzkK/connectiblechains-2.4.1%2B1.21.jar",
             "sha1": "f4093d1e834f8e6102c0604b5e4f72997b77d352",
@@ -479,6 +467,18 @@
             "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/CullLessLeaves-1.3.0.jar",
             "sha1": "8971434d3120ebcfd7908e383db4c5de1817fff3",
             "size": 23228
+        },
+        {
+            "name": "enchanted-vertical-slabs-2.0.1-fabric-mc1.21.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/TG1cHkRf/versions/wqXxKT1W/enchanted-vertical-slabs-2.0.1-fabric-mc1.21.jar",
+            "sha1": "45e99caba1e08d3a80a0874e0676c329306c9d75",
+            "size": 233501
+        },
+        {
+            "name": "modmenu-11.0.0-rc.2.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/I7OSH8Gw/modmenu-11.0.0-rc.2.jar",
+            "sha1": "9e86614a0a30f07350e8af6f2aacebdfcad7aa25",
+            "size": 971585
         }
     ],
     "curseFiles": [
