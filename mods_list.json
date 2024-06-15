@@ -270,7 +270,6 @@
             "sha1": "21432e3d36fddbe4d85ddd7d9f82796aeb0a984d",
             "size": 495859
         },
-        
         {
             "name": "areas-1.21.0-5.8.jar",
             "downloadURL": "https://cdn.modrinth.com/data/NWvsqJ2Z/versions/lZp5IcJ2/areas-1.21.0-5.8.jar",
@@ -420,6 +419,12 @@
             "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/fMWIAdOc/chisel%2Bfabric%2B1.21-1.7.2.jar",
             "sha1": "6ab0f554b0410fb9ccdbb2bb8155e77d3b85a1c9",
             "size": 7875210
+        },
+        {
+            "name": "balm-fabric-1.21-21.0.5.jar",
+            "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/nEvbheGT/balm-fabric-1.21-21.0.5.jar",
+            "sha1": "c6a8449af7be7e527d2b59d0620d57387f5fce78",
+            "size": 425887
         }
     ]
 }
