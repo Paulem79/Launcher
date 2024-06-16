@@ -409,12 +409,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/EsAfCjCV/versions/YxFxnyd4/appleskin-fabric-mc1.21-3.0.2.jar"
     },
     {
-      "name": "BiomesOPlenty-fabric-1.21-21.0.0.3.jar",
-      "sha1": "a4b2472a2f0a679090b89bca424d822344309124",
-      "size": 22330769,
-      "downloadURL": "https://cdn.modrinth.com/data/HXF82T3G/versions/ZOXXDdBL/BiomesOPlenty-fabric-1.21-21.0.0.3.jar"
-    },
-    {
       "name": "GlitchCore-fabric-1.21-2.0.0.1.jar",
       "sha1": "da53c54d37a3909e90202a2bc6bbd8208437e1e0",
       "size": 329183,
@@ -491,6 +485,12 @@
       "sha1": "C88D34E07E5CF3151191BBBACC995D0937897669",
       "size": 76853,
       "downloadURL": "https://cdn.modrinth.com/data/rI0hvYcd/versions/2618jVtS/visuality-0.7.4%2B1.21.jar"
+    },
+    {
+      "name": "BiomesOPlenty-fabric-1.21-21.0.0.5.jar",
+      "sha1": "F1494D96545EDD85887DC01700643FE4BA7DAA44",
+      "size": 22335325,
+      "downloadURL": "https://cdn.modrinth.com/data/HXF82T3G/versions/SkdQxCUH/BiomesOPlenty-fabric-1.21-21.0.0.5.jar"
     }
   ],
   "curseFiles": [
