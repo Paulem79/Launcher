@@ -1,12 +1,6 @@
 {
   "mods": [
     {
-      "name": "auto-connect-2.1.2.jar",
-      "sha1": "8d0ee09faa88573c01b1896061d78aac3cfda00e",
-      "size": 11638,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.2.jar"
-    },
-    {
       "name": "fabric-api-0.100.1%2B1.21.jar",
       "sha1": "63848b365c036a89e4aba51d14d6dc8301e32b27",
       "size": 2219441,
@@ -469,12 +463,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/TG1cHkRf/versions/wqXxKT1W/enchanted-vertical-slabs-2.0.1-fabric-mc1.21.jar"
     },
     {
-      "name": "modmenu-11.0.0-rc.2.jar",
-      "sha1": "9e86614a0a30f07350e8af6f2aacebdfcad7aa25",
-      "size": 971585,
-      "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/I7OSH8Gw/modmenu-11.0.0-rc.2.jar"
-    },
-    {
       "name": "ferritecore-7.0.0-fabric.jar",
       "sha1": "95B18B0F1673BBBE328812C3052CC1A921591F0F",
       "size": 117333,
@@ -503,6 +491,18 @@
       "sha1": "2E8A6380EC390465F0666DA8E1E16A383CEC8C60",
       "size": 103858,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/indium-1.0.32-dev.1415284+mc1.21.jar"
+    },
+    {
+      "name": "auto-connect-2.1.3.jar",
+      "sha1": "9515396A29F640AE15043347F87B305D4B9ED423",
+      "size": 12554,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.3.jar"
+    },
+    {
+      "name": "modmenu-11.0.0-rc.4.jar",
+      "sha1": "7337C3EE2BECAE0B2F4DF6182716AC672387B6B5",
+      "size": 971581,
+      "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/jnj30PDT/modmenu-11.0.0-rc.4.jar"
     }
   ],
   "curseFiles": [
@@ -520,7 +520,7 @@
     },
     {
       "projectID": 870275,
-      "fileID": 5430672
+      "fileID": 5433060
     }
   ]
 }
