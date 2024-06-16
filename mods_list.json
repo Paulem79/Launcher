@@ -439,12 +439,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/e0bNACJD/versions/kCqKV59a/SereneSeasons-fabric-1.21-10.0.0.2.jar"
     },
     {
-      "name": "ToughAsNails-fabric-1.21-10.0.0.2.jar",
-      "sha1": "7d01b39bdb2efcc487fedbdf2eff86315a600946",
-      "size": 659540,
-      "downloadURL": "https://cdn.modrinth.com/data/ge1sOdFH/versions/8YR110HE/ToughAsNails-fabric-1.21-10.0.0.2.jar"
-    },
-    {
       "name": "basicweapons-1.2.6.jar",
       "sha1": "8aa4db5508cf2648621ac01b0f520c40eb44aa20",
       "size": 151847,
@@ -491,6 +485,18 @@
       "sha1": "F1494D96545EDD85887DC01700643FE4BA7DAA44",
       "size": 22335325,
       "downloadURL": "https://cdn.modrinth.com/data/HXF82T3G/versions/SkdQxCUH/BiomesOPlenty-fabric-1.21-21.0.0.5.jar"
+    },
+    {
+      "name": "puzzle-1.6.3%2B1.21.jar",
+      "sha1": "7A0498824BBCA3AE75F51FA582025E758F8B1F20",
+      "size": 142150,
+      "downloadURL": "https://cdn.modrinth.com/data/3IuO68q1/versions/2pBwdDy2/puzzle-1.6.3%2B1.21.jar"
+    },
+    {
+      "name": "indium-1.0.32-dev.1415284+mc1.21.jar",
+      "sha1": "2E8A6380EC390465F0666DA8E1E16A383CEC8C60",
+      "size": 103858,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/indium-1.0.32-dev.1415284+mc1.21.jar"
     }
   ],
   "curseFiles": [
