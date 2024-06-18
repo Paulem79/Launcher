@@ -1,12 +1,6 @@
 {
   "mods": [
     {
-      "name": "fabric-api-0.100.1%2B1.21.jar",
-      "sha1": "63848b365c036a89e4aba51d14d6dc8301e32b27",
-      "size": 2219441,
-      "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/HXzEJYgV/fabric-api-0.100.1%2B1.21.jar"
-    },
-    {
       "name": "sodium-fabric-0.5.9%2Bmc1.21.jar",
       "sha1": "3b1ad241af59c32f6ed016c8a285429bfb5c5f86",
       "size": 979834,
@@ -193,12 +187,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/OSQ8mw2r/versions/JLYnnbUi/explosive-enhancement-1.2.3-1.21.0.jar"
     },
     {
-      "name": "BetterF3-11.0.0-Fabric-1.21.jar",
-      "sha1": "b916c4d03371412ef38d9e176afbae246dd09e6a",
-      "size": 1802640,
-      "downloadURL": "https://cdn.modrinth.com/data/8shC1gFX/versions/v0mwC68L/BetterF3-11.0.0-Fabric-1.21.jar"
-    },
-    {
       "name": "entityculling-fabric-1.6.6-mc1.21.jar",
       "sha1": "cae57526503e6fff155d6168fd271c9f1f4d029b",
       "size": 65363,
@@ -373,12 +361,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/fMWIAdOc/chisel%2Bfabric%2B1.21-1.7.2.jar"
     },
     {
-      "name": "balm-fabric-1.21-21.0.5.jar",
-      "sha1": "c6a8449af7be7e527d2b59d0620d57387f5fce78",
-      "size": 425887,
-      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/nEvbheGT/balm-fabric-1.21-21.0.5.jar"
-    },
-    {
       "name": "BadOptimizations-2.1.4-1.21.jar",
       "sha1": "2338c2382537de70388a2f0f2a7b60ee0512afce",
       "size": 91292,
@@ -427,12 +409,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/e0bNACJD/versions/kCqKV59a/SereneSeasons-fabric-1.21-10.0.0.2.jar"
     },
     {
-      "name": "basicweapons-1.2.6.jar",
-      "sha1": "8aa4db5508cf2648621ac01b0f520c40eb44aa20",
-      "size": 151847,
-      "downloadURL": "https://cdn.modrinth.com/data/sc2Pektv/versions/JsONNvkB/basicweapons-1.2.6.jar"
-    },
-    {
       "name": "blockus-2.9.1%2B1.21.jar",
       "sha1": "862b7045afaf33956d17d3cbe22bdeec726ee5e4",
       "size": 6056982,
@@ -473,12 +449,6 @@
       "sha1": "7A0498824BBCA3AE75F51FA582025E758F8B1F20",
       "size": 142150,
       "downloadURL": "https://cdn.modrinth.com/data/3IuO68q1/versions/2pBwdDy2/puzzle-1.6.3%2B1.21.jar"
-    },
-    {
-      "name": "modmenu-11.0.0-rc.4.jar",
-      "sha1": "7337C3EE2BECAE0B2F4DF6182716AC672387B6B5",
-      "size": 971581,
-      "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/jnj30PDT/modmenu-11.0.0-rc.4.jar"
     },
     {
       "name": "indium-1.0.33%2Bmc1.21.jar",
@@ -569,6 +539,36 @@
       "sha1": "77FE0DEE7F8E1DA013AFA9E53352B0D74447F826",
       "size": 12972,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.4.jar"
+    },
+    {
+      "name": "basicweapons-1.2.7.jar",
+      "sha1": "F2D7D59FC3C8C02E49A18E06A51D47358DC5EDA4",
+      "size": 152562,
+      "downloadURL": "https://cdn.modrinth.com/data/sc2Pektv/versions/YBUTHRag/basicweapons-1.2.7.jar"
+    },
+    {
+      "name": "fabric-api-0.100.3%2B1.21.jar",
+      "sha1": "4243A5C9F936EE5C2404DC2C9E27BF119955DA49",
+      "size": 2236205,
+      "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/1cXs6RWI/fabric-api-0.100.3%2B1.21.jar"
+    },
+    {
+      "name": "balm-fabric-1.21-21.0.7.jar",
+      "sha1": "BCBE27C964D19D5BF3E0A0F6ADD50BC190A954B9",
+      "size": 425902,
+      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/DJFGAs9Y/balm-fabric-1.21-21.0.7.jar"
+    },
+    {
+      "name": "modmenu-11.0.0.jar",
+      "sha1": "D2B353F3F491CE8029F33CC17B69D80BB465842D",
+      "size": 975152,
+      "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/lJ1xXMce/modmenu-11.0.0.jar"
+    },
+    {
+      "name": "BetterF3-11.0.1-Fabric-1.21.jar",
+      "sha1": "EB48BA676E4C0779576B0F49C28FFD47F0EAE561",
+      "size": 1802691,
+      "downloadURL": "https://cdn.modrinth.com/data/8shC1gFX/versions/sXO3idkS/BetterF3-11.0.1-Fabric-1.21.jar"
     }
   ],
   "curseFiles": [
