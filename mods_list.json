@@ -247,12 +247,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/4JZAlpn7/architectury-13.0.1-fabric.jar"
     },
     {
-      "name": "WilderWild-2.4.3-Fabric%2B1.21.jar",
-      "sha1": "54e60632275c5c289dbd5d7d2bc746ed3cdaad8d",
-      "size": 56453257,
-      "downloadURL": "https://cdn.modrinth.com/data/AtHRJSUW/versions/YOM7p2mQ/WilderWild-2.4.3-Fabric%2B1.21.jar"
-    },
-    {
       "name": "waystones-fabric-1.21-21.0.1.jar",
       "sha1": "7723269d13942084c7031bac415757cd2c6af45a",
       "size": 832290,
@@ -347,12 +341,6 @@
       "sha1": "7da9032a3eeacada275ee1e6a6cbebdba82cf480",
       "size": 14813869,
       "downloadURL": "https://cdn.modrinth.com/data/QC4wcUXZ/versions/MHELy3iO/cinderscapes-5.0.0-beta.2.jar"
-    },
-    {
-      "name": "chisel%2Bfabric%2B1.21-1.7.2.jar",
-      "sha1": "6ab0f554b0410fb9ccdbb2bb8155e77d3b85a1c9",
-      "size": 7875210,
-      "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/fMWIAdOc/chisel%2Bfabric%2B1.21-1.7.2.jar"
     },
     {
       "name": "BadOptimizations-2.1.4-1.21.jar",
