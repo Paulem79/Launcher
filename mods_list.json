@@ -581,6 +581,18 @@
       "sha1": "95EA1D9173D13382CB03193CE76E63C5C00F41BF",
       "size": 85330958,
       "downloadURL": "https://cdn.modrinth.com/data/fM515JnW/versions/fMT5SCgk/AmbientSounds_FABRIC_v6.0.2_mc1.21.jar"
+    },
+    {
+      "name": "WilderWild-2.4.4-Fabric%2B1.21.jar",
+      "sha1": "6F5DA19251E9A23E40E798E98A91744E399727A8",
+      "size": 56453462,
+      "downloadURL": "https://cdn.modrinth.com/data/AtHRJSUW/versions/LNVU2H1u/WilderWild-2.4.4-Fabric%2B1.21.jar"
+    },
+    {
+      "name": "chisel%2Bfabric%2B1.21-1.7.3.jar",
+      "sha1": "9DCE8E32EEA69E3165AC3C70F7CB7BC4BDC1A50C",
+      "size": 7872389,
+      "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/kpH5ZPVq/chisel%2Bfabric%2B1.21-1.7.3.jar"
     }
   ],
   "curseFiles": [
