@@ -475,12 +475,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/x02cBj9Y/versions/ramqgou6/status-effect-bars-1.0.6.jar"
     },
     {
-      "name": "EnhancedVisuals_FABRIC_v1.7.2_mc1.21.jar",
-      "sha1": "F2EAA42D0F89AE8E4310301D843687BDC31A46DB",
-      "size": 4723893,
-      "downloadURL": "https://cdn.modrinth.com/data/KjL0jE2w/versions/CGJUS9Fl/EnhancedVisuals_FABRIC_v1.7.2_mc1.21.jar"
-    },
-    {
       "name": "CreativeCore_FABRIC_v2.11.34_mc1.21.jar",
       "sha1": "D5616D82A337A5D4835B94A2E017C7CB2D57A26D",
       "size": 1139068,
@@ -581,6 +575,12 @@
       "sha1": "9DCE8E32EEA69E3165AC3C70F7CB7BC4BDC1A50C",
       "size": 7872389,
       "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/kpH5ZPVq/chisel%2Bfabric%2B1.21-1.7.3.jar"
+    },
+    {
+      "name": "EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar",
+      "sha1": "D31BB2C8C29B2B36885134E90CBBB5EB9B52CC1A",
+      "size": 4728798,
+      "downloadURL": "https://cdn.modrinth.com/data/KjL0jE2w/versions/PWxOcrC6/EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar"
     }
   ],
   "curseFiles": [
