@@ -37,12 +37,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/jeq5Pk2P/dynamic-fps-3.4.3%2Bminecraft-1.21.0-fabric.jar"
     },
     {
-      "name": "modernfix-fabric-5.18.2%2Bmc1.21.jar",
-      "sha1": "17c498a5c0481836127754cd67cdbc688cb88c1d",
-      "size": 434062,
-      "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/f3UzsGPb/modernfix-fabric-5.18.2%2Bmc1.21.jar"
-    },
-    {
       "name": "entity_texture_features_fabric_1.21-6.1.1.jar",
       "sha1": "7d4a81b46b02c4292247e69d0113fd6a61b9c8d0",
       "size": 598709,
@@ -245,12 +239,6 @@
       "sha1": "13e7a2613832a438707beb780447149f807c24b6",
       "size": 600756,
       "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/4JZAlpn7/architectury-13.0.1-fabric.jar"
-    },
-    {
-      "name": "waystones-fabric-1.21-21.0.1.jar",
-      "sha1": "7723269d13942084c7031bac415757cd2c6af45a",
-      "size": 832290,
-      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/tFOFXxNF/waystones-fabric-1.21-21.0.1.jar"
     },
     {
       "name": "toms_storage_fabric-1.21-2.0.0.jar",
@@ -581,6 +569,60 @@
       "sha1": "D31BB2C8C29B2B36885134E90CBBB5EB9B52CC1A",
       "size": 4728798,
       "downloadURL": "https://cdn.modrinth.com/data/KjL0jE2w/versions/PWxOcrC6/EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar"
+    },
+    {
+      "name": "modernfix-fabric-5.18.3%2Bmc1.21.jar",
+      "sha1": "DC3F962A95D65B0D92BF49AE01A73E50153193C9",
+      "size": 434670,
+      "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/AFvoBfkx/modernfix-fabric-5.18.3%2Bmc1.21.jar"
+    },
+    {
+      "name": "waystones-fabric-1.21-21.0.2.jar",
+      "sha1": "22E939DE4BB034EE0718C30E565A189A2A364C2F",
+      "size": 831170,
+      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/dCTmnsnv/waystones-fabric-1.21-21.0.2.jar"
+    },
+    {
+      "name": "suggestion-tweaker-1.20.6-1.5.2-fabric.jar",
+      "sha1": "0EDFA0664E69632038E60C141E6206695119552E",
+      "size": 23557,
+      "downloadURL": "https://cdn.modrinth.com/data/MBLj38R0/versions/mmkX2a1K/suggestion-tweaker-1.20.6-1.5.2-fabric.jar"
+    },
+    {
+      "name": "fabrishot-1.14.0.jar",
+      "sha1": "1FB19F6EA6B9C0DDEC99BF59904BBD82B977476C",
+      "size": 51658,
+      "downloadURL": "https://cdn.modrinth.com/data/3qsfQtE9/versions/aKAvBwSt/fabrishot-1.14.0.jar"
+    },
+    {
+      "name": "betterbeds-fabric-1.4.0.jar",
+      "sha1": "18BC5C4F40FF6E47D65526A59244C9EA57B83E3F",
+      "size": 39918,
+      "downloadURL": "https://cdn.modrinth.com/data/kKwy3HU9/versions/ZPmX9Uy3/betterbeds-fabric-1.4.0.jar"
+    },
+    {
+      "name": "mcw-fences-1.1.2-mc1.21fabric.jar",
+      "sha1": "7AAB3AA6044464880D33F4C1320CDFBC2446CC80",
+      "size": 470698,
+      "downloadURL": "https://cdn.modrinth.com/data/GmwLse2I/versions/wlBMRxdf/mcw-fences-1.1.2-mc1.21fabric.jar"
+    },
+    {
+      "name": "CameraOverhaul-1.4.1-fabric-universal.jar",
+      "sha1": "64484033377FE7FDD2E008E5C1E6B113EB0C25A3",
+      "size": 57022,
+      "downloadURL": "https://cdn.modrinth.com/data/m0oRwcZx/versions/siH8aqXE/CameraOverhaul-1.4.1-fabric-universal.jar"
+    },
+    {
+      "name": "mcw-doors-1.1.1fabric-mc1.21.jar",
+      "sha1": "E4309627237F42B1CB3F861E2D5A8D9840A6D84F",
+      "size": 1176289,
+      "downloadURL": "https://cdn.modrinth.com/data/kNxa8z3e/versions/dVNlylHy/mcw-doors-1.1.1fabric-mc1.21.jar"
+    },
+    {
+      "name": "lambdynamiclights-2.3.4+1.21.jar",
+      "sha1": "E2F768013F7451184B5C4BD82BF68FE866D18F21",
+      "size": 355292,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/lambdynamiclights-2.3.4+1.21.jar"
     }
   ],
   "curseFiles": [
