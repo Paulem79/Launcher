@@ -121,12 +121,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/HpdHOPOp/versions/A3n8pliV/fsb-interop-1.4.0%2Bmc1.21-build.54.jar"
     },
     {
-      "name": "CraftPresence-2.4.0%2B1.21.jar",
-      "sha1": "5b1be2622d0610685fe9ee69e0be74e28c820f95",
-      "size": 2463591,
-      "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/3Udkfl92/CraftPresence-2.4.0%2B1.21.jar"
-    },
-    {
       "name": "rrls-5.0.0%2Bmc1.21-fabric.jar",
       "sha1": "d923bbf2271915d36bc1229cb650d08f027a484a",
       "size": 164891,
@@ -617,6 +611,18 @@
       "sha1": "E2F768013F7451184B5C4BD82BF68FE866D18F21",
       "size": 355292,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/lambdynamiclights-2.3.4+1.21.jar"
+    },
+    {
+      "name": "compact_storage-1.21-fabric-8.0.74.jar",
+      "sha1": "E4DB433B0BE3D9288A6FF8735F9A4205785F5737",
+      "size": 963044,
+      "downloadURL": "https://cdn.modrinth.com/data/CNYyGWn5/versions/MtIWTZQM/compact_storage-1.21-fabric-8.0.74.jar"
+    },
+    {
+      "name": "CraftPresence-2.4.2%2B1.21.jar",
+      "sha1": "0CAC3A668CA7FC5D2B0381A43D54B7110CBF0FD0",
+      "size": 2471991,
+      "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/BEhx5ZnQ/CraftPresence-2.4.2%2B1.21.jar"
     }
   ],
   "curseFiles": [
