@@ -205,12 +205,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/na1dL51S/versions/xoq7hD8B/durabilityplus_1.20.5-1.1.0.jar"
     },
     {
-      "name": "dynamiccrosshair-8.0.1%2B1.21-fabric.jar",
-      "sha1": "21432e3d36fddbe4d85ddd7d9f82796aeb0a984d",
-      "size": 495859,
-      "downloadURL": "https://cdn.modrinth.com/data/ZcR9weSm/versions/8QA0JAbA/dynamiccrosshair-8.0.1%2B1.21-fabric.jar"
-    },
-    {
       "name": "areas-1.21.0-5.8.jar",
       "sha1": "ac1e6872123a4565cc723c690f53470f47e9055c",
       "size": 105149,
@@ -623,6 +617,12 @@
       "sha1": "0CAC3A668CA7FC5D2B0381A43D54B7110CBF0FD0",
       "size": 2471991,
       "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/BEhx5ZnQ/CraftPresence-2.4.2%2B1.21.jar"
+    },
+    {
+      "name": "dynamiccrosshair-8.0.2%2B1.21-fabric.jar",
+      "sha1": "3A17A73FDACEADFBC8F5728B1B86DFD2AF619737",
+      "size": 495890,
+      "downloadURL": "https://cdn.modrinth.com/data/ZcR9weSm/versions/AjOd8bzj/dynamiccrosshair-8.0.2%2B1.21-fabric.jar"
     }
   ],
   "curseFiles": [
