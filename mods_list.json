@@ -623,6 +623,30 @@
       "sha1": "3A17A73FDACEADFBC8F5728B1B86DFD2AF619737",
       "size": 495890,
       "downloadURL": "https://cdn.modrinth.com/data/ZcR9weSm/versions/AjOd8bzj/dynamiccrosshair-8.0.2%2B1.21-fabric.jar"
+    },
+    {
+      "name": "FeyTweaks-1.21-1.2.8.jar",
+      "sha1": "65ABC62AF8BED2474E572F56434F25B0C437E1CC",
+      "size": 178615,
+      "downloadURL": "https://cdn.modrinth.com/data/Wa72oW2W/versions/XAG8m7Hj/FeyTweaks-1.21-1.2.8.jar"
+    },
+    {
+      "name": "do_a_barrel_roll-fabric-3.6.1%2B1.21.jar",
+      "sha1": "78816B91FB52A631278754B75EA662D547204955",
+      "size": 506912,
+      "downloadURL": "https://cdn.modrinth.com/data/6FtRfnLg/versions/CJFnOoi0/do_a_barrel_roll-fabric-3.6.1%2B1.21.jar"
+    },
+    {
+      "name": "cicada-lib-0.8.0%2B1.21-and-above.jar",
+      "sha1": "41E24F6F65524C41B33D9964F890E6908E0FBE1D",
+      "size": 86140,
+      "downloadURL": "https://cdn.modrinth.com/data/IwCkru1D/versions/HfP4bdJn/cicada-lib-0.8.0%2B1.21-and-above.jar"
+    },
+    {
+      "name": "modelfix-1.21-1.6-fabric.jar",
+      "sha1": "B8069F2A672ABDEA1112DAA6D716A0E482CF61EA",
+      "size": 62761,
+      "downloadURL": "https://cdn.modrinth.com/data/QdG47OkI/versions/FUZo6yCk/modelfix-1.21-1.6-fabric.jar"
     }
   ],
   "curseFiles": [
