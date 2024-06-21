@@ -307,12 +307,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/ykSfIgTw/versions/cb9rzzkK/connectiblechains-2.4.1%2B1.21.jar"
     },
     {
-      "name": "collective-1.21.0-7.61.jar",
-      "sha1": "434ee4c690220f144a9edd2ae4be8f8eec3b2869",
-      "size": 862148,
-      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/rfJmYdeg/collective-1.21.0-7.61.jar"
-    },
-    {
       "name": "cinderscapes-5.0.0-beta.2.jar",
       "sha1": "7da9032a3eeacada275ee1e6a6cbebdba82cf480",
       "size": 14813869,
@@ -511,12 +505,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/DJFGAs9Y/balm-fabric-1.21-21.0.7.jar"
     },
     {
-      "name": "modmenu-11.0.0.jar",
-      "sha1": "D2B353F3F491CE8029F33CC17B69D80BB465842D",
-      "size": 975152,
-      "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/lJ1xXMce/modmenu-11.0.0.jar"
-    },
-    {
       "name": "BetterF3-11.0.1-Fabric-1.21.jar",
       "sha1": "EB48BA676E4C0779576B0F49C28FFD47F0EAE561",
       "size": 1802691,
@@ -647,6 +635,18 @@
       "sha1": "B8069F2A672ABDEA1112DAA6D716A0E482CF61EA",
       "size": 62761,
       "downloadURL": "https://cdn.modrinth.com/data/QdG47OkI/versions/FUZo6yCk/modelfix-1.21-1.6-fabric.jar"
+    },
+    {
+      "name": "modmenu-11.0.1.jar",
+      "sha1": "E4BA66F6036A4902433BB517D55120C4237C512F",
+      "size": 975390,
+      "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/xhN1IvHi/modmenu-11.0.1.jar"
+    },
+    {
+      "name": "collective-1.21.0-7.62.jar",
+      "sha1": "5C74C32D4B1E00F98A486CA6F58224684E1616B2",
+      "size": 862036,
+      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/24TEOmrb/collective-1.21.0-7.62.jar"
     }
   ],
   "curseFiles": [
