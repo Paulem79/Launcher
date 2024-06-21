@@ -659,6 +659,12 @@
       "sha1": "21CC296533BA849CEDE9AD6CD07F7EA51A3828A4",
       "size": 83744,
       "downloadURL": "https://cdn.modrinth.com/data/xv94TkTM/versions/5gwvsIP7/Controlling-fabric-1.21-18.0.1.jar"
+    },
+    {
+      "name": "Searchables-fabric-1.21-1.0.1.jar",
+      "sha1": "23F9FB394AC985BCAF4BFF4095672E287D430123",
+      "size": 79142,
+      "downloadURL": "https://cdn.modrinth.com/data/fuuu3xnx/versions/CBSMQxpQ/Searchables-fabric-1.21-1.0.1.jar"
     }
   ],
   "curseFiles": [
