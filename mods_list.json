@@ -647,6 +647,12 @@
       "sha1": "5C74C32D4B1E00F98A486CA6F58224684E1616B2",
       "size": 862036,
       "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/24TEOmrb/collective-1.21.0-7.62.jar"
+    },
+    {
+      "name": "expandedstorage-14.0.0%2B1.21-pre2-fabric.jar",
+      "sha1": "43520FFDA9CEEA0B9DAFD65393A3798EBB838CA1",
+      "size": 733966,
+      "downloadURL": "https://cdn.modrinth.com/data/jCCPlP3c/versions/2ttdNNeE/expandedstorage-14.0.0%2B1.21-pre2-fabric.jar"
     }
   ],
   "curseFiles": [
