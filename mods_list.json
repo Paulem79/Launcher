@@ -653,6 +653,12 @@
       "sha1": "43520FFDA9CEEA0B9DAFD65393A3798EBB838CA1",
       "size": 733966,
       "downloadURL": "https://cdn.modrinth.com/data/jCCPlP3c/versions/2ttdNNeE/expandedstorage-14.0.0%2B1.21-pre2-fabric.jar"
+    },
+    {
+      "name": "Controlling-fabric-1.21-18.0.1.jar",
+      "sha1": "21CC296533BA849CEDE9AD6CD07F7EA51A3828A4",
+      "size": 83744,
+      "downloadURL": "https://cdn.modrinth.com/data/xv94TkTM/versions/5gwvsIP7/Controlling-fabric-1.21-18.0.1.jar"
     }
   ],
   "curseFiles": [
