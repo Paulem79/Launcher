@@ -205,12 +205,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/na1dL51S/versions/xoq7hD8B/durabilityplus_1.20.5-1.1.0.jar"
     },
     {
-      "name": "areas-1.21.0-5.8.jar",
-      "sha1": "ac1e6872123a4565cc723c690f53470f47e9055c",
-      "size": 105149,
-      "downloadURL": "https://cdn.modrinth.com/data/NWvsqJ2Z/versions/lZp5IcJ2/areas-1.21.0-5.8.jar"
-    },
-    {
       "name": "advancednetherite-fabric-2.1.5-1.21.jar",
       "sha1": "5d3452676c4fca886ead9da516cb6d9f1de54c5c",
       "size": 504938,
@@ -317,12 +311,6 @@
       "sha1": "2338c2382537de70388a2f0f2a7b60ee0512afce",
       "size": 91292,
       "downloadURL": "https://cdn.modrinth.com/data/g96Z4WVZ/versions/XYBqWKD2/BadOptimizations-2.1.4-1.21.jar"
-    },
-    {
-      "name": "Philips-Ruins1.21-1.2%5BFabric%5D.jar",
-      "sha1": "bb06a44cf42bb4a8f3a71ca9523204c722bd88cc",
-      "size": 1487056,
-      "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/iUUUhSx8/Philips-Ruins1.21-1.2%5BFabric%5D.jar"
     },
     {
       "name": "appleskin-fabric-mc1.21-3.0.2.jar",
@@ -643,12 +631,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/xhN1IvHi/modmenu-11.0.1.jar"
     },
     {
-      "name": "collective-1.21.0-7.62.jar",
-      "sha1": "5C74C32D4B1E00F98A486CA6F58224684E1616B2",
-      "size": 862036,
-      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/24TEOmrb/collective-1.21.0-7.62.jar"
-    },
-    {
       "name": "expandedstorage-14.0.0%2B1.21-pre2-fabric.jar",
       "sha1": "43520FFDA9CEEA0B9DAFD65393A3798EBB838CA1",
       "size": 733966,
@@ -667,10 +649,28 @@
       "downloadURL": "https://cdn.modrinth.com/data/fuuu3xnx/versions/CBSMQxpQ/Searchables-fabric-1.21-1.0.1.jar"
     },
     {
-      "name": "morecontent-1.0.0.jar",
-      "sha1": "13452CE5D0B400709572448844FE0661A1095D6C",
-      "size": 334449,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.0.jar"
+      "name": "Philips-Ruins1.21-1.3%5BFabric%5D.jar",
+      "sha1": "C2F5F007A9AEABF9AE07E753D865A98BCC1949FB",
+      "size": 1496334,
+      "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/8nNEktkg/Philips-Ruins1.21-1.3%5BFabric%5D.jar"
+    },
+    {
+      "name": "collective-1.21.0-7.64.jar",
+      "sha1": "206AD85446D1248C6DD9149B0CC25F245FCB51BB",
+      "size": 887306,
+      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/hYoENexj/collective-1.21.0-7.64.jar"
+    },
+    {
+      "name": "areas-1.21.0-5.9.jar",
+      "sha1": "89A162444268895F4620C4834481BED44ABF1B34",
+      "size": 105294,
+      "downloadURL": "https://cdn.modrinth.com/data/NWvsqJ2Z/versions/6jPnGcJ4/areas-1.21.0-5.9.jar"
+    },
+    {
+      "name": "morecontent-1.0.1.jar",
+      "sha1": "1EED23571BD98BE6F2CD8238A7EE1DF9ACCD93A2",
+      "size": 339007,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.1.jar"
     }
   ],
   "curseFiles": [
