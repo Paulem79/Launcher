@@ -665,6 +665,12 @@
       "sha1": "23F9FB394AC985BCAF4BFF4095672E287D430123",
       "size": 79142,
       "downloadURL": "https://cdn.modrinth.com/data/fuuu3xnx/versions/CBSMQxpQ/Searchables-fabric-1.21-1.0.1.jar"
+    },
+    {
+      "name": "morecontent-1.0.0.jar",
+      "sha1": "1724D8C791694570A848EBC2597A0A3BBFDF6E20",
+      "size": 334448,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.0.jar"
     }
   ],
   "curseFiles": [
