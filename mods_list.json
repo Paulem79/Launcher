@@ -37,12 +37,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/jeq5Pk2P/dynamic-fps-3.4.3%2Bminecraft-1.21.0-fabric.jar"
     },
     {
-      "name": "entity_texture_features_fabric_1.21-6.1.1.jar",
-      "sha1": "7d4a81b46b02c4292247e69d0113fd6a61b9c8d0",
-      "size": 598709,
-      "downloadURL": "https://cdn.modrinth.com/data/BVzZfTc1/versions/JvRwC1fO/entity_texture_features_fabric_1.21-6.1.1.jar"
-    },
-    {
       "name": "entity_model_features_fabric_1.21-pre3-test.jar",
       "sha1": "82aa26ed7c17566849f54f5dfc84d9467be59aba",
       "size": 394954,
@@ -667,10 +661,16 @@
       "downloadURL": "https://cdn.modrinth.com/data/NWvsqJ2Z/versions/6jPnGcJ4/areas-1.21.0-5.9.jar"
     },
     {
-      "name": "morecontent-1.0.1.jar",
-      "sha1": "1EED23571BD98BE6F2CD8238A7EE1DF9ACCD93A2",
-      "size": 339007,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.1.jar"
+      "name": "morecontent-1.0.2.jar",
+      "sha1": "E52EF714F4E1A0B21E6F65FDD95D75585D57CD8A",
+      "size": 337364,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.2.jar"
+    },
+    {
+      "name": "entity_texture_features_fabric_1.21-6.1.2.jar",
+      "sha1": "EDA517ACEC2B111FCA2E1F40429938BB379D0723",
+      "size": 598725,
+      "downloadURL": "https://cdn.modrinth.com/data/BVzZfTc1/versions/8czGsT2L/entity_texture_features_fabric_1.21-6.1.2.jar"
     }
   ],
   "curseFiles": [
