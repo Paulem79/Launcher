@@ -251,13 +251,7 @@
       "sha1": "1e556c4a232762f7d5694ddcfc9e1e72f8a2583f",
       "size": 57628,
       "downloadURL": "https://cdn.modrinth.com/data/tG6HkcWx/versions/O8HVT0z4/realisticbees-1.21.0-3.9.jar"
-    },
-    {
-      "name": "randomvillagenames-1.21.0-3.6.jar",
-      "sha1": "fd71e05dc40288d9ffd7eb2666fe0d9af73291c2",
-      "size": 43845,
-      "downloadURL": "https://cdn.modrinth.com/data/N0ytbukx/versions/q1uOElBJ/randomvillagenames-1.21.0-3.6.jar"
-    },
+    },=
     {
       "name": "raknetify-fabric-0.1.0%2Balpha.5.128-all.jar",
       "sha1": "9f3e9018352ee331e61ebb010e91b6c3b41a0972",
@@ -481,12 +475,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/1cXs6RWI/fabric-api-0.100.3%2B1.21.jar"
     },
     {
-      "name": "balm-fabric-1.21-21.0.7.jar",
-      "sha1": "BCBE27C964D19D5BF3E0A0F6ADD50BC190A954B9",
-      "size": 425902,
-      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/DJFGAs9Y/balm-fabric-1.21-21.0.7.jar"
-    },
-    {
       "name": "BetterF3-11.0.1-Fabric-1.21.jar",
       "sha1": "EB48BA676E4C0779576B0F49C28FFD47F0EAE561",
       "size": 1802691,
@@ -671,6 +659,12 @@
       "sha1": "EDA517ACEC2B111FCA2E1F40429938BB379D0723",
       "size": 598725,
       "downloadURL": "https://cdn.modrinth.com/data/BVzZfTc1/versions/8czGsT2L/entity_texture_features_fabric_1.21-6.1.2.jar"
+    },
+    {
+      "name": "balm-fabric-1.21-21.0.8.jar",
+      "sha1": "E33617291A7B1789F91FD26470B95918646A86BD",
+      "size": 425967,
+      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/b7Q7HRZD/balm-fabric-1.21-21.0.8.jar"
     }
   ],
   "curseFiles": [
