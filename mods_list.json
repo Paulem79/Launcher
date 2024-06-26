@@ -671,6 +671,78 @@
       "sha1": "A799B0DBB320BC314B9D81CC7FD43C4FC895C3F8",
       "size": 292244,
       "downloadURL": "https://cdn.modrinth.com/data/QwxR6Gcd/versions/mOk69fib/Debugify-1.21%2B1.0.jar"
+    },
+    {
+      "name": "nvidium-0.2.8-beta.jar",
+      "sha1": "C636C50761BE4B58C13DA4896C6B7CB0248D2CFF",
+      "size": 157488,
+      "downloadURL": "https://cdn.modrinth.com/data/SfMw2IZN/versions/DJXQSa8Q/nvidium-0.2.8-beta.jar"
+    },
+    {
+      "name": "polymorph-fabric-1.0.1%2B1.21.jar",
+      "sha1": "CE7E2DCBB6389DB8ED9D02306ECD803E8AF7D09E",
+      "size": 316002,
+      "downloadURL": "https://cdn.modrinth.com/data/tagwiZkJ/versions/lvXLiyLU/polymorph-fabric-1.0.1%2B1.21.jar"
+    },
+    {
+      "name": "nyfsspiders-fabric-1.21-2.3.0.jar",
+      "sha1": "7468A84460F81C3546E5A5B5D2190940DE1CD52D",
+      "size": 560130,
+      "downloadURL": "https://cdn.modrinth.com/data/dOGM7ccu/versions/VQC0TxDp/nyfsspiders-fabric-1.21-2.3.0.jar"
+    },
+    {
+      "name": "terrestria-7.0.0.jar",
+      "sha1": "9F738740AE50F7CD19DEC5DAB7709884E289F54B",
+      "size": 9159855,
+      "downloadURL": "https://cdn.modrinth.com/data/lsUDPMOT/versions/HsolkciH/terrestria-7.0.0.jar"
+    },
+    {
+      "name": "BOMD-1.10.0-1.21.jar",
+      "sha1": "28AD77324026C4E7A17655DB0D1084F3B54FA0C9",
+      "size": 2677565,
+      "downloadURL": "https://cdn.modrinth.com/data/du3UfiLL/versions/yjgcPYVA/BOMD-1.10.0-1.21.jar"
+    },
+    {
+      "name": "geckolib-fabric-1.21-4.5.6.jar",
+      "sha1": "65542B25549DFA141134D95C03CC96395F0A9FF0",
+      "size": 583001,
+      "downloadURL": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/UCl2KRDj/geckolib-fabric-1.21-4.5.6.jar"
+    },
+    {
+      "name": "cardinal-components-api-6.1.0.jar",
+      "sha1": "06B64B8024AAEA4B589DC860E018E45490713696",
+      "size": 229233,
+      "downloadURL": "https://cdn.modrinth.com/data/K01OU20C/versions/quTFtjka/cardinal-components-api-6.1.0.jar"
+    },
+    {
+      "name": "cubes-without-borders-2.0.1%2B1.21.jar",
+      "sha1": "C944C4B677E86BDA346F763DEAC0F57CD99AF500",
+      "size": 54849,
+      "downloadURL": "https://cdn.modrinth.com/data/ETlrkaYF/versions/zG2rMbPK/cubes-without-borders-2.0.1%2B1.21.jar"
+    },
+    {
+      "name": "polytone-1.21-2.0.3-fabric.jar",
+      "sha1": "78E495EF6EFCA992E563FC02C9A708C97FB2E785",
+      "size": 501105,
+      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/N9vJxRex/polytone-1.21-2.0.3-fabric.jar"
+    },
+    {
+      "name": "quartz-elevator-2.3.0%2B1.21.jar",
+      "sha1": "0EC6CF00275F95FE6F2CDD1049DE4F90CF63C661",
+      "size": 1077057,
+      "downloadURL": "https://cdn.modrinth.com/data/O9C0qdu8/versions/X13rWty9/quartz-elevator-2.3.0%2B1.21.jar"
+    },
+    {
+      "name": "Armorful-3.1.0%2B1.21.jar",
+      "sha1": "63CB81B3F24D1C16C312468B3300D5A8A1A8BDAE",
+      "size": 120870,
+      "downloadURL": "https://cdn.modrinth.com/data/LlOkR2e2/versions/y9O4L6tm/Armorful-3.1.0%2B1.21.jar"
+    },
+    {
+      "name": "mru-0.4.3%2B1.21.jar",
+      "sha1": "629C450BF332AA2075A5B4C406F8307207152640",
+      "size": 1253754,
+      "downloadURL": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/lJ4erxrJ/mru-0.4.3%2B1.21.jar"
     }
   ],
   "curseFiles": [
