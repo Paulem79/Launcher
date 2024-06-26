@@ -665,6 +665,12 @@
       "sha1": "E33617291A7B1789F91FD26470B95918646A86BD",
       "size": 425967,
       "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/b7Q7HRZD/balm-fabric-1.21-21.0.8.jar"
+    },
+    {
+      "name": "AnvilFix-1.21.jar",
+      "sha1": "EC81EB216269A10FB417A13CD3700BDCCA5BF5D6",
+      "size": 74470,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/AnvilFix-1.21.jar"
     }
   ],
   "curseFiles": [
