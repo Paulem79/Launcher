@@ -743,6 +743,12 @@
       "sha1": "F81153B04B672A9EE83E512064412805FA39576D",
       "size": 831151,
       "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/YyhO1yXN/waystones-fabric-1.21-21.0.4.jar"
+    },
+    {
+      "name": "ExtendedDrawers-3.0.1%2Bmc.1.21.jar",
+      "sha1": "6756CAB255E33D6A6C4C4DA27F1460BF34366A56",
+      "size": 2583892,
+      "downloadURL": "https://cdn.modrinth.com/data/AhtxbnpG/versions/YYk48t42/ExtendedDrawers-3.0.1%2Bmc.1.21.jar"
     }
   ],
   "curseFiles": [
