@@ -445,12 +445,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/fM515JnW/versions/fMT5SCgk/AmbientSounds_FABRIC_v6.0.2_mc1.21.jar"
     },
     {
-      "name": "chisel%2Bfabric%2B1.21-1.7.3.jar",
-      "sha1": "9DCE8E32EEA69E3165AC3C70F7CB7BC4BDC1A50C",
-      "size": 7872389,
-      "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/kpH5ZPVq/chisel%2Bfabric%2B1.21-1.7.3.jar"
-    },
-    {
       "name": "EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar",
       "sha1": "D31BB2C8C29B2B36885134E90CBBB5EB9B52CC1A",
       "size": 4728798,
@@ -505,12 +499,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/CNYyGWn5/versions/MtIWTZQM/compact_storage-1.21-fabric-8.0.74.jar"
     },
     {
-      "name": "CraftPresence-2.4.2%2B1.21.jar",
-      "sha1": "0CAC3A668CA7FC5D2B0381A43D54B7110CBF0FD0",
-      "size": 2471991,
-      "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/BEhx5ZnQ/CraftPresence-2.4.2%2B1.21.jar"
-    },
-    {
       "name": "dynamiccrosshair-8.0.2%2B1.21-fabric.jar",
       "sha1": "3A17A73FDACEADFBC8F5728B1B86DFD2AF619737",
       "size": 495890,
@@ -527,12 +515,6 @@
       "sha1": "78816B91FB52A631278754B75EA662D547204955",
       "size": 506912,
       "downloadURL": "https://cdn.modrinth.com/data/6FtRfnLg/versions/CJFnOoi0/do_a_barrel_roll-fabric-3.6.1%2B1.21.jar"
-    },
-    {
-      "name": "cicada-lib-0.8.0%2B1.21-and-above.jar",
-      "sha1": "41E24F6F65524C41B33D9964F890E6908E0FBE1D",
-      "size": 86140,
-      "downloadURL": "https://cdn.modrinth.com/data/IwCkru1D/versions/HfP4bdJn/cicada-lib-0.8.0%2B1.21-and-above.jar"
     },
     {
       "name": "modelfix-1.21-1.6-fabric.jar",
@@ -571,12 +553,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/8nNEktkg/Philips-Ruins1.21-1.3%5BFabric%5D.jar"
     },
     {
-      "name": "collective-1.21.0-7.64.jar",
-      "sha1": "206AD85446D1248C6DD9149B0CC25F245FCB51BB",
-      "size": 887306,
-      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/hYoENexj/collective-1.21.0-7.64.jar"
-    },
-    {
       "name": "areas-1.21.0-5.9.jar",
       "sha1": "89A162444268895F4620C4834481BED44ABF1B34",
       "size": 105294,
@@ -607,12 +583,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/AtHRJSUW/versions/TeLf37qk/WilderWild-2.4.5-Fabric%2B1.21.jar"
     },
     {
-      "name": "waystones-fabric-1.21-21.0.3.jar",
-      "sha1": "4129F7C730C1C4F9ACFDD3BA14A5522B9954A9DF",
-      "size": 831156,
-      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/FX8O3crR/waystones-fabric-1.21-21.0.3.jar"
-    },
-    {
       "name": "passiveshield-1.21.0-3.5.jar",
       "sha1": "0C81B177B5317815CF979D11F5F57E41A336924A",
       "size": 44724,
@@ -637,34 +607,16 @@
       "downloadURL": "https://cdn.modrinth.com/data/rUgZvGzi/versions/KWZCioh0/eating-animation-1.21%2B1.9.72.jar"
     },
     {
-      "name": "dynamic-fps-3.5.0%2Bminecraft-1.21.0-fabric.jar",
-      "sha1": "122DA09E17980A2D9685B19276065C5772B69AE6",
-      "size": 170607,
-      "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/pHWNKS7t/dynamic-fps-3.5.0%2Bminecraft-1.21.0-fabric.jar"
-    },
-    {
       "name": "cinderscapes-5.0.0.jar",
       "sha1": "B91AFB13483E5E7A375D06A8BA330D47F312DF96",
       "size": 14829668,
       "downloadURL": "https://cdn.modrinth.com/data/QC4wcUXZ/versions/TVdizIfm/cinderscapes-5.0.0.jar"
     },
     {
-      "name": "balm-fabric-1.21-21.0.9.jar",
-      "sha1": "25920D989934C2693B3070FB1E8B1923505673B2",
-      "size": 425971,
-      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/1PZPYo6D/balm-fabric-1.21-21.0.9.jar"
-    },
-    {
       "name": "architectury-13.0.2-fabric.jar",
       "sha1": "99B07B15F16372482235D53B932BB04335BE17FF",
       "size": 600764,
       "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/geHK4z6i/architectury-13.0.2-fabric.jar"
-    },
-    {
-      "name": "amethystequipment-v1.0.3-fabric-1.21.jar",
-      "sha1": "59D7E8EA663FD618DD1AF14E0BE39D2C4C67C28A",
-      "size": 205719,
-      "downloadURL": "https://cdn.modrinth.com/data/UUffNxLR/versions/9TAYkj44/amethystequipment-v1.0.3-fabric-1.21.jar"
     },
     {
       "name": "Debugify-1.21%2B1.0.jar",
@@ -677,12 +629,6 @@
       "sha1": "C636C50761BE4B58C13DA4896C6B7CB0248D2CFF",
       "size": 157488,
       "downloadURL": "https://cdn.modrinth.com/data/SfMw2IZN/versions/DJXQSa8Q/nvidium-0.2.8-beta.jar"
-    },
-    {
-      "name": "polymorph-fabric-1.0.1%2B1.21.jar",
-      "sha1": "CE7E2DCBB6389DB8ED9D02306ECD803E8AF7D09E",
-      "size": 316002,
-      "downloadURL": "https://cdn.modrinth.com/data/tagwiZkJ/versions/lvXLiyLU/polymorph-fabric-1.0.1%2B1.21.jar"
     },
     {
       "name": "nyfsspiders-fabric-1.21-2.3.0.jar",
@@ -721,12 +667,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/ETlrkaYF/versions/zG2rMbPK/cubes-without-borders-2.0.1%2B1.21.jar"
     },
     {
-      "name": "polytone-1.21-2.0.3-fabric.jar",
-      "sha1": "78E495EF6EFCA992E563FC02C9A708C97FB2E785",
-      "size": 501105,
-      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/N9vJxRex/polytone-1.21-2.0.3-fabric.jar"
-    },
-    {
       "name": "quartz-elevator-2.3.0%2B1.21.jar",
       "sha1": "0EC6CF00275F95FE6F2CDD1049DE4F90CF63C661",
       "size": 1077057,
@@ -739,10 +679,70 @@
       "downloadURL": "https://cdn.modrinth.com/data/LlOkR2e2/versions/y9O4L6tm/Armorful-3.1.0%2B1.21.jar"
     },
     {
-      "name": "mru-0.4.3%2B1.21.jar",
-      "sha1": "629C450BF332AA2075A5B4C406F8307207152640",
-      "size": 1253754,
-      "downloadURL": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/lJ4erxrJ/mru-0.4.3%2B1.21.jar"
+      "name": "amethystequipment-v1.0.4-fabric-1.21.jar",
+      "sha1": "F277AC9D9CA7AC8700B8B67A4E808965C56E387A",
+      "size": 210634,
+      "downloadURL": "https://cdn.modrinth.com/data/UUffNxLR/versions/M2Z9wtPf/amethystequipment-v1.0.4-fabric-1.21.jar"
+    },
+    {
+      "name": "balm-fabric-1.21-21.0.10.jar",
+      "sha1": "A3982320CDE9292E407391DD39F6939A7B567DED",
+      "size": 425974,
+      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/yWclRdjf/balm-fabric-1.21-21.0.10.jar"
+    },
+    {
+      "name": "chisel-fabric-1.21-1.8.0.jar",
+      "sha1": "655D45246D121DEA47B95653D0F5720EBB3D138C",
+      "size": 7881021,
+      "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/tJXXPIgE/chisel-fabric-1.21-1.8.0.jar"
+    },
+    {
+      "name": "cicada-lib-0.8.1%2B1.21-and-above.jar",
+      "sha1": "D4025E43A7F7F3FDD71BFB34AAED9ECAAB3F3A9B",
+      "size": 86580,
+      "downloadURL": "https://cdn.modrinth.com/data/IwCkru1D/versions/i13D9AEP/cicada-lib-0.8.1%2B1.21-and-above.jar"
+    },
+    {
+      "name": "collective-1.21.0-7.68.jar",
+      "sha1": "4D30929E547162D754C28FC769FF3CF3C8071521",
+      "size": 904820,
+      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/JJEzOZro/collective-1.21.0-7.68.jar"
+    },
+    {
+      "name": "CraftPresence-2.4.3%2B1.21.jar",
+      "sha1": "4956556671ADA143DFA945CA9A34B70B4AA971E3",
+      "size": 2370661,
+      "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/QcpLHnp7/CraftPresence-2.4.3%2B1.21.jar"
+    },
+    {
+      "name": "dynamic-fps-3.5.1%2Bminecraft-1.21.0-fabric.jar",
+      "sha1": "9037FC2D9725E4DA5A0F163086B0ECE9FBF324F8",
+      "size": 172100,
+      "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/aLCEN12X/dynamic-fps-3.5.1%2Bminecraft-1.21.0-fabric.jar"
+    },
+    {
+      "name": "mru-0.4.4%2B1.21.jar",
+      "sha1": "6F2C179A54A2918322F58A6C620F28E526ED77D3",
+      "size": 1254112,
+      "downloadURL": "https://cdn.modrinth.com/data/SNVQ2c0g/versions/dMTEZn0q/mru-0.4.4%2B1.21.jar"
+    },
+    {
+      "name": "polymorph-fabric-1.0.2%2B1.21.jar",
+      "sha1": "CFF2A71850EA0B5860A765D704ECE337760F7676",
+      "size": 316864,
+      "downloadURL": "https://cdn.modrinth.com/data/tagwiZkJ/versions/p7pF15m3/polymorph-fabric-1.0.2%2B1.21.jar"
+    },
+    {
+      "name": "polytone-1.21-2.1.1-fabric.jar",
+      "sha1": "A6D445D35F6225D72B765B6EE814B2C8707C51C5",
+      "size": 519242,
+      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/fwoY0CNc/polytone-1.21-2.1.1-fabric.jar"
+    },
+    {
+      "name": "waystones-fabric-1.21-21.0.4.jar",
+      "sha1": "F81153B04B672A9EE83E512064412805FA39576D",
+      "size": 831151,
+      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/YyhO1yXN/waystones-fabric-1.21-21.0.4.jar"
     }
   ],
   "curseFiles": [
