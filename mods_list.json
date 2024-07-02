@@ -97,12 +97,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/8qkXwOnk/versions/3siYJiWG/morechathistory-1.3.1.jar"
     },
     {
-      "name": "ToughAsNails-fabric-1.21-10.0.0.2.jar",
-      "sha1": "7d01b39bdb2efcc487fedbdf2eff86315a600946",
-      "size": 659540,
-      "downloadURL": "https://cdn.modrinth.com/data/ge1sOdFH/versions/8YR110HE/ToughAsNails-fabric-1.21-10.0.0.2.jar"
-    },
-    {
       "name": "fsb-interop-1.4.0%2Bmc1.21-build.54.jar",
       "sha1": "ebd6d9f048b591cee8bbf90b23246f3369161868",
       "size": 73307,
