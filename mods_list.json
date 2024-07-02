@@ -739,6 +739,12 @@
       "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/YyhO1yXN/waystones-fabric-1.21-21.0.4.jar"
     },
     {
+      "name": "ToughAsNails-fabric-1.21-10.0.0.2.jar",
+      "sha1": "7d01b39bdb2efcc487fedbdf2eff86315a600946",
+      "size": 659540,
+      "downloadURL": "https://cdn.modrinth.com/data/ge1sOdFH/versions/8YR110HE/ToughAsNails-fabric-1.21-10.0.0.2.jar"
+    },
+    {
       "name": "ExtendedDrawers-3.0.1%2Bmc.1.21.jar",
       "sha1": "6756CAB255E33D6A6C4C4DA27F1460BF34366A56",
       "size": 2583892,
