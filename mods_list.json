@@ -745,10 +745,10 @@
       "downloadURL": "https://cdn.modrinth.com/data/AhtxbnpG/versions/YYk48t42/ExtendedDrawers-3.0.1%2Bmc.1.21.jar"
     },
     {
-      "name": "overloadedarmorbar-common-1.21-1.jar",
-      "sha1": "85E78440AE0405E5CC44A624D8387142F34A83D8",
-      "size": 13942,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/overloadedarmorbar-common-1.21-1.jar"
+      "name": "overloadedarmorbar-fabric-1.21-2.jar",
+      "sha1": "AADE1C56725EE2BA499D85E337BB1803A1013A0F",
+      "size": 51988,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/overloadedarmorbar-fabric-1.21-2.jar"
     }
   ],
   "curseFiles": [
