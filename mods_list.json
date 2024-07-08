@@ -517,12 +517,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/QwxR6Gcd/versions/mOk69fib/Debugify-1.21%2B1.0.jar"
     },
     {
-      "name": "nvidium-0.2.8-beta.jar",
-      "sha1": "C636C50761BE4B58C13DA4896C6B7CB0248D2CFF",
-      "size": 157488,
-      "downloadURL": "https://cdn.modrinth.com/data/SfMw2IZN/versions/DJXQSa8Q/nvidium-0.2.8-beta.jar"
-    },
-    {
       "name": "nyfsspiders-fabric-1.21-2.3.0.jar",
       "sha1": "7468A84460F81C3546E5A5B5D2190940DE1CD52D",
       "size": 560130,
@@ -755,6 +749,12 @@
       "sha1": "A4BFE8286B7F20F5A2C84C2C9F2AEC52437B1378",
       "size": 832922,
       "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/jqkMwqdk/waystones-fabric-1.21-21.0.7.jar"
+    },
+    {
+      "name": "nvidium-0.2.9-beta.jar",
+      "sha1": "2EA01E5910C7273670F748E2664E948DB2D77610",
+      "size": 157404,
+      "downloadURL": "https://cdn.modrinth.com/data/SfMw2IZN/versions/cl0HrTL6/nvidium-0.2.9-beta.jar"
     }
   ],
   "curseFiles": [
