@@ -1,18 +1,6 @@
 {
   "mods": [
     {
-      "name": "sodium-fabric-0.5.9%2Bmc1.21.jar",
-      "sha1": "3b1ad241af59c32f6ed016c8a285429bfb5c5f86",
-      "size": 979834,
-      "downloadURL": "https://cdn.modrinth.com/data/AANobbMI/versions/dNHeFokL/sodium-fabric-0.5.9%2Bmc1.21.jar"
-    },
-    {
-      "name": "iris-1.7.1%2Bmc1.21.jar",
-      "sha1": "e098699f4d22b34f4b8ab773e2f3eca98640008c",
-      "size": 2707221,
-      "downloadURL": "https://cdn.modrinth.com/data/YL57xq9U/versions/RYnrr5zv/iris-1.7.1%2Bmc1.21.jar"
-    },
-    {
       "name": "sodium-extra-0.5.7%2Bmc1.21.jar",
       "sha1": "13a65186e5ba363e0ed3216303bc67a173c050fe",
       "size": 375625,
@@ -29,12 +17,6 @@
       "sha1": "cc4e16bba55547494667ec257349f66695e029de",
       "size": 77428,
       "downloadURL": "https://cdn.modrinth.com/data/Bh37bMuy/versions/DNJFe2me/reeses_sodium_options-1.7.2%2Bmc1.21.jar"
-    },
-    {
-      "name": "entity_model_features_fabric_1.21-pre3-test.jar",
-      "sha1": "82aa26ed7c17566849f54f5dfc84d9467be59aba",
-      "size": 394954,
-      "downloadURL": "https://cdn.modrinth.com/data/4I1XuqiY/versions/zQC8LMqE/entity_model_features_fabric_1.21-pre3-test.jar"
     },
     {
       "name": "PresenceFootsteps-1.10.0%2B1.21.jar",
@@ -163,12 +145,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/zV5r3pPn/versions/8YK20yhu/skinlayers3d-fabric-1.6.6-mc1.21.jar"
     },
     {
-      "name": "chunksfadein-1.0.0-1.21.jar",
-      "sha1": "e064202232aa9a1d5cda981740464877e2cf1a2d",
-      "size": 310628,
-      "downloadURL": "https://cdn.modrinth.com/data/JaNmzvA8/versions/INLnTyVe/chunksfadein-1.0.0-1.21.jar"
-    },
-    {
       "name": "breakfree-1.3.0.jar",
       "sha1": "2e78f007c2f716f642731d954bd5945806795367",
       "size": 178204,
@@ -179,18 +155,6 @@
       "sha1": "a88ed1d86039a47b79e68c73c43631a3835f14e7",
       "size": 8210,
       "downloadURL": "https://cdn.modrinth.com/data/na1dL51S/versions/xoq7hD8B/durabilityplus_1.20.5-1.1.0.jar"
-    },
-    {
-      "name": "advancednetherite-fabric-2.1.5-1.21.jar",
-      "sha1": "5d3452676c4fca886ead9da516cb6d9f1de54c5c",
-      "size": 504938,
-      "downloadURL": "https://cdn.modrinth.com/data/CFX9ftUJ/versions/tbzPiOQy/advancednetherite-fabric-2.1.5-1.21.jar"
-    },
-    {
-      "name": "toms_storage_fabric-1.21-2.0.0.jar",
-      "sha1": "c10a34ae928db3f145d0551abef2c253887aa946",
-      "size": 1839049,
-      "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/fbgYsydq/toms_storage_fabric-1.21-2.0.0.jar"
     },
     {
       "name": "stackrefill-1.21.0-4.4.jar",
@@ -271,12 +235,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/kkmrDlKT/versions/lN4iXEkx/TerraBlender-fabric-1.21-4.0.0.1.jar"
     },
     {
-      "name": "elytratrims-fabric-3.2.0%2B1.21.jar",
-      "sha1": "74a254af2c72810e4b9e98656d96f68a0fde479c",
-      "size": 566565,
-      "downloadURL": "https://cdn.modrinth.com/data/XpzGz7KD/versions/BgLzQbAt/elytratrims-fabric-3.2.0%2B1.21.jar"
-    },
-    {
       "name": "nerb-1.21-0.4-FABRIC.jar",
       "sha1": "e2384e2c4528c0a91c99f271e0b30d6f5ef715af",
       "size": 10598,
@@ -301,12 +259,6 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/CullLessLeaves-1.3.0.jar"
     },
     {
-      "name": "enchanted-vertical-slabs-2.0.1-fabric-mc1.21.jar",
-      "sha1": "45e99caba1e08d3a80a0874e0676c329306c9d75",
-      "size": 233501,
-      "downloadURL": "https://cdn.modrinth.com/data/TG1cHkRf/versions/wqXxKT1W/enchanted-vertical-slabs-2.0.1-fabric-mc1.21.jar"
-    },
-    {
       "name": "ferritecore-7.0.0-fabric.jar",
       "sha1": "95B18B0F1673BBBE328812C3052CC1A921591F0F",
       "size": 117333,
@@ -319,22 +271,10 @@
       "downloadURL": "https://cdn.modrinth.com/data/rI0hvYcd/versions/2618jVtS/visuality-0.7.4%2B1.21.jar"
     },
     {
-      "name": "BiomesOPlenty-fabric-1.21-21.0.0.5.jar",
-      "sha1": "F1494D96545EDD85887DC01700643FE4BA7DAA44",
-      "size": 22335325,
-      "downloadURL": "https://cdn.modrinth.com/data/HXF82T3G/versions/SkdQxCUH/BiomesOPlenty-fabric-1.21-21.0.0.5.jar"
-    },
-    {
       "name": "puzzle-1.6.3%2B1.21.jar",
       "sha1": "7A0498824BBCA3AE75F51FA582025E758F8B1F20",
       "size": 142150,
       "downloadURL": "https://cdn.modrinth.com/data/3IuO68q1/versions/2pBwdDy2/puzzle-1.6.3%2B1.21.jar"
-    },
-    {
-      "name": "indium-1.0.33%2Bmc1.21.jar",
-      "sha1": "1AD1CA78D1185B4F702DEF3A0FEAB7BEF7D943D5",
-      "size": 104920,
-      "downloadURL": "https://cdn.modrinth.com/data/Orvt0mRa/versions/w4F7PG0f/indium-1.0.33%2Bmc1.21.jar"
     },
     {
       "name": "Xaeros_Minimap_24.2.1_Fabric_1.21.jar",
@@ -391,12 +331,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/NK39zBp2/versions/4stUfJpY/blur-4.1.0.jar"
     },
     {
-      "name": "voicechat-fabric-1.21-2.5.17.jar",
-      "sha1": "67E4AA4633B0288FE09B9D1F3A727EA6DC14DD33",
-      "size": 6559233,
-      "downloadURL": "https://cdn.modrinth.com/data/9eGKb6K1/versions/gz0q5n5K/voicechat-fabric-1.21-2.5.17.jar"
-    },
-    {
       "name": "trimeffects-fabric-1.21-1.3.1.jar",
       "sha1": "E83181564C23825C3FF613838FB45E10795046A0",
       "size": 28588,
@@ -433,22 +367,10 @@
       "downloadURL": "https://cdn.modrinth.com/data/9ON3zv6e/versions/UpfCW9RM/logbegone-fabric-1.21-1.0.2.jar"
     },
     {
-      "name": "AmbientSounds_FABRIC_v6.0.2_mc1.21.jar",
-      "sha1": "95EA1D9173D13382CB03193CE76E63C5C00F41BF",
-      "size": 85330958,
-      "downloadURL": "https://cdn.modrinth.com/data/fM515JnW/versions/fMT5SCgk/AmbientSounds_FABRIC_v6.0.2_mc1.21.jar"
-    },
-    {
       "name": "EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar",
       "sha1": "D31BB2C8C29B2B36885134E90CBBB5EB9B52CC1A",
       "size": 4728798,
       "downloadURL": "https://cdn.modrinth.com/data/KjL0jE2w/versions/PWxOcrC6/EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar"
-    },
-    {
-      "name": "modernfix-fabric-5.18.3%2Bmc1.21.jar",
-      "sha1": "DC3F962A95D65B0D92BF49AE01A73E50153193C9",
-      "size": 434670,
-      "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/AFvoBfkx/modernfix-fabric-5.18.3%2Bmc1.21.jar"
     },
     {
       "name": "suggestion-tweaker-1.20.6-1.5.2-fabric.jar",
@@ -559,12 +481,6 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.2.jar"
     },
     {
-      "name": "entity_texture_features_fabric_1.21-6.1.2.jar",
-      "sha1": "EDA517ACEC2B111FCA2E1F40429938BB379D0723",
-      "size": 598725,
-      "downloadURL": "https://cdn.modrinth.com/data/BVzZfTc1/versions/8czGsT2L/entity_texture_features_fabric_1.21-6.1.2.jar"
-    },
-    {
       "name": "AnvilFix-1.21.jar",
       "sha1": "EC81EB216269A10FB417A13CD3700BDCCA5BF5D6",
       "size": 74470,
@@ -589,28 +505,10 @@
       "downloadURL": "https://cdn.modrinth.com/data/9KawNmQc/versions/U5sYkDf5/FrozenLib-1.7.4-Fabric%2B1.21.jar"
     },
     {
-      "name": "fabric-api-0.100.4%2B1.21.jar",
-      "sha1": "4BF00B19252FC7C2F618340C5C50BE430A230D5E",
-      "size": 2237122,
-      "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/oIVA3FbL/fabric-api-0.100.4%2B1.21.jar"
-    },
-    {
       "name": "eating-animation-1.21%2B1.9.72.jar",
       "sha1": "D89ECD0AC342697E0D1C3AAFF1DAA6C81BEBE2F6",
       "size": 1060520,
       "downloadURL": "https://cdn.modrinth.com/data/rUgZvGzi/versions/KWZCioh0/eating-animation-1.21%2B1.9.72.jar"
-    },
-    {
-      "name": "cinderscapes-5.0.0.jar",
-      "sha1": "B91AFB13483E5E7A375D06A8BA330D47F312DF96",
-      "size": 14829668,
-      "downloadURL": "https://cdn.modrinth.com/data/QC4wcUXZ/versions/TVdizIfm/cinderscapes-5.0.0.jar"
-    },
-    {
-      "name": "architectury-13.0.2-fabric.jar",
-      "sha1": "99B07B15F16372482235D53B932BB04335BE17FF",
-      "size": 600764,
-      "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/geHK4z6i/architectury-13.0.2-fabric.jar"
     },
     {
       "name": "Debugify-1.21%2B1.0.jar",
@@ -655,12 +553,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/K01OU20C/versions/quTFtjka/cardinal-components-api-6.1.0.jar"
     },
     {
-      "name": "cubes-without-borders-2.0.1%2B1.21.jar",
-      "sha1": "C944C4B677E86BDA346F763DEAC0F57CD99AF500",
-      "size": 54849,
-      "downloadURL": "https://cdn.modrinth.com/data/ETlrkaYF/versions/zG2rMbPK/cubes-without-borders-2.0.1%2B1.21.jar"
-    },
-    {
       "name": "quartz-elevator-2.3.0%2B1.21.jar",
       "sha1": "0EC6CF00275F95FE6F2CDD1049DE4F90CF63C661",
       "size": 1077057,
@@ -679,40 +571,16 @@
       "downloadURL": "https://cdn.modrinth.com/data/UUffNxLR/versions/M2Z9wtPf/amethystequipment-v1.0.4-fabric-1.21.jar"
     },
     {
-      "name": "balm-fabric-1.21-21.0.10.jar",
-      "sha1": "A3982320CDE9292E407391DD39F6939A7B567DED",
-      "size": 425974,
-      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/yWclRdjf/balm-fabric-1.21-21.0.10.jar"
-    },
-    {
-      "name": "chisel-fabric-1.21-1.8.0.jar",
-      "sha1": "655D45246D121DEA47B95653D0F5720EBB3D138C",
-      "size": 7881021,
-      "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/tJXXPIgE/chisel-fabric-1.21-1.8.0.jar"
-    },
-    {
       "name": "cicada-lib-0.8.1%2B1.21-and-above.jar",
       "sha1": "D4025E43A7F7F3FDD71BFB34AAED9ECAAB3F3A9B",
       "size": 86580,
       "downloadURL": "https://cdn.modrinth.com/data/IwCkru1D/versions/i13D9AEP/cicada-lib-0.8.1%2B1.21-and-above.jar"
     },
     {
-      "name": "collective-1.21.0-7.68.jar",
-      "sha1": "4D30929E547162D754C28FC769FF3CF3C8071521",
-      "size": 904820,
-      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/JJEzOZro/collective-1.21.0-7.68.jar"
-    },
-    {
       "name": "CraftPresence-2.4.3%2B1.21.jar",
       "sha1": "4956556671ADA143DFA945CA9A34B70B4AA971E3",
       "size": 2370661,
       "downloadURL": "https://cdn.modrinth.com/data/DFqQfIBR/versions/QcpLHnp7/CraftPresence-2.4.3%2B1.21.jar"
-    },
-    {
-      "name": "dynamic-fps-3.5.1%2Bminecraft-1.21.0-fabric.jar",
-      "sha1": "9037FC2D9725E4DA5A0F163086B0ECE9FBF324F8",
-      "size": 172100,
-      "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/aLCEN12X/dynamic-fps-3.5.1%2Bminecraft-1.21.0-fabric.jar"
     },
     {
       "name": "mru-0.4.4%2B1.21.jar",
@@ -733,12 +601,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/fwoY0CNc/polytone-1.21-2.1.1-fabric.jar"
     },
     {
-      "name": "waystones-fabric-1.21-21.0.4.jar",
-      "sha1": "F81153B04B672A9EE83E512064412805FA39576D",
-      "size": 831151,
-      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/YyhO1yXN/waystones-fabric-1.21-21.0.4.jar"
-    },
-    {
       "name": "ExtendedDrawers-3.0.1%2Bmc.1.21.jar",
       "sha1": "6756CAB255E33D6A6C4C4DA27F1460BF34366A56",
       "size": 2583892,
@@ -749,6 +611,150 @@
       "sha1": "AADE1C56725EE2BA499D85E337BB1803A1013A0F",
       "size": 51988,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/overloadedarmorbar-fabric-1.21-2.jar"
+    },
+    {
+      "name": "advancednetherite-fabric-2.1.6-1.21.jar",
+      "sha1": "1D8E2E712762F88CD9A507B3D0D44D82B1F5F731",
+      "size": 506784,
+      "downloadURL": "https://cdn.modrinth.com/data/CFX9ftUJ/versions/f50pNkNh/advancednetherite-fabric-2.1.6-1.21.jar"
+    },
+    {
+      "name": "AmbientSounds_FABRIC_v6.0.3_mc1.21.jar",
+      "sha1": "CB3851BCFDF21B4F5096A045B1BC2E7F02B7DF4A",
+      "size": 85330968,
+      "downloadURL": "https://cdn.modrinth.com/data/fM515JnW/versions/LCNNNltd/AmbientSounds_FABRIC_v6.0.3_mc1.21.jar"
+    },
+    {
+      "name": "architectury-13.0.3-fabric.jar",
+      "sha1": "083B24E41A39C106A1EF9F03C78EC6B62C8D88C0",
+      "size": 600779,
+      "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/nW3HvWVP/architectury-13.0.3-fabric.jar"
+    },
+    {
+      "name": "balm-fabric-1.21-21.0.11.jar",
+      "sha1": "C3B8A97202047D536876E9C2699690DE83DA7CF2",
+      "size": 425973,
+      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/ryOwjzmq/balm-fabric-1.21-21.0.11.jar"
+    },
+    {
+      "name": "BiomesOPlenty-fabric-1.21-21.0.0.11.jar",
+      "sha1": "078801FD439805A12658D8F8E9AF1A0983518C12",
+      "size": 22335047,
+      "downloadURL": "https://cdn.modrinth.com/data/HXF82T3G/versions/okPCWByE/BiomesOPlenty-fabric-1.21-21.0.0.11.jar"
+    },
+    {
+      "name": "chisel-fabric-1.21-1.8.1.jar",
+      "sha1": "06F1A2FF1BAB654725F3CEE4D9BCE9926FB03401",
+      "size": 7879061,
+      "downloadURL": "https://cdn.modrinth.com/data/4KWv7wbN/versions/j7OtHlGz/chisel-fabric-1.21-1.8.1.jar"
+    },
+    {
+      "name": "chunksfadein-1.0.1-1.21.jar",
+      "sha1": "6B6A212F5E371C5DC20C04C71F3F743D5A594EF9",
+      "size": 310929,
+      "downloadURL": "https://cdn.modrinth.com/data/JaNmzvA8/versions/PEetbdug/chunksfadein-1.0.1-1.21.jar"
+    },
+    {
+      "name": "cinderscapes-5.0.1.jar",
+      "sha1": "70DF0B1A583E999731B80EAD42F03DD06E3D5D8D",
+      "size": 14829252,
+      "downloadURL": "https://cdn.modrinth.com/data/QC4wcUXZ/versions/7YaA4bki/cinderscapes-5.0.1.jar"
+    },
+    {
+      "name": "collective-1.21.0-7.70.jar",
+      "sha1": "8E6E63EE89011EF27BE5CD69FF76D72954EECC63",
+      "size": 906500,
+      "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/ZaTRzQs8/collective-1.21.0-7.70.jar"
+    },
+    {
+      "name": "cubes-without-borders-2.1.0%2B1.21.jar",
+      "sha1": "BE868E3EE7B88DCB11F807003B94B893EFA39A98",
+      "size": 55221,
+      "downloadURL": "https://cdn.modrinth.com/data/ETlrkaYF/versions/cU76xqvp/cubes-without-borders-2.1.0%2B1.21.jar"
+    },
+    {
+      "name": "dynamic-fps-3.6.0%2Bminecraft-1.21.0-fabric.jar",
+      "sha1": "7A42DAB5FE78A4E89D541D3ECA2D7513AFFF23F9",
+      "size": 172584,
+      "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/WJuoKsuM/dynamic-fps-3.6.0%2Bminecraft-1.21.0-fabric.jar"
+    },
+    {
+      "name": "elytratrims-fabric-3.4.0%2B1.21.jar",
+      "sha1": "368B702B02BC9A204C1CFC7EF1BA9C6E780894D3",
+      "size": 583648,
+      "downloadURL": "https://cdn.modrinth.com/data/XpzGz7KD/versions/JwzzMol6/elytratrims-fabric-3.4.0%2B1.21.jar"
+    },
+    {
+      "name": "enchanted-vertical-slabs-2.0.2-fabric-mc1.21.jar",
+      "sha1": "677D830358CF8428E6C56803CDD9FA6B56878B30",
+      "size": 233530,
+      "downloadURL": "https://cdn.modrinth.com/data/TG1cHkRf/versions/wDQsYCvc/enchanted-vertical-slabs-2.0.2-fabric-mc1.21.jar"
+    },
+    {
+      "name": "energizedpower-1.21-2.12.1-fabric.jar",
+      "sha1": "B221CCEA504B7A228971A48C255D9E11A9269668",
+      "size": 4400019,
+      "downloadURL": "https://cdn.modrinth.com/data/6pku8gW1/versions/mxiuO90t/energizedpower-1.21-2.12.1-fabric.jar"
+    },
+    {
+      "name": "entity_model_features_fabric_1.21-2.1.3.jar",
+      "sha1": "DE8D74B91B9616923921DD0E25B01CA972D6CCF1",
+      "size": 410465,
+      "downloadURL": "https://cdn.modrinth.com/data/4I1XuqiY/versions/hX4kT2fu/entity_model_features_fabric_1.21-2.1.3.jar"
+    },
+    {
+      "name": "entity_texture_features_fabric_1.21-6.1.3.jar",
+      "sha1": "F2C9E292B9582A02903F1886F8F9F0313299D91F",
+      "size": 599401,
+      "downloadURL": "https://cdn.modrinth.com/data/BVzZfTc1/versions/O3jDICoH/entity_texture_features_fabric_1.21-6.1.3.jar"
+    },
+    {
+      "name": "fabric-api-0.100.6%2B1.21.jar",
+      "sha1": "DD92D95977C960AFFEFC6C29E3EE946CE7B4723A",
+      "size": 2267960,
+      "downloadURL": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Y0cpssyN/fabric-api-0.100.6%2B1.21.jar"
+    },
+    {
+      "name": "indium-1.0.34%2Bmc1.21.jar",
+      "sha1": "CF4641206FDE618F194DC0A1064B1294E385D679",
+      "size": 104921,
+      "downloadURL": "https://cdn.modrinth.com/data/Orvt0mRa/versions/K4hsdO9H/indium-1.0.34%2Bmc1.21.jar"
+    },
+    {
+      "name": "iris-1.7.3%2Bmc1.21.jar",
+      "sha1": "1B4E44A74C850D407518BC5CBE33EEC9577AD9E9",
+      "size": 2707610,
+      "downloadURL": "https://cdn.modrinth.com/data/YL57xq9U/versions/kuOV4Ece/iris-1.7.3%2Bmc1.21.jar"
+    },
+    {
+      "name": "modernfix-fabric-5.18.6%2Bmc1.21.jar",
+      "sha1": "277669D7A747D5E6E9A0CDB67E5934CB09F818B0",
+      "size": 416153,
+      "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/NUPJxyji/modernfix-fabric-5.18.6%2Bmc1.21.jar"
+    },
+    {
+      "name": "voicechat-fabric-1.21-2.5.18.jar",
+      "sha1": "FDFB6799E9A02DCFC63C5DA38FA71747A00F9A49",
+      "size": 6561178,
+      "downloadURL": "https://cdn.modrinth.com/data/9eGKb6K1/versions/COYWChTc/voicechat-fabric-1.21-2.5.18.jar"
+    },
+    {
+      "name": "sodium-fabric-0.5.11%2Bmc1.21.jar",
+      "sha1": "D67E66EA4BB2409997B636DAE4203D33764CDCC8",
+      "size": 982671,
+      "downloadURL": "https://cdn.modrinth.com/data/AANobbMI/versions/RncWhTxD/sodium-fabric-0.5.11%2Bmc1.21.jar"
+    },
+    {
+      "name": "toms_storage_fabric-1.21-2.0.6.jar",
+      "sha1": "71A6471ACDBCCF52F07CE3FC3B47D7269E57AECC",
+      "size": 1896322,
+      "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/FUKGrRvt/toms_storage_fabric-1.21-2.0.6.jar"
+    },
+    {
+      "name": "waystones-fabric-1.21-21.0.7.jar",
+      "sha1": "A4BFE8286B7F20F5A2C84C2C9F2AEC52437B1378",
+      "size": 832922,
+      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/jqkMwqdk/waystones-fabric-1.21-21.0.7.jar"
     }
   ],
   "curseFiles": [
