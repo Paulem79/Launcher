@@ -755,6 +755,12 @@
       "sha1": "2EA01E5910C7273670F748E2664E948DB2D77610",
       "size": 157404,
       "downloadURL": "https://cdn.modrinth.com/data/SfMw2IZN/versions/cl0HrTL6/nvidium-0.2.9-beta.jar"
+    },
+    {
+      "name": "ImmersiveThunder-1.21%2B1.2.2.jar",
+      "sha1": "580686E25C8A65ECDF5891AE90F9B6E1BA22CEA6",
+      "size": 3305139,
+      "downloadURL": "https://cdn.modrinth.com/data/uKjKoMsj/versions/6TiQdfiz/ImmersiveThunder-1.21%2B1.2.2.jar"
     }
   ],
   "curseFiles": [
