@@ -761,6 +761,24 @@
       "sha1": "580686E25C8A65ECDF5891AE90F9B6E1BA22CEA6",
       "size": 3305139,
       "downloadURL": "https://cdn.modrinth.com/data/uKjKoMsj/versions/6TiQdfiz/ImmersiveThunder-1.21%2B1.2.2.jar"
+    },
+    {
+      "name": "BetterPingDisplay-Fabric-1.21-1.1.1.jar",
+      "sha1": "82078E2A34AD5ED7E246A7C0B25A54204B61C464",
+      "size": 14848,
+      "downloadURL": "https://cdn.modrinth.com/data/MS1ZMyR7/versions/RYkZjRb5/BetterPingDisplay-Fabric-1.21-1.1.1.jar"
+    },
+    {
+      "name": "cave_dust-3.0.0.jar",
+      "sha1": "2913BA88E5F72B8FFC94B1182C395C9F0E948DB3",
+      "size": 245845,
+      "downloadURL": "https://cdn.modrinth.com/data/jawg7zT1/versions/YS7mMAIj/cave_dust-3.0.0.jar"
+    },
+    {
+      "name": "highlight-fabric-1.21-3.0.0.jar",
+      "sha1": "68C9D99F271CD8EF8421358369D2D663DD7074FE",
+      "size": 457352,
+      "downloadURL": "https://cdn.modrinth.com/data/Vz96hXMh/versions/O0nda3pt/highlight-fabric-1.21-3.0.0.jar"
     }
   ],
   "curseFiles": [
