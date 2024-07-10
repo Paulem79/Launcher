@@ -779,6 +779,18 @@
       "sha1": "68C9D99F271CD8EF8421358369D2D663DD7074FE",
       "size": 457352,
       "downloadURL": "https://cdn.modrinth.com/data/Vz96hXMh/versions/O0nda3pt/highlight-fabric-1.21-3.0.0.jar"
+    },
+    {
+      "name": "malilib-fabric-1.21-0.19.999-sakura.6.jar",
+      "sha1": "EAA55ED19B8950D2C705FED0B7BCDF63568D56A5",
+      "size": 806110,
+      "downloadURL": "https://github.com/sakura-ryoko/malilib/releases/download/1.21-sakura.6/malilib-fabric-1.21-0.19.999-sakura.6.jar"
+    },
+    {
+      "name": "litematica-fabric-1.21-0.18.999-sakura.17.jar",
+      "sha1": "B18E9316C362B4E032A6CBA5C7379C5067A7A121",
+      "size": 1267022,
+      "downloadURL": "https://github.com/sakura-ryoko/litematica/releases/download/1.21-sakura.17/litematica-fabric-1.21-0.18.999-sakura.17.jar"
     }
   ],
   "curseFiles": [
