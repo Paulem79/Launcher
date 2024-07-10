@@ -791,6 +791,12 @@
       "sha1": "16B0A36B9C54A669874F091DA7CDFC1BACD2BED4",
       "size": 427388,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.1.0.jar"
+    },
+    {
+      "name": "litematica-printer-1.21-3.5.0-sakura.2.jar",
+      "sha1": "83D514345A3A51D227427E16EA66FF574194FCB2",
+      "size": 433040,
+      "downloadURL": "https://github.com/sakura-ryoko/litematica-printer/releases/download/1.21-sakura.2/litematica-printer-1.21-3.5.0-sakura.2.jar"
     }
   ],
   "curseFiles": [
