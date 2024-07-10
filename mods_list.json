@@ -475,12 +475,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/NWvsqJ2Z/versions/6jPnGcJ4/areas-1.21.0-5.9.jar"
     },
     {
-      "name": "morecontent-1.0.2.jar",
-      "sha1": "E52EF714F4E1A0B21E6F65FDD95D75585D57CD8A",
-      "size": 337364,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.0.2.jar"
-    },
-    {
       "name": "AnvilFix-1.21.jar",
       "sha1": "EC81EB216269A10FB417A13CD3700BDCCA5BF5D6",
       "size": 74470,
@@ -791,6 +785,12 @@
       "sha1": "B18E9316C362B4E032A6CBA5C7379C5067A7A121",
       "size": 1267022,
       "downloadURL": "https://github.com/sakura-ryoko/litematica/releases/download/1.21-sakura.17/litematica-fabric-1.21-0.18.999-sakura.17.jar"
+    },
+    {
+      "name": "morecontent-1.1.0.jar",
+      "sha1": "16B0A36B9C54A669874F091DA7CDFC1BACD2BED4",
+      "size": 427388,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.1.0.jar"
     }
   ],
   "curseFiles": [
