@@ -55,12 +55,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/nvQzSEkH/versions/ZMaraV5t/Jade-1.21-Fabric-15.0.4.jar"
     },
     {
-      "name": "fallingleaves-1.16.0%2B1.21.jar",
-      "sha1": "721a02e2b4b526c8377abec3ea95b161853fc5a5",
-      "size": 162495,
-      "downloadURL": "https://cdn.modrinth.com/data/WhbRG4iK/versions/U3JJC6zk/fallingleaves-1.16.0%2B1.21.jar"
-    },
-    {
       "name": "fabricskyboxes-0.7.4%2Bmc1.21.jar",
       "sha1": "d7c80f23792afc6018da2477d46804114529afca",
       "size": 206127,
@@ -313,12 +307,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/x02cBj9Y/versions/ramqgou6/status-effect-bars-1.0.6.jar"
     },
     {
-      "name": "CreativeCore_FABRIC_v2.11.34_mc1.21.jar",
-      "sha1": "D5616D82A337A5D4835B94A2E017C7CB2D57A26D",
-      "size": 1139068,
-      "downloadURL": "https://cdn.modrinth.com/data/OsZiaDHq/versions/kAitRU86/CreativeCore_FABRIC_v2.11.34_mc1.21.jar"
-    },
-    {
       "name": "RoughlyEnoughProfessions-fabric-1.21-4.0.0.jar",
       "sha1": "964FBA3D86085119B3EF372AB91FFF503C97590F",
       "size": 20052,
@@ -343,12 +331,6 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.4.jar"
     },
     {
-      "name": "basicweapons-1.2.7.jar",
-      "sha1": "F2D7D59FC3C8C02E49A18E06A51D47358DC5EDA4",
-      "size": 152562,
-      "downloadURL": "https://cdn.modrinth.com/data/sc2Pektv/versions/YBUTHRag/basicweapons-1.2.7.jar"
-    },
-    {
       "name": "BetterF3-11.0.1-Fabric-1.21.jar",
       "sha1": "EB48BA676E4C0779576B0F49C28FFD47F0EAE561",
       "size": 1802691,
@@ -365,12 +347,6 @@
       "sha1": "C448E62B8E038E45E9891A20E191FB5B50E233BB",
       "size": 73543,
       "downloadURL": "https://cdn.modrinth.com/data/9ON3zv6e/versions/UpfCW9RM/logbegone-fabric-1.21-1.0.2.jar"
-    },
-    {
-      "name": "EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar",
-      "sha1": "D31BB2C8C29B2B36885134E90CBBB5EB9B52CC1A",
-      "size": 4728798,
-      "downloadURL": "https://cdn.modrinth.com/data/KjL0jE2w/versions/PWxOcrC6/EnhancedVisuals_FABRIC_v1.8.1_mc1.21.jar"
     },
     {
       "name": "suggestion-tweaker-1.20.6-1.5.2-fabric.jar",
@@ -445,12 +421,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/mOgUt4GM/versions/xhN1IvHi/modmenu-11.0.1.jar"
     },
     {
-      "name": "expandedstorage-14.0.0%2B1.21-pre2-fabric.jar",
-      "sha1": "43520FFDA9CEEA0B9DAFD65393A3798EBB838CA1",
-      "size": 733966,
-      "downloadURL": "https://cdn.modrinth.com/data/jCCPlP3c/versions/2ttdNNeE/expandedstorage-14.0.0%2B1.21-pre2-fabric.jar"
-    },
-    {
       "name": "Controlling-fabric-1.21-18.0.1.jar",
       "sha1": "21CC296533BA849CEDE9AD6CD07F7EA51A3828A4",
       "size": 83744,
@@ -461,12 +431,6 @@
       "sha1": "23F9FB394AC985BCAF4BFF4095672E287D430123",
       "size": 79142,
       "downloadURL": "https://cdn.modrinth.com/data/fuuu3xnx/versions/CBSMQxpQ/Searchables-fabric-1.21-1.0.1.jar"
-    },
-    {
-      "name": "Philips-Ruins1.21-1.3%5BFabric%5D.jar",
-      "sha1": "C2F5F007A9AEABF9AE07E753D865A98BCC1949FB",
-      "size": 1496334,
-      "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/8nNEktkg/Philips-Ruins1.21-1.3%5BFabric%5D.jar"
     },
     {
       "name": "areas-1.21.0-5.9.jar",
@@ -607,24 +571,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/CFX9ftUJ/versions/f50pNkNh/advancednetherite-fabric-2.1.6-1.21.jar"
     },
     {
-      "name": "AmbientSounds_FABRIC_v6.0.3_mc1.21.jar",
-      "sha1": "CB3851BCFDF21B4F5096A045B1BC2E7F02B7DF4A",
-      "size": 85330968,
-      "downloadURL": "https://cdn.modrinth.com/data/fM515JnW/versions/LCNNNltd/AmbientSounds_FABRIC_v6.0.3_mc1.21.jar"
-    },
-    {
-      "name": "architectury-13.0.3-fabric.jar",
-      "sha1": "083B24E41A39C106A1EF9F03C78EC6B62C8D88C0",
-      "size": 600779,
-      "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/nW3HvWVP/architectury-13.0.3-fabric.jar"
-    },
-    {
-      "name": "balm-fabric-1.21-21.0.11.jar",
-      "sha1": "C3B8A97202047D536876E9C2699690DE83DA7CF2",
-      "size": 425973,
-      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/ryOwjzmq/balm-fabric-1.21-21.0.11.jar"
-    },
-    {
       "name": "BiomesOPlenty-fabric-1.21-21.0.0.11.jar",
       "sha1": "078801FD439805A12658D8F8E9AF1A0983518C12",
       "size": 22335047,
@@ -715,18 +661,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/YL57xq9U/versions/kuOV4Ece/iris-1.7.3%2Bmc1.21.jar"
     },
     {
-      "name": "modernfix-fabric-5.18.6%2Bmc1.21.jar",
-      "sha1": "277669D7A747D5E6E9A0CDB67E5934CB09F818B0",
-      "size": 416153,
-      "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/NUPJxyji/modernfix-fabric-5.18.6%2Bmc1.21.jar"
-    },
-    {
-      "name": "voicechat-fabric-1.21-2.5.18.jar",
-      "sha1": "FDFB6799E9A02DCFC63C5DA38FA71747A00F9A49",
-      "size": 6561178,
-      "downloadURL": "https://cdn.modrinth.com/data/9eGKb6K1/versions/COYWChTc/voicechat-fabric-1.21-2.5.18.jar"
-    },
-    {
       "name": "sodium-fabric-0.5.11%2Bmc1.21.jar",
       "sha1": "D67E66EA4BB2409997B636DAE4203D33764CDCC8",
       "size": 982671,
@@ -737,12 +671,6 @@
       "sha1": "71A6471ACDBCCF52F07CE3FC3B47D7269E57AECC",
       "size": 1896322,
       "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/FUKGrRvt/toms_storage_fabric-1.21-2.0.6.jar"
-    },
-    {
-      "name": "waystones-fabric-1.21-21.0.7.jar",
-      "sha1": "A4BFE8286B7F20F5A2C84C2C9F2AEC52437B1378",
-      "size": 832922,
-      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/jqkMwqdk/waystones-fabric-1.21-21.0.7.jar"
     },
     {
       "name": "nvidium-0.2.9-beta.jar",
@@ -797,6 +725,78 @@
       "sha1": "EAA55ED19B8950D2C705FED0B7BCDF63568D56A5",
       "size": 806110,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/malilib-fabric-1.21-0.19.999-sakura.6.jar"
+    },
+    {
+      "name": "AmbientSounds_FABRIC_v6.0.4_mc1.21.jar",
+      "sha1": "2B8D8F0ED48782EE4FCC1AE10C044C900F6DCDC8",
+      "size": 85330968,
+      "downloadURL": "https://cdn.modrinth.com/data/fM515JnW/versions/R5ocwPul/AmbientSounds_FABRIC_v6.0.4_mc1.21.jar"
+    },
+    {
+      "name": "waystones-fabric-1.21-21.0.8.jar",
+      "sha1": "AEF53CB2C2C085F060E0FCE4915A466FE102EB52",
+      "size": 836416,
+      "downloadURL": "https://cdn.modrinth.com/data/LOpKHB2A/versions/xvvdZQUn/waystones-fabric-1.21-21.0.8.jar"
+    },
+    {
+      "name": "expandedstorage-14.0.2%2B1.21-fabric.jar",
+      "sha1": "46B57585EEDC430231CC285CA45C90AE8263887B",
+      "size": 734046,
+      "downloadURL": "https://cdn.modrinth.com/data/jCCPlP3c/versions/ZENmt3pm/expandedstorage-14.0.2%2B1.21-fabric.jar"
+    },
+    {
+      "name": "fallingleaves-1.16.1%2B1.21.jar",
+      "sha1": "7AE2F319455708541FBBC658C1CE4E106825CBAF",
+      "size": 164167,
+      "downloadURL": "https://cdn.modrinth.com/data/WhbRG4iK/versions/HtuOat2a/fallingleaves-1.16.1%2B1.21.jar"
+    },
+    {
+      "name": "modernfix-fabric-5.18.7%2Bmc1.21.jar",
+      "sha1": "6C3E8DD274B3F8AF1D429736D526AEB109DD963F",
+      "size": 416172,
+      "downloadURL": "https://cdn.modrinth.com/data/nmDcB62a/versions/omk9tj4N/modernfix-fabric-5.18.7%2Bmc1.21.jar"
+    },
+    {
+      "name": "Philips-Ruins1.21-1.4%5BFabric%5D.jar",
+      "sha1": "11E27C5F3A75ED7F3E37F2B7ACE2AC2A703AD7C5",
+      "size": 1504550,
+      "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/MkqWE9nU/Philips-Ruins1.21-1.4%5BFabric%5D.jar"
+    },
+    {
+      "name": "voicechat-fabric-1.21-2.5.19.jar",
+      "sha1": "C8B05BACB5B5040130EF65498B0F9C41751636C8",
+      "size": 6562951,
+      "downloadURL": "https://cdn.modrinth.com/data/9eGKb6K1/versions/SSk6KqP7/voicechat-fabric-1.21-2.5.19.jar"
+    },
+    {
+      "name": "EnhancedVisuals_FABRIC_v1.8.2_mc1.21.jar",
+      "sha1": "4C0A209C03C118CC2BA9B0DDAF6C588AB5981173",
+      "size": 4728798,
+      "downloadURL": "https://cdn.modrinth.com/data/KjL0jE2w/versions/AKRqEU0x/EnhancedVisuals_FABRIC_v1.8.2_mc1.21.jar"
+    },
+    {
+      "name": "CreativeCore_FABRIC_v2.12.1_mc1.21.jar",
+      "sha1": "A5DE6EDA42E495F0778C3EC93C04AC664D692245",
+      "size": 1168995,
+      "downloadURL": "https://cdn.modrinth.com/data/OsZiaDHq/versions/okK3RO4e/CreativeCore_FABRIC_v2.12.1_mc1.21.jar"
+    },
+    {
+      "name": "basicweapons-1.2.8%2B1.21.jar",
+      "sha1": "A73B598F36C3B814EC196DDA16EC5F2257BCD60D",
+      "size": 154314,
+      "downloadURL": "https://cdn.modrinth.com/data/sc2Pektv/versions/o9KgAKrC/basicweapons-1.2.8%2B1.21.jar"
+    },
+    {
+      "name": "balm-fabric-1.21-21.0.14.jar",
+      "sha1": "287A36A153C78A71D4121B66E2D331168A949D25",
+      "size": 429572,
+      "downloadURL": "https://cdn.modrinth.com/data/MBAkmtvl/versions/6wqJaTSm/balm-fabric-1.21-21.0.14.jar"
+    },
+    {
+      "name": "architectury-13.0.4-fabric.jar",
+      "sha1": "3B41F97F66093532D3F10AC43B79A0A71FDDF376",
+      "size": 600776,
+      "downloadURL": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/i0N0Veb4/architectury-13.0.4-fabric.jar"
     }
   ],
   "curseFiles": [
