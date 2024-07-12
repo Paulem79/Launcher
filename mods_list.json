@@ -775,28 +775,28 @@
       "downloadURL": "https://cdn.modrinth.com/data/Vz96hXMh/versions/O0nda3pt/highlight-fabric-1.21-3.0.0.jar"
     },
     {
-      "name": "malilib-fabric-1.21-0.19.999-sakura.6.jar",
-      "sha1": "EAA55ED19B8950D2C705FED0B7BCDF63568D56A5",
-      "size": 806110,
-      "downloadURL": "https://github.com/sakura-ryoko/malilib/releases/download/1.21-sakura.6/malilib-fabric-1.21-0.19.999-sakura.6.jar"
-    },
-    {
-      "name": "litematica-fabric-1.21-0.18.999-sakura.17.jar",
-      "sha1": "B18E9316C362B4E032A6CBA5C7379C5067A7A121",
-      "size": 1267022,
-      "downloadURL": "https://github.com/sakura-ryoko/litematica/releases/download/1.21-sakura.17/litematica-fabric-1.21-0.18.999-sakura.17.jar"
-    },
-    {
       "name": "morecontent-1.1.0.jar",
       "sha1": "16B0A36B9C54A669874F091DA7CDFC1BACD2BED4",
       "size": 427388,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.1.0.jar"
     },
     {
+      "name": "litematica-fabric-1.21-0.18.999-sakura.18.jar",
+      "sha1": "6B8CB0F5FAF4D633FF01A332B42B1A2CDFECC7CE",
+      "size": 1273288,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/litematica-fabric-1.21-0.18.999-sakura.18.jar"
+    },
+    {
       "name": "litematica-printer-1.21-3.5.0-sakura.2.jar",
       "sha1": "83D514345A3A51D227427E16EA66FF574194FCB2",
       "size": 433040,
-      "downloadURL": "https://github.com/sakura-ryoko/litematica-printer/releases/download/1.21-sakura.2/litematica-printer-1.21-3.5.0-sakura.2.jar"
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/litematica-printer-1.21-3.5.0-sakura.2.jar"
+    },
+    {
+      "name": "malilib-fabric-1.21-0.19.999-sakura.6.jar",
+      "sha1": "EAA55ED19B8950D2C705FED0B7BCDF63568D56A5",
+      "size": 806110,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/malilib-fabric-1.21-0.19.999-sakura.6.jar"
     }
   ],
   "curseFiles": [
