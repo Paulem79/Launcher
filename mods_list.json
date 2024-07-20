@@ -613,12 +613,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/Vz96hXMh/versions/O0nda3pt/highlight-fabric-1.21-3.0.0.jar"
     },
     {
-      "name": "morecontent-1.1.0.jar",
-      "sha1": "16B0A36B9C54A669874F091DA7CDFC1BACD2BED4",
-      "size": 427388,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.1.0.jar"
-    },
-    {
       "name": "litematica-fabric-1.21-0.18.999-sakura.18.jar",
       "sha1": "6B8CB0F5FAF4D633FF01A332B42B1A2CDFECC7CE",
       "size": 1273288,
@@ -797,6 +791,12 @@
       "sha1": "96B58ABEB02764D0B0DAA6F278329E06E2812F62",
       "size": 906492,
       "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/Z5MOP6R2/collective-1.21.0-7.71.jar"
+    },
+    {
+      "name": "morecontent-1.2.4.jar",
+      "sha1": "261FDB700DDAABE44FC70F996215311A8A4E26E1",
+      "size": 443953,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.2.4.jar"
     }
   ],
   "curseFiles": [
