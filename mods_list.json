@@ -463,12 +463,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/du3UfiLL/versions/yjgcPYVA/BOMD-1.10.0-1.21.jar"
     },
     {
-      "name": "cardinal-components-api-6.1.0.jar",
-      "sha1": "06B64B8024AAEA4B589DC860E018E45490713696",
-      "size": 229233,
-      "downloadURL": "https://cdn.modrinth.com/data/K01OU20C/versions/quTFtjka/cardinal-components-api-6.1.0.jar"
-    },
-    {
       "name": "quartz-elevator-2.3.0%2B1.21.jar",
       "sha1": "0EC6CF00275F95FE6F2CDD1049DE4F90CF63C661",
       "size": 1077057,
@@ -697,12 +691,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/IwCkru1D/versions/cIHtzziG/cicada-lib-0.8.3%2B1.21-and-above.jar"
     },
     {
-      "name": "toms_storage_fabric-1.21-2.0.7.jar",
-      "sha1": "1CE419F250010E0D3147536BF7836255A47EA9E3",
-      "size": 1906116,
-      "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/V4mwo7v5/toms_storage_fabric-1.21-2.0.7.jar"
-    },
-    {
       "name": "sodium-shadowy-path-blocks-3.3.1.jar",
       "sha1": "B2D5CA4AD682B20C2204C035AA0A175830795E01",
       "size": 55621,
@@ -797,6 +785,18 @@
       "sha1": "261FDB700DDAABE44FC70F996215311A8A4E26E1",
       "size": 443953,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.2.4.jar"
+    },
+    {
+      "name": "cardinal-components-api-6.1.1.jar",
+      "sha1": "7CDD4CE921236D65C9C7A4D149A92AABA34A0AF2",
+      "size": 229179,
+      "downloadURL": "https://cdn.modrinth.com/data/K01OU20C/versions/tVPYyTPV/cardinal-components-api-6.1.1.jar"
+    },
+    {
+      "name": "toms_storage_fabric-1.21-2.0.8.jar",
+      "sha1": "3340BE730E5E0CEC9C32D99F11059DB3DB34F5AB",
+      "size": 1915088,
+      "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/noHIwpc0/toms_storage_fabric-1.21-2.0.8.jar"
     }
   ],
   "curseFiles": [
