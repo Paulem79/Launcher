@@ -781,12 +781,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/e0M1UDsY/versions/Z5MOP6R2/collective-1.21.0-7.71.jar"
     },
     {
-      "name": "morecontent-1.2.4.jar",
-      "sha1": "261FDB700DDAABE44FC70F996215311A8A4E26E1",
-      "size": 443953,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.2.4.jar"
-    },
-    {
       "name": "cardinal-components-api-6.1.1.jar",
       "sha1": "7CDD4CE921236D65C9C7A4D149A92AABA34A0AF2",
       "size": 229179,
@@ -797,6 +791,42 @@
       "sha1": "3340BE730E5E0CEC9C32D99F11059DB3DB34F5AB",
       "size": 1915088,
       "downloadURL": "https://cdn.modrinth.com/data/XZNI4Cpy/versions/noHIwpc0/toms_storage_fabric-1.21-2.0.8.jar"
+    },
+    {
+      "name": "InvMove-1.21-0.8.8-Fabric.jar",
+      "sha1": "21808EEF6B228C561F07730D97AE30720FD2438B",
+      "size": 123324,
+      "downloadURL": "https://cdn.modrinth.com/data/REfW2AEX/versions/FcdIvKru/InvMove-1.21-0.8.8-Fabric.jar"
+    },
+    {
+      "name": "moreculling-1.21-0.26.0.jar",
+      "sha1": "962BE4CCB7C3490B62DEA09E1678D86CA1836DFC",
+      "size": 259071,
+      "downloadURL": "https://cdn.modrinth.com/data/51shyZVL/versions/BUxgeDdf/moreculling-1.21-0.26.0.jar"
+    },
+    {
+      "name": "NoChatReports-FABRIC-1.21-v2.8.0.jar",
+      "sha1": "F1822B058132F7F221A3AC4470D54D820369C04E",
+      "size": 310073,
+      "downloadURL": "https://cdn.modrinth.com/data/qQyHxfxd/versions/riMhCAII/NoChatReports-FABRIC-1.21-v2.8.0.jar"
+    },
+    {
+      "name": "InventoryProfilesNext-fabric-1.21-2.0.2.jar",
+      "sha1": "68949B1F357DFDA4945C751FD6685FADC3F8DDDA",
+      "size": 1190352,
+      "downloadURL": "https://cdn.modrinth.com/data/O7RBXm3n/versions/TfRhevlK/InventoryProfilesNext-fabric-1.21-2.0.2.jar"
+    },
+    {
+      "name": "InvMoveCompats-1.20-0.3.2-Fabric.jar",
+      "sha1": "F089F5DFC3E7C143B94C18A909221F53ADC3D5A9",
+      "size": 102080,
+      "downloadURL": "https://cdn.modrinth.com/data/6IpcGP7T/versions/ezkd2wAz/InvMoveCompats-1.20-0.3.2-Fabric.jar"
+    },
+    {
+      "name": "morecontent-1.2.5.jar",
+      "sha1": "FAF165089562F799ED24713C3B46CB3997DB103F",
+      "size": 449943,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.2.5.jar"
     }
   ],
   "curseFiles": [
