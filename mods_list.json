@@ -827,6 +827,12 @@
       "sha1": "FAF165089562F799ED24713C3B46CB3997DB103F",
       "size": 449943,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.2.5.jar"
+    },
+    {
+      "name": "libIPN-fabric-1.21-6.0.0.jar",
+      "sha1": "B62272C4B04B6C9247025AA684684E8F4F7A9565",
+      "size": 604115,
+      "downloadURL": "https://cdn.modrinth.com/data/onSQdWhM/versions/2aBSL3js/libIPN-fabric-1.21-6.0.0.jar"
     }
   ],
   "curseFiles": [
