@@ -517,12 +517,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/QC4wcUXZ/versions/7YaA4bki/cinderscapes-5.0.1.jar"
     },
     {
-      "name": "dynamic-fps-3.6.0%2Bminecraft-1.21.0-fabric.jar",
-      "sha1": "7A42DAB5FE78A4E89D541D3ECA2D7513AFFF23F9",
-      "size": 172584,
-      "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/WJuoKsuM/dynamic-fps-3.6.0%2Bminecraft-1.21.0-fabric.jar"
-    },
-    {
       "name": "energizedpower-1.21-2.12.1-fabric.jar",
       "sha1": "B221CCEA504B7A228971A48C255D9E11A9269668",
       "size": 4400019,
@@ -833,6 +827,12 @@
       "sha1": "CC734401DEC7B346E632614AF8C4AC8AA7F76FD5",
       "size": 449971,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/morecontent-1.2.5.1.jar"
+    },
+    {
+      "name": "dynamic-fps-3.6.1%2Bminecraft-1.21.0-fabric.jar",
+      "sha1": "D7A4B8B5798D85BF1A0BAD86200F5ED5C210E0F3",
+      "size": 173298,
+      "downloadURL": "https://cdn.modrinth.com/data/LQ3K71Q1/versions/hqTdt4bl/dynamic-fps-3.6.1%2Bminecraft-1.21.0-fabric.jar"
     }
   ],
   "curseFiles": [
