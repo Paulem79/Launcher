@@ -799,12 +799,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/xv94TkTM/versions/16UbbEe8/Controlling-fabric-1.21-18.0.2.jar"
     },
     {
-      "name": "polytone-1.21-2.1.5-fabric.jar",
-      "sha1": "2508EF3DAB98355A8DA9FD3DB5877A4D2FB91309",
-      "size": 525389,
-      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/aekk57CP/polytone-1.21-2.1.5-fabric.jar"
-    },
-    {
       "name": "malilib-fabric-1.21-0.20.0.jar",
       "sha1": "40D897958E1DA835544732EFAD504A8B1CB4424B",
       "size": 792976,
@@ -827,6 +821,12 @@
       "sha1": "1EBAA7F2F98BA714C96376F7612A913E380C3863",
       "size": 12704,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.5.jar"
+    },
+    {
+      "name": "polytone-1.21-2.1.6-fabric.jar",
+      "sha1": "B1B66C2CBF1E0B43138C4B3323E05897D907B47E",
+      "size": 528094,
+      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/Q3uKTGcS/polytone-1.21-2.1.6-fabric.jar"
     }
   ],
   "curseFiles": [
