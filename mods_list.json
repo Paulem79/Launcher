@@ -589,12 +589,6 @@
       "downloadURL": "https://cdn.modrinth.com/data/WhbRG4iK/versions/HtuOat2a/fallingleaves-1.16.1%2B1.21.jar"
     },
     {
-      "name": "Philips-Ruins1.21-1.4%5BFabric%5D.jar",
-      "sha1": "11E27C5F3A75ED7F3E37F2B7ACE2AC2A703AD7C5",
-      "size": 1504550,
-      "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/MkqWE9nU/Philips-Ruins1.21-1.4%5BFabric%5D.jar"
-    },
-    {
       "name": "voicechat-fabric-1.21-2.5.19.jar",
       "sha1": "C8B05BACB5B5040130EF65498B0F9C41751636C8",
       "size": 6562951,
@@ -833,6 +827,12 @@
       "sha1": "2CF560DBA8892CB3E51AB3EEA25B9F20DD03C749",
       "size": 54648,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/magna-1.10.1+1.21.jar"
+    },
+    {
+      "name": "Philips-Ruins1.21-1.5%5BFabric%5D.jar",
+      "sha1": "F235EDEFC84D35EA559E0B3F0041EF3D3CAD8A00",
+      "size": 1513112,
+      "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/3pkhK6a9/Philips-Ruins1.21-1.5%5BFabric%5D.jar"
     }
   ],
   "curseFiles": [
