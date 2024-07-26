@@ -811,12 +811,6 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.5.jar"
     },
     {
-      "name": "polytone-1.21-2.1.6-fabric.jar",
-      "sha1": "B1B66C2CBF1E0B43138C4B3323E05897D907B47E",
-      "size": 528094,
-      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/Q3uKTGcS/polytone-1.21-2.1.6-fabric.jar"
-    },
-    {
       "name": "morecontent-1.3.1.jar",
       "sha1": "718F3FF91F8AAC57C74F9F7F850B132F45A5A94D",
       "size": 499521,
@@ -833,6 +827,12 @@
       "sha1": "F235EDEFC84D35EA559E0B3F0041EF3D3CAD8A00",
       "size": 1513112,
       "downloadURL": "https://cdn.modrinth.com/data/KdJhOYVV/versions/3pkhK6a9/Philips-Ruins1.21-1.5%5BFabric%5D.jar"
+    },
+    {
+      "name": "polytone-1.21-2.2.1-fabric.jar",
+      "sha1": "1F205AA8F8BB596B90327034975253600B80CC70",
+      "size": 541101,
+      "downloadURL": "https://cdn.modrinth.com/data/3qAYkBMB/versions/gF6RzV0i/polytone-1.21-2.2.1-fabric.jar"
     }
   ],
   "curseFiles": [
