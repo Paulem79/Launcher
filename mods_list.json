@@ -799,12 +799,6 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/litematica-printer-1.21-3.5.0-sakura.3.jar"
     },
     {
-      "name": "auto-connect-2.1.5.jar",
-      "sha1": "1EBAA7F2F98BA714C96376F7612A913E380C3863",
-      "size": 12704,
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.5.jar"
-    },
-    {
       "name": "morecontent-1.3.1.jar",
       "sha1": "718F3FF91F8AAC57C74F9F7F850B132F45A5A94D",
       "size": 499521,
@@ -833,6 +827,12 @@
       "sha1": "AC28022E2905E8943FE54A76632C91C0BCCAE35F",
       "size": 37160,
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/magna-1.10.1+1.21.jar"
+    },
+    {
+      "name": "auto-connect-2.1.6.jar",
+      "sha1": "8490F76C71E19E97086146A46BD3BF19CD9C8A72",
+      "size": 12937,
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/updater/auto-connect-2.1.6.jar"
     }
   ],
   "curseFiles": [
