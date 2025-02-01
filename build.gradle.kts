@@ -76,6 +76,7 @@ tasks.withType<JPackageTask>().configureEach {
     copyright = "Copyright (c) 2025 Paulem"
     runtimeImage = Jvm.current().javaHome.toString()
     destination = "dist"
+    removeDestination = true
     input = "build/libs"
     mainJar = tasks.shadowJar.get().archiveFileName.get()
     mainClass = application.mainClass.get()
@@ -140,10 +141,6 @@ tasks.jpackage {
     }
 }
 
-tasks.clean {
-    dependsOn("deleteDist")
-}
-
 tasks.jar {
     finalizedBy(tasks.shadowJar)
 }
@@ -155,10 +152,6 @@ tasks.shadowJar {
 
     archiveVersion.set("")
     archiveClassifier.set("")
-}
-
-tasks.register<Delete>("deleteDist") {
-    delete("dist")
 }
 
 tasks.register<JavaExec>("runShadowJar") {
