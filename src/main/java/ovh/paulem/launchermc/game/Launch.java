@@ -84,6 +84,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                     .withFabricVersion(MinecraftInfos.MODLOADER_VERSION)
                     .withMods(MinecraftInfos.MODS_LIST_URL)
                     .withCurseMods(MinecraftInfos.MODS_LIST_URL)
+                    .withModrinthMods(MinecraftInfos.MODS_LIST_URL)
                     .withFileDeleter(new ModFileDeleter(true))
                     .build();
 
