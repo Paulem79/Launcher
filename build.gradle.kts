@@ -52,17 +52,17 @@ application {
     mainClass.set("ovh.paulem.launchermc.Main")
 }
 
+val javaVersion = JavaLanguageVersion.of(23)
+
 tasks.withType<JavaCompile>().configureEach {
-    JavaVersion.VERSION_21.toString().also {
-        sourceCompatibility = it
-        targetCompatibility = it
-    }
+    sourceCompatibility = javaVersion.toString()
+    targetCompatibility = javaVersion.toString()
     options.encoding = "UTF-8"
 }
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = javaVersion
         vendor = JvmVendorSpec.BELLSOFT
     }
 }
