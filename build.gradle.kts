@@ -107,10 +107,10 @@ tasks.register<JPackageTask>("zipjpackage") {
 }
 
 tasks.register<Zip>("zipPackage") {
-    archiveFileName.set(infra + "-FlowJsonCreator-" + project.version + ".zip")
+    archiveFileName.set(infra + "-"  + project.name + "-" + project.version + ".zip")
     destinationDirectory.set(layout.projectDirectory.dir("dist"))
 
-    from(layout.projectDirectory.dir("dist/FlowJsonCreator"))
+    from(layout.projectDirectory.dir("dist/" + project.name))
 }
 
 tasks.jpackage {
