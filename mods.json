@@ -1,0 +1,116 @@
+{
+  "mods": [],
+  "curseFiles": [],
+  "modrinthMods": [
+    {
+      "projectReference": "P7dR8mSH",
+      "versionNumber": "0.120.0+1.21.5",
+      "versionId": ""
+    },
+    {
+      "projectReference": "AANobbMI",
+      "versionNumber": "mc1.21.5-0.6.13-fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "YL57xq9U",
+      "versionNumber": "1.8.11+1.21.5-fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "NNAgCjsB",
+      "versionNumber": "1.7.4",
+      "versionId": ""
+    },
+    {
+      "projectReference": "uXXizFIs",
+      "versionNumber": "8.0.0-fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "mOgUt4GM",
+      "versionNumber": "14.0.0-rc.2",
+      "versionId": ""
+    },
+    {
+      "projectReference": "gvQqBUqZ",
+      "versionNumber": "mc1.21.5-0.16.2-fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "5ZwdcRci",
+      "versionNumber": "1.9.3+1.21.5-fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "PtjYWJkn",
+      "versionNumber": "mc1.21.5-0.6.3+fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "4I1XuqiY",
+      "versionNumber": "2.4.3",
+      "versionId": ""
+    },
+    {
+      "projectReference": "BVzZfTc1",
+      "versionNumber": "6.2.13",
+      "versionId": ""
+    },
+    {
+      "projectReference": "Bh37bMuy",
+      "versionNumber": "mc1.21.4-1.8.3+fabric",
+      "versionId": ""
+    },
+    {
+      "projectReference": "LQ3K71Q1",
+      "versionNumber": "3.9.3",
+      "versionId": ""
+    },
+    {
+      "projectReference": "51shyZVL",
+      "versionNumber": "1.3.0",
+      "versionId": ""
+    },
+    {
+      "projectReference": "w7ThoJFB",
+      "versionNumber": "2.14.2+1.21.3",
+      "versionId": ""
+    },
+    {
+      "projectReference": "QdG47OkI",
+      "versionNumber": "1.21.5-1.12",
+      "versionId": ""
+    },
+    {
+      "projectReference": "uLbm7CG6",
+      "versionNumber": "1.7.3+1.21.5",
+      "versionId": ""
+    },
+    {
+      "projectReference": "QwxR6Gcd",
+      "versionNumber": "1.21.5+1.0",
+      "versionId": ""
+    },
+    {
+      "projectReference": "k2ZPuTBm",
+      "versionNumber": "1.3.5.12",
+      "versionId": ""
+    },
+    {
+      "projectReference": "VSNURh3q",
+      "versionNumber": "0.3.3+alpha.0.5+1.21.5",
+      "versionId": ""
+    },
+    {
+      "projectReference": "g96Z4WVZ",
+      "versionNumber": "2.2.1",
+      "versionId": ""
+    },
+    {
+      "projectReference": "ETlrkaYF",
+      "versionNumber": "3.0.0+1.21.5",
+      "versionId": ""
+    }
+  ]
+}
