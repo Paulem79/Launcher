@@ -70,7 +70,7 @@ java {
 tasks.withType<JPackageTask>().configureEach {
     dependsOn(tasks.shadowJar)
 
-    appName = "FlowJsonCreator"
+    appName = project.name
     appVersion = project.version.toString()
     vendor = "Paulem"
     copyright = "Copyright (c) 2025 Paulem"
