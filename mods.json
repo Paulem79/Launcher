@@ -101,6 +101,16 @@
       "projectReference": "VSNURh3q",
       "versionNumber": "0.3.3+alpha.0.5+1.21.5",
       "versionId": "BkdPeQKc"
+    },
+    {
+      "projectReference": "9s6osm5g",
+      "versionNumber": "18.0.145+fabric",
+      "versionId": "qA00xo1O"
+    },
+    {
+      "projectReference": "Ha28R6CL",
+      "versionNumber": "1.13.2+kotlin.2.1.20",
+      "versionId": "E4WyjCxJ"
     }
   ]
 }
