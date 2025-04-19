@@ -111,6 +111,11 @@
       "projectReference": "Ha28R6CL",
       "versionNumber": "1.13.2+kotlin.2.1.20",
       "versionId": "E4WyjCxJ"
+    },
+    {
+      "projectReference": "1eAoo2KR",
+      "versionNumber": "3.6.6+1.21.5-fabric",
+      "versionId": "5yBEzonb"
     }
   ]
 }
