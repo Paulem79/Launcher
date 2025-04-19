@@ -80,8 +80,8 @@ public final class RPC {
 
             lib.Discord_UpdatePresence(presence);
         } catch (Exception e) {
-            this.logger.err("Impossible de récupérer les informations sur le serveur !");
-            this.logger.printStackTrace(e);
+            /*this.logger.err("Impossible de récupérer les informations sur le serveur !");
+            this.logger.printStackTrace(e);*/
         }
     }
 
