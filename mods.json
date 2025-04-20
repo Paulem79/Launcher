@@ -121,6 +121,11 @@
       "projectReference": "qANg5Jrr",
       "versionNumber": "5.3.1-fabric",
       "versionId": "71uPp5Hx"
+    },
+    {
+      "projectReference": "9eGKb6K1",
+      "versionNumber": "fabric-1.21.5-2.5.30",
+      "versionId": "suJqF5xU"
     }
   ]
 }
