@@ -48,11 +48,6 @@
       "versionId": "Oub8JunR"
     },
     {
-      "projectReference": "PtjYWJkn",
-      "versionNumber": "mc1.20.1-0.5.1",
-      "versionId": "80a0J5Cn"
-    },
-    {
       "projectReference": "Ha28R6CL",
       "versionNumber": "1.12.3+kotlin.2.0.21",
       "versionId": "B0fZidZi"
@@ -178,14 +173,14 @@
       "versionId": "3bx8wVuC"
     },
     {
-      "projectReference": "3xZjvkQF",
-      "versionNumber": "1.0.1",
-      "versionId": "eHIfNdYA"
-    },
-    {
       "projectReference": "JBjInUXM",
       "versionNumber": "4.11.7+1.20.1",
       "versionId": "SI3CMrWo"
+    },
+    {
+      "projectReference": "PtjYWJkn",
+      "versionNumber": "mc1.20.1-0.5.9",
+      "versionId": "mDbF0LZT"
     }
   ]
 }
