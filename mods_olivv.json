@@ -1,5 +1,12 @@
 {
-  "mods": [],
+  "mods": [
+    {
+      "name": "vanilla-plus-ores-1.0.0.jar",
+      "downloadURL": "https://paulem.ovh/other/vanilla-plus-ores-1.0.0.jar",
+      "sha1": "AE5E29E31768AF7FD5149304617D0213EBAF790F",
+      "size": 225563
+    }
+  ],
   "curseFiles": [],
   "modrinthMods": [
     {
