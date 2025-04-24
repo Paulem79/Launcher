@@ -1,19 +1,14 @@
 {
   "mods": [
     {
-      "name": "vanilla-plus-ores-1.0.0.jar",
-      "downloadURL": "https://paulem.ovh/other/vanilla-plus-ores-1.0.0.jar",
-      "sha1": "AE5E29E31768AF7FD5149304617D0213EBAF790F",
-      "size": 225563
+      "name": "vanillaplusores-1.0.0.jar",
+      "downloadURL": "https://paulem.ovh/other/vanillaplusores-1.0.0.jar",
+      "sha1": "249BB76F8DC5B4E7B719D9ED7AD36FE83E098C39",
+      "size": 214775
     }
   ],
   "curseFiles": [],
   "modrinthMods": [
-    {
-      "projectReference": "P7dR8mSH",
-      "versionNumber": "0.92.5+1.20.1",
-      "versionId": "PB9Kjpo3"
-    },
     {
       "projectReference": "AANobbMI",
       "versionNumber": "mc1.20.1-0.5.13-fabric",
@@ -553,6 +548,11 @@
       "projectReference": "nmDcB62a",
       "versionNumber": "5.21.0+mc1.20.1",
       "versionId": "srmUM7tY"
+    },
+    {
+      "projectReference": "P7dR8mSH",
+      "versionNumber": "0.92.5+1.20.1",
+      "versionId": "PB9Kjpo3"
     }
   ]
 }
