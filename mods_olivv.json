@@ -683,6 +683,51 @@
       "projectReference": "5aaWibi9",
       "versionNumber": "3.7.2",
       "versionId": "AHxQGtuC"
+    },
+    {
+      "projectReference": "CYQ7VYrM",
+      "versionNumber": "1.2.4-1.20-1.20.1-fabric",
+      "versionId": "6SZgZIoc"
+    },
+    {
+      "projectReference": "nRL5uFe0",
+      "versionNumber": "1.2-fabric",
+      "versionId": "CMn5tbJX"
+    },
+    {
+      "projectReference": "FimwF33K",
+      "versionNumber": "mc1.20.1-0.2.0",
+      "versionId": "JFNunyDW"
+    },
+    {
+      "projectReference": "bQh7xzFq",
+      "versionNumber": "0.4.1",
+      "versionId": "hiLb6QFe"
+    },
+    {
+      "projectReference": "RfFxanNh",
+      "versionNumber": "5.1.0",
+      "versionId": "BbFqiKvi"
+    },
+    {
+      "projectReference": "RH2KUdKJ",
+      "versionNumber": "0.5.0.1",
+      "versionId": "5UfjvE8g"
+    },
+    {
+      "projectReference": "ZfQ3kTvR",
+      "versionNumber": "5.0.0-beta.2+1.20.0",
+      "versionId": "wgtrj8HS"
+    },
+    {
+      "projectReference": "yHf7SALy",
+      "versionNumber": "1.6-1.20",
+      "versionId": "5lHXCowj"
+    },
+    {
+      "projectReference": "vSEH1ERy",
+      "versionNumber": "0.1.1+mc1.20.2",
+      "versionId": "gBP1GqtK"
     }
   ]
 }
