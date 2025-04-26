@@ -430,11 +430,6 @@
       "versionId": "LrmG4rhi"
     },
     {
-      "projectReference": "H8CaAYZC",
-      "versionNumber": "1.1.2+1.20",
-      "versionId": "XGIsoVGT"
-    },
-    {
       "projectReference": "Eldc1g37",
       "versionNumber": "3.12.3+fabric-1.20.1",
       "versionId": "Gob4d0A8"
@@ -668,6 +663,26 @@
       "projectReference": "jac2HdQt",
       "versionNumber": "0.6.3",
       "versionId": "cEB2c0mu"
+    },
+    {
+      "projectReference": "Rg9WdvvR",
+      "versionNumber": "1.2.3-1.20",
+      "versionId": "D6UCoGjk"
+    },
+    {
+      "projectReference": "pkI4SefA",
+      "versionNumber": "2.5.0",
+      "versionId": "a9byOIPF"
+    },
+    {
+      "projectReference": "JNRr4jji",
+      "versionNumber": "1.1.5-1.20-1.20.2-fabric",
+      "versionId": "Z2E5to4k"
+    },
+    {
+      "projectReference": "5aaWibi9",
+      "versionNumber": "3.7.2",
+      "versionId": "AHxQGtuC"
     }
   ]
 }
