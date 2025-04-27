@@ -5,12 +5,6 @@
       "downloadURL": "https://paulem.ovh/other/vanillaplusores-1.0.0.jar",
       "sha1": "249BB76F8DC5B4E7B719D9ED7AD36FE83E098C39",
       "size": 214775
-    },
-    {
-      "name": "TheManFromTheFog-1.1.1+fabric.mc.1.20.1.jar",
-      "downloadURL": "https://cdn.modrinth.com/data/118OmVLd/versions/8hRVUj9Y/TheManFromTheFog-1.1.1%2Bfabric.mc.1.20.1.jar",
-      "sha1": "06669C0C42FAB17AECEE517082ADBCDE899A099E",
-      "size": 11761006
     }
   ],
   "curseFiles": [],
@@ -774,6 +768,131 @@
       "projectReference": "s4B19O5h",
       "versionNumber": "1.20.1-1.2.1",
       "versionId": "DoQDvBq5"
+    },
+    {
+      "projectReference": "DynYZEae",
+      "versionNumber": "1.4.1",
+      "versionId": "V2cPMZzn"
+    },
+    {
+      "projectReference": "SfMw2IZN",
+      "versionNumber": "0.2.6-beta",
+      "versionId": "J2fuM58R"
+    },
+    {
+      "projectReference": "9wv7LuMc",
+      "versionNumber": "0.3.0",
+      "versionId": "icjI7ruC"
+    },
+    {
+      "projectReference": "5srFLIaK",
+      "versionNumber": "1.3.31+1.20.1-fabric-r",
+      "versionId": "5yViQ7dn"
+    },
+    {
+      "projectReference": "2RKFTmiB",
+      "versionNumber": "1.1.1-1.20",
+      "versionId": "B2L4LeMV"
+    },
+    {
+      "projectReference": "Wa72oW2W",
+      "versionNumber": "1.20-1.2.7",
+      "versionId": "vaw7Vb8R"
+    },
+    {
+      "projectReference": "Es5v4eyq",
+      "versionNumber": "fabric-1.20.1-1.0.10",
+      "versionId": "nww69hqs"
+    },
+    {
+      "projectReference": "9mtu0sUO",
+      "versionNumber": "v1.0.5-mc1.20.4-fabric",
+      "versionId": "G8gwjTTP"
+    },
+    {
+      "projectReference": "CllP7wW0",
+      "versionNumber": "2.1.3.1",
+      "versionId": "Fv16193b"
+    },
+    {
+      "projectReference": "Kw7Sm3Xf",
+      "versionNumber": "1.0.3",
+      "versionId": "xuV51Sqy"
+    },
+    {
+      "projectReference": "m5T5xmUy",
+      "versionNumber": "1.4.4+fabric.1.20.1",
+      "versionId": "GVS6ujFJ"
+    },
+    {
+      "projectReference": "vqqx0QiE",
+      "versionNumber": "fabric-1.20.1-1.0.7",
+      "versionId": "FdVKLVds"
+    },
+    {
+      "projectReference": "Yg1VT27P",
+      "versionNumber": "fabric-1.20.1-1.0.0",
+      "versionId": "duh9s7gn"
+    },
+    {
+      "projectReference": "x9ISUf1U",
+      "versionNumber": "1.20.4-0.3",
+      "versionId": "yAoHjRQa"
+    },
+    {
+      "projectReference": "houIxdGF",
+      "versionNumber": "1.0.0",
+      "versionId": "aHibkCCo"
+    },
+    {
+      "projectReference": "ngOW5XvY",
+      "versionNumber": "1.1.0",
+      "versionId": "637Rl8Ch"
+    },
+    {
+      "projectReference": "dFKMFBrn",
+      "versionNumber": "v1.1-1.20.1",
+      "versionId": "5i4XW7V3"
+    },
+    {
+      "projectReference": "7RvRWn6p",
+      "versionNumber": "1.3.0",
+      "versionId": "GI28mwG5"
+    },
+    {
+      "projectReference": "5roWs6VO",
+      "versionNumber": "0.2.2",
+      "versionId": "KPvmTtFT"
+    },
+    {
+      "projectReference": "5CTSrY8X",
+      "versionNumber": "1.0.5.1",
+      "versionId": "ZoOH4tOq"
+    },
+    {
+      "projectReference": "hhnR8xqU",
+      "versionNumber": "fabric-1.20.1-1.0.0",
+      "versionId": "QkgWbSnA"
+    },
+    {
+      "projectReference": "Zoz5HQjH",
+      "versionNumber": "1.3.3+mc1.20.x",
+      "versionId": "UTGgJGk5"
+    },
+    {
+      "projectReference": "5HUqEye3",
+      "versionNumber": "1.1.10-beta",
+      "versionId": "tJc1yy6B"
+    },
+    {
+      "projectReference": "H80QSt2v",
+      "versionNumber": "1.1.0-fabric+1.20.1",
+      "versionId": "6YiHJdJC"
+    },
+    {
+      "projectReference": "aTsegPV0",
+      "versionNumber": "1.7.1-Fabric",
+      "versionId": "GIpyUaeI"
     }
   ]
 }
