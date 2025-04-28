@@ -775,11 +775,6 @@
       "versionId": "V2cPMZzn"
     },
     {
-      "projectReference": "SfMw2IZN",
-      "versionNumber": "0.2.6-beta",
-      "versionId": "J2fuM58R"
-    },
-    {
       "projectReference": "9wv7LuMc",
       "versionNumber": "0.3.0",
       "versionId": "icjI7ruC"
@@ -893,6 +888,11 @@
       "projectReference": "aTsegPV0",
       "versionNumber": "1.7.1-Fabric",
       "versionId": "GIpyUaeI"
+    },
+    {
+      "projectReference": "vBbPDuOs",
+      "versionNumber": "fabric-1.20.1-1.0.23",
+      "versionId": "tdv2AbVQ"
     }
   ]
 }
