@@ -75,9 +75,9 @@ tasks.withType<JPackageTask>().configureEach {
     vendor = "Paulem"
     copyright = "Copyright (c) 2025 Paulem"
     runtimeImage = Jvm.current().javaHome.toString()
-    destination = "dist"
+    destination = "${layout.projectDirectory}/dist"
     removeDestination = true
-    input = "build/libs"
+    input = "${layout.buildDirectory.get()}/libs"
     mainJar = tasks.shadowJar.get().archiveFileName.get()
     mainClass = application.mainClass.get()
     javaOptions = listOf("-Dfile.encoding=UTF-8", "--add-exports=javafx.graphics/com.sun.glass.ui=ALL-UNNAMED")
@@ -94,12 +94,12 @@ tasks.register<JPackageTask>("zipjpackage") {
     }
 
     mac {
-        icon = "icons/icons.icns"
+        icon = "${layout.projectDirectory}/icons/icons.icns"
         infra = "macos"
     }
 
     windows {
-        icon = "icons/icons.ico"
+        icon = "${layout.projectDirectory}/icons/icons.ico"
 
         winConsole = true
         infra = "windows"
@@ -119,18 +119,19 @@ tasks.jpackage {
     }
 
     mac {
-        icon = "icons/icons.icns"
+        icon = "${layout.projectDirectory}/icons/icons.icns"
 
         type = ImageType.DMG
     }
 
     windows {
-        icon = "icons/icons.ico"
+        icon = "${layout.projectDirectory}/icons/icons.ico"
 
         type = ImageType.MSI
 
         winConsole = true
-        if(type == ImageType.EXE || type == ImageType.MSI) {
+
+        if(type.get() == ImageType.EXE || type.get() == ImageType.MSI) {
             winMenu = true
             winDirChooser = true
             winPerUserInstall = true
