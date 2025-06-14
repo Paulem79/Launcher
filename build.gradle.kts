@@ -7,7 +7,7 @@ plugins {
     id("com.gradleup.shadow") version "8.+"
     id("java")
     id("application")
-    id("org.panteleyev.jpackageplugin") version "1.7.0"
+    id("org.panteleyev.jpackageplugin") version "1.7.1"
 }
 
 group = "ovh.paulem.launchermc"
