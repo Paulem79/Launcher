@@ -74,11 +74,10 @@ tasks.withType<JPackageTask>().configureEach {
     appVersion = project.version.toString()
     vendor = "Paulem"
     copyright = "Copyright (c) 2025 Paulem"
-    runtimeImage = Jvm.current().javaHome.toString()
-    destination = "${layout.projectDirectory}/dist"
-    removeDestination = true
-    input = "${layout.buildDirectory.get()}/libs"
-    mainJar = tasks.shadowJar.get().archiveFileName.get()
+    runtimeImage = Jvm.current().javaHome
+    destination = layout.projectDirectory.dir("dist")
+    input = layout.buildDirectory.dir("libs")
+    mainJar = tasks.shadowJar.get().archiveFile.get()
     mainClass = application.mainClass.get()
     javaOptions = listOf("-Dfile.encoding=UTF-8", "--add-exports=javafx.graphics/com.sun.glass.ui=ALL-UNNAMED")
 }
@@ -94,12 +93,12 @@ tasks.register<JPackageTask>("zipjpackage") {
     }
 
     mac {
-        icon = "${layout.projectDirectory}/icons/icons.icns"
+        icon = layout.projectDirectory.file("icons/icons.icns")
         infra = "macos"
     }
 
     windows {
-        icon = "${layout.projectDirectory}/icons/icons.ico"
+        icon = layout.projectDirectory.file("icons/icons.ico")
 
         winConsole = true
         infra = "windows"
@@ -119,13 +118,13 @@ tasks.jpackage {
     }
 
     mac {
-        icon = "${layout.projectDirectory}/icons/icons.icns"
+        icon = layout.projectDirectory.file("icons/icons.icns")
 
         type = ImageType.DMG
     }
 
     windows {
-        icon = "${layout.projectDirectory}/icons/icons.ico"
+        icon = layout.projectDirectory.file("icons/icons.ico")
 
         type = ImageType.MSI
 
