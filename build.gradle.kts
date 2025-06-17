@@ -77,7 +77,7 @@ tasks.withType<JPackageTask>().configureEach {
     runtimeImage = Jvm.current().javaHome
     destination = layout.projectDirectory.dir("dist")
     input = layout.buildDirectory.dir("libs")
-    mainJar = tasks.shadowJar.get().archiveFile.get()
+    mainJar = tasks.shadowJar.get().archiveFileName.get()
     mainClass = application.mainClass.get()
     javaOptions = listOf("-Dfile.encoding=UTF-8", "--add-exports=javafx.graphics/com.sun.glass.ui=ALL-UNNAMED")
 }
