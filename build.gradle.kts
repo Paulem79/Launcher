@@ -42,7 +42,7 @@ dependencies {
     implementation("fr.flowarg:flowupdater:1.9.2")
     implementation("fr.flowarg:openlauncherlib:3.2.11")
 
-    implementation("club.minnced:java-discord-rpc:2.0.2")
+    implementation("club.minnced:java-discord-rpc:2.0.3")
 
     implementation("com.google.code.gson:gson:2.+")
     implementation("org.jetbrains:annotations:26.+")
