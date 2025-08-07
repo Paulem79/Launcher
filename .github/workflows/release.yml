@@ -50,15 +50,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: ubuntu-latest-build-artifacts
           path: dist
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: macos-latest-build-artifacts
           path: dist
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: windows-latest-build-artifacts
           path: dist
