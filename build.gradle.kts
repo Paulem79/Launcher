@@ -27,7 +27,7 @@ repositories {
     }
     maven {
         name = "paulemReleases"
-        url = uri("https://maven.paulem.ovh/releases")
+        url = uri("https://maven.paulem.net/releases")
     }
 }
 
