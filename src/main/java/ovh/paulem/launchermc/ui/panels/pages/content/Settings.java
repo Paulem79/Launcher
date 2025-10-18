@@ -78,7 +78,7 @@ public class Settings extends ContentPanel {
             comboBox.getItems().add(i/1024.0 + " GB");
         }
 
-        int defaultRamAmount = 1024;
+        int defaultRamAmount = Constants.DEFAULT_MAX_RAM.get();
         String maxRam = saver.get(Constants.CONFIG_MAXRAM);
         try {
             if (maxRam != null) {

@@ -1,11 +1,26 @@
 package ovh.paulem.launchermc.utils;
 
+import com.sun.management.OperatingSystemMXBean;
+
+import java.lang.management.ManagementFactory;
 import java.util.UUID;
+import java.util.function.Supplier;
 
 public class Constants {
     public static final double TITLE_OFFSET_Y = 15d;
     public static final double NAVBUTTON_OFFSET_Y = 1d;
 
+    public static final Supplier<Integer> DEFAULT_MAX_RAM = () -> {
+        OperatingSystemMXBean os = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
+        long totalBytes;
+        try {
+            totalBytes = os.getTotalMemorySize();
+        } catch (Throwable ignored) {
+            totalBytes = Runtime.getRuntime().maxMemory();
+        }
+        long halfBytes = totalBytes / 2L;
+        return (int) (halfBytes / (1024L * 1024L));
+    };
     public static final String CONFIG_MAXRAM = "maxRam";
 
     public static final String RPC_APP_ID = "1266045291161976884";

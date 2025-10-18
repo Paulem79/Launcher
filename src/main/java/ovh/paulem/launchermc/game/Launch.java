@@ -7,7 +7,7 @@ import fr.flowarg.flowupdater.download.IProgressCallback;
 import fr.flowarg.flowupdater.download.Step;
 import fr.flowarg.flowupdater.utils.ModFileDeleter;
 import fr.flowarg.flowupdater.versions.VanillaVersion;
-import fr.flowarg.flowupdater.versions.fabric.FabricVersionBuilder;
+import fr.flowarg.flowupdater.versions.forge.ForgeVersionBuilder;
 import fr.flowarg.openlauncherlib.NoFramework;
 import fr.theshark34.openlauncherlib.minecraft.GameFolder;
 import fr.theshark34.openlauncherlib.util.Saver;
@@ -80,8 +80,8 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
         try {
             Launcher.getInstance().getDiscordRPC().editPresence(Constants.RPC_UPDATE);
 
-            MinecraftVersion.GAME = new FabricVersionBuilder()
-                    .withFabricVersion(MinecraftInfos.MODLOADER_VERSION)
+            MinecraftVersion.GAME = new ForgeVersionBuilder()
+                    .withForgeVersion(MinecraftInfos.MODLOADER_VERSION)
                     .withMods(MinecraftInfos.MODS_LIST_URL)
                     .withCurseMods(MinecraftInfos.MODS_LIST_URL)
                     .withModrinthMods(MinecraftInfos.MODS_LIST_URL)
@@ -154,7 +154,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
     }
 
     public String getRamArgsFromSaver() {
-        int val = 1024;
+        int val = Constants.DEFAULT_MAX_RAM.get();
         try {
             if (saver.get("maxRam") != null) {
                 val = Integer.parseInt(saver.get("maxRam"));

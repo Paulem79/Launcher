@@ -1,6 +1,6 @@
 package ovh.paulem.launchermc.game.minecraft;
 
-import fr.flowarg.flowupdater.versions.fabric.FabricVersion;
+import fr.flowarg.flowupdater.versions.IModLoaderVersion;
 
 public class MinecraftVersion {
     /*public static final QuiltVersion GAME = new QuiltVersion.QuiltVersionBuilder()
@@ -9,8 +9,7 @@ public class MinecraftVersion {
             .withFileDeleter(new ModFileDeleter(true))
             .build();*/
 
-    // ----- POUR FABRIC -----
-    public static FabricVersion GAME;
+    public static IModLoaderVersion GAME;
 
 
     /* ----- POUR FORGE -----
