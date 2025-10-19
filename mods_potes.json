@@ -1123,6 +1123,21 @@
       "projectReference": "M1953qlQ",
       "versionNumber": "2.1.3",
       "versionId": "DERs8u7v"
+    },
+    {
+      "projectReference": "JNRr4jji",
+      "versionNumber": "1.1.6.1-1.20-1.20.2",
+      "versionId": "AxFvWdI8"
+    },
+    {
+      "projectReference": "jcn9RURP",
+      "versionNumber": "1.2.0",
+      "versionId": "1xe2nuym"
+    },
+    {
+      "projectReference": "5CTSrY8X",
+      "versionNumber": "1.0.5.1-forge",
+      "versionId": "mMc55fB1"
     }
   ]
 }
