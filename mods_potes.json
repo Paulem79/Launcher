@@ -29,6 +29,12 @@
       "downloadURL": "https://cdn.modrinth.com/data/o8eM9Cnp/versions/B7b46kQA/DynamicTreesTerralith-1.20.1-1.2.5.jar",
       "sha1": "06886B4F3DA0737E4C79E181572473783F4C8B81",
       "size": 494367
+    },
+    {
+      "name": "xenon-0.3.33-beta.84+mc1.20.1.jar",
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/xenon-0.3.33-beta.84+mc1.20.1.jar",
+      "sha1": "705687CF7A5C8C4CED7E4FF5467E6F19F5EDE7E1",
+      "size": 2093405
     }
   ],
   "curseFiles": [
@@ -425,10 +431,6 @@
       "fileID": 5281700
     },
     {
-      "projectID": 931925,
-      "fileID": 6615986
-    },
-    {
       "projectID": 831663,
       "fileID": 4894789
     },
@@ -459,10 +461,6 @@
     {
       "projectID": 470193,
       "fileID": 7032387
-    },
-    {
-      "projectID": 531351,
-      "fileID": 5981334
     },
     {
       "projectID": 968398,
@@ -537,10 +535,6 @@
       "fileID": 6418456
     },
     {
-      "projectID": 975120,
-      "fileID": 5855464
-    },
-    {
       "projectID": 362528,
       "fileID": 5089406
     },
@@ -565,10 +559,6 @@
       "fileID": 5778734
     },
     {
-      "projectID": 908741,
-      "fileID": 5681725
-    },
-    {
       "projectID": 844662,
       "fileID": 6922712
     },
@@ -579,10 +569,6 @@
     {
       "projectID": 448233,
       "fileID": 7110590
-    },
-    {
-      "projectID": 889079,
-      "fileID": 6885853
     },
     {
       "projectID": 1094819,
@@ -711,10 +697,6 @@
     {
       "projectID": 676136,
       "fileID": 5200949
-    },
-    {
-      "projectID": 790626,
-      "fileID": 6837713
     },
     {
       "projectID": 250498,
@@ -940,11 +922,6 @@
       "versionId": "lDrRWaFm"
     },
     {
-      "projectReference": "1IjD5062",
-      "versionNumber": "3.0.0+1.20.1.forge",
-      "versionId": "9KbAcWSO"
-    },
-    {
       "projectReference": "OsZiaDHq",
       "versionNumber": "2.12.32",
       "versionId": "IbFWHI5h"
@@ -965,11 +942,6 @@
       "versionId": "lQ7VoJbj"
     },
     {
-      "projectReference": "Aqlf1Shp",
-      "versionNumber": "0.92.6+1.11.14+1.20.1",
-      "versionId": "XweDEycJ"
-    },
-    {
       "projectReference": "NRjRiSSD",
       "versionNumber": "v1.1.5",
       "versionId": "3w0IxNtk"
@@ -983,11 +955,6 @@
       "projectReference": "aC3cM3Vq",
       "versionNumber": "1.20.1-2.25.1-forge",
       "versionId": "7JVXOe3K"
-    },
-    {
-      "projectReference": "u58R1TMW",
-      "versionNumber": "1.0.0-beta.46+1.20.1",
-      "versionId": "e8hSZ4vp"
     },
     {
       "projectReference": "X8CISwXp",
