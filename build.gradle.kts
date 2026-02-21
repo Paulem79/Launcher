@@ -35,10 +35,10 @@ dependencies {
     implementation("fr.litarvan:openauth:1.+")
     implementation("fr.flowarg:materialdesignfontfx:7.+")
 
-    implementation("fr.flowarg:flowupdater:1.9.4")
+    implementation("fr.flowarg:flowupdater:1.9.3")
     implementation("fr.flowarg:openlauncherlib:3.2.11")
 
-    implementation("club.minnced:java-discord-rpc:2.0.2")
+    implementation("club.minnced:java-discord-rpc:2.0.3")
 
     implementation("com.google.code.gson:gson:2.+")
     implementation("org.jetbrains:annotations:26.+")
