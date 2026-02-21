@@ -1,71 +1,115 @@
+/* ============================================
+ *  Settings Page — Dark Theme
+ * ============================================ */
+
 .settings-layout {
-    -fx-background-color: rgb(24, 24, 24);
+    -fx-background-color: transparent;
 }
 
+/* ── Title ── */
 .settings-title {
-    -fx-text-fill: rgb(255, 255, 255);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
 }
 
-.content-pane,  {
+/* ── Content Pane ── */
+.content-pane {
+    -fx-background-color: rgba(24, 24, 24, 0.6);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 14, 0, 0, 4);
+}
+
+.scroll-pane,
+.scroll-pane .viewport {
     -fx-background-color: transparent;
 }
 
-.scroll-pane .scroll-pane .viewport {
-    -fx-background-color: transparent;
-}
-
+/* ── Labels ── */
 .settings-labels {
-    -fx-text-fill: rgb(255, 255, 255);
+    -fx-text-fill: #B0B0B0;
     -fx-font-size: 15px;
+    -fx-font-family: 'Poppins';
 }
 
-.ram-selector-text {
-    -fx-text-fill: rgb(255, 255, 255);
-    -fx-font-size: 12px;
-}
-
+/* ── RAM Selector (ComboBox) ── */
 .ram-selector {
-    -fx-width: 200px;
-    -fx-height: 25px;
-    -fx-background-color: rgb(48, 48, 48);
-    -fx-text-fill: rgb(255, 255, 255);
+    -fx-min-width: 200px;
+    -fx-min-height: 36px;
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 14px;
 }
 
 .ram-selector .arrow-button .arrow {
-    -fx-background-color: rgb(255, 255, 255);
+    -fx-background-color: #B0B0B0;
 }
 
 .ram-selector .list-view {
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-background-color: #1E1E1E;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0, 0, 4);
 }
 
 .ram-selector .list-cell {
-    -fx-text-fill: rgb(200, 200, 200);
+    -fx-text-fill: #B0B0B0;
+    -fx-font-family: 'Poppins';
+    -fx-background-color: #1E1E1E;
+    -fx-padding: 6 12;
 }
 
 .ram-selector .list-cell:hover {
-    -fx-text-fill: rgb(255, 255, 255);
-    -fx-background-color: rgb(65, 65, 65);
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: rgba(255, 69, 0, 0.15);
+}
+
+.ram-selector .list-cell:selected {
+    -fx-text-fill: #FF4500;
+    -fx-background-color: rgba(255, 69, 0, 0.1);
 }
 
 .ram-selector .track {
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-background-color: rgba(255, 255, 255, 0.05);
 }
 
 .ram-selector .thumb {
-    -fx-background-color: rgb(65, 65, 65);
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 10;
 }
 
+.ram-selector-text {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Poppins';
+}
+
+/* ── Save Button (Gradient Accent) ── */
 .save-btn {
-    -fx-font-size: 16px;
-    -fx-text-fill: rgb(255, 255, 255);
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
+    -fx-background-radius: 14;
+    -fx-padding: 10 30;
+    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.35), 14, 0, 0, 4);
+    -fx-cursor: hand;
 }
 
 .save-btn:hover {
-    -fx-background-color: rgb(65, 65, 65);
+    -fx-background-color: linear-gradient(to right, #A00000, #FF5722);
+    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.45), 18, 0, 0, 5);
 }
 
+.save-btn:pressed {
+    -fx-background-color: linear-gradient(to right, #700000, #E03E00);
+}
+
+/* ── Save Icon ── */
 .save-icon {
-    -fx-fill: rgb(255, 255, 255);
+    -fx-fill: #FFFFFF;
 }

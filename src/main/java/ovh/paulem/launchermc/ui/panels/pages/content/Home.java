@@ -1,15 +1,19 @@
 package ovh.paulem.launchermc.ui.panels.pages.content;
 
+import animatefx.animation.FadeIn;
+import animatefx.animation.Pulse;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import ovh.paulem.launchermc.Launcher;
 import ovh.paulem.launchermc.game.Launch;
 import ovh.paulem.launchermc.ui.panels.PanelManager;
 import ovh.paulem.launchermc.utils.Constants;
+import javafx.animation.ScaleTransition;
 import javafx.geometry.Insets;
 import javafx.geometry.VPos;
 import javafx.scene.control.*;
 import javafx.scene.layout.RowConstraints;
+import javafx.util.Duration;
 
 public class Home extends ContentPanel {
     private Launch launch;
@@ -70,16 +74,46 @@ public class Home extends ContentPanel {
 
     public void showPlayButton() {
         contentPane.getChildren().clear();
-        Button playBtn = new Button("Jouer");
+        Button playBtn = new Button("JOUER");
         final var playIcon = new MaterialDesignIconView<>(MaterialDesignIcon.G.GAMEPAD);
         playIcon.getStyleClass().add("play-icon");
+        playIcon.setSize("28");
         setCanTakeAllSize(playBtn);
         setCenterH(playBtn);
         setCenterV(playBtn);
         playBtn.getStyleClass().add("play-btn");
         playBtn.setGraphic(playIcon);
         playBtn.setOnMouseClicked(e -> launch.play());
+
+        // ── Hover animation: ScaleTransition (grow on enter, shrink on exit) ──
+        ScaleTransition scaleUp = new ScaleTransition(Duration.millis(200), playBtn);
+        scaleUp.setToX(1.08);
+        scaleUp.setToY(1.08);
+
+        ScaleTransition scaleDown = new ScaleTransition(Duration.millis(200), playBtn);
+        scaleDown.setToX(1.0);
+        scaleDown.setToY(1.0);
+
+        playBtn.setOnMouseEntered(e -> {
+            scaleDown.stop();
+            scaleUp.playFromStart();
+        });
+        playBtn.setOnMouseExited(e -> {
+            scaleUp.stop();
+            scaleDown.playFromStart();
+        });
+
         contentPane.getChildren().add(playBtn);
+
+        // Pulse animation on button appearance
+        new Pulse(playBtn).setSpeed(0.6).play();
+    }
+
+    @Override
+    public void onShow() {
+        super.onShow();
+        // Animate content appearance
+        new FadeIn(contentPane).setSpeed(0.8).play();
     }
 
     public boolean isDownloadingOrPlaying() {

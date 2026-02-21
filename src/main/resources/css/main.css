@@ -1,0 +1,128 @@
+/*
+ * ============================================
+ *  Launcher MC — Main Theme (Dark + Gaming)
+ * ============================================
+ *
+ *  Palette:
+ *    Background primary   : #121212
+ *    Background card/glass: rgba(30, 30, 30, 0.75)
+ *    Accent gradient start: #8B0000 (dark red)
+ *    Accent gradient end  : #FF4500 (electric orange)
+ *    Text primary         : #FFFFFF
+ *    Text secondary       : #B0B0B0
+ */
+
+/* ── Root variables ── */
+* {
+    -fx-bg-primary: #121212;
+    -fx-bg-secondary: #1A1A1A;
+    -fx-bg-card: rgba(30, 30, 30, 0.75);
+    -fx-bg-card-solid: #1E1E1E;
+    -fx-bg-hover: rgba(255, 255, 255, 0.06);
+    -fx-bg-input: rgba(255, 255, 255, 0.07);
+    -fx-accent-start: #8B0000;
+    -fx-accent-end: #FF4500;
+    -fx-accent-mid: #C22000;
+    -fx-text-primary: #FFFFFF;
+    -fx-text-secondary: #B0B0B0;
+    -fx-text-muted: #666666;
+    -fx-danger: #F63737;
+    -fx-radius-sm: 10;
+    -fx-radius-md: 15;
+    -fx-radius-lg: 20;
+    -fx-radius-xl: 25;
+    -fx-shadow-card: dropshadow(gaussian, rgba(0,0,0,0.45), 20, 0, 0, 6);
+    -fx-shadow-btn: dropshadow(gaussian, rgba(139,0,0,0.35), 14, 0, 0, 4);
+    -fx-font-family: 'Poppins';
+}
+
+/* ── Global defaults ── */
+.root {
+    -fx-font-family: 'Poppins';
+    -fx-background-color: #121212;
+}
+
+.label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+}
+
+.button {
+    -fx-font-family: 'Poppins';
+    -fx-cursor: hand;
+}
+
+/* ── Custom Title Bar ── */
+.title-bar {
+    -fx-background-color: rgba(18, 18, 18, 0.95);
+    -fx-padding: 0 8 0 16;
+    -fx-min-height: 40;
+    -fx-max-height: 40;
+    -fx-pref-height: 40;
+}
+
+.title-bar .title-label {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+}
+
+.title-bar-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B0B0B0;
+    -fx-font-size: 14px;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-max-width: 40;
+    -fx-max-height: 40;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.title-bar-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.10);
+}
+
+.title-bar-btn-close:hover {
+    -fx-background-color: #C22000;
+    -fx-text-fill: white;
+}
+
+.title-bar-icon {
+    -fx-fill: #B0B0B0;
+}
+
+/* ── Scrollbar styling ── */
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(255,255,255,0.12);
+    -fx-background-radius: 10;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button,
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+    -fx-pref-width: 0;
+}
+
+/* ── Tooltip ── */
+.tooltip {
+    -fx-background-color: #1E1E1E;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 12px;
+}
+

@@ -1,5 +1,6 @@
 package ovh.paulem.launchermc.ui.panels.pages.content;
 
+import animatefx.animation.FadeInUp;
 import com.sun.management.OperatingSystemMXBean;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
@@ -46,7 +47,7 @@ public class Settings extends ContentPanel {
 
         // Titre
         Label title = new Label("Paramètres");
-        title.setFont(Font.font("Consolas", FontWeight.BOLD, FontPosture.REGULAR, 25f));
+        title.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 24f));
         title.getStyleClass().add("settings-title");
         setLeft(title);
         setCanTakeAllSize(title);
@@ -68,14 +69,13 @@ public class Settings extends ContentPanel {
         contentPane.getChildren().add(ramLabel);
 
         // RAM Chooser
-
         ComboBox<String> comboBox = new ComboBox<>();
         comboBox.getStyleClass().add("ram-selector");
 
         long totalMemorySize = ((OperatingSystemMXBean) ManagementFactory
                 .getOperatingSystemMXBean()).getTotalMemorySize();
-        for(int i = 512; i <= Math.ceil(totalMemorySize / Math.pow(1024, 2)); i+=512) {
-            comboBox.getItems().add(i/1024.0 + " GB");
+        for (int i = 512; i <= Math.ceil(totalMemorySize / Math.pow(1024, 2)); i += 512) {
+            comboBox.getItems().add(i / 1024.0 + " GB");
         }
 
         int defaultRamAmount = Constants.DEFAULT_MAX_RAM.get();
@@ -91,7 +91,7 @@ public class Settings extends ContentPanel {
             saver.save();
         }
 
-        if (comboBox.getItems().contains(defaultRamAmount/1024.0+" GB")) {
+        if (comboBox.getItems().contains(defaultRamAmount / 1024.0 + " GB")) {
             comboBox.setValue(defaultRamAmount / 1024.0 + " GB");
         } else {
             comboBox.setValue("1.0 GB");
@@ -117,15 +117,16 @@ public class Settings extends ContentPanel {
         setCanTakeAllSize(saveBtn);
         setBottom(saveBtn);
         setCenterH(saveBtn);
+        saveBtn.setTranslateY(-30d);
 
         saveBtn.setOnMouseClicked(e -> {
             double comboBoxRamValue = Double.parseDouble(comboBox.getValue().replace(" GB", ""));
             comboBoxRamValue *= 1024;
             saver.set(Constants.CONFIG_MAXRAM, String.valueOf((int) comboBoxRamValue));
-            
+
             saveBtn.setGraphic(iconCheck);
-            saveBtn.setText("Enregistré");
-            
+            saveBtn.setText("Enregistré !");
+
             Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(4), event -> {
                 saveBtn.setGraphic(iconView);
                 saveBtn.setText("Enregistrer");
@@ -133,5 +134,12 @@ public class Settings extends ContentPanel {
             timeline.play();
         });
         contentPane.getChildren().add(saveBtn);
+    }
+
+    @Override
+    public void onShow() {
+        super.onShow();
+        // Animate content appearance (slide up instead of fade to avoid flickering on dark bg)
+        new FadeInUp(contentPane).setSpeed(1.2).play();
     }
 }

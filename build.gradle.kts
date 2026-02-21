@@ -40,6 +40,8 @@ dependencies {
 
     implementation("club.minnced:java-discord-rpc:2.0.3")
 
+    implementation("io.github.typhon0:AnimateFX:1.2.4")
+
     implementation("com.google.code.gson:gson:2.+")
     implementation("org.jetbrains:annotations:26.+")
 }

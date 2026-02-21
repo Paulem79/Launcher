@@ -1,55 +1,119 @@
+/* ============================================
+ *  Login Page — Glassmorphism Dark Theme
+ * ============================================ */
+
 .login-layout {
-    -fx-background-color: rgb(24, 24, 24);
+    -fx-background-color: #121212;
 }
 
+/* ── Login Card (Glassmorphism) ── */
 .login-card {
-    -fx-background-color: rgb(24, 24, 24);
+    -fx-background-color: rgba(30, 30, 30, 0.75);
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 24, 0, 4, 6);
 }
 
+/* ── Background Image ── */
 .bg-image {
     -fx-background-position: center center;
     -fx-background-repeat: stretch;
+    -fx-background-size: cover;
 }
 
+/* ── Title ── */
 .login-card .login-title {
-    -fx-text-fill: rgb(255, 255, 255);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.3), 10, 0, 0, 2);
 }
 
+/* ── Text Input ── */
 .login-card .login-input {
-    -fx-background-color: rgb(48, 48, 48);
-    -fx-font-size: 16px;
-    -fx-prompt-text-fill: rgb(130, 130, 130);
-    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Poppins';
+    -fx-prompt-text-fill: #666666;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 10 16;
 }
 
+.login-card .login-input:focused {
+    -fx-border-color: #FF4500;
+    -fx-background-color: rgba(255, 255, 255, 0.09);
+    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.25), 10, 0, 0, 0);
+}
+
+/* ── Error Label ── */
 .login-card .login-error {
-    -fx-text-fill: rgb(246, 55, 55);
-    -fx-font-size: 14px;
+    -fx-text-fill: #F63737;
+    -fx-font-size: 13px;
+    -fx-font-family: 'Poppins';
 }
 
+/* ── Login Button (Gradient Accent) ── */
 .login-card .login-log-btn {
-    -fx-font-size: 16px;
-    -fx-text-fill: rgb(255, 255, 255);
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
+    -fx-background-radius: 14;
+    -fx-padding: 10 30;
+    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.35), 14, 0, 0, 4);
+    -fx-cursor: hand;
 }
 
 .login-card .login-log-btn:hover {
-    -fx-background-color: rgb(80, 80, 80);
+    -fx-background-color: linear-gradient(to right, #A00000, #FF5722);
+    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.45), 18, 0, 0, 5);
 }
 
+.login-card .login-log-btn:pressed {
+    -fx-background-color: linear-gradient(to right, #700000, #E03E00);
+}
+
+.login-card .login-log-btn:disabled {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-text-fill: #666666;
+    -fx-effect: none;
+}
+
+/* ── Separator ── */
 .login-card .login-separator {
-    -fx-border-color: rgb(48, 48, 48);
+    -fx-border-color: rgba(255, 255, 255, 0.08);
     -fx-border-width: 1 0 0 0;
 }
 
+/* ── "Login with" Label ── */
+.login-with-label {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 12px;
+}
+
+/* ── Microsoft Login Button ── */
 .login-card .ms-login-btn {
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 14;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 14;
+    -fx-border-width: 1;
+    -fx-padding: 8 20;
+    -fx-cursor: hand;
 }
 
 .login-card .ms-login-btn:hover {
-    -fx-background-color: rgb(80, 80, 80);
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-border-color: rgba(255, 69, 0, 0.3);
+    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.15), 8, 0, 0, 0);
 }
 
-.login-with-label {
-    -fx-text-fill: rgb(255, 255, 255);
+.login-card .ms-login-btn:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
 }

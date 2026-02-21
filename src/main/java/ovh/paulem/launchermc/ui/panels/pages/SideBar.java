@@ -1,5 +1,6 @@
 package ovh.paulem.launchermc.ui.panels.pages;
 
+import animatefx.animation.FadeIn;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import ovh.paulem.launchermc.Launcher;
@@ -29,7 +30,7 @@ public class SideBar extends Panel {
     private Node activeLink = null;
     private ContentPanel currentPage = null;
 
-    private Button homeBtn, settingsBtn;
+    private Button homeBtn, settingsBtn, newsBtn, storeBtn;
 
     @Override
     public String getName() {
@@ -51,8 +52,8 @@ public class SideBar extends Panel {
 
         ColumnConstraints columnConstraints = new ColumnConstraints();
         columnConstraints.setHalignment(HPos.LEFT);
-        columnConstraints.setMinWidth(350);
-        columnConstraints.setMaxWidth(350);
+        columnConstraints.setMinWidth(260);
+        columnConstraints.setMaxWidth(260);
         this.layout.getColumnConstraints().addAll(columnConstraints, new ColumnConstraints());
 
         // Side menu
@@ -80,7 +81,7 @@ public class SideBar extends Panel {
          */
         // Titre
         Label title = new Label("Launcher MC");
-        title.setFont(Font.font("Consolas", FontWeight.BOLD, FontPosture.REGULAR, 30f));
+        title.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 24f));
         title.getStyleClass().add("home-title");
         setCenterH(title);
         setCanTakeAllSize(title);
@@ -98,8 +99,32 @@ public class SideBar extends Panel {
         homeBtn.setGraphic(homeIcon);
         setCanTakeAllSize(homeBtn);
         setTop(homeBtn);
-        homeBtn.setTranslateY(90d);
+        homeBtn.setTranslateY(80d);
         homeBtn.setOnMouseClicked(e -> setPage(new Home(), homeBtn));
+
+        newsBtn = new Button("Actualités");
+        newsBtn.getStyleClass().add("sidemenu-nav-btn");
+        final var newsIcon = new MaterialDesignIconView<>(MaterialDesignIcon.N.NEWSPAPER);
+        newsIcon.getStyleClass().add("sidemenu-nav-btn-icon");
+        newsIcon.setTranslateY(Constants.NAVBUTTON_OFFSET_Y);
+        newsBtn.setGraphic(newsIcon);
+        setCanTakeAllSize(newsBtn);
+        setTop(newsBtn);
+        newsBtn.setTranslateY(124d);
+        newsBtn.setDisable(true);
+        newsBtn.setOpacity(0.5);
+
+        storeBtn = new Button("Boutique");
+        storeBtn.getStyleClass().add("sidemenu-nav-btn");
+        final var storeIcon = new MaterialDesignIconView<>(MaterialDesignIcon.S.STORE);
+        storeIcon.getStyleClass().add("sidemenu-nav-btn-icon");
+        storeIcon.setTranslateY(Constants.NAVBUTTON_OFFSET_Y);
+        storeBtn.setGraphic(storeIcon);
+        setCanTakeAllSize(storeBtn);
+        setTop(storeBtn);
+        storeBtn.setTranslateY(168d);
+        storeBtn.setDisable(true);
+        storeBtn.setOpacity(0.5);
 
         settingsBtn = new Button("Paramètres");
         settingsBtn.getStyleClass().add("sidemenu-nav-btn");
@@ -109,10 +134,10 @@ public class SideBar extends Panel {
         settingsBtn.setGraphic(settingsIcon);
         setCanTakeAllSize(settingsBtn);
         setTop(settingsBtn);
-        settingsBtn.setTranslateY(130d);
+        settingsBtn.setTranslateY(212d);
         settingsBtn.setOnMouseClicked(e -> setPage(new Settings(), settingsBtn));
 
-        sidemenu.getChildren().addAll(homeBtn, settingsBtn);
+        sidemenu.getChildren().addAll(homeBtn, newsBtn, storeBtn, settingsBtn);
 
         if (Launcher.getInstance().getAuthInfos() != null) {
             // Pseudo + avatar
@@ -132,7 +157,7 @@ public class SideBar extends Panel {
             Image avatarImg = new Image(avatarUrl);
             avatarView.setImage(avatarImg);
             avatarView.setPreserveRatio(true);
-            avatarView.setFitHeight(50d);
+            avatarView.setFitHeight(44d);
             setCenterV(avatarView);
             setCanTakeAllSize(avatarView);
             setLeft(avatarView);
@@ -140,12 +165,12 @@ public class SideBar extends Panel {
             userPane.getChildren().add(avatarView);
 
             Label usernameLabel = new Label(Launcher.getInstance().getAuthInfos().getUsername());
-            usernameLabel.setFont(Font.font("Consolas", FontWeight.BOLD, FontPosture.REGULAR, 25f));
+            usernameLabel.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 18f));
             setCanTakeAllSize(usernameLabel);
             setCenterV(usernameLabel);
             setLeft(usernameLabel);
             usernameLabel.getStyleClass().add("username-label");
-            usernameLabel.setTranslateX(75d);
+            usernameLabel.setTranslateX(70d);
             setCanTakeAllWidth(usernameLabel);
             userPane.getChildren().add(usernameLabel);
 
@@ -179,11 +204,16 @@ public class SideBar extends Panel {
     @Override
     public void onShow() {
         super.onShow();
+        // Animate sidebar appearance
+        new FadeIn(sidemenu).setSpeed(0.8).play();
         setPage(new Home(), homeBtn);
     }
 
     public void setPage(ContentPanel panel, Node navButton) {
         if (currentPage instanceof Home && ((Home) currentPage).isDownloadingOrPlaying()) {
+            return;
+        }
+        if (activeLink == navButton) {
             return;
         }
         if (activeLink != null)
@@ -198,6 +228,7 @@ public class SideBar extends Panel {
             if (panel.getStylesheetPath() != null) {
                 this.panelManager.getStage().getScene().getStylesheets().clear();
                 this.panelManager.getStage().getScene().getStylesheets().addAll(
+                        "css/main.css",
                         this.getStylesheetPath(),
                         panel.getStylesheetPath()
                 );

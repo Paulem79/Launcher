@@ -1,5 +1,6 @@
 package ovh.paulem.launchermc.ui.panels.pages;
 
+import animatefx.animation.FadeIn;
 import ovh.paulem.launchermc.Launcher;
 import ovh.paulem.launchermc.game.Authentification;
 import ovh.paulem.launchermc.ui.panels.PanelManager;
@@ -53,8 +54,8 @@ public class Login extends Panel {
 
         ColumnConstraints columnConstraints = new ColumnConstraints();
         columnConstraints.setHalignment(HPos.LEFT);
-        columnConstraints.setMinWidth(350);
-        columnConstraints.setMaxWidth(350);
+        columnConstraints.setMinWidth(380);
+        columnConstraints.setMaxWidth(380);
         this.layout.getColumnConstraints().addAll(columnConstraints, new ColumnConstraints());
         this.layout.add(loginCard, 0, 0);
 
@@ -75,7 +76,7 @@ public class Login extends Panel {
          * Login sidebar
          */
         Label title = new Label("Launcher MC");
-        title.setFont(Font.font("Consolas", FontWeight.BOLD, FontPosture.REGULAR, 30f));
+        title.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 28f));
         title.getStyleClass().add("login-title");
         setCenterH(title);
         setCanTakeAllSize(title);
@@ -109,7 +110,6 @@ public class Login extends Panel {
         setCenterH(btnLogin);
         btnLogin.setDisable(true);
         btnLogin.setMaxWidth(300);
-        //btnLogin.setTranslateY(20d);
         btnLogin.getStyleClass().add("login-log-btn");
         btnLogin.setOnMouseClicked(e -> authentification.authenticate(userField.getText()));
 
@@ -126,7 +126,7 @@ public class Login extends Panel {
         setCanTakeAllSize(loginWithLabel);
         setCenterV(loginWithLabel);
         setCenterH(loginWithLabel);
-        loginWithLabel.setFont(Font.font(loginWithLabel.getFont().getFamily(), FontWeight.BOLD, FontPosture.REGULAR, 14d));
+        loginWithLabel.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 12d));
         loginWithLabel.getStyleClass().add("login-with-label");
         loginWithLabel.setTranslateY(60d);
         loginWithLabel.setMaxWidth(280d);
@@ -135,6 +135,7 @@ public class Login extends Panel {
         ImageView view = new ImageView(new Image("images/assets/microsoft.png"));
         view.setPreserveRatio(true);
         view.setFitHeight(30d);
+        view.setSmooth(true);
         setCanTakeAllSize(msLoginBtn);
         setCenterH(msLoginBtn);
         setCenterV(msLoginBtn);
@@ -145,6 +146,13 @@ public class Login extends Panel {
         msLoginBtn.setOnMouseClicked(e -> authentification.authenticateMS());
 
         loginCard.getChildren().addAll(userField, userErrorLabel, btnLogin, separator, loginWithLabel, msLoginBtn);
+    }
+
+    @Override
+    public void onShow() {
+        super.onShow();
+        // Animate the login card appearance
+        new FadeIn(loginCard).setSpeed(0.7).play();
     }
 
     public void updateLoginBtnState(TextField textField, Label errorLabel) {

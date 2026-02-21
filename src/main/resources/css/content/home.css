@@ -1,42 +1,74 @@
-.box-pane {
-    -fx-background-color: rgb(24, 24, 24);
+/* ============================================
+ *  Home Page — Gaming Dark Theme
+ * ============================================ */
+
+.home-layout {
+    -fx-background-color: transparent;
 }
 
+.box-pane {
+    -fx-background-color: rgba(18, 18, 18, 0.65);
+    -fx-background-radius: 0 0 20 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 16, 0, 0, 4);
+}
+
+/* ── Play Button (Large, Gradient, Gaming) ── */
 .play-btn {
-    -fx-font-size: 16px;
-    -fx-text-fill: rgb(255, 255, 255);
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
+    -fx-background-radius: 25;
+    -fx-min-width: 220;
+    -fx-min-height: 60;
+    -fx-padding: 14 48;
+    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.5), 20, 0, 0, 6);
+    -fx-cursor: hand;
 }
 
 .play-btn:hover {
-    -fx-background-color: rgb(65, 65, 65);
+    -fx-background-color: linear-gradient(to right, #A00000, #FF5722);
+    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.6), 28, 0, 0, 8);
 }
 
+.play-btn:pressed {
+    -fx-background-color: linear-gradient(to right, #700000, #E03E00);
+    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.3), 12, 0, 0, 3);
+}
+
+/* ── Play Icon ── */
 .play-icon {
-    -fx-fill: rgb(255, 255, 255);
+    -fx-fill: #FFFFFF;
+    -fx-font-size: 24px;
 }
 
+/* ── Progress Bar ── */
 .download-progress {
-    -fx-max-width: 1000;
-    -fx-pref-width: 1000;
-    -fx-min-width: 100;
-    -fx-min-height: 10px;
-    -fx-max-height: 10px;
+    -fx-max-width: 700;
+    -fx-pref-width: 700;
+    -fx-min-width: 200;
+    -fx-min-height: 8px;
+    -fx-max-height: 8px;
 }
 
 .download-progress > .bar {
-    -fx-background-color: rgb(48, 48, 48);
+    -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
     -fx-background-insets: 0;
     -fx-background-radius: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.4), 6, 0, 0, 0);
 }
 
 .download-progress > .track {
-    -fx-background-color: rgb(80, 80, 80);
+    -fx-background-color: rgba(255, 255, 255, 0.06);
     -fx-background-insets: 0;
     -fx-background-radius: 30px;
 }
 
+/* ── Download Status Labels ── */
 .download-status {
     -fx-text-alignment: center;
-    -fx-text-fill: rgb(255, 255, 255);
+    -fx-text-fill: #B0B0B0;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
 }
