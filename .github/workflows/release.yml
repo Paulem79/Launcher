@@ -37,7 +37,7 @@ jobs:
         run: ./gradlew zipjpackage
 
       - name: Archive build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.os }}-build-artifacts
           path: dist
@@ -50,15 +50,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v7
         with:
           name: ubuntu-latest-build-artifacts
           path: dist
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v7
         with:
           name: macos-latest-build-artifacts
           path: dist
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v7
         with:
           name: windows-latest-build-artifacts
           path: dist
