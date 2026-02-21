@@ -1,17 +1,19 @@
 /* ============================================
- *  Sidebar — Glassmorphism Dark Theme
+ *  Sidebar — Floating Glassmorphism Dark Theme
  * ============================================ */
 
 .app-layout {
     -fx-background-color: #121212;
 }
 
-/* ── Side Menu (Glassmorphism) ── */
+/* ── Side Menu (Floating, Glassmorphism, Rounded) ── */
 .sidemenu {
-    -fx-background-color: rgba(22, 22, 22, 0.85);
-    -fx-border-color: rgba(255, 255, 255, 0.04);
-    -fx-border-width: 0 1 0 0;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 16, 0, 4, 0);
+    -fx-background-color: rgba(22, 22, 22, 0.88);
+    -fx-background-radius: 18;
+    -fx-border-color: rgba(255, 255, 255, 0.06);
+    -fx-border-radius: 18;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 20, 0, 4, 4);
 }
 
 /* ── Background Image ── */
@@ -21,31 +23,22 @@
     -fx-background-size: cover;
 }
 
-/* ── Title ── */
-.home-title {
-    -fx-text-fill: #FFFFFF;
-    -fx-font-family: 'Poppins';
-    -fx-font-weight: bold;
-    -fx-font-size: 26px;
-    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.25), 8, 0, 0, 2);
-}
-
 /* ── Navigation Buttons ── */
 .sidemenu-nav-btn {
-    -fx-border-width: 0 0 0 4px;
     -fx-background-color: transparent;
-    -fx-background-radius: 0 12 12 0;
-    -fx-font-size: 16px;
+    -fx-background-radius: 12;
+    -fx-font-size: 14px;
     -fx-font-family: 'Poppins';
     -fx-font-weight: normal;
-    -fx-text-alignment: left;
     -fx-text-fill: #B0B0B0;
     -fx-min-height: 44px;
     -fx-max-height: 44px;
-    -fx-max-width: 260px;
-    -fx-border-color: transparent;
-    -fx-padding: 0 0 0 12;
+    -fx-padding: 0 12 0 15;
     -fx-cursor: hand;
+    -fx-graphic-text-gap: 12;
+    -fx-content-display: left;
+    -fx-overflow: hidden;
+    -fx-border-width: 0;
 }
 
 .sidemenu-nav-btn.button {
@@ -58,8 +51,7 @@
 }
 
 .sidemenu-nav-btn.active {
-    -fx-border-color: linear-gradient(to bottom, #8B0000, #FF4500);
-    -fx-background-color: rgba(139, 0, 0, 0.12);
+    -fx-background-color: rgba(139, 0, 0, 0.15);
     -fx-text-fill: #FFFFFF;
     -fx-font-weight: bold;
 }
@@ -79,26 +71,24 @@
 
 /* ── User Pane ── */
 .user-pane {
-    -fx-background-color: rgba(30, 30, 30, 0.7);
-    -fx-background-radius: 16 16 0 0;
-    -fx-padding: 12;
-    -fx-border-color: transparent;
-    -fx-border-width: 0;
+    -fx-background-color: rgba(255, 255, 255, 0.04);
+    -fx-background-radius: 12;
+    -fx-padding: 8 0 8 0;
 }
 
 .user-pane .username-label {
     -fx-text-fill: #FFFFFF;
     -fx-font-family: 'Poppins';
     -fx-font-weight: bold;
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
 }
 
 /* ── Logout Button ── */
 .logout-btn {
     -fx-background-color: transparent;
     -fx-text-fill: white;
-    -fx-font-size: 18px;
-    -fx-padding: 8;
+    -fx-font-size: 16px;
+    -fx-padding: 6;
     -fx-background-radius: 10;
     -fx-cursor: hand;
 }

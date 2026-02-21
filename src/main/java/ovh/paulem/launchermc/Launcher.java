@@ -35,6 +35,8 @@ public final class Launcher extends Application {
     public Launcher() {
         instance = this;
         this.logger = new Logger("[Launcher]", this.launcherDir.resolve("launcher.log"));
+        
+        this.logger.info(this.launcherDir.toString());
 
         if (Files.notExists(this.launcherDir))
         {

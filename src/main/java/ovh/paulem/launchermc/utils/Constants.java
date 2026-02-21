@@ -1,6 +1,7 @@
 package ovh.paulem.launchermc.utils;
 
 import com.sun.management.OperatingSystemMXBean;
+import ovh.paulem.launchermc.Launcher;
 
 import java.lang.management.ManagementFactory;
 import java.util.UUID;
@@ -19,7 +20,9 @@ public class Constants {
             totalBytes = Runtime.getRuntime().maxMemory();
         }
         long halfBytes = totalBytes / 2L;
-        return (int) (halfBytes / (1024L * 1024L));
+        int ramAmount = (int) (halfBytes / (1024L * 1024L));
+        Launcher.getInstance().getLogger().info("Default max ram amount : " + ramAmount);
+        return ramAmount;
     };
     public static final String CONFIG_MAXRAM = "maxRam";
 

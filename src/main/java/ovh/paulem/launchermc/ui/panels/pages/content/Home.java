@@ -6,14 +6,13 @@ import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import ovh.paulem.launchermc.Launcher;
 import ovh.paulem.launchermc.game.Launch;
+import ovh.paulem.launchermc.ui.components.GradientButton;
 import ovh.paulem.launchermc.ui.panels.PanelManager;
 import ovh.paulem.launchermc.utils.Constants;
-import javafx.animation.ScaleTransition;
 import javafx.geometry.Insets;
 import javafx.geometry.VPos;
 import javafx.scene.control.*;
 import javafx.scene.layout.RowConstraints;
-import javafx.util.Duration;
 
 public class Home extends ContentPanel {
     private Launch launch;
@@ -49,7 +48,7 @@ public class Home extends ContentPanel {
         this.layout.getRowConstraints().addAll(rowConstraints, new RowConstraints());
         contentPane.getStyleClass().add("box-pane");
         setCanTakeAllSize(contentPane);
-        contentPane.setPadding(new Insets(20));
+        contentPane.setPadding(new Insets(20, 20, 20, 85));
         this.layout.add(contentPane, 0, 0);
         this.layout.getStyleClass().add("home-layout");
 
@@ -74,39 +73,30 @@ public class Home extends ContentPanel {
 
     public void showPlayButton() {
         contentPane.getChildren().clear();
-        Button playBtn = new Button("JOUER");
+
+        GradientButton playBtn = new GradientButton("JOUER", 25, 1.08)
+                .withLargeShadow();
         final var playIcon = new MaterialDesignIconView<>(MaterialDesignIcon.G.GAMEPAD);
         playIcon.getStyleClass().add("play-icon");
         playIcon.setSize("28");
+        playBtn.setGraphic(playIcon);
         setCanTakeAllSize(playBtn);
         setCenterH(playBtn);
         setCenterV(playBtn);
         playBtn.getStyleClass().add("play-btn");
-        playBtn.setGraphic(playIcon);
         playBtn.setOnMouseClicked(e -> launch.play());
-
-        // ── Hover animation: ScaleTransition (grow on enter, shrink on exit) ──
-        ScaleTransition scaleUp = new ScaleTransition(Duration.millis(200), playBtn);
-        scaleUp.setToX(1.08);
-        scaleUp.setToY(1.08);
-
-        ScaleTransition scaleDown = new ScaleTransition(Duration.millis(200), playBtn);
-        scaleDown.setToX(1.0);
-        scaleDown.setToY(1.0);
-
-        playBtn.setOnMouseEntered(e -> {
-            scaleDown.stop();
-            scaleUp.playFromStart();
-        });
-        playBtn.setOnMouseExited(e -> {
-            scaleUp.stop();
-            scaleDown.playFromStart();
-        });
 
         contentPane.getChildren().add(playBtn);
 
-        // Pulse animation on button appearance
-        new Pulse(playBtn).setSpeed(0.6).play();
+        // Pulse animation on button appearance, then reset scale
+        Pulse pulse = new Pulse(playBtn);
+        pulse.setSpeed(0.8);
+        pulse.setOnFinished(e -> {
+            playBtn.setScaleX(1.0);
+            playBtn.setScaleY(1.0);
+            playBtn.setCache(false);
+        });
+        pulse.play();
     }
 
     @Override

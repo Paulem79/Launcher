@@ -63,26 +63,11 @@
     -fx-font-family: 'Poppins';
     -fx-text-fill: #FFFFFF;
     -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
-    -fx-background-radius: 14;
+    -fx-background-radius: 18;
     -fx-padding: 10 30;
-    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.35), 14, 0, 0, 4);
     -fx-cursor: hand;
 }
 
-.login-card .login-log-btn:hover {
-    -fx-background-color: linear-gradient(to right, #A00000, #FF5722);
-    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.45), 18, 0, 0, 5);
-}
-
-.login-card .login-log-btn:pressed {
-    -fx-background-color: linear-gradient(to right, #700000, #E03E00);
-}
-
-.login-card .login-log-btn:disabled {
-    -fx-background-color: rgba(255, 255, 255, 0.08);
-    -fx-text-fill: #666666;
-    -fx-effect: none;
-}
 
 /* ── Separator ── */
 .login-card .login-separator {

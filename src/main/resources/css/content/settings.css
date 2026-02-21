@@ -96,18 +96,9 @@
     -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
     -fx-background-radius: 14;
     -fx-padding: 10 30;
-    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.35), 14, 0, 0, 4);
     -fx-cursor: hand;
 }
 
-.save-btn:hover {
-    -fx-background-color: linear-gradient(to right, #A00000, #FF5722);
-    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.45), 18, 0, 0, 5);
-}
-
-.save-btn:pressed {
-    -fx-background-color: linear-gradient(to right, #700000, #E03E00);
-}
 
 /* ── Save Icon ── */
 .save-icon {

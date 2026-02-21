@@ -23,19 +23,9 @@
     -fx-min-width: 220;
     -fx-min-height: 60;
     -fx-padding: 14 48;
-    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.5), 20, 0, 0, 6);
     -fx-cursor: hand;
 }
 
-.play-btn:hover {
-    -fx-background-color: linear-gradient(to right, #A00000, #FF5722);
-    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.6), 28, 0, 0, 8);
-}
-
-.play-btn:pressed {
-    -fx-background-color: linear-gradient(to right, #700000, #E03E00);
-    -fx-effect: dropshadow(gaussian, rgba(139, 0, 0, 0.3), 12, 0, 0, 3);
-}
 
 /* ── Play Icon ── */
 .play-icon {

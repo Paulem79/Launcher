@@ -3,34 +3,49 @@ package ovh.paulem.launchermc.ui.panels.pages;
 import animatefx.animation.FadeIn;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
+import javafx.scene.layout.*;
 import ovh.paulem.launchermc.Launcher;
 import ovh.paulem.launchermc.ui.panels.PanelManager;
 import ovh.paulem.launchermc.ui.panels.Panel;
 import ovh.paulem.launchermc.ui.panels.pages.content.ContentPanel;
 import ovh.paulem.launchermc.ui.panels.pages.content.Home;
 import ovh.paulem.launchermc.ui.panels.pages.content.Settings;
-import ovh.paulem.launchermc.utils.Constants;
-import javafx.geometry.HPos;
+import javafx.animation.Animation;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
-import javafx.scene.text.TextAlignment;
+import javafx.util.Duration;
 
 public class SideBar extends Panel {
-    private final GridPane sidemenu = new GridPane();
+    private final VBox sidemenu = new VBox();
     private final GridPane navContent = new GridPane();
 
     private Node activeLink = null;
     private ContentPanel currentPage = null;
 
     private Button homeBtn, settingsBtn, newsBtn, storeBtn;
+
+    private static final double SIDEBAR_COLLAPSED_WIDTH = 62;
+    private static final double SIDEBAR_EXPANDED_WIDTH = 220;
+    private static final double SIDEBAR_GAP = 10;
+
+    private Label usernameLabel;
+    private Button logoutBtn;
+
+    private Timeline expandTimeline;
+    private Timeline collapseTimeline;
 
     @Override
     public String getName() {
@@ -46,159 +61,215 @@ public class SideBar extends Panel {
     public void init(PanelManager panelManager) {
         super.init(panelManager);
 
-        // Background
+        // Root layout: StackPane so sidebar floats over content
         this.layout.getStyleClass().add("app-layout");
         setCanTakeAllSize(this.layout);
 
-        ColumnConstraints columnConstraints = new ColumnConstraints();
-        columnConstraints.setHalignment(HPos.LEFT);
-        columnConstraints.setMinWidth(260);
-        columnConstraints.setMaxWidth(260);
-        this.layout.getColumnConstraints().addAll(columnConstraints, new ColumnConstraints());
-
-        // Side menu
-        this.layout.add(sidemenu, 0, 0);
-        sidemenu.getStyleClass().add("sidemenu");
-        setLeft(sidemenu);
-        setCenterH(sidemenu);
-        setCenterV(sidemenu);
-
-        // Background Image
+        // ── Background Image (behind everything) ──
         GridPane bgImage = new GridPane();
         setCanTakeAllSize(bgImage);
         bgImage.getStyleClass().add("bg-image");
-        this.layout.add(bgImage, 1, 0);
 
-        // Nav content
-        this.layout.add(navContent, 1, 0);
+        // ── Nav content (takes full space) ──
         navContent.getStyleClass().add("nav-content");
-        setLeft(navContent);
-        setCenterH(navContent);
-        setCenterV(navContent);
+        setCanTakeAllSize(navContent);
 
-        /*
-         * Side menu
-         */
-        // Titre
-        Label title = new Label("Launcher MC");
-        title.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 24f));
-        title.getStyleClass().add("home-title");
-        setCenterH(title);
-        setCanTakeAllSize(title);
-        setTop(title);
-        title.setTextAlignment(TextAlignment.CENTER);
-        title.setTranslateY(Constants.TITLE_OFFSET_Y);
-        sidemenu.getChildren().add(title);
+        // ── Floating sidebar ──
+        sidemenu.getStyleClass().add("sidemenu");
+        sidemenu.setAlignment(Pos.TOP_LEFT);
+        sidemenu.setPrefWidth(SIDEBAR_COLLAPSED_WIDTH);
+        sidemenu.setMinWidth(SIDEBAR_COLLAPSED_WIDTH);
+        sidemenu.setMaxWidth(SIDEBAR_COLLAPSED_WIDTH);
+        sidemenu.setSpacing(4);
+        sidemenu.setPadding(new Insets(12, 6, 12, 6));
+        sidemenu.setPickOnBounds(false);
 
-        // Navigation
-        homeBtn = new Button("Accueil");
-        homeBtn.getStyleClass().add("sidemenu-nav-btn");
-        final var homeIcon = new MaterialDesignIconView<>(MaterialDesignIcon.H.HOME);
-        homeIcon.getStyleClass().add("sidemenu-nav-btn-icon");
-        homeIcon.setTranslateY(Constants.NAVBUTTON_OFFSET_Y);
-        homeBtn.setGraphic(homeIcon);
-        setCanTakeAllSize(homeBtn);
-        setTop(homeBtn);
-        homeBtn.setTranslateY(80d);
+        // Clip the sidebar so content (user pane) doesn't overflow
+        Rectangle sideClip = new Rectangle();
+        sideClip.setArcWidth(36);
+        sideClip.setArcHeight(36);
+        sideClip.widthProperty().bind(sidemenu.widthProperty());
+        sideClip.heightProperty().bind(sidemenu.heightProperty());
+        sidemenu.setClip(sideClip);
+
+        // Use a StackPane as the content of the layout
+        StackPane contentStack = new StackPane();
+        setCanTakeAllSize(contentStack);
+        contentStack.getChildren().addAll(bgImage, navContent, sidemenu);
+        StackPane.setAlignment(sidemenu, Pos.CENTER_LEFT);
+        StackPane.setMargin(sidemenu, new Insets(SIDEBAR_GAP, 0, SIDEBAR_GAP, SIDEBAR_GAP));
+
+        this.layout.add(contentStack, 0, 0);
+
+        // ── Build sidebar content ──
+        buildSidebarButtons();
+        buildUserPane();
+
+        // ── Hover animations ──
+        setupHoverAnimations();
+    }
+
+    private void buildSidebarButtons() {
+        // Navigation buttons
+        homeBtn = createNavButton("Accueil", new MaterialDesignIconView<>(MaterialDesignIcon.H.HOME));
         homeBtn.setOnMouseClicked(e -> setPage(new Home(), homeBtn));
 
-        newsBtn = new Button("Actualités");
-        newsBtn.getStyleClass().add("sidemenu-nav-btn");
-        final var newsIcon = new MaterialDesignIconView<>(MaterialDesignIcon.N.NEWSPAPER);
-        newsIcon.getStyleClass().add("sidemenu-nav-btn-icon");
-        newsIcon.setTranslateY(Constants.NAVBUTTON_OFFSET_Y);
-        newsBtn.setGraphic(newsIcon);
-        setCanTakeAllSize(newsBtn);
-        setTop(newsBtn);
-        newsBtn.setTranslateY(124d);
+        newsBtn = createNavButton("Actualités", new MaterialDesignIconView<>(MaterialDesignIcon.N.NEWSPAPER));
         newsBtn.setDisable(true);
         newsBtn.setOpacity(0.5);
 
-        storeBtn = new Button("Boutique");
-        storeBtn.getStyleClass().add("sidemenu-nav-btn");
-        final var storeIcon = new MaterialDesignIconView<>(MaterialDesignIcon.S.STORE);
-        storeIcon.getStyleClass().add("sidemenu-nav-btn-icon");
-        storeIcon.setTranslateY(Constants.NAVBUTTON_OFFSET_Y);
-        storeBtn.setGraphic(storeIcon);
-        setCanTakeAllSize(storeBtn);
-        setTop(storeBtn);
-        storeBtn.setTranslateY(168d);
+        storeBtn = createNavButton("Boutique", new MaterialDesignIconView<>(MaterialDesignIcon.S.STORE));
         storeBtn.setDisable(true);
         storeBtn.setOpacity(0.5);
 
-        settingsBtn = new Button("Paramètres");
-        settingsBtn.getStyleClass().add("sidemenu-nav-btn");
-        final var settingsIcon = new MaterialDesignIconView<>(MaterialDesignIcon.C.COG);
-        settingsIcon.getStyleClass().add("sidemenu-nav-btn-icon");
-        settingsIcon.setTranslateY(Constants.NAVBUTTON_OFFSET_Y);
-        settingsBtn.setGraphic(settingsIcon);
-        setCanTakeAllSize(settingsBtn);
-        setTop(settingsBtn);
-        settingsBtn.setTranslateY(212d);
+        settingsBtn = createNavButton("Paramètres", new MaterialDesignIconView<>(MaterialDesignIcon.C.COG));
         settingsBtn.setOnMouseClicked(e -> setPage(new Settings(), settingsBtn));
 
-        sidemenu.getChildren().addAll(homeBtn, newsBtn, storeBtn, settingsBtn);
+        // Spacer to push user pane to bottom
+        VBox spacer = new VBox();
+        VBox.setVgrow(spacer, Priority.ALWAYS);
 
-        if (Launcher.getInstance().getAuthInfos() != null) {
-            // Pseudo + avatar
-            GridPane userPane = new GridPane();
-            setCanTakeAllWidth(userPane);
-            userPane.setMaxHeight(80);
-            userPane.setMinWidth(80);
-            userPane.getStyleClass().add("user-pane");
-            setBottom(userPane);
+        sidemenu.getChildren().addAll(homeBtn, newsBtn, storeBtn, settingsBtn, spacer);
+    }
 
-            String avatarUrl = "https://minotar.net/avatar/" + (
-                    saver.get("offline-username") != null ?
-                            "MHF_Steve.png" :
-                            Launcher.getInstance().getAuthInfos().getUuid() + ".png"
-            );
-            ImageView avatarView = new ImageView();
-            Image avatarImg = new Image(avatarUrl);
-            avatarView.setImage(avatarImg);
-            avatarView.setPreserveRatio(true);
-            avatarView.setFitHeight(44d);
-            setCenterV(avatarView);
-            setCanTakeAllSize(avatarView);
-            setLeft(avatarView);
-            avatarView.setTranslateX(15d);
-            userPane.getChildren().add(avatarView);
+    private Button createNavButton(String text, MaterialDesignIconView<?> iconView) {
+        Button btn = new Button(text);
+        btn.getStyleClass().add("sidemenu-nav-btn");
+        iconView.getStyleClass().add("sidemenu-nav-btn-icon");
+        iconView.setSize("20");
+        btn.setGraphic(iconView);
+        btn.setMaxWidth(Double.MAX_VALUE);
+        btn.setMinHeight(44);
+        btn.setMaxHeight(44);
+        btn.setEllipsisString("");
+        return btn;
+    }
 
-            Label usernameLabel = new Label(Launcher.getInstance().getAuthInfos().getUsername());
-            usernameLabel.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 18f));
-            setCanTakeAllSize(usernameLabel);
-            setCenterV(usernameLabel);
-            setLeft(usernameLabel);
-            usernameLabel.getStyleClass().add("username-label");
-            usernameLabel.setTranslateX(70d);
-            setCanTakeAllWidth(usernameLabel);
-            userPane.getChildren().add(usernameLabel);
+    private void buildUserPane() {
+        if (Launcher.getInstance().getAuthInfos() == null) return;
 
-            Button logoutBtn = new Button();
-            final var logoutIcon = new MaterialDesignIconView<>(MaterialDesignIcon.L.LOGOUT);
-            logoutIcon.getStyleClass().add("logout-icon");
-            setCanTakeAllSize(logoutBtn);
-            setCenterV(logoutBtn);
-            setRight(logoutBtn);
-            logoutBtn.getStyleClass().add("logout-btn");
-            logoutBtn.setGraphic(logoutIcon);
-            logoutBtn.setOnMouseClicked(e -> {
-                if (currentPage instanceof Home && ((Home) currentPage).isDownloadingOrPlaying()) {
-                    return;
-                }
-                saver.remove("accessToken");
-                saver.remove("clientToken");
-                saver.remove("offline-username");
-                saver.remove("msAccessToken");
-                saver.remove("msRefreshToken");
-                saver.save();
-                Launcher.getInstance().setAuthInfos(null);
-                this.panelManager.showPanel(new Login());
-            });
-            userPane.getChildren().add(logoutBtn);
+        // Separator spacer
+        VBox userBox = new VBox();
+        userBox.getStyleClass().add("user-pane");
+        userBox.setAlignment(Pos.CENTER_LEFT);
+        userBox.setSpacing(0);
+        userBox.setMinHeight(60);
+        userBox.setMaxHeight(60);
 
-            sidemenu.getChildren().add(userPane);
+        // Avatar + username row
+        HBox userRow = new HBox();
+        userRow.setAlignment(Pos.CENTER_LEFT);
+        userRow.setSpacing(10);
+
+        String avatarUrl = "https://minotar.net/avatar/" + (
+                saver.get("offline-username") != null ?
+                        "MHF_Steve.png" :
+                        Launcher.getInstance().getAuthInfos().getUuid() + ".png"
+        );
+        ImageView avatarView = new ImageView(new Image(avatarUrl));
+        avatarView.setPreserveRatio(true);
+        avatarView.setFitHeight(36d);
+        avatarView.setFitWidth(36d);
+        avatarView.setSmooth(true);
+
+        usernameLabel = new Label(Launcher.getInstance().getAuthInfos().getUsername());
+        usernameLabel.setFont(Font.font("Poppins", FontWeight.BOLD, FontPosture.REGULAR, 14f));
+        usernameLabel.getStyleClass().add("username-label");
+        usernameLabel.setOpacity(0);
+
+        userRow.getChildren().addAll(avatarView, usernameLabel);
+
+        // Logout button
+        logoutBtn = new Button();
+        final var logoutIcon = new MaterialDesignIconView<>(MaterialDesignIcon.L.LOGOUT);
+        logoutIcon.getStyleClass().add("logout-icon");
+        logoutIcon.setSize("18");
+        logoutBtn.getStyleClass().add("logout-btn");
+        logoutBtn.setGraphic(logoutIcon);
+        logoutBtn.setOpacity(0);
+        logoutBtn.setOnMouseClicked(e -> {
+            if (currentPage instanceof Home && ((Home) currentPage).isDownloadingOrPlaying()) {
+                return;
+            }
+            saver.remove("accessToken");
+            saver.remove("clientToken");
+            saver.remove("offline-username");
+            saver.remove("msAccessToken");
+            saver.remove("msRefreshToken");
+            saver.save();
+            Launcher.getInstance().setAuthInfos(null);
+            this.panelManager.showPanel(new Login());
+        });
+
+        // Layout: avatar row + logout side by side
+        HBox userContainer = new HBox();
+        userContainer.setAlignment(Pos.CENTER_LEFT);
+        userContainer.setSpacing(6);
+        HBox logoutSpacer = new HBox();
+        HBox.setHgrow(logoutSpacer, Priority.ALWAYS);
+        userContainer.getChildren().addAll(userRow, logoutSpacer, logoutBtn);
+        userContainer.setPadding(new Insets(0, 8, 0, 7));
+
+        userBox.getChildren().add(userContainer);
+
+        // Add bottom margin so user pane doesn't stick to the sidebar edge
+        VBox.setMargin(userBox, new Insets(0, 0, 4, 0));
+
+        sidemenu.getChildren().add(userBox);
+    }
+
+    private void setupHoverAnimations() {
+        // Snappy interpolator
+        Interpolator snappy = Interpolator.SPLINE(0.22, 0.95, 0.35, 1.0);
+        Interpolator smooth = Interpolator.SPLINE(0.25, 0.1, 0.25, 1.0);
+
+        double overshoot = SIDEBAR_EXPANDED_WIDTH + 12;
+
+        expandTimeline = new Timeline();
+        collapseTimeline = new Timeline();
+
+        // Expand: overshoot then settle (bouncy)
+        expandTimeline.getKeyFrames().addAll(
+                new KeyFrame(Duration.millis(220),
+                        new KeyValue(sidemenu.prefWidthProperty(), overshoot, snappy),
+                        new KeyValue(sidemenu.minWidthProperty(), overshoot, snappy),
+                        new KeyValue(sidemenu.maxWidthProperty(), overshoot, snappy)),
+                new KeyFrame(Duration.millis(350),
+                        new KeyValue(sidemenu.prefWidthProperty(), SIDEBAR_EXPANDED_WIDTH, smooth),
+                        new KeyValue(sidemenu.minWidthProperty(), SIDEBAR_EXPANDED_WIDTH, smooth),
+                        new KeyValue(sidemenu.maxWidthProperty(), SIDEBAR_EXPANDED_WIDTH, smooth))
+        );
+
+        // Collapse: smooth ease out
+        collapseTimeline.getKeyFrames().add(
+                new KeyFrame(Duration.millis(300),
+                        new KeyValue(sidemenu.prefWidthProperty(), SIDEBAR_COLLAPSED_WIDTH, smooth),
+                        new KeyValue(sidemenu.minWidthProperty(), SIDEBAR_COLLAPSED_WIDTH, smooth),
+                        new KeyValue(sidemenu.maxWidthProperty(), SIDEBAR_COLLAPSED_WIDTH, smooth))
+        );
+
+        // Username & logout fade
+        if (usernameLabel != null) {
+            expandTimeline.getKeyFrames().add(new KeyFrame(Duration.millis(350),
+                    new KeyValue(usernameLabel.opacityProperty(), 1, snappy)));
+            collapseTimeline.getKeyFrames().add(new KeyFrame(Duration.millis(200),
+                    new KeyValue(usernameLabel.opacityProperty(), 0, smooth)));
         }
+        if (logoutBtn != null) {
+            expandTimeline.getKeyFrames().add(new KeyFrame(Duration.millis(350),
+                    new KeyValue(logoutBtn.opacityProperty(), 1, snappy)));
+            collapseTimeline.getKeyFrames().add(new KeyFrame(Duration.millis(200),
+                    new KeyValue(logoutBtn.opacityProperty(), 0, smooth)));
+        }
+
+        sidemenu.setOnMouseEntered(e -> {
+            if (collapseTimeline.getStatus() == Animation.Status.RUNNING) collapseTimeline.stop();
+            expandTimeline.playFromStart();
+        });
+        sidemenu.setOnMouseExited(e -> {
+            if (expandTimeline.getStatus() == Animation.Status.RUNNING) expandTimeline.stop();
+            collapseTimeline.playFromStart();
+        });
     }
 
     @Override
@@ -210,7 +281,7 @@ public class SideBar extends Panel {
     }
 
     public void setPage(ContentPanel panel, Node navButton) {
-        if (currentPage instanceof Home && ((Home) currentPage).isDownloadingOrPlaying()) {
+        if (currentPage instanceof Home home && home.isDownloadingOrPlaying()) {
             return;
         }
         if (activeLink == navButton) {

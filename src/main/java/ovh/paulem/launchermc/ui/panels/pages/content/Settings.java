@@ -1,15 +1,15 @@
 package ovh.paulem.launchermc.ui.panels.pages.content;
 
-import animatefx.animation.FadeInUp;
+import animatefx.animation.FadeIn;
 import com.sun.management.OperatingSystemMXBean;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
+import ovh.paulem.launchermc.ui.components.GradientButton;
 import ovh.paulem.launchermc.ui.panels.PanelManager;
 import ovh.paulem.launchermc.utils.Constants;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
@@ -37,7 +37,7 @@ public class Settings extends ContentPanel {
 
         // Background
         this.layout.getStyleClass().add("settings-layout");
-        this.layout.setPadding(new Insets(40));
+        this.layout.setPadding(new Insets(40, 40, 40, 85));
         setCanTakeAllSize(this.layout);
 
         // Content
@@ -84,18 +84,16 @@ public class Settings extends ContentPanel {
             if (maxRam != null) {
                 defaultRamAmount = Integer.parseInt(maxRam);
             } else {
-                throw new NumberFormatException("maxRam doesn't exist !");
+                throw new NumberFormatException();
             }
-        } catch (NumberFormatException error) {
+        } catch (NumberFormatException _) {
             saver.set(Constants.CONFIG_MAXRAM, String.valueOf(defaultRamAmount));
             saver.save();
         }
 
-        if (comboBox.getItems().contains(defaultRamAmount / 1024.0 + " GB")) {
-            comboBox.setValue(defaultRamAmount / 1024.0 + " GB");
-        } else {
-            comboBox.setValue("1.0 GB");
-        }
+        double toFormatRam = defaultRamAmount / 1024.0;
+        // Round to nearest GB
+        comboBox.setValue(Math.round(toFormatRam * 2) / 2.0 + " GB");
 
         setLeft(comboBox);
         setCanTakeAllSize(comboBox);
@@ -107,7 +105,7 @@ public class Settings extends ContentPanel {
         /*
          * Save Button
          */
-        Button saveBtn = new Button("Enregistrer");
+        GradientButton saveBtn = new GradientButton("Enregistrer", 14, 1.06);
         saveBtn.getStyleClass().add("save-btn");
         final var iconView = new MaterialDesignIconView<>(MaterialDesignIcon.F.FLOPPY);
         iconView.getStyleClass().add("save-icon");
@@ -140,6 +138,6 @@ public class Settings extends ContentPanel {
     public void onShow() {
         super.onShow();
         // Animate content appearance (slide up instead of fade to avoid flickering on dark bg)
-        new FadeInUp(contentPane).setSpeed(1.2).play();
+        new FadeIn(contentPane).setSpeed(3).play();
     }
 }

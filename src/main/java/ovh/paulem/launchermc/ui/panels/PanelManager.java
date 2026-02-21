@@ -3,6 +3,9 @@ package ovh.paulem.launchermc.ui.panels;
 import animatefx.animation.FadeIn;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Screen;
 import ovh.paulem.launchermc.Launcher;
 import ovh.paulem.launchermc.ui.panels.pages.content.Settings;
 import ovh.paulem.launchermc.utils.Background;
@@ -58,11 +61,12 @@ public class PanelManager {
         this.stage.setMinHeight(480);
 
         // Size the window to half the screen and center it
-        javafx.geometry.Rectangle2D screenBounds = javafx.stage.Screen.getPrimary().getVisualBounds();
+        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
         this.stage.setWidth(screenBounds.getWidth() / 2);
         this.stage.setHeight(screenBounds.getHeight() / 2);
         this.stage.setX((screenBounds.getWidth() - this.stage.getWidth()) / 2);
         this.stage.setY((screenBounds.getHeight() - this.stage.getHeight()) / 2);
+        this.stage.centerOnScreen();
 
         this.stage.getIcons().add(new Image("images/icon.png"));
 
@@ -72,7 +76,7 @@ public class PanelManager {
         rootLayout.setStyle("-fx-background-color: #121212; -fx-background-radius: " + CORNER_RADIUS + ";");
 
         // Clip the root layout to a rounded rectangle so corners are truly transparent
-        javafx.scene.shape.Rectangle rootClip = new javafx.scene.shape.Rectangle();
+        Rectangle rootClip = new Rectangle();
         rootClip.setArcWidth(CORNER_RADIUS * 2);
         rootClip.setArcHeight(CORNER_RADIUS * 2);
         rootClip.widthProperty().bind(rootLayout.widthProperty());
@@ -86,7 +90,7 @@ public class PanelManager {
         VBox.setVgrow(this.contentPane, Priority.ALWAYS);
 
         // Clip content so panels don't overflow onto the title bar
-        javafx.scene.shape.Rectangle contentClip = new javafx.scene.shape.Rectangle();
+        Rectangle contentClip = new Rectangle();
         contentClip.widthProperty().bind(this.contentPane.widthProperty());
         contentClip.heightProperty().bind(this.contentPane.heightProperty());
         this.contentPane.setClip(contentClip);
@@ -236,6 +240,28 @@ public class PanelManager {
         minimizeBtn.setGraphic(minimizeIcon);
         minimizeBtn.getStyleClass().add("title-bar-btn");
         minimizeBtn.setOnAction(e -> stage.setIconified(true));
+        
+        // Fullscreen button
+        Button fullscreenBtn = new Button();
+        
+        var fullscreenIcon = new MaterialDesignIconView<>(MaterialDesignIcon.F.FULLSCREEN);
+        fullscreenIcon.getStyleClass().add("title-bar-icon");
+        fullscreenIcon.setSize("16");
+        var fullscreenedIcon = new MaterialDesignIconView<>(MaterialDesignIcon.F.FULLSCREEN_EXIT);
+        fullscreenedIcon.getStyleClass().add("title-bar-icon");
+        fullscreenedIcon.setSize("16");
+        
+        fullscreenBtn.setGraphic(fullscreenIcon);
+        fullscreenBtn.getStyleClass().add("title-bar-btn");
+        fullscreenBtn.setOnAction(e -> {
+            stage.setFullScreen(!stage.isFullScreen());
+            
+            if(stage.isFullScreen()) {
+                fullscreenBtn.setGraphic(fullscreenedIcon);
+            } else {
+                fullscreenBtn.setGraphic(fullscreenIcon);
+            }
+        });
 
         // Close button
         Button closeBtn = new Button();
@@ -249,7 +275,7 @@ public class PanelManager {
             System.exit(0);
         });
 
-        titleBar.getChildren().addAll(titleLabel, spacer, minimizeBtn, closeBtn);
+        titleBar.getChildren().addAll(titleLabel, spacer, minimizeBtn, fullscreenBtn, closeBtn);
 
         // Make the title bar draggable (only when not resizing)
         titleBar.setOnMousePressed(event -> {

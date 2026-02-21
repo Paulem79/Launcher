@@ -16,6 +16,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
+import ovh.paulem.launchermc.ui.components.GradientButton;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -28,7 +29,7 @@ public class Login extends Panel {
 
     private final TextField userField = new TextField();
     private final Label userErrorLabel = new Label();
-    private final Button btnLogin = new Button("Connexion");
+    private final GradientButton btnLogin = new GradientButton("Connexion", 18, 1.04);
     private final Button msLoginBtn = new Button();
 
     @Override

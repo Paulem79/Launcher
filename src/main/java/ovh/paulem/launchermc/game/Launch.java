@@ -156,13 +156,13 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
     public String getRamArgsFromSaver() {
         int val = Constants.DEFAULT_MAX_RAM.get();
         try {
-            if (saver.get("maxRam") != null) {
-                val = Integer.parseInt(saver.get("maxRam"));
+            if (saver.get(Constants.CONFIG_MAXRAM) != null) {
+                val = Integer.parseInt(saver.get(Constants.CONFIG_MAXRAM));
             } else {
                 throw new NumberFormatException();
             }
-        } catch (NumberFormatException error) {
-            saver.set("maxRam", String.valueOf(val));
+        } catch (NumberFormatException _) {
+            saver.set(Constants.CONFIG_MAXRAM, String.valueOf(val));
             saver.save();
         }
 
