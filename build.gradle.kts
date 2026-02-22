@@ -5,7 +5,7 @@ import java.security.MessageDigest
 
 plugins {
     id("idea")
-    id("com.gradleup.shadow") version "9.0.0"
+    id("com.gradleup.shadow") version "9.3.1"
     id("java")
     id("application")
     id("org.panteleyev.jpackageplugin") version "1.7.6"
