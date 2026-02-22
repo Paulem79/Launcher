@@ -1,11 +1,6 @@
 package net.paulem.launchermc.ui.panels.pages;
 
 import animatefx.animation.FadeIn;
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
-import javafx.util.Duration;
 import net.paulem.launchermc.Launcher;
 import net.paulem.launchermc.game.Authentification;
 import net.paulem.launchermc.ui.components.MSLoginButton;
@@ -14,8 +9,6 @@ import net.paulem.launchermc.ui.panels.Panel;
 import net.paulem.launchermc.utils.Constants;
 import javafx.geometry.HPos;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;

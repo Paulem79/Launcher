@@ -126,6 +126,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                     MinecraftInfos.MODLOADER);
 
             Launcher.getInstance().getDiscordRPC().editPresence(Constants.RPC_CONNECTED);
+            Platform.runLater(() -> Launcher.getInstance().hideWindow());
 
             new Thread(() -> checkStopped(p)).start();
         } catch (Exception e) {
@@ -142,8 +143,12 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
     private void checkStopped(Process p) {
         try {
             p.waitFor();
+            
             home.setDownloadingOrPlaying(false);
-            Platform.runLater(home::showPlayButton);
+            Platform.runLater(() -> {
+                Launcher.getInstance().showWindow();
+                home.showPlayButton();
+            });
 
             Launcher.getInstance().getDiscordRPC().editPresence(Constants.RPC_LAUNCHER);
         } catch (InterruptedException e) {

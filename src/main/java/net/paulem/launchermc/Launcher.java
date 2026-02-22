@@ -5,16 +5,20 @@ import fr.flowarg.flowlogger.Logger;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthResult;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticationException;
 import fr.litarvan.openauth.microsoft.MicrosoftAuthenticator;
+import fr.theshark34.openlauncherlib.minecraft.util.GameDirGenerator;
+import lombok.Getter;
+import lombok.Setter;
 import net.paulem.launchermc.discord.RPC;
 import net.paulem.launchermc.ui.panels.PanelManager;
 import net.paulem.launchermc.ui.panels.pages.SideBar;
 import net.paulem.launchermc.ui.panels.pages.Login;
 import fr.theshark34.openlauncherlib.minecraft.AuthInfos;
 import fr.theshark34.openlauncherlib.util.Saver;
-import net.paulem.launchermc.utils.GameUtils;
+import net.paulem.launchermc.updater.Updater;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,29 +26,33 @@ import java.nio.file.Path;
 import java.util.UUID;
 
 public final class Launcher extends Application {
+    @Getter
     private static Launcher instance;
 
+    @Getter
     private final ILogger logger;
-    private final Path launcherDir = GameUtils.createGameDir("paulem-launcher", true);
+    @Getter
+    private final Path launcherDir = GameDirGenerator.createGameDir("paulem-launcher", true);
+    @Getter
     private final Saver saver;
     private PanelManager panelManager;
+    @Setter
+    @Getter
     private AuthInfos authInfos = null;
 
+    @Getter
     private final RPC discordRPC;
 
     public Launcher() {
         instance = this;
         this.logger = new Logger("[Launcher]", this.launcherDir.resolve("launcher.log"));
-        
-        this.logger.info(this.launcherDir.toString());
 
-        if (Files.notExists(this.launcherDir))
-        {
-            try
-            {
+        this.logger.info("Running LauncherMC v" + getVersion());
+
+        if (Files.notExists(this.launcherDir)) {
+            try {
                 Files.createDirectory(this.launcherDir);
-            } catch (IOException e)
-            {
+            } catch (IOException e) {
                 this.logger.err("Unable to create launcher folder");
                 this.logger.printStackTrace(e);
             }
@@ -53,12 +61,16 @@ public final class Launcher extends Application {
         this.saver = new Saver(this.launcherDir.resolve("config.properties"));
         this.saver.load();
 
+        try {
+            Updater updater = new Updater();
+            updater.checkForUpdatesAsync();
+        } catch (Exception e) {
+            this.logger.err("Unable to check for updates");
+            this.logger.printStackTrace(e);
+        }
+
         this.discordRPC = new RPC(this.logger);
         this.discordRPC.startPresence();
-    }
-
-    public static Launcher getInstance() {
-        return instance;
     }
 
     @Override
@@ -106,30 +118,6 @@ public final class Launcher extends Application {
         return false;
     }
 
-    public AuthInfos getAuthInfos() {
-        return authInfos;
-    }
-
-    public void setAuthInfos(AuthInfos authInfos) {
-        this.authInfos = authInfos;
-    }
-
-    public ILogger getLogger() {
-        return logger;
-    }
-
-    public Saver getSaver() {
-        return saver;
-    }
-
-    public Path getLauncherDir() {
-        return launcherDir;
-    }
-
-    public RPC getDiscordRPC() {
-        return discordRPC;
-    }
-
     @Override
     public void stop() {
         Platform.exit();
@@ -137,6 +125,15 @@ public final class Launcher extends Application {
     }
 
     public void hideWindow() {
-        this.panelManager.getStage().hide();
+        this.panelManager.getStage().setIconified(true);
+    }
+    
+    public void showWindow() {
+        this.panelManager.getStage().setIconified(false);
+    }
+    
+    @Nullable
+    public String getVersion() {
+        return getClass().getPackage().getImplementationVersion();
     }
 }

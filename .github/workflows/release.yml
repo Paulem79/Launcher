@@ -8,36 +8,9 @@ on:
       - "README.md"
 
 jobs:
-  build-jar:
-    permissions: write-all
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Set up JDK 23
-        uses: actions/setup-java@v5
-        with:
-          distribution: 'liberica'
-          java-version: '23'
-          java-package: jdk+fx
-          cache: gradle
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Gradle build
-        run: ./gradlew build
-
-      - name: Archive build artifacts
-        uses: actions/upload-artifact@v6
-        with:
-          name: jar-build-artifacts
-          path: build/libs/Launchermc.jar
-  
   build:
     strategy:
+      fail-fast: false
       matrix:
         os: [ ubuntu-latest, macos-latest, windows-latest ]
     permissions: write-all
@@ -45,64 +18,63 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Set up JDK 23
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v4
         with:
           distribution: 'liberica'
           java-version: '23'
           java-package: jdk+fx
           cache: gradle
 
+      - name: Install RPM tools (Linux only)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y rpm
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Gradle jpackage
-        run: ./gradlew jpackage
-
-      - name: Gradle zipjpackage
-        run: ./gradlew zipjpackage
+      - name: Gradle Build Packages
+        run: |
+          if [ "$RUNNER_OS" == "Windows" ]; then
+            ./gradlew packageMsi packageExe zipjpackage generateChecksums
+          elif [ "$RUNNER_OS" == "Linux" ]; then
+            ./gradlew packageDeb packageRpm zipjpackage generateChecksums
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+            ./gradlew packageDmg packagePkg zipjpackage generateChecksums
+          fi
+        shell: bash
 
       - name: Archive build artifacts
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.os }}-build-artifacts
-          path: dist
+          name: artifacts-${{ matrix.os }}
+          path: dist/*
 
   release:
     permissions: write-all
-    needs:
-      - build
+    needs: build
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v7
-        with:
-          name: jar-build-artifacts
-          path: dist
-      - uses: actions/download-artifact@v7
-        with:
-          name: ubuntu-latest-build-artifacts
-          path: dist
-      - uses: actions/download-artifact@v7
-        with:
-          name: macos-latest-build-artifacts
-          path: dist
-      - uses: actions/download-artifact@v7
-        with:
-          name: windows-latest-build-artifacts
-          path: dist
+      - uses: actions/checkout@v4
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: all-artifacts
+
+      - name: Prepare Release Files
+        run: |
+          mkdir -p release-dist
+          # On cherche tous les fichiers binaires et checksums récursivement pour les mettre à plat
+          find all-artifacts -type f \( -name "*.exe" -o -name "*.msi" -o -name "*.deb" -o -name "*.rpm" -o -name "*.dmg" -o -name "*.pkg" -o -name "*.zip" -o -name "*.jar" -o -name "*.sha256" \) -exec cp {} release-dist/ \;
+
+      - name: Create Release
+        uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "release"
+          automatic_release_tag: "latest"
           prerelease: false
-          title: "release"
-          files: |
-            dist/*.deb
-            dist/*.dmg
-            dist/*.msi
-            dist/*.zip
+          title: "Release v${{ github.run_number }}"
+          files: release-dist/*

@@ -1,7 +1,7 @@
 package net.paulem.launchermc.gson;
 
 import com.google.gson.Gson;
-import net.paulem.launchermc.utils.GameUtils;
+import net.paulem.launchermc.utils.FileUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -30,7 +30,7 @@ public class GsonUtils {
     }
 
     public static<T> T parseJson(Class<T> type) throws Exception {
-        String address = Files.readAllLines(GameUtils.getJarPath().getParent().resolve("ip.txt"), StandardCharsets.UTF_8).get(0);
+        String address = Files.readAllLines(FileUtils.getJarPath().getParent().resolve("ip.txt"), StandardCharsets.UTF_8).get(0);
         String json = readUrl("https://api.minetools.eu/ping/" + address.replace(":", "/"));
 
         Gson gson = new Gson();
