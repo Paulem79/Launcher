@@ -1,4 +1,5 @@
 import org.gradle.internal.jvm.Jvm
+import org.gradle.internal.os.OperatingSystem
 import org.panteleyev.jpackage.ImageType
 import org.panteleyev.jpackage.JPackageTask
 import java.security.MessageDigest
@@ -66,45 +67,69 @@ tasks.withType<JPackageTask>().configureEach {
     copyright = "Copyright (c) 2025 Paulem"
     runtimeImage = Jvm.current().javaHome
 
-    // CHANGEMENT : On utilise le répertoire 'build' pour éviter l'erreur de permission
     destination = layout.buildDirectory.dir("dist")
-
     input = layout.buildDirectory.dir("libs")
     mainJar = tasks.shadowJar.get().archiveFileName.get()
     mainClass = application.mainClass.get()
     javaOptions = listOf("-Dfile.encoding=UTF-8", "--add-exports=javafx.graphics/com.sun.glass.ui=ALL-UNNAMED")
 }
 
-// Enregistrement des tâches
-val packageMsi = tasks.register<JPackageTask>("packageMsi") { windows { type = ImageType.MSI; icon = layout.projectDirectory.file("icons/icons.ico"); winConsole = true; winMenu = true; winDirChooser = true; winPerUserInstall = true; winShortcut = true } }
-val packageExe = tasks.register<JPackageTask>("packageExe") { windows { type = ImageType.EXE; icon = layout.projectDirectory.file("icons/icons.ico"); winConsole = true; winMenu = true; winDirChooser = true; winPerUserInstall = true; winShortcut = true } }
-val packageDeb = tasks.register<JPackageTask>("packageDeb") { linux { type = ImageType.DEB } }
-val packageRpm = tasks.register<JPackageTask>("packageRpm") { linux { type = ImageType.RPM } }
-val packageDmg = tasks.register<JPackageTask>("packageDmg") { mac { type = ImageType.DMG; icon = layout.projectDirectory.file("icons/icons.icns") } }
-val packagePkg = tasks.register<JPackageTask>("packagePkg") { mac { type = ImageType.PKG; icon = layout.projectDirectory.file("icons/icons.icns") } }
+// Détection propre de l'OS pour le nommage du .zip
+val currentOs = OperatingSystem.current()
+val osName = when {
+    currentOs.isWindows -> "windows"
+    currentOs.isMacOsX -> "macos"
+    currentOs.isLinux -> "linux"
+    else -> "unknown"
+}
 
-var infra = ""
+// Enregistrement des tâches (types définis proprement à la racine de la tâche)
+val packageMsi = tasks.register<JPackageTask>("packageMsi") {
+    type = ImageType.MSI
+    windows { icon = layout.projectDirectory.file("icons/icons.ico"); winConsole = true; winMenu = true; winDirChooser = true; winPerUserInstall = true; winShortcut = true }
+}
+
+val packageExe = tasks.register<JPackageTask>("packageExe") {
+    type = ImageType.EXE
+    windows { icon = layout.projectDirectory.file("icons/icons.ico"); winConsole = true; winMenu = true; winDirChooser = true; winPerUserInstall = true; winShortcut = true }
+}
+
+val packageDeb = tasks.register<JPackageTask>("packageDeb") {
+    type = ImageType.DEB
+}
+
+val packageRpm = tasks.register<JPackageTask>("packageRpm") {
+    type = ImageType.RPM
+}
+
+val packageDmg = tasks.register<JPackageTask>("packageDmg") {
+    type = ImageType.DMG
+    mac { icon = layout.projectDirectory.file("icons/icons.icns") }
+}
+
+val packagePkg = tasks.register<JPackageTask>("packagePkg") {
+    type = ImageType.PKG
+    mac { icon = layout.projectDirectory.file("icons/icons.icns") }
+}
+
 val zipjpackage = tasks.register<JPackageTask>("zipjpackage") {
     type = ImageType.APP_IMAGE
-    linux { infra = "linux" }
-    mac { infra = "macos"; icon = layout.projectDirectory.file("icons/icons.icns") }
-    windows { infra = "windows"; icon = layout.projectDirectory.file("icons/icons.ico") }
+    mac { icon = layout.projectDirectory.file("icons/icons.icns") }
+    windows { icon = layout.projectDirectory.file("icons/icons.ico") }
 }
 
 tasks.register<Zip>("zipPackage") {
-    // On force la dépendance pour éviter l'erreur "Implicit Dependency"
     dependsOn(zipjpackage)
 
-    archiveFileName.set("$infra-${project.name}-${project.version}.zip")
+    archiveFileName.set("$osName-${project.name}-${project.version}.zip")
     destinationDirectory.set(layout.buildDirectory.dir("dist"))
 
-    // On récupère le contenu généré dans build/dist/AppName
     from(layout.buildDirectory.dir("dist/${project.name}"))
 }
 
 tasks.register("generateChecksums") {
     group = "distribution"
-    // Cette tâche doit s'exécuter après toutes les autres tâches de packaging
+    // Cette dépendance n'est plus strictement obligatoire avec notre bash, mais c'est une bonne sécurité
     mustRunAfter(packageMsi, packageExe, packageDeb, packageRpm, packageDmg, packagePkg, "zipPackage")
 
     doLast {

@@ -28,9 +28,9 @@ jobs:
           java-package: jdk+fx
           cache: gradle
 
-      - name: Install RPM tools (Linux only)
+      - name: Install packaging tools (Linux only)
         if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y rpm
+        run: sudo apt-get update && sudo apt-get install -y rpm fakeroot
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -38,12 +38,19 @@ jobs:
       - name: Gradle Build Packages
         run: |
           if [ "$RUNNER_OS" == "Windows" ]; then
-            ./gradlew packageMsi packageExe zipjpackage generateChecksums
+            ./gradlew packageMsi
+            ./gradlew packageExe
+            ./gradlew zipPackage
           elif [ "$RUNNER_OS" == "Linux" ]; then
-            ./gradlew packageDeb packageRpm zipjpackage generateChecksums
+            ./gradlew packageDeb
+            ./gradlew packageRpm
+            ./gradlew zipPackage
           elif [ "$RUNNER_OS" == "macOS" ]; then
-            ./gradlew packageDmg packagePkg zipjpackage generateChecksums
+            ./gradlew packageDmg
+            ./gradlew packagePkg
+            ./gradlew zipPackage
           fi
+          ./gradlew generateChecksums
         shell: bash
 
       - name: Archive build artifacts
