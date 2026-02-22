@@ -10,7 +10,7 @@ plugins {
     id("org.panteleyev.jpackageplugin") version "1.7.6"
 }
 
-group = "ovh.paulem.launchermc"
+group = "net.paulem.launchermc"
 version = "1.0.8"
 
 repositories {
@@ -47,7 +47,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("ovh.paulem.launchermc.Main")
+    mainClass.set("$group.Main")
 }
 
 val javaVersion = JavaLanguageVersion.of(23)
@@ -147,20 +147,22 @@ tasks.shadowJar {
     mustRunAfter(tasks.distZip)
     mustRunAfter(tasks.distTar)
     mustRunAfter(tasks.startScripts)
+    
+    minimize()
 
     archiveVersion.set("")
     archiveClassifier.set("")
 }
 
-tasks.register<JavaExec>("runShadowJar") {
+tasks.register<JavaExec>("runBuildJar") {
     val javaPath = Jvm.current().javaExecutable.toString()
 
     group = "application"
     description = "Builds and runs the shadow jar using the specified Java path"
 
-    dependsOn(tasks.shadowJar)
+    dependsOn(tasks.build)
 
-    classpath = files(tasks.shadowJar.get().archiveFile)
+    classpath = files(tasks.build.get().outputs.files, tasks.shadowJar.get().archiveFile)
     setExecutable(javaPath)
     jvmArgs("--add-exports=javafx.graphics/com.sun.glass.ui=ALL-UNNAMED")
 

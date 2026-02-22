@@ -63,7 +63,7 @@
     -fx-font-family: 'Poppins';
     -fx-text-fill: #FFFFFF;
     -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
-    -fx-background-radius: 18;
+    -fx-background-radius: 14;
     -fx-padding: 10 30;
     -fx-cursor: hand;
 }
@@ -83,20 +83,11 @@
 }
 
 /* ── Microsoft Login Button ── */
-.login-card .ms-login-btn {
-    -fx-background-color: rgba(255, 255, 255, 0.07);
-    -fx-background-radius: 14;
-    -fx-border-color: rgba(255, 255, 255, 0.08);
+.login-card .ms-login-btn {-fx-background-radius: 14;
     -fx-border-radius: 14;
     -fx-border-width: 1;
     -fx-padding: 8 20;
     -fx-cursor: hand;
-}
-
-.login-card .ms-login-btn:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.12);
-    -fx-border-color: rgba(255, 69, 0, 0.3);
-    -fx-effect: dropshadow(gaussian, rgba(255, 69, 0, 0.15), 8, 0, 0, 0);
 }
 
 .login-card .ms-login-btn:pressed {
