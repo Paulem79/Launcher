@@ -35,29 +35,59 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Gradle Build Packages
+      - name: Gradle Build Packages & Staging
         run: |
+          mkdir -p build/upload-ready
+          
           if [ "$RUNNER_OS" == "Windows" ]; then
             ./gradlew packageMsi
+            cp build/dist/msi/*.msi build/upload-ready/ || true
+          
             ./gradlew packageExe
+            cp build/dist/exe/*.exe build/upload-ready/ || true
+          
             ./gradlew zipPackage
+            cp build/dist/zip/*.zip build/upload-ready/ || true
+          
           elif [ "$RUNNER_OS" == "Linux" ]; then
             ./gradlew packageDeb
+            cp build/dist/deb/*.deb build/upload-ready/ || true
+          
             ./gradlew packageRpm
+            cp build/dist/rpm/*.rpm build/upload-ready/ || true
+          
             ./gradlew zipPackage
+            cp build/dist/zip/*.zip build/upload-ready/ || true
+          
           elif [ "$RUNNER_OS" == "macOS" ]; then
             ./gradlew packageDmg
+            cp build/dist/dmg/*.dmg build/upload-ready/ || true
+          
             ./gradlew packagePkg
+            cp build/dist/pkg/*.pkg build/upload-ready/ || true
+          
             ./gradlew zipPackage
+            cp build/dist/zip/*.zip build/upload-ready/ || true
           fi
-          ./gradlew generateChecksums
+
+          # Génération des Checksums uniquement pour les fichiers finaux
+          cd build/upload-ready
+          for file in *; do
+            if [ -f "$file" ]; then
+              if command -v sha256sum &> /dev/null; then
+                sha256sum "$file" > "$file.sha256"
+              else
+                shasum -a 256 "$file" > "$file.sha256"
+              fi
+            fi
+          done
         shell: bash
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: artifacts-${{ matrix.os }}
-          path: build/dist/*
+          path: build/upload-ready/*
 
   release:
     permissions: write-all
@@ -74,8 +104,9 @@ jobs:
       - name: Prepare Release Files
         run: |
           mkdir -p release-dist
-          # On cherche tous les fichiers binaires et checksums récursivement pour les mettre à plat
-          find all-artifacts -type f \( -name "*.exe" -o -name "*.msi" -o -name "*.deb" -o -name "*.rpm" -o -name "*.dmg" -o -name "*.pkg" -o -name "*.zip" -o -name "*.jar" -o -name "*.sha256" \) -exec cp {} release-dist/ \;
+          # On copie tout bêtement le contenu des dossiers téléchargés
+          # Plus besoin de filtrer agressivement, la CI a déjà fait le tri !
+          find all-artifacts -type f -exec cp {} release-dist/ \;
 
       - name: Create Release
         uses: "marvinpinto/action-automatic-releases@latest"

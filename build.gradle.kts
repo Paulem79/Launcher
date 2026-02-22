@@ -2,7 +2,6 @@ import org.gradle.internal.jvm.Jvm
 import org.gradle.internal.os.OperatingSystem
 import org.panteleyev.jpackage.ImageType
 import org.panteleyev.jpackage.JPackageTask
-import java.security.MessageDigest
 
 plugins {
     id("idea")
@@ -67,14 +66,12 @@ tasks.withType<JPackageTask>().configureEach {
     copyright = "Copyright (c) 2025 Paulem"
     runtimeImage = Jvm.current().javaHome
 
-    destination = layout.buildDirectory.dir("dist")
     input = layout.buildDirectory.dir("libs")
     mainJar = tasks.shadowJar.get().archiveFileName.get()
     mainClass = application.mainClass.get()
     javaOptions = listOf("-Dfile.encoding=UTF-8", "--add-exports=javafx.graphics/com.sun.glass.ui=ALL-UNNAMED")
 }
 
-// Détection propre de l'OS pour le nommage du .zip
 val currentOs = OperatingSystem.current()
 val osName = when {
     currentOs.isWindows -> "windows"
@@ -83,37 +80,44 @@ val osName = when {
     else -> "unknown"
 }
 
-// Enregistrement des tâches (types définis proprement à la racine de la tâche)
+// Chaque tâche a maintenant son dossier cible isolé
 val packageMsi = tasks.register<JPackageTask>("packageMsi") {
     type = ImageType.MSI
+    destination = layout.buildDirectory.dir("dist/msi")
     windows { icon = layout.projectDirectory.file("icons/icons.ico"); winConsole = true; winMenu = true; winDirChooser = true; winPerUserInstall = true; winShortcut = true }
 }
 
 val packageExe = tasks.register<JPackageTask>("packageExe") {
     type = ImageType.EXE
+    destination = layout.buildDirectory.dir("dist/exe")
     windows { icon = layout.projectDirectory.file("icons/icons.ico"); winConsole = true; winMenu = true; winDirChooser = true; winPerUserInstall = true; winShortcut = true }
 }
 
 val packageDeb = tasks.register<JPackageTask>("packageDeb") {
     type = ImageType.DEB
+    destination = layout.buildDirectory.dir("dist/deb")
 }
 
 val packageRpm = tasks.register<JPackageTask>("packageRpm") {
     type = ImageType.RPM
+    destination = layout.buildDirectory.dir("dist/rpm")
 }
 
 val packageDmg = tasks.register<JPackageTask>("packageDmg") {
     type = ImageType.DMG
+    destination = layout.buildDirectory.dir("dist/dmg")
     mac { icon = layout.projectDirectory.file("icons/icons.icns") }
 }
 
 val packagePkg = tasks.register<JPackageTask>("packagePkg") {
     type = ImageType.PKG
+    destination = layout.buildDirectory.dir("dist/pkg")
     mac { icon = layout.projectDirectory.file("icons/icons.icns") }
 }
 
 val zipjpackage = tasks.register<JPackageTask>("zipjpackage") {
     type = ImageType.APP_IMAGE
+    destination = layout.buildDirectory.dir("dist/appimage")
     mac { icon = layout.projectDirectory.file("icons/icons.icns") }
     windows { icon = layout.projectDirectory.file("icons/icons.ico") }
 }
@@ -122,43 +126,20 @@ tasks.register<Zip>("zipPackage") {
     dependsOn(zipjpackage)
 
     archiveFileName.set("$osName-${project.name}-${project.version}.zip")
-    destinationDirectory.set(layout.buildDirectory.dir("dist"))
+    destinationDirectory.set(layout.buildDirectory.dir("dist/zip"))
 
-    from(layout.buildDirectory.dir("dist/${project.name}"))
-}
-
-tasks.register("generateChecksums") {
-    group = "distribution"
-    // Cette dépendance n'est plus strictement obligatoire avec notre bash, mais c'est une bonne sécurité
-    mustRunAfter(packageMsi, packageExe, packageDeb, packageRpm, packageDmg, packagePkg, "zipPackage")
-
-    doLast {
-        val distDir = layout.buildDirectory.dir("dist").get().asFile
-        distDir.listFiles()?.filter { it.isFile && !it.name.endsWith(".sha256") }?.forEach { file ->
-            val digest = MessageDigest.getInstance("SHA-256")
-            val hash = file.readBytes().let { bytes ->
-                digest.digest(bytes).joinToString("") { "%02x".format(it) }
-            }
-            File(file.absolutePath + ".sha256").writeText(hash)
-            println("Generated checksum for ${file.name}")
-        }
-    }
+    // On compresse le contenu du sous-dossier généré par zipjpackage
+    from(layout.buildDirectory.dir("dist/appimage/${project.name}"))
 }
 
 tasks.jar {
     finalizedBy(tasks.shadowJar)
-
-    manifest {
-        attributes("Implementation-Version" to project.version)
-    }
+    manifest { attributes("Implementation-Version" to project.version) }
 }
 
 tasks.shadowJar {
     minimize()
     archiveVersion.set("")
     archiveClassifier.set("")
-
-    mustRunAfter(tasks.distZip)
-    mustRunAfter(tasks.distTar)
-    mustRunAfter(tasks.startScripts)
+    mustRunAfter(tasks.distZip, tasks.distTar, tasks.startScripts)
 }
