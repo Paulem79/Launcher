@@ -8,7 +8,7 @@ plugins {
     id("com.gradleup.shadow") version "9.3.1"
     id("java")
     id("application")
-    id("org.panteleyev.jpackageplugin") version "1.7.6"
+    id("org.panteleyev.jpackageplugin") version "2.0.0"
 }
 
 group = "net.paulem.launchermc"
