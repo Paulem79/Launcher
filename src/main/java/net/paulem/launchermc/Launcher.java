@@ -18,21 +18,24 @@ import net.paulem.launchermc.updater.Updater;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.stage.Stage;
+import net.paulem.launchermc.utils.GameUtils;
 import org.jetbrains.annotations.Nullable;
 
-import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.UUID;
 
 public final class Launcher extends Application {
+    public static final String SERVER_NAME = "paulem-launcher";
+    
     @Getter
     private static Launcher instance;
 
     @Getter
     private final ILogger logger;
     @Getter
-    private final Path launcherDir = GameDirGenerator.createGameDir("paulem-launcher", true);
+    private Path launcherDir = GameDirGenerator.createGameDir(SERVER_NAME, true);
     @Getter
     private final Saver saver;
     private PanelManager panelManager;
@@ -42,21 +45,17 @@ public final class Launcher extends Application {
 
     @Getter
     private final RPC discordRPC;
-
+    
+    @Getter
+    private final boolean isPortable;
+    
     public Launcher() {
         instance = this;
         this.logger = new Logger("[Launcher]", this.launcherDir.resolve("launcher.log"));
 
-        this.logger.info("Running LauncherMC v" + getVersion());
+        this.isPortable = initializeLauncherDirectory();
 
-        if (Files.notExists(this.launcherDir)) {
-            try {
-                Files.createDirectory(this.launcherDir);
-            } catch (IOException e) {
-                this.logger.err("Unable to create launcher folder");
-                this.logger.printStackTrace(e);
-            }
-        }
+        this.logger.info("Running LauncherMC v" + getVersion());
 
         this.saver = new Saver(this.launcherDir.resolve("config.properties"));
         this.saver.load();
@@ -71,6 +70,48 @@ public final class Launcher extends Application {
 
         this.discordRPC = new RPC(this.logger);
         this.discordRPC.startPresence();
+    }
+
+    private boolean initializeLauncherDirectory() {
+        boolean tempPortable;
+        // TODO: Merge duplicated code
+        // If file portable.txt exists in jar parent dir
+        try {
+            if(Files.exists(GameUtils.getJarPath().getParent().resolve("portable.txt"))) {
+                this.logger.info("Portable mode enabled !");
+                this.launcherDir = GameUtils.createGameDir(SERVER_NAME);
+
+                tempPortable = GameUtils.createLauncherDir(this);
+            } else {
+                tempPortable = false;
+            }
+        } catch (URISyntaxException e) {
+            this.logger.err("Unable to get the game directory.");
+            this.logger.printStackTrace(e);
+            this.logger.info("Create in manually at " + this.launcherDir.toAbsolutePath());
+            
+            tempPortable = false;
+        }
+
+        if(!tempPortable) {
+            boolean isGlobalDirCreated = GameUtils.createLauncherDir(this);
+            
+            if(!isGlobalDirCreated) {
+                this.logger.err("Unable to create the launcher directory.");
+                this.logger.info("Portable mode enabled !");
+                this.launcherDir = GameUtils.createGameDir(SERVER_NAME);
+                
+                tempPortable = true;
+                
+                boolean isLocalDirCreated = GameUtils.createLauncherDir(this);
+                if(!isLocalDirCreated) {
+                    this.logger.err("Unable to create the launcher directory.");
+                    this.logger.info("Create in manually at " + this.launcherDir.toAbsolutePath());
+                }
+            }
+        }
+        
+        return tempPortable;
     }
 
     @Override
