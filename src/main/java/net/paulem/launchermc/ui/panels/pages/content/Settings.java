@@ -4,6 +4,8 @@ import animatefx.animation.FadeIn;
 import com.sun.management.OperatingSystemMXBean;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
+import javafx.scene.control.CheckBox;
+import net.paulem.launchermc.config.SaveSystem;
 import net.paulem.launchermc.ui.components.GradientButton;
 import net.paulem.launchermc.ui.panels.PanelManager;
 import net.paulem.launchermc.utils.Constants;
@@ -101,6 +103,133 @@ public class Settings extends ContentPanel {
         comboBox.setTranslateX(35d);
         comboBox.setTranslateY(130d);
         contentPane.getChildren().add(comboBox);
+        
+        SaveSystem saveSystem = new SaveSystem();
+        
+        saveSystem.add(() -> {
+            double comboBoxRamValue = Double.parseDouble(comboBox.getValue().replace(" GB", ""));
+            comboBoxRamValue *= 1024;
+            saver.set(Constants.CONFIG_MAXRAM, String.valueOf((int) comboBoxRamValue));
+        });
+        
+        // check system is linux based
+        if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+            // Mangohud label + checkbox
+            Label mangohudLabel = new Label("MangoHud");
+            mangohudLabel.getStyleClass().add("settings-labels");
+            setLeft(mangohudLabel);
+            setCanTakeAllSize(mangohudLabel);
+            setTop(mangohudLabel);
+            mangohudLabel.setTextAlignment(TextAlignment.LEFT);
+            mangohudLabel.setTranslateX(25d);
+            mangohudLabel.setTranslateY(170d);
+            contentPane.getChildren().add(mangohudLabel);
+            
+            // MangoHud checkbox
+            CheckBox mangohudCheckBox = new CheckBox();
+            mangohudCheckBox.getStyleClass().add("settings-checkbox");
+            setLeft(mangohudCheckBox);
+            setCanTakeAllSize(mangohudCheckBox);
+            setTop(mangohudCheckBox);
+            mangohudCheckBox.setTranslateX(35d);
+            mangohudCheckBox.setTranslateY(190d);
+            
+            boolean mangoHud = saver.get(Constants.CONFIG_ENABLE_MANGOHUD, "false").equals("true");
+            mangohudCheckBox.setSelected(mangoHud);
+            
+            contentPane.getChildren().add(mangohudCheckBox);
+            
+            saveSystem.add(() ->
+                    saver.set(Constants.CONFIG_ENABLE_MANGOHUD, String.valueOf(mangohudCheckBox.isSelected()))
+            );
+            
+            // Zink label + checkbox
+            Label zinkLabel = new Label("Zink");
+            zinkLabel.getStyleClass().add("settings-labels");
+            setLeft(zinkLabel);
+            setCanTakeAllSize(zinkLabel);
+            setTop(zinkLabel);
+            zinkLabel.setTextAlignment(TextAlignment.LEFT);
+            zinkLabel.setTranslateX(25d);
+            zinkLabel.setTranslateY(210d);
+            contentPane.getChildren().add(zinkLabel);
+            
+            // Zink checkbox
+            CheckBox zinkCheckBox = new CheckBox();
+            zinkCheckBox.getStyleClass().add("settings-checkbox");
+            setLeft(zinkCheckBox);
+            setCanTakeAllSize(zinkCheckBox);
+            setTop(zinkCheckBox);
+            zinkCheckBox.setTranslateX(35d);
+            zinkCheckBox.setTranslateY(230d);
+            
+            boolean zink = saver.get(Constants.CONFIG_ENABLE_ZINK, "false").equals("true");
+            zinkCheckBox.setSelected(zink);
+            
+            contentPane.getChildren().add(zinkCheckBox);
+
+            saveSystem.add(() ->
+                    saver.set(Constants.CONFIG_ENABLE_ZINK, String.valueOf(zinkCheckBox.isSelected()))
+            );
+            
+            // Feral Gamemode label + checkbox
+            Label gamemodeLabel = new Label("Feral Gamemode");
+            gamemodeLabel.getStyleClass().add("settings-labels");
+            setLeft(gamemodeLabel);
+            setCanTakeAllSize(gamemodeLabel);
+            setTop(gamemodeLabel);
+            gamemodeLabel.setTextAlignment(TextAlignment.LEFT);
+            gamemodeLabel.setTranslateX(25d);
+            gamemodeLabel.setTranslateY(290d);
+            contentPane.getChildren().add(gamemodeLabel);
+            
+            // Feral Gamemode checkbox
+            CheckBox gamemodeCheckBox = new CheckBox();
+            gamemodeCheckBox.getStyleClass().add("settings-checkbox");
+            setLeft(gamemodeCheckBox);
+            setCanTakeAllSize(gamemodeCheckBox);
+            setTop(gamemodeCheckBox);
+            gamemodeCheckBox.setTranslateX(35d);
+            gamemodeCheckBox.setTranslateY(310d);
+            
+            boolean gamemode = saver.get(Constants.CONFIG_ENABLE_FERAL_GAMEMODE, "false").equals("true");
+            gamemodeCheckBox.setSelected(gamemode);
+            
+            contentPane.getChildren().add(gamemodeCheckBox);
+            
+            saveSystem.add(() ->
+                    saver.set(Constants.CONFIG_ENABLE_FERAL_GAMEMODE, String.valueOf(gamemodeCheckBox.isSelected()))
+            );
+            
+            // DGPU label + checkbox
+            Label dgpuLabel = new Label("Activer la carte graphique dédiée (DGPU)");
+            dgpuLabel.getStyleClass().add("settings-labels");
+            setLeft(dgpuLabel);
+            setCanTakeAllSize(dgpuLabel);
+            setTop(dgpuLabel);
+            dgpuLabel.setTextAlignment(TextAlignment.LEFT);
+            dgpuLabel.setTranslateX(25d);
+            dgpuLabel.setTranslateY(250d);
+            contentPane.getChildren().add(dgpuLabel);
+            
+            // DGPU checkbox
+            CheckBox dgpuCheckBox = new CheckBox();
+            dgpuCheckBox.getStyleClass().add("settings-checkbox");
+            setLeft(dgpuCheckBox);
+            setCanTakeAllSize(dgpuCheckBox);
+            setTop(dgpuCheckBox);
+            dgpuCheckBox.setTranslateX(35d);
+            dgpuCheckBox.setTranslateY(270d);
+            
+            boolean dgpu = saver.get(Constants.CONFIG_ENABLE_DGPU, "false").equals("true");
+            dgpuCheckBox.setSelected(dgpu);
+            
+            contentPane.getChildren().add(dgpuCheckBox);
+            
+            saveSystem.add(() ->
+                    saver.set(Constants.CONFIG_ENABLE_DGPU, String.valueOf(dgpuCheckBox.isSelected()))
+            );
+        }
 
         /*
          * Save Button
@@ -116,12 +245,8 @@ public class Settings extends ContentPanel {
         setBottom(saveBtn);
         setCenterH(saveBtn);
         saveBtn.setTranslateY(-30d);
-
-        saveBtn.setOnMouseClicked(e -> {
-            double comboBoxRamValue = Double.parseDouble(comboBox.getValue().replace(" GB", ""));
-            comboBoxRamValue *= 1024;
-            saver.set(Constants.CONFIG_MAXRAM, String.valueOf((int) comboBoxRamValue));
-
+        
+        saveSystem.setSaveUi(() -> {
             saveBtn.setGraphic(iconCheck);
             saveBtn.setText("Enregistré !");
 
@@ -130,6 +255,14 @@ public class Settings extends ContentPanel {
                 saveBtn.setText("Enregistrer");
             }));
             timeline.play();
+        });
+
+        saveBtn.setOnMouseClicked(e -> {
+            for (Runnable run : saveSystem.getRuns()) {
+                run.run();
+            }
+            
+            saveSystem.getSaveUi().run();
         });
         contentPane.getChildren().add(saveBtn);
     }

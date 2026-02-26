@@ -25,6 +25,12 @@ public class Constants {
         return ramAmount;
     };
     public static final String CONFIG_MAXRAM = "maxRam";
+    // START LINUX ONLY
+    public static final String CONFIG_ENABLE_MANGOHUD = "enableMangohud";
+    public static final String CONFIG_ENABLE_FERAL_GAMEMODE = "enableFeralGamemode";
+    public static final String CONFIG_ENABLE_ZINK = "enableZink";
+    public static final String CONFIG_ENABLE_DGPU = "enableDGPU";
+    // END LINUX ONLY
 
     public static final String RPC_APP_ID = "1266045291161976884";
     public static final String RPC_LAUNCHER = "Dans le launcher";

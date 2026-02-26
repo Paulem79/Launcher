@@ -4,11 +4,14 @@ import net.paulem.launchermc.Launcher;
 import net.paulem.launchermc.Main;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 public class GameUtils {
     /**
@@ -51,6 +54,22 @@ public class GameUtils {
             launcher.getLogger().printStackTrace(e);
         }
         
+        return false;
+    }
+    
+    public static boolean hasNvidiaGPU() {
+        try {
+            Process process = Runtime.getRuntime().exec(new String[]{"lspci"});
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.toLowerCase().contains("nvidia")) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return false;
     }
 }

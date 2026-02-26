@@ -33,6 +33,12 @@
     -fx-font-family: 'Poppins';
 }
 
+/* ─── Checkboxes (CheckBox) ── */
+.settings-checkbox {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+
 /* ── RAM Selector (ComboBox) ── */
 .ram-selector {
     -fx-min-width: 200px;

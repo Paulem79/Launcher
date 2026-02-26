@@ -33,7 +33,7 @@ public final class Launcher extends Application {
     private static Launcher instance;
 
     @Getter
-    private final ILogger logger;
+    private ILogger logger;
     @Getter
     private Path launcherDir = GameDirGenerator.createGameDir(SERVER_NAME, true);
     @Getter
@@ -51,9 +51,11 @@ public final class Launcher extends Application {
     
     public Launcher() {
         instance = this;
-        this.logger = new Logger("[Launcher]", this.launcherDir.resolve("launcher.log"));
+        this.logger = new Logger("[Launcher]", null);
 
         this.isPortable = initializeLauncherDirectory();
+        
+        this.logger = new Logger(this.logger.getPrefix(), this.launcherDir.resolve("launcher.log"));
 
         this.logger.info("Running LauncherMC v" + getVersion());
 
