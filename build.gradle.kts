@@ -26,7 +26,7 @@ repositories {
 dependencies {
     implementation("fr.litarvan:openauth:1.+")
     implementation("fr.flowarg:materialdesignfontfx:7.+")
-    implementation("fr.flowarg:flowupdater:1.9.3")
+    implementation("fr.flowarg:flowupdater:1.9.4")
     implementation("fr.flowarg:openlauncherlib:3.2.11")
     implementation("org.kohsuke:github-api:2.0.0-alpha-2")
     implementation("club.minnced:java-discord-rpc:2.0.3")
