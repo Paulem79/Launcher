@@ -1,6 +1,7 @@
 package net.paulem.launchermc.ui.panels;
 
 import fr.theshark34.openlauncherlib.util.Saver;
+import lombok.Getter;
 import net.paulem.launchermc.Launcher;
 import fr.flowarg.flowlogger.ILogger;
 import javafx.geometry.HPos;
@@ -12,6 +13,7 @@ import javafx.scene.layout.Priority;
 public abstract class Panel {
     protected final Saver saver = Launcher.getInstance().getSaver();
     protected final ILogger logger;
+    @Getter
     protected final GridPane layout = new GridPane();
     protected PanelManager panelManager;
 
@@ -33,10 +35,6 @@ public abstract class Panel {
         for (Node n : nodes) {
             GridPane.setHgrow(n, Priority.ALWAYS);
         }
-    }
-
-    public GridPane getLayout() {
-        return layout;
     }
 
     public void onShow() {

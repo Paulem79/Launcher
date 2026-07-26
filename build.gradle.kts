@@ -9,6 +9,7 @@ plugins {
     id("java")
     id("application")
     id("org.panteleyev.jpackageplugin") version "2.0.0"
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 group = "net.paulem.launchermc"
@@ -26,9 +27,9 @@ repositories {
 dependencies {
     implementation("fr.litarvan:openauth:1.+")
     implementation("fr.flowarg:materialdesignfontfx:7.+")
-    implementation("fr.flowarg:flowupdater:1.9.3")
+    implementation("fr.flowarg:flowupdater:1.9.4")
     implementation("fr.flowarg:openlauncherlib:3.2.11")
-    implementation("org.kohsuke:github-api:2.0.0-alpha-2")
+    implementation("org.kohsuke:github-api:2.0-rc.6")
     implementation("club.minnced:java-discord-rpc:2.0.3")
     implementation("io.github.typhon0:AnimateFX:1.3.0")
     implementation("com.google.code.gson:gson:2.+")
@@ -42,7 +43,7 @@ application {
     mainClass.set("$group.Main")
 }
 
-val javaVersion = JavaLanguageVersion.of(23)
+val javaVersion = JavaLanguageVersion.of(21)
 
 tasks.withType<JavaCompile>().configureEach {
     sourceCompatibility = javaVersion.toString()
@@ -55,6 +56,11 @@ java {
         languageVersion = javaVersion
         vendor = JvmVendorSpec.BELLSOFT
     }
+}
+
+javafx {
+    version = "21"
+    modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.swing", "javafx.media")
 }
 
 // --- CONFIGURATION COMMUNE JPACKAGE ---
@@ -138,7 +144,6 @@ tasks.jar {
 }
 
 tasks.shadowJar {
-    minimize()
     archiveVersion.set("")
     archiveClassifier.set("")
     mustRunAfter(tasks.distZip, tasks.distTar, tasks.startScripts)

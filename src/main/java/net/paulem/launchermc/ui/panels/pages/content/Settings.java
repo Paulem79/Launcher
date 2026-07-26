@@ -88,7 +88,7 @@ public class Settings extends ContentPanel {
             } else {
                 throw new NumberFormatException();
             }
-        } catch (NumberFormatException _) {
+        } catch (NumberFormatException ex) {
             saver.set(Constants.CONFIG_MAXRAM, String.valueOf(defaultRamAmount));
             saver.save();
         }

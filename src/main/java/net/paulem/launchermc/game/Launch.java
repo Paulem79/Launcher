@@ -118,9 +118,14 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                     Launcher.getInstance().getAuthInfos(),
                     GameFolder.FLOW_UPDATER
             );
-            
-            String modLoaderVersion = updater != null ? updater.getModLoaderVersion().getModLoaderVersion()
-                    : MinecraftInfos.MODLOADER_VERSION.split("-").length >= 2 ? MinecraftInfos.MODLOADER_VERSION.split("-")[1] : MinecraftInfos.MODLOADER_VERSION;
+
+            String rawModLoaderVersion = updater != null
+                    ? updater.getModLoaderVersion().getModLoaderVersion()
+                    : MinecraftInfos.MODLOADER_VERSION;
+
+            String modLoaderVersion = rawModLoaderVersion.split("-").length >= 2
+                    ? rawModLoaderVersion.split("-")[1]
+                    : rawModLoaderVersion;
             
             noFramework.getAdditionalVmArgs().add(this.getRamArgsFromSaver());
 
@@ -236,7 +241,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
             } else {
                 throw new NumberFormatException();
             }
-        } catch (NumberFormatException _) {
+        } catch (NumberFormatException exception) {
             saver.set(Constants.CONFIG_MAXRAM, String.valueOf(val));
             saver.save();
         }

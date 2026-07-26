@@ -68,7 +68,9 @@ public class UpdateDownloader {
             for (String key : keywords) {
                 if (content.contains(key)) return true;
             }
-        } catch (Exception _) {
+        } catch (Exception ex) {
+            Launcher.getInstance().getLogger().err("Error while checking OS release.");
+            Launcher.getInstance().getLogger().printStackTrace(ex);
             return false;
         }
         return false;
