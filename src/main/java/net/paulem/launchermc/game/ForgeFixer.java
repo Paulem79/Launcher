@@ -1,6 +1,8 @@
 package net.paulem.launchermc.game;
 
 import net.paulem.launchermc.Launcher;
+import net.paulem.launchermc.game.minecraft.MinecraftInfos;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -21,10 +23,9 @@ import java.util.List;
  */
 public class ForgeFixer {
 
-    private static final String MC_VERSION = "1.20.1";
-    private static final String MCP_VERSION = "20230612.114412";
-    private static final String FORGE_VERSION = "1.20.1-47.4.10";
-    private static final String FORGE_FULL_VERSION = "1.20.1-47.4.10";
+    private static final String MC_VERSION = MinecraftInfos.GAME_VERSION;
+    private static final String FORGE_VERSION = MinecraftInfos.MODLOADER_VERSION;
+    private static final String FORGE_FULL_VERSION = MinecraftInfos.MODLOADER_VERSION;
 
     private final Path launcherDir;
 
@@ -39,24 +40,24 @@ public class ForgeFixer {
     }
 
     private Path clientDir() {
-        return lib("net/minecraft/client", "1.20.1-" + MCP_VERSION);
+        return lib("net/minecraft/client", MC_VERSION + "-" + MinecraftInfos.MCP_VERSION);
     }
 
-    private Path slimJar()   { return clientDir().resolve("client-1.20.1-" + MCP_VERSION + "-slim.jar"); }
-    private Path extraJar()  { return clientDir().resolve("client-1.20.1-" + MCP_VERSION + "-extra.jar"); }
-    private Path srgJar()    { return clientDir().resolve("client-1.20.1-" + MCP_VERSION + "-srg.jar"); }
+    private Path slimJar()   { return clientDir().resolve("client-" + MC_VERSION + "-" + MinecraftInfos.MCP_VERSION + "-slim.jar"); }
+    private Path extraJar()  { return clientDir().resolve("client-" + MC_VERSION + "-" + MinecraftInfos.MCP_VERSION + "-extra.jar"); }
+    private Path srgJar()    { return clientDir().resolve("client-" + MC_VERSION + "-" + MinecraftInfos.MCP_VERSION + "-srg.jar"); }
 
     private Path forgeClientJar() {
         return lib("net/minecraftforge/forge", FORGE_FULL_VERSION, "forge-" + FORGE_FULL_VERSION + "-client.jar");
     }
 
     private Path mergedMappings() {
-        return lib("de/oceanlabs/mcp/mcp_config", "1.20.1-" + MCP_VERSION,
-                "mcp_config-1.20.1-" + MCP_VERSION + "-mappings-merged.txt");
+        return lib("de/oceanlabs/mcp/mcp_config", MC_VERSION + "-" + MinecraftInfos.MCP_VERSION,
+                "mcp_config-" + MC_VERSION + "-" + MinecraftInfos.MCP_VERSION + "-mappings-merged.txt");
     }
 
     private Path mojmapMappings() {
-        return clientDir().resolve("client-1.20.1-" + MCP_VERSION + "-mappings.txt");
+        return clientDir().resolve("client-" + MC_VERSION + "-" + MinecraftInfos.MCP_VERSION + "-mappings.txt");
     }
 
     private Path abs(Path p) { return p.toAbsolutePath().normalize(); }
@@ -68,11 +69,13 @@ public class ForgeFixer {
      * is missing and needs to be recreated. Only checks if Forge is actually installed.
      */
     public boolean needsFix() {
+        if(MinecraftInfos.MCP_VERSION == null) return false;
+
         // Only attempt a fix if Forge is actually installed (version JSON exists)
-        Path forgeJson = launcherDir.resolve("1.20.1-forge-" + FORGE_VERSION.split("-")[1] + ".json");
+        Path forgeJson = launcherDir.resolve(MC_VERSION + "-forge-" + FORGE_VERSION.split("-")[1] + ".json");
         if (Files.notExists(forgeJson)) return false;
 
-        // Also verify the client directory exists (validates it's a Forge 1.20.1 install)
+        // Also verify the client directory exists (validates it's a Forge " + MC_VERSION + " install)
         if (Files.notExists(clientDir())) return false;
 
         return Files.notExists(slimJar()) || Files.notExists(extraJar()) || Files.notExists(srgJar()) || Files.notExists(forgeClientJar());

@@ -60,7 +60,7 @@ java {
 
 javafx {
     version = "21"
-    modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.swing", "javafx.media")
+    modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.swing", "javafx.media", "javafx.web")
 }
 
 // --- CONFIGURATION COMMUNE JPACKAGE ---
