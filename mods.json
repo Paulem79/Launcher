@@ -1,1280 +1,1069 @@
-[
-  {
-    "filename": "skinlayers3d-forge-1.11.2-mc1.20.1.jar",
-    "name": "3d-Skin-Layers",
-    "url": "https://modrinth.com/mod/zV5r3pPn",
-    "version": "1.11.2"
-  },
-  {
-    "filename": "ae2wtlib-15.3.3-forge.jar",
-    "name": "AE2WTLib",
-    "url": "https://modrinth.com/mod/pNabrMMw",
-    "version": "15.3.3-forge"
-  },
-  {
-    "filename": "AI-Improvements-1.20-0.5.2.jar",
-    "name": "AI-Improvements",
-    "url": "https://modrinth.com/mod/DSVgwcji",
-    "version": "0.5.2"
-  },
-  {
-    "filename": "addonslib-forge-1.20.1-1.11.jar",
-    "name": "AddonsLib",
-    "url": "https://modrinth.com/mod/cl5ec0Qm",
-    "version": "1.20.1-1.11"
-  },
-  {
-    "filename": "advancednetherite-forge-2.1.3-1.20.1.jar",
-    "name": "Advanced Netherite",
-    "url": "https://modrinth.com/mod/CFX9ftUJ",
-    "version": "2.1.3"
-  },
-  {
-    "filename": "alexsmobs-1.22.9.jar",
-    "name": "Alex's Mobs",
-    "url": "https://modrinth.com/mod/2cMuAZAp",
-    "version": "1.22.9"
-  },
-  {
-    "filename": "almostunified-forge-1.20.1-0.11.0.jar",
-    "name": "AlmostUnified",
-    "url": "https://modrinth.com/mod/sdaSaQEz",
-    "version": "1.20.1-0.11.0"
-  },
-  {
-    "filename": "alternate_current-mc1.20-1.7.0.jar",
-    "name": "Alternate Current",
-    "url": "https://modrinth.com/mod/r0v8vy1s",
-    "version": "1.7.0"
-  },
-  {
-    "filename": "AmbientSounds_FORGE_v6.3.8_mc1.20.1.jar",
-    "name": "AmbientSounds",
-    "url": "https://modrinth.com/mod/fM515JnW",
-    "version": "6.3.8"
-  },
-  {
-    "filename": "amendments-1.20-2.2.5.jar",
-    "name": "Amendments",
-    "url": "https://modrinth.com/mod/6iTJugQR",
-    "version": "1.20-2.2.5"
-  },
-  {
-    "filename": "another_furniture-forge-1.20.1-3.0.4.jar",
-    "name": "Another Furniture",
-    "url": "https://modrinth.com/mod/ulloLmqG",
-    "version": "1.20.1-3.0.4"
-  },
-  {
-    "filename": "appleskin-forge-mc1.20.1-2.5.1.jar",
-    "name": "AppleSkin",
-    "url": "https://modrinth.com/mod/EsAfCjCV",
-    "version": "2.5.1+mc1.20.1"
-  },
-  {
-    "filename": "applied-botanics-forge-1.5.2.jar",
-    "name": "Applied Botanics",
-    "url": "https://modrinth.com/mod/545hUrw9",
-    "version": "1.5.2"
-  },
-  {
-    "filename": "appliedenergistics2-forge-15.4.10.jar",
-    "name": "Applied Energistics 2",
-    "url": "https://modrinth.com/mod/XxWD5pD3",
-    "version": "15.4.10"
-  },
-  {
-    "filename": "architectury-9.2.14-forge.jar",
-    "name": "Architectury",
-    "url": "https://modrinth.com/mod/lhGA9TYQ",
-    "version": "9.2.14"
-  },
-  {
-    "filename": "balm-forge-1.20.1-7.3.41-all.jar",
-    "name": "Balm",
-    "url": "https://modrinth.com/mod/MBAkmtvl",
-    "version": "7.3.41"
-  },
-  {
-    "filename": "BetterAdvancements-Forge-1.20.1-0.4.2.60.jar",
-    "name": "Better Advancements",
-    "url": "https://modrinth.com/mod/Q2OqKxDG",
-    "version": "0.4.2.60"
-  },
-  {
-    "filename": "BetterModsButton-v8.0.2-1.20.1-Forge.jar",
-    "name": "Better Mods Button",
-    "url": "https://modrinth.com/mod/KUZAAwdD",
-    "version": "8.0.2"
-  },
-  {
-    "filename": "BiomesOPlenty-forge-1.20.1-19.0.0.96.jar",
-    "name": "Biomes O' Plenty",
-    "url": "https://modrinth.com/mod/HXF82T3G",
-    "version": "19.0.0.96"
-  },
-  {
-    "filename": "Bookshelf-Forge-1.20.1-20.2.15.jar",
-    "name": "Bookshelf",
-    "url": "https://modrinth.com/mod/uy4Cnpcm",
-    "version": "20.2.15"
-  },
-  {
-    "filename": "Botania-1.20.1-454-FORGE.jar",
-    "name": "Botania",
-    "url": "https://modrinth.com/mod/pfjLUfGv",
-    "version": "1.20.1-454-FORGE"
-  },
-  {
-    "filename": "BrandonsCore-1.20.1-3.2.1.302-universal.jar",
-    "name": "Brandon's Core",
-    "url": "https://modrinth.com/mod/iFDWVIFV",
-    "version": "3.2.1.302"
-  },
-  {
-    "filename": "bucketlib-1.20.1-2.3.8.0.jar",
-    "name": "BucketLib",
-    "url": "https://modrinth.com/mod/DItE655o",
-    "version": "1.20.1-2.3.8.0"
-  },
-  {
-    "filename": "ctov-domesticated-innovation-compat-2.0.jar",
-    "name": "CTOV - Domesticated Innovation Compat",
-    "url": "https://modrinth.com/mod/BORRKwOq",
-    "version": "2.0"
-  },
-  {
-    "filename": "caelus-forge-3.2.0+1.20.1.jar",
-    "name": "Caelus API",
-    "url": "https://modrinth.com/mod/40FYwb4z",
-    "version": "3.2.0+1.20.1"
-  },
-  {
-    "filename": "chloride-FORGE-mc1.20.1-v1.8.1.jar",
-    "name": "Chloride",
-    "url": "https://modrinth.com/mod/yD9qW65f",
-    "version": "1.8.1"
-  },
-  {
-    "filename": "[forge]ctov-3.4.14.jar",
-    "name": "ChoiceTheorem's Overhauled Village",
-    "url": "https://modrinth.com/mod/fgmhI8kH",
-    "version": "3.4.14"
-  },
-  {
-    "filename": "citadel-2.6.3-1.20.1.jar",
-    "name": "Citadel",
-    "url": "https://modrinth.com/mod/jJfV67b1",
-    "version": "2.6.3"
-  },
-  {
-    "filename": "cloth-config-11.1.136-forge.jar",
-    "name": "Cloth Config v10 API",
-    "url": "https://modrinth.com/mod/9s6osm5g",
-    "version": "11.1.136"
-  },
-  {
-    "filename": "cofh_core-1.20.1-11.0.2.56.jar",
-    "name": "CoFH Core",
-    "url": "https://modrinth.com/mod/OWSRM4vD",
-    "version": "11.0.2"
-  },
-  {
-    "filename": "Cobblemon-forge-1.5.2+1.20.1.jar",
-    "name": "Cobblemon",
-    "url": "https://modrinth.com/mod/MdwFAVRL",
-    "version": "1.5.2+1.20.1"
-  },
-  {
-    "filename": "cobblemon-counter-1.5-forge-1.2.0.jar",
-    "name": "Cobblemon Counter",
-    "url": "https://modrinth.com/mod/rj8uLYP4",
-    "version": "1.5-forge-1.2.0"
-  },
-  {
-    "filename": "cobblemonintegrations-1.20.1-1.0.7.jar",
-    "name": "Cobblemon Integrations",
-    "url": "https://modrinth.com/mod/NPCfuUI4",
-    "version": "1.0.7"
-  },
-  {
-    "filename": "cobblemon-spawn-notification-1.5-forge-1.2.0.jar",
-    "name": "Cobblemon Spawn Notification",
-    "url": "https://modrinth.com/mod/LPuJjiQz",
-    "version": "1.5-forge-1.2.0"
-  },
-  {
-    "filename": "cobblemon-unchained-1.5-forge-1.0.1.jar",
-    "name": "Cobblemon Unchained",
-    "url": "https://modrinth.com/mod/wh0wnzrT",
-    "version": "1.5-forge-1.0.1"
-  },
-  {
-    "filename": "CodeChickenLib-1.20.1-4.4.0.528-universal.jar",
-    "name": "CodeChicken Lib",
-    "url": "https://modrinth.com/mod/2gq0ALnz",
-    "version": "4.4.0.528"
-  },
-  {
-    "filename": "comforts-forge-6.4.0+1.20.1.jar",
-    "name": "Comforts",
-    "url": "https://modrinth.com/mod/SaCpeal4",
-    "version": "6.4.0+1.20.1"
-  },
-  {
-    "filename": "Controlling-forge-1.20.1-12.0.2.jar",
-    "name": "Controlling",
-    "url": "https://modrinth.com/mod/xv94TkTM",
-    "version": "12.0.2"
-  },
-  {
-    "filename": "Corgilib-Forge-1.20.1-4.0.3.4.jar",
-    "name": "CorgiLib",
-    "url": "https://modrinth.com/mod/ziOp6EO8",
-    "version": "4.0.3.4"
-  },
-  {
-    "filename": "coroutil-forge-1.20.1-1.3.7.jar",
-    "name": "CoroUtil",
-    "url": "https://modrinth.com/mod/rLLJ1OZM",
-    "version": "1.20.1-1.3.7"
-  },
-  {
-    "filename": "create-1.20.1-6.0.8.jar",
-    "name": "Create",
-    "url": "https://modrinth.com/mod/LNytGWDc",
-    "version": "6.0.8"
-  },
-  {
-    "filename": "createappliedkinetics-1.5.1-1.20.1.jar",
-    "name": "Create Applied Kinetics",
-    "url": "https://modrinth.com/mod/mYGTCuZY",
-    "version": "1.5.1-1.20.1"
-  },
-  {
-    "filename": "createbigcannons-5.11.4-mc.1.20.1-forge.jar",
-    "name": "Create Big Cannons",
-    "url": "https://modrinth.com/mod/GWp4jCJj",
-    "version": "5.11.4"
-  },
-  {
-    "filename": "createaddition-1.20.1-1.3.3.jar",
-    "name": "Create Crafts & Additions",
-    "url": "https://modrinth.com/mod/kU1G12Nn",
-    "version": "1.20.1-1.3.3"
-  },
-  {
-    "filename": "createdeco-2.0.3-1.20.1-forge.jar",
-    "name": "Create Deco",
-    "url": "https://modrinth.com/mod/sMvUb4Rb",
-    "version": "2.0.3-1.20.1-forge"
-  },
-  {
-    "filename": "create_enchantment_industry-1.4.0-for-create-6.0.8.jar",
-    "name": "Create Enchantment Industry",
-    "url": "https://modrinth.com/mod/JWGBpFUP",
-    "version": "1.4.0-for-create-6.0.8"
-  },
-  {
-    "filename": "creategoggles-1.20.1-6.1.1-[FORGE].jar",
-    "name": "Create Goggles",
-    "url": "https://modrinth.com/mod/L1RT5SJc",
-    "version": "6.1.1"
-  },
-  {
-    "filename": "create_jetpack-forge-4.4.6.jar",
-    "name": "Create Jetpack",
-    "url": "https://modrinth.com/mod/UbFnAd4l",
-    "version": "4.4.6"
-  },
-  {
-    "filename": "createnuclear-1.3.1-forge.jar",
-    "name": "Create Nuclear",
-    "url": "https://modrinth.com/mod/z611fdf7",
-    "version": "1.3.1"
-  },
-  {
-    "filename": "sliceanddice-forge-3.6.0.jar",
-    "name": "Create Slice & Dice",
-    "url": "https://modrinth.com/mod/GmjmRQ0A",
-    "version": "3.6.0"
-  },
-  {
-    "filename": "bellsandwhistles-0.4.5-1.20.x-Create6.0+.jar",
-    "name": "Create: Bells & Whistles",
-    "url": "https://modrinth.com/mod/gJ5afkVv",
-    "version": "0.4.3-1.20.x"
-  },
-  {
-    "filename": "create_central_kitchen-1.20.1-for-create-6.0.8-1.5.0.jar",
-    "name": "Create: Central Kitchen",
-    "url": "https://modrinth.com/mod/btq68HMO",
-    "version": "1.5.0"
-  },
-  {
-    "filename": "Create-Cobblemon-Forge-v0.4.jar",
-    "name": "Create: Cobblemon Industrialized",
-    "url": "https://modrinth.com/mod/tOucrGJ4",
-    "version": "0.4"
-  },
-  {
-    "filename": "create_connected-1.2.3-mc1.20.1-all.jar",
-    "name": "Create: Connected",
-    "url": "https://modrinth.com/mod/Vg5TIO6d",
-    "version": "1.2.3-mc1.20.1"
-  },
-  {
-    "filename": "copycats-3.0.7+mc.1.20.1-forge.jar",
-    "name": "Create: Copycats+",
-    "url": "https://modrinth.com/mod/UT2M39wf",
-    "version": "3.0.7+mc.1.20.1-forge"
-  },
-  {
-    "filename": "createdieselgenerators-1.20.1-1.3.12.jar",
-    "name": "Create: Diesel Generators",
-    "url": "https://modrinth.com/mod/ZM3tt6p1",
-    "version": "1.20.1-1.3.12"
-  },
-  {
-    "filename": "create_handcrafted-1.0.0.jar",
-    "name": "Create: Handcrafted",
-    "url": "https://modrinth.com/mod/wT60nf59",
-    "version": "1.0.0"
-  },
-  {
-    "filename": "interiors-1.20.1-forge-0.6.0.jar",
-    "name": "Create: Interiors",
-    "url": "https://modrinth.com/mod/r4Knci2k",
-    "version": "0.6.0"
-  },
-  {
-    "filename": "create_jetpack_curios-1.2.0-forge-1.20.1.jar",
-    "name": "Create: Jetpack Curios",
-    "url": "https://modrinth.com/mod/BBhCMftF",
-    "version": "1.2.0"
-  },
-  {
-    "filename": "create-new-age-1.2.0+forge-mc1.20.1.jar",
-    "name": "Create: New Age",
-    "url": "https://modrinth.com/mod/FTeXqI9v",
-    "version": "1.2.0+mc1.20.1"
-  },
-  {
-    "filename": "Steam_Rails-1.7.2+forge-mc1.20.1.jar",
-    "name": "Create: Steam 'n' Rails",
-    "url": "https://modrinth.com/mod/ZzjhlDgM",
-    "version": "1.7.2+forge-mc1.20.1"
-  },
-  {
-    "filename": "create-structures-0.1.1-1.20.1-FORGE.jar",
-    "name": "Create: Structures",
-    "url": "https://modrinth.com/mod/IAnP4np7",
-    "version": "0.1.1"
-  },
-  {
-    "filename": "CreativeCore_FORGE_v2.12.39_mc1.20.1.jar",
-    "name": "CreativeCore",
-    "url": "https://modrinth.com/mod/OsZiaDHq",
-    "version": "2.12.39"
-  },
-  {
-    "filename": "creeperoverhaul-3.0.2-forge.jar",
-    "name": "Creeper Overhaul",
-    "url": "https://modrinth.com/mod/MI1LWe93",
-    "version": "3.0.2"
-  },
-  {
-    "filename": "cristellib-1.1.6-forge.jar",
-    "name": "Cristel Lib",
-    "url": "https://modrinth.com/mod/cl223EMc",
-    "version": "1.1.6"
-  },
-  {
-    "filename": "Cucumber-1.20.1-7.0.16.jar",
-    "name": "Cucumber Library",
-    "url": "https://modrinth.com/mod/Rw1NrDzF",
-    "version": "7.0.16"
-  },
-  {
-    "filename": "curios-forge-5.14.1+1.20.1.jar",
-    "name": "Curios API",
-    "url": "https://modrinth.com/mod/vvuO3ImH",
-    "version": "5.14.1+1.20.1"
-  },
-  {
-    "filename": "DarkUtilities-Forge-1.20.1-17.0.6.jar",
-    "name": "DarkUtilities",
-    "url": "https://modrinth.com/mod/CkqTAIaP",
-    "version": "17.0.6"
-  },
-  {
-    "filename": "DiagonalFences-v8.1.5-1.20.1-Forge.jar",
-    "name": "Diagonal Fences",
-    "url": "https://modrinth.com/mod/IKARgflD",
-    "version": "8.1.5"
-  },
-  {
-    "filename": "DistantHorizons-3.2.0-b-1.20.1-fabric-forge.jar",
-    "name": "Distant Horizons",
-    "url": "https://modrinth.com/mod/uCdwusMi",
-    "version": "3.2.0-b"
-  },
-  {
-    "filename": "do_a_barrel_roll-forge-3.5.6+1.20.1.jar",
-    "name": "Do a Barrel Roll",
-    "url": "https://modrinth.com/mod/6FtRfnLg",
-    "version": "3.5.6+1.20.1"
-  },
-  {
-    "filename": "domesticationinnovation-1.7.1-1.20.1.jar",
-    "name": "Domestication Innovation",
-    "url": "https://modrinth.com/mod/h5JyLdjM",
-    "version": "1.7.1"
-  },
-  {
-    "filename": "Draconic-Evolution-1.20.1-3.1.2.621-universal.jar",
-    "name": "Draconic Evolution",
-    "url": "https://modrinth.com/mod/nBqivi8H",
-    "version": "3.1.2.621"
-  },
-  {
-    "filename": "dungeons-and-taverns-3.0.3.f.jar",
-    "name": "Dungeons and Taverns",
-    "url": "https://modrinth.com/mod/tpehi7ww",
-    "version": "3.0.3.f"
-  },
-  {
-    "filename": "dynamiccrosshair-9.10+1.20.1-forge.jar",
-    "name": "Dynamic Crosshair",
-    "url": "https://modrinth.com/mod/ZcR9weSm",
-    "version": "9.10"
-  },
-  {
-    "filename": "dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar",
-    "name": "Dynamic FPS",
-    "url": "https://modrinth.com/mod/LQ3K71Q1",
-    "version": "3.11.4"
-  },
-  {
-    "filename": "EasyAnvils-v8.0.2-1.20.1-Forge.jar",
-    "name": "Easy Anvils",
-    "url": "https://modrinth.com/mod/OZBR5JT5",
-    "version": "8.0.2"
-  },
-  {
-    "filename": "elytraslot-forge-6.4.4+1.20.1.jar",
-    "name": "Elytra Slot",
-    "url": "https://modrinth.com/mod/mSQF1NpT",
-    "version": "6.4.4+1.20.1"
-  },
-  {
-    "filename": "embeddium-0.3.31+mc1.20.1.jar",
-    "name": "Embeddium",
-    "url": "https://modrinth.com/mod/sk9rgfiA",
-    "version": "0.3.31+mc1.20.1"
-  },
-  {
-    "filename": "rubidium-extra-0.5.4.4+mc1.20.1-build.131.jar",
-    "name": "Embeddium Extra",
-    "url": "https://modrinth.com/mod/oY2B1pjg",
-    "version": "0.5.4.4+mc1.20.1-build.131"
-  },
-  {
-    "filename": "EnchantmentDescriptions-Forge-1.20.1-17.1.21.jar",
-    "name": "EnchantmentDescriptions",
-    "url": "https://modrinth.com/mod/UVtY3ZAC",
-    "version": "17.1.21"
-  },
-  {
-    "filename": "EnderIO-1.20.1-6.2.18-beta-all.jar",
-    "name": "Ender IO",
-    "url": "https://modrinth.com/mod/49ZofO4f",
-    "version": "6.2.18-beta"
-  },
-  {
-    "filename": "EnderStorage-1.20.1-2.11.0.188-universal.jar",
-    "name": "EnderStorage",
-    "url": "https://modrinth.com/mod/BbrHg80P",
-    "version": "2.11.0.188"
-  },
-  {
-    "filename": "entity_model_features-3.2.4-1.20.1-forge.jar",
-    "name": "Entity Model Features",
-    "url": "https://modrinth.com/mod/4I1XuqiY",
-    "version": "3.2.4"
-  },
-  {
-    "filename": "entity_texture_features_1.20.1-forge-7.1.jar",
-    "name": "Entity Texture Features",
-    "url": "https://modrinth.com/mod/BVzZfTc1",
-    "version": "7.1"
-  },
-  {
-    "filename": "entityculling-forge-1.10.5-mc1.20.1.jar",
-    "name": "EntityCulling",
-    "url": "https://modrinth.com/mod/NNAgCjsB",
-    "version": "1.10.5"
-  },
-  {
-    "filename": "ExtremeReactors2-1.20.1-2.0.84.jar",
-    "name": "Extreme Reactors",
-    "url": "https://modrinth.com/mod/idkvShUy",
-    "version": "1.20.1-2.0.84"
-  },
-  {
-    "filename": "FallingTree-1.20.1-4.3.4.jar",
-    "name": "FallingTree",
-    "url": "https://modrinth.com/mod/Fb4jn8m6",
-    "version": "4.3.4"
-  },
-  {
-    "filename": "fast-ip-ping-v1.0.11-mc1.20.4-forge.jar",
-    "name": "Fast IP Ping",
-    "url": "https://modrinth.com/mod/9mtu0sUO",
-    "version": "1.0.11"
-  },
-  {
-    "filename": "ferritecore-6.0.1-forge.jar",
-    "name": "Ferrite Core",
-    "url": "https://modrinth.com/mod/uXXizFIs",
-    "version": "6.0.1"
-  },
-  {
-    "filename": "firstperson-forge-2.7.2-mc1.20.1.jar",
-    "name": "FirstPerson",
-    "url": "https://modrinth.com/mod/H5XMjpHi",
-    "version": "2.7.2"
-  },
-  {
-    "filename": "fusion-1.3.9-forge-mc1.20.1.jar",
-    "name": "Fusion",
-    "url": "https://modrinth.com/mod/p19vrgc2",
-    "version": "1.3.9"
-  },
-  {
-    "filename": "fzzy_config-0.7.6+1.20.1+forge.jar",
-    "name": "Fzzy Config",
-    "url": "https://modrinth.com/mod/hYykXjDp",
-    "version": "0.7.6+1.20.1+forge"
-  },
-  {
-    "filename": "geckolib-forge-1.20.1-4.8.4.jar",
-    "name": "GeckoLib 4",
-    "url": "https://modrinth.com/mod/8BmcQJ2H",
-    "version": "4.8.4"
-  },
-  {
-    "filename": "Geophilic v3.6.mod.jar",
-    "name": "Geophilic",
-    "url": "https://modrinth.com/mod/hl5OLM95",
-    "version": "3.6"
-  },
-  {
-    "filename": "GlitchCore-forge-1.20.1-0.0.1.1.jar",
-    "name": "GlitchCore",
-    "url": "https://modrinth.com/mod/s3dmwKy5",
-    "version": "0.0.1.1"
-  },
-  {
-    "filename": "guideme-20.1.15.jar",
-    "name": "GuideME",
-    "url": "https://modrinth.com/mod/Ck4E7v7R",
-    "version": "20.1.15"
-  },
-  {
-    "filename": "handcrafted-forge-1.20.1-3.0.6.jar",
-    "name": "Handcrafted",
-    "url": "https://modrinth.com/mod/pJmCFF0p",
-    "version": "3.0.6"
-  },
-  {
-    "filename": "highlight-forge-1.20-2.0.1.jar",
-    "name": "Highlight",
-    "url": "https://modrinth.com/mod/Vz96hXMh",
-    "version": "2.0.1"
-  },
-  {
-    "filename": "Highlighter-1.20.1-forge-1.1.9.jar",
-    "name": "Highlighter",
-    "url": "https://modrinth.com/mod/cVNW5lr6",
-    "version": "1.1.9"
-  },
-  {
-    "filename": "iceandfire-2.1.13-1.20.1-beta-5.jar",
-    "name": "Ice and Fire",
-    "url": "https://modrinth.com/mod/LVnvHVBp",
-    "version": "2.1.13-1.20.1"
-  },
-  {
-    "filename": "Iceberg-1.20.1-forge-1.1.25.jar",
-    "name": "Iceberg",
-    "url": "https://modrinth.com/mod/5faXoLqX",
-    "version": "1.1.25"
-  },
-  {
-    "filename": "ironfurnaces-1.20.1-4.1.8.jar",
-    "name": "Iron Furnaces",
-    "url": "https://modrinth.com/mod/yPlaLxD1",
-    "version": "4.1.8"
-  },
-  {
-    "filename": "IronJetpacks-1.20.1-7.0.9.jar",
-    "name": "Iron Jetpacks",
-    "url": "https://modrinth.com/mod/DWIEOniQ",
-    "version": "7.0.9"
-  },
-  {
-    "filename": "Jade-1.20.1-Forge-11.13.3.jar",
-    "name": "Jade",
-    "url": "https://modrinth.com/mod/nvQzSEkH",
-    "version": "11.13.3+forge"
-  },
-  {
-    "filename": "Just-Enough-Botania-1.20.1-v0.2.1.jar",
-    "name": "Just Enough Botania",
-    "url": "https://modrinth.com/mod/9V5kkHHH",
-    "version": "0.2.1"
-  },
-  {
-    "filename": "justenoughbreeding-forge-1.20.1-3.0.1.jar",
-    "name": "Just Enough Breeding",
-    "url": "https://modrinth.com/mod/9Pk89J3g",
-    "version": "3.0.1"
-  },
-  {
-    "filename": "jeed-1.20-2.2.5.jar",
-    "name": "Just Enough Effects Descriptions",
-    "url": "https://modrinth.com/mod/EO27GKs1",
-    "version": "1.20-2.2.5"
-  },
-  {
-    "filename": "jei-1.20.1-forge-15.20.0.134.jar",
-    "name": "Just Enough Items",
-    "url": "https://modrinth.com/mod/u6dRKJwZ",
-    "version": "15.20.0.134"
-  },
-  {
-    "filename": "JustEnoughProfessions-forge-1.20.1-3.0.1.jar",
-    "name": "Just Enough Professions (JEP)",
-    "url": "https://modrinth.com/mod/kB56GtWA",
-    "version": "3.0.1"
-  },
-  {
-    "filename": "JustEnoughResources-1.20.1-1.4.0.247.jar",
-    "name": "Just Enough Resources",
-    "url": "https://modrinth.com/mod/uEfK2CXF",
-    "version": "1.4.0.247"
-  },
-  {
-    "filename": "justhammers-forge-2.0.3+mc1.20.1.jar",
-    "name": "Just Hammers",
-    "url": "https://modrinth.com/mod/edU0NbZZ",
-    "version": "2.0.3+mc1.20.1"
-  },
-  {
-    "filename": "kotlinforforge-4.12.0-all.jar",
-    "name": "Kotlin for Forge",
-    "url": "https://modrinth.com/mod/ordsPcFz",
-    "version": "Zsh14XeQ"
-  },
-  {
-    "filename": "LegendaryTooltips-1.20.1-forge-1.4.5.jar",
-    "name": "Legendary Tooltips",
-    "url": "https://modrinth.com/mod/atHH8NyV",
-    "version": "1.4.5"
-  },
-  {
-    "filename": "lithostitched-forge-1.20.1-1.4.11.jar",
-    "name": "Lithostitched",
-    "url": "https://modrinth.com/mod/XaDC71GB",
-    "version": "1.4.11"
-  },
-  {
-    "filename": "Log-Begone-Forge-1.20.1-1.0.8.jar",
-    "name": "Log Begone",
-    "url": "https://modrinth.com/mod/9ON3zv6e",
-    "version": "1.0.8"
-  },
-  {
-    "filename": "lootr-forge-1.20-0.7.35.94.jar",
-    "name": "Lootr",
-    "url": "https://modrinth.com/mod/EltpO5cN",
-    "version": "0.7.35.94"
-  },
-  {
-    "filename": "mcwbiomesoplenty-1.20.1-1.6.jar",
-    "name": "Macaw's Biomes O' Plenty",
-    "url": "https://modrinth.com/mod/Tanquv9C",
-    "version": "1.20.1-1.6"
-  },
-  {
-    "filename": "mcw-bridges-3.1.2-mc1.20.1forge.jar",
-    "name": "Macaw's Bridges",
-    "url": "https://modrinth.com/mod/GURcjz8O",
-    "version": "3.1.2"
-  },
-  {
-    "filename": "mcw-doors-1.1.5-mc1.20.1forge.jar",
-    "name": "Macaw's Doors",
-    "url": "https://modrinth.com/mod/kNxa8z3e",
-    "version": "1.1.5"
-  },
-  {
-    "filename": "mcw-mcwfences-1.2.1-mc1.20.1forge.jar",
-    "name": "Macaw's Fences and Walls",
-    "url": "https://modrinth.com/mod/GmwLse2I",
-    "version": "1.2.1"
-  },
-  {
-    "filename": "mcw-furniture-3.4.1-mc1.20.1forge.jar",
-    "name": "Macaw's Furniture",
-    "url": "https://modrinth.com/mod/dtWC90iB",
-    "version": "3.4.1"
-  },
-  {
-    "filename": "mcw-holidays-1.1.2-mc1.20.1forge.jar",
-    "name": "Macaw's Holidays",
-    "url": "https://modrinth.com/mod/rH20L2Lp",
-    "version": "1.1.2"
-  },
-  {
-    "filename": "mcw-lights-1.1.5-mc1.20.1forge.jar",
-    "name": "Macaw's Lights and Lamps",
-    "url": "https://modrinth.com/mod/w4an97C2",
-    "version": "1.1.5"
-  },
-  {
-    "filename": "mcwbyg-1.20.1-1.6.jar",
-    "name": "Macaw's Oh The Biomes We've Gone",
-    "url": "https://modrinth.com/mod/s4B19O5h",
-    "version": "1.20.1-1.6"
-  },
-  {
-    "filename": "mcw-paintings-1.1.0-mc1.20.1forge.jar",
-    "name": "Macaw's Paintings",
-    "url": "https://modrinth.com/mod/okE6QVAY",
-    "version": "1.1.0"
-  },
-  {
-    "filename": "mcw-mcwpaths-1.1.1-mc1.20.1forge.jar",
-    "name": "Macaw's Paths and Pavings",
-    "url": "https://modrinth.com/mod/VRLhWB91",
-    "version": "1.1.1"
-  },
-  {
-    "filename": "mcw-roofs-2.3.2-mc1.20.1forge.jar",
-    "name": "Macaw's Roofs",
-    "url": "https://modrinth.com/mod/B8jaH3P1",
-    "version": "2.3.2"
-  },
-  {
-    "filename": "mcw-mcwstairs-1.0.2-mc1.20.1forge.jar",
-    "name": "Macaw's Stairs and Balconies",
-    "url": "https://modrinth.com/mod/iP3wH1ha",
-    "version": "1.0.2"
-  },
-  {
-    "filename": "mcw-trapdoors-1.1.5-mc1.20.1forge.jar",
-    "name": "Macaw's Trapdoors",
-    "url": "https://modrinth.com/mod/n2fvCDlM",
-    "version": "1.1.5"
-  },
-  {
-    "filename": "mcw-mcwwindows-2.4.2-mc1.20.1forge.jar",
-    "name": "Macaw's Windows",
-    "url": "https://modrinth.com/mod/C7I0BCni",
-    "version": "2.4.2"
-  },
-  {
-    "filename": "mcjtylib-1.20-8.0.8.jar",
-    "name": "McJtyLib",
-    "url": "https://modrinth.com/mod/1Zu0uTEE",
-    "version": "1.20-8.0.8"
-  },
-  {
-    "filename": "memoryleakfix-forge-1.17+-1.1.5.jar",
-    "name": "Memory Leak Fix",
-    "url": "https://modrinth.com/mod/NRjRiSSD",
-    "version": "1.1.5"
-  },
-  {
-    "filename": "minecraft-comes-alive-7.6.28-beta.9+1.20.1-universal.jar",
-    "name": "Minecraft Comes Alive",
-    "url": "https://modrinth.com/mod/1W98a849",
-    "version": "7.6.28-beta.9+1.20.1"
-  },
-  {
-    "filename": "modernfix-forge-5.27.66+mc1.20.1.jar",
-    "name": "ModernFix",
-    "url": "https://modrinth.com/mod/nmDcB62a",
-    "version": "5.27.66+mc1.20.1"
-  },
-  {
-    "filename": "moonlight-1.20-2.16.34-forge.jar",
-    "name": "Moonlight Library",
-    "url": "https://modrinth.com/mod/twkfQtEc",
-    "version": "1.20-2.16.34"
-  },
-  {
-    "filename": "MouseTweaks-forge-mc1.20.1-2.25.1.jar",
-    "name": "Mouse Tweaks",
-    "url": "https://modrinth.com/mod/aC3cM3Vq",
-    "version": "2.25.1"
-  },
-  {
-    "filename": "MysticalAgradditions-1.20.1-7.0.12.jar",
-    "name": "Mystical Agradditions",
-    "url": "https://modrinth.com/mod/pl0jGXIx",
-    "version": "7.0.12"
-  },
-  {
-    "filename": "MysticalAgriculture-1.20.1-7.0.24.jar",
-    "name": "Mystical Agriculture",
-    "url": "https://modrinth.com/mod/C95ReXie",
-    "version": "7.0.24"
-  },
-  {
-    "filename": "notenoughcrashes-4.4.9+1.20.1-forge.jar",
-    "name": "Not Enough Crashes",
-    "url": "https://modrinth.com/mod/yM94ont6",
-    "version": "4.4.9+1.20.1"
-  },
-  {
-    "filename": "notenoughanimations-forge-1.12.4-mc1.20.1.jar",
-    "name": "NotEnoughAnimations",
-    "url": "https://modrinth.com/mod/MPCX6s5C",
-    "version": "1.12.4"
-  },
-  {
-    "filename": "oculus-mc1.20.1-1.8.0.jar",
-    "name": "Oculus",
-    "url": "https://modrinth.com/mod/GchcoXML",
-    "version": "1.8.0"
-  },
-  {
-    "filename": "Oh-The-Biomes-Weve-Gone-Forge-1.8.0.jar",
-    "name": "Oh The Biomes We've Gone",
-    "url": "https://modrinth.com/mod/NTi7d3Xc",
-    "version": "1.8.0"
-  },
-  {
-    "filename": "Oh-The-Trees-Youll-Grow-forge-1.20.1-1.7.0.jar",
-    "name": "Oh The Trees You'll Grow",
-    "url": "https://modrinth.com/mod/g8NOG5OR",
-    "version": "1.7.0"
-  },
-  {
-    "filename": "OverflowingBars-v8.0.1-1.20.1-Forge.jar",
-    "name": "Overflowing Bars",
-    "url": "https://modrinth.com/mod/XD7XOrAF",
-    "version": "8.0.1"
-  },
-  {
-    "filename": "particle_core-0.3.3+1.20.1+forge.jar",
-    "name": "Particle Core",
-    "url": "https://modrinth.com/mod/RSeLon5O",
-    "version": "0.3.3+1.20.1+forge"
-  },
-  {
-    "filename": "particlerain-4.0.0-beta.10+1.20.1-forge.jar",
-    "name": "Particle Rain",
-    "url": "https://modrinth.com/mod/nrikgvxm",
-    "version": "4.0.0-beta.10"
-  },
-  {
-    "filename": "particular-1.20.1-Forge-1.5.5.jar",
-    "name": "Particular Reforged",
-    "url": "https://modrinth.com/mod/pYFUU6cq",
-    "version": "1.5.5"
-  },
-  {
-    "filename": "Patchouli-1.20.1-85-FORGE.jar",
-    "name": "Patchouli",
-    "url": "https://modrinth.com/mod/nU0bVIaL",
-    "version": "1.20.1-85-FORGE"
-  },
-  {
-    "filename": "PigPen-Forge-1.20.1-15.0.3.jar",
-    "name": "PigPen",
-    "url": "https://modrinth.com/mod/2xZPITh8",
-    "version": "15.0.3"
-  },
-  {
-    "filename": "polymorph-forge-0.49.10+1.20.1.jar",
-    "name": "Polymorph",
-    "url": "https://modrinth.com/mod/tagwiZkJ",
-    "version": "0.49.10+1.20.1"
-  },
-  {
-    "filename": "Prism-1.20.1-forge-1.0.5.jar",
-    "name": "Prism",
-    "url": "https://modrinth.com/mod/1OE8wbN0",
-    "version": "1.0.5"
-  },
-  {
-    "filename": "PuzzlesLib-v8.1.33-1.20.1-Forge.jar",
-    "name": "Puzzles Lib",
-    "url": "https://modrinth.com/mod/QAGBst4M",
-    "version": "8.1.33"
-  },
-  {
-    "filename": "rftoolsbase-1.20-5.0.7.jar",
-    "name": "RFToolsBase",
-    "url": "https://modrinth.com/mod/hIO8IsD8",
-    "version": "1.20-5.0.7"
-  },
-  {
-    "filename": "rechiseled-1.2.5-forge-mc1.20.1.jar",
-    "name": "Rechiseled",
-    "url": "https://modrinth.com/mod/B0g2vT6l",
-    "version": "1.2.5"
-  },
-  {
-    "filename": "rechiseledae-1.0.1-forge-mc1.20.1.jar",
-    "name": "Rechiseled: Applied Energistics 2",
-    "url": "https://modrinth.com/mod/1Tpwnc5h",
-    "version": "1.0.1"
-  },
-  {
-    "filename": "rechiseledcreate-1.1.1-forge-mc1.20.jar",
-    "name": "Rechiseled: Create",
-    "url": "https://modrinth.com/mod/E6867niZ",
-    "version": "1.1.1"
-  },
-  {
-    "filename": "resourcefullib-forge-1.20.1-2.1.29.jar",
-    "name": "Resourceful Lib",
-    "url": "https://modrinth.com/mod/G1hIVOrD",
-    "version": "2.1.29"
-  },
-  {
-    "filename": "resourcefulconfig-forge-1.20.1-2.1.3.jar",
-    "name": "Resourcefulconfig",
-    "url": "https://modrinth.com/mod/M1953qlQ",
-    "version": "2.1.3"
-  },
-  {
-    "filename": "Resourcify (1.20.1-forge)-1.8.5.jar",
-    "name": "Resourcify",
-    "url": "https://modrinth.com/mod/RLzHAoZe",
-    "version": "1.8.5"
-  },
-  {
-    "filename": "ritchiesprojectilelib-2.1.1+mc.1.20.1-forge.jar",
-    "name": "Ritchie's Projectile Library",
-    "url": "https://modrinth.com/mod/B3pb093D",
-    "version": "2.1.1"
-  },
-  {
-    "filename": "Roundabout-forge-1.20.1-3.1.2.jar",
-    "name": "Roundabout",
-    "url": "https://modrinth.com/mod/IDI5Ie1o",
-    "version": "3.1.2"
-  },
-  {
-    "filename": "Runelic-Forge-1.20.1-18.0.4.jar",
-    "name": "Runelic",
-    "url": "https://modrinth.com/mod/P4Xi5huA",
-    "version": "18.0.4"
-  },
-  {
-    "filename": "Searchables-forge-1.20.1-1.0.3.jar",
-    "name": "Searchables",
-    "url": "https://modrinth.com/mod/fuuu3xnx",
-    "version": "1.0.3"
-  },
-  {
-    "filename": "servercore-forge-1.5.2+1.20.1.jar",
-    "name": "ServerCore",
-    "url": "https://modrinth.com/mod/4WWQxlQP",
-    "version": "1.5.2+1.20.1"
-  },
-  {
-    "filename": "shulkerboxtooltip-forge-4.0.4+1.20.1.jar",
-    "name": "ShulkerBoxTooltip",
-    "url": "https://modrinth.com/mod/2M01OLQq",
-    "version": "4.0.4+1.20.1"
-  },
-  {
-    "filename": "SimpleOres2-1.20.1-6.0.0.3.jar",
-    "name": "Simple Ores",
-    "url": "https://modrinth.com/mod/51dAkghQ",
-    "version": "1.20.1-6.0.0.3"
-  },
-  {
-    "filename": "SimpleCoreLib-1.20.1-6.0.1.2.jar",
-    "name": "SimpleCoreLib",
-    "url": "https://modrinth.com/mod/mA7yWMPS",
-    "version": "1.20.1-6.0.1.2"
-  },
-  {
-    "filename": "Fusion-1.20.1-6.0.0.3.jar",
-    "name": "SimpleOres:Fusion",
-    "url": "https://modrinth.com/mod/8K8WPv8S",
-    "version": "1.20.1-6.0.0.3"
-  },
-  {
-    "filename": "Machines-1.20.1-5.0.0.0.jar",
-    "name": "SimpleOres:Machines",
-    "url": "https://modrinth.com/mod/TCdrCpf8",
-    "version": "1.20.1-5.0.0.0"
-  },
-  {
-    "filename": "simplyswords-forge-1.56.0-1.20.1.jar",
-    "name": "Simply Swords",
-    "url": "https://modrinth.com/mod/bK3Ubu9p",
-    "version": "1.56.0-1.20.1"
-  },
-  {
-    "filename": "sodiumextras-forge-1.0.7-1.20.1.jar",
-    "name": "Sodium Extras",
-    "url": "https://modrinth.com/mod/vqqx0QiE",
-    "version": "1.0.6"
-  },
-  {
-    "filename": "sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
-    "name": "Sodium Options API",
-    "url": "https://modrinth.com/mod/Es5v4eyq",
-    "version": "1.0.10"
-  },
-  {
-    "filename": "sophisticatedbackpacks-1.20.1-3.24.61.2010.jar",
-    "name": "Sophisticated Backpacks",
-    "url": "https://modrinth.com/mod/TyCTlI4b",
-    "version": "3.24.61.2010"
-  },
-  {
-    "filename": "sophisticatedcore-1.20.1-1.3.72.2184.jar",
-    "name": "Sophisticated Core",
-    "url": "https://modrinth.com/mod/nmoqTijg",
-    "version": "1.3.72.2184"
-  },
-  {
-    "filename": "sound-physics-remastered-forge-1.20.1-1.5.1.jar",
-    "name": "Sound Physics Remastered",
-    "url": "https://modrinth.com/mod/qyVF9oeo",
-    "version": "1.20.1-1.5.1"
-  },
-  {
-    "filename": "starlight-1.1.2+forge.1cda73c.jar",
-    "name": "Starlight",
-    "url": "https://modrinth.com/mod/iRfIGC1s",
-    "version": "1.1.2+forge.1cda73c"
-  },
-  {
-    "filename": "Stoneworks-v8.0.0-1.20.1-Forge.jar",
-    "name": "Stoneworks",
-    "url": "https://modrinth.com/mod/FzyTKtVF",
-    "version": "8.0.0"
-  },
-  {
-    "filename": "supermartijn642configlib-1.1.8-forge-mc1.20.jar",
-    "name": "SuperMartijn642's Config Library",
-    "url": "https://modrinth.com/mod/LN9BxssP",
-    "version": "1.1.8"
-  },
-  {
-    "filename": "supermartijn642corelib-1.1.21-forge-mc1.20.1.jar",
-    "name": "SuperMartijn642's Core Lib",
-    "url": "https://modrinth.com/mod/rOUBggPv",
-    "version": "1.1.21"
-  },
-  {
-    "filename": "supplementaries-1.20-3.1.43-forge.jar",
-    "name": "Supplementaries",
-    "url": "https://modrinth.com/mod/fFEIiSDQ",
-    "version": "1.20-3.1.43"
-  },
-  {
-    "filename": "TerraBlender-forge-1.20.1-3.0.1.10.jar",
-    "name": "TerraBlender",
-    "url": "https://modrinth.com/mod/kkmrDlKT",
-    "version": "3.0.1.10"
-  },
-  {
-    "filename": "thermal_cultivation-1.20.1-11.0.1.24.jar",
-    "name": "Thermal Cultivation",
-    "url": "https://modrinth.com/mod/5beJoehw",
-    "version": "11.0.1"
-  },
-  {
-    "filename": "thermal_dynamics-1.20.1-11.0.1.23.jar",
-    "name": "Thermal Dynamics",
-    "url": "https://modrinth.com/mod/t8bmWGI2",
-    "version": "11.0.1"
-  },
-  {
-    "filename": "thermal_expansion-1.20.1-11.0.1.29.jar",
-    "name": "Thermal Expansion",
-    "url": "https://modrinth.com/mod/hmD6rrUJ",
-    "version": "11.0.1"
-  },
-  {
-    "filename": "thermal_foundation-1.20.1-11.0.6.70.jar",
-    "name": "Thermal Foundation",
-    "url": "https://modrinth.com/mod/Xvg6q5Wp",
-    "version": "11.0.6"
-  },
-  {
-    "filename": "thermal_innovation-1.20.1-11.0.1.23.jar",
-    "name": "Thermal Innovation",
-    "url": "https://modrinth.com/mod/MNgLmnvM",
-    "version": "11.0.1"
-  },
-  {
-    "filename": "thermal_integration-1.20.1-11.0.1.27.jar",
-    "name": "Thermal Integration",
-    "url": "https://modrinth.com/mod/Ro7yiyD4",
-    "version": "11.0.1"
-  },
-  {
-    "filename": "thermal_locomotion-1.20.1-11.0.1.19.jar",
-    "name": "Thermal Locomotion",
-    "url": "https://modrinth.com/mod/L3eFR8i3",
-    "version": "11.0.1"
-  },
-  {
-    "filename": "ToadLib-1.20.1-1.3.5S-3.jar",
-    "name": "ToadLib",
-    "url": "https://modrinth.com/mod/CYQ7VYrM",
-    "version": "1.3.5S-2"
-  },
-  {
-    "filename": "Towns-and-Towers-1.12-Fabric+Forge.jar",
-    "name": "Towns and Towers",
-    "url": "https://modrinth.com/mod/DjLobEOy",
-    "version": "1.12"
-  },
-  {
-    "filename": "travelersbackpack-forge-1.20.1-9.1.56.jar",
-    "name": "Traveler's Backpack",
-    "url": "https://modrinth.com/mod/rlloIFEV",
-    "version": "9.1.56"
-  },
-  {
-    "filename": "trek-B0.6.2.jar",
-    "name": "Trek",
-    "url": "https://modrinth.com/mod/h2jngREY",
-    "version": "1-B0.6.2"
-  },
-  {
-    "filename": "veinmining-forge-1.5.0+1.20.1.jar",
-    "name": "Vein Mining",
-    "url": "https://modrinth.com/mod/bRAPbNyF",
-    "version": "1.5.0+1.20.1"
-  },
-  {
-    "filename": "VisualWorkbench-v8.0.1-1.20.1-Forge.jar",
-    "name": "Visual Workbench",
-    "url": "https://modrinth.com/mod/kfqD1JRw",
-    "version": "8.0.1"
-  },
-  {
-    "filename": "waystones-forge-1.20.1-14.1.20.jar",
-    "name": "Waystones",
-    "url": "https://modrinth.com/mod/LOpKHB2A",
-    "version": "14.1.20"
-  },
-  {
-    "filename": "watut-forge-1.20.1-1.2.3.jar",
-    "name": "What Are They Up To",
-    "url": "https://modrinth.com/mod/AtB5mHky",
-    "version": "1.20.1-1.2.3"
-  },
-  {
-    "filename": "DungeonsArise-1.20.x-2.1.58-release.jar",
-    "name": "When Dungeons Arise",
-    "url": "https://modrinth.com/mod/8DfbfASn",
-    "version": "2.1.58-1.20.x"
-  },
-  {
-    "filename": "xaeros_waystones_compatibility-1.1 - 1.20.1.jar",
-    "name": "Xaero's Map - Waystones Compability",
-    "url": "https://modrinth.com/mod/7mLhyqIY",
-    "version": "1.1"
-  },
-  {
-    "filename": "xaeroworldmap-forge-1.20.1-1.44.2.jar",
-    "name": "Xaero's World Map",
-    "url": "https://modrinth.com/mod/NcUtCpym",
-    "version": "1.44.2"
-  },
-  {
-    "filename": "YungsApi-1.20-Forge-4.0.6.jar",
-    "name": "YUNG's API",
-    "url": "https://modrinth.com/mod/Ua7DFN59",
-    "version": "1.20-Forge-4.0.6"
-  },
-  {
-    "filename": "YungsBetterDesertTemples-1.20-Forge-3.0.3.jar",
-    "name": "YUNG's Better Desert Temples",
-    "url": "https://modrinth.com/mod/XNlO7sBv",
-    "version": "1.20-Forge-3.0.3"
-  },
-  {
-    "filename": "YungsBetterDungeons-1.20-Forge-4.0.4.jar",
-    "name": "YUNG's Better Dungeons",
-    "url": "https://modrinth.com/mod/o1C1Dkj5",
-    "version": "1.20-Forge-4.0.4"
-  },
-  {
-    "filename": "YungsBetterEndIsland-1.20-Forge-2.0.6.jar",
-    "name": "YUNG's Better End Island",
-    "url": "https://modrinth.com/mod/2BwBOmBQ",
-    "version": "1.20-Forge-2.0.6"
-  },
-  {
-    "filename": "YungsBetterJungleTemples-1.20-Forge-2.0.5.jar",
-    "name": "YUNG's Better Jungle Temples",
-    "url": "https://modrinth.com/mod/z9Ve58Ih",
-    "version": "1.20-Forge-2.0.5"
-  },
-  {
-    "filename": "YungsBetterMineshafts-1.20-Forge-4.0.4.jar",
-    "name": "YUNG's Better Mineshafts",
-    "url": "https://modrinth.com/mod/HjmxVlSr",
-    "version": "1.20-Forge-4.0.4"
-  },
-  {
-    "filename": "YungsBetterOceanMonuments-1.20-Forge-3.0.4.jar",
-    "name": "YUNG's Better Ocean Monuments",
-    "url": "https://modrinth.com/mod/3dT9sgt4",
-    "version": "1.20-Forge-3.0.4"
-  },
-  {
-    "filename": "YungsBetterWitchHuts-1.20-Forge-3.0.3.jar",
-    "name": "YUNG's Better Witch Huts",
-    "url": "https://modrinth.com/mod/t5FRdP87",
-    "version": "1.20-Forge-3.0.3"
-  },
-  {
-    "filename": "YungsCaveBiomes-1.20.1-Forge-2.0.5.jar",
-    "name": "YUNG's Cave Biomes",
-    "url": "https://modrinth.com/mod/cs7iGVq1",
-    "version": "1.20.1-Forge-2.0.5"
-  },
-  {
-    "filename": "ZeroCore2-1.20.1-2.1.45.jar",
-    "name": "Zero CORE 2",
-    "url": "https://modrinth.com/mod/rHpb85Mf",
-    "version": "1.20.1-2.1.45"
-  },
-  {
-    "filename": "SimpleCobalt-1.20.1-5.0.0.0.jar",
-    "name": "akkamaddi's Simple Cobalt",
-    "url": "https://modrinth.com/mod/QBZIhLKb",
-    "version": "1.20.1-5.0.0.0"
-  },
-  {
-    "filename": "e4mc-forge-6.2.0.jar",
-    "name": "e4mc",
-    "url": "https://modrinth.com/mod/qANg5Jrr",
-    "version": "6.2.0"
-  },
-  {
-    "filename": "spark-1.10.53-forge.jar",
-    "name": "spark",
-    "url": "https://modrinth.com/mod/l6YH9Als",
-    "version": "1.10.53"
-  }
-]
+{
+  "modrinthMods": [
+    {
+      "projectReference": "zV5r3pPn",
+      "versionNumber": "1.11.2",
+      "versionId": "4oWvC9eo"
+    },
+    {
+      "projectReference": "pNabrMMw",
+      "versionNumber": "15.3.3-forge",
+      "versionId": "z8QXeyI0"
+    },
+    {
+      "projectReference": "DSVgwcji",
+      "versionNumber": "0.5.2",
+      "versionId": "eJihmpNQ"
+    },
+    {
+      "projectReference": "cl5ec0Qm",
+      "versionNumber": "1.20.1-1.11",
+      "versionId": "h34cTdny"
+    },
+    {
+      "projectReference": "CFX9ftUJ",
+      "versionNumber": "2.1.3",
+      "versionId": "DW4je0EN"
+    },
+    {
+      "projectReference": "2cMuAZAp",
+      "versionNumber": "1.22.9",
+      "versionId": "XoIASRVU"
+    },
+    {
+      "projectReference": "sdaSaQEz",
+      "versionNumber": "1.20.1-0.11.0",
+      "versionId": "9qc7KIeg"
+    },
+    {
+      "projectReference": "r0v8vy1s",
+      "versionNumber": "1.7.0",
+      "versionId": "kC6SY4Zp"
+    },
+    {
+      "projectReference": "fM515JnW",
+      "versionNumber": "6.3.8",
+      "versionId": "AuLdtrBY"
+    },
+    {
+      "projectReference": "6iTJugQR",
+      "versionNumber": "1.20-2.2.5",
+      "versionId": "73W8UHX3"
+    },
+    {
+      "projectReference": "ulloLmqG",
+      "versionNumber": "1.20.1-3.0.4",
+      "versionId": "S9tNKT5R"
+    },
+    {
+      "projectReference": "EsAfCjCV",
+      "versionNumber": "2.5.1+mc1.20.1",
+      "versionId": "XdXDExVF"
+    },
+    {
+      "projectReference": "545hUrw9",
+      "versionNumber": "1.5.2",
+      "versionId": "ByiqRpj3"
+    },
+    {
+      "projectReference": "XxWD5pD3",
+      "versionNumber": "15.4.10",
+      "versionId": "7KVs6HMQ"
+    },
+    {
+      "projectReference": "lhGA9TYQ",
+      "versionNumber": "9.2.14",
+      "versionId": "1MKTLiiG"
+    },
+    {
+      "projectReference": "MBAkmtvl",
+      "versionNumber": "7.3.41",
+      "versionId": "47ZbZoOg"
+    },
+    {
+      "projectReference": "Q2OqKxDG",
+      "versionNumber": "0.4.2.60",
+      "versionId": "EKwDaD23"
+    },
+    {
+      "projectReference": "KUZAAwdD",
+      "versionNumber": "8.0.2",
+      "versionId": "bSoVaTgS"
+    },
+    {
+      "projectReference": "HXF82T3G",
+      "versionNumber": "19.0.0.96",
+      "versionId": "jxUqRzSD"
+    },
+    {
+      "projectReference": "uy4Cnpcm",
+      "versionNumber": "20.2.15",
+      "versionId": "7eS5OIHj"
+    },
+    {
+      "projectReference": "pfjLUfGv",
+      "versionNumber": "1.20.1-454-FORGE",
+      "versionId": "Y3Gc88UV"
+    },
+    {
+      "projectReference": "iFDWVIFV",
+      "versionNumber": "3.2.1.302",
+      "versionId": "qFTHdrDH"
+    },
+    {
+      "projectReference": "DItE655o",
+      "versionNumber": "1.20.1-2.3.8.0",
+      "versionId": "vkc1qThF"
+    },
+    {
+      "projectReference": "BORRKwOq",
+      "versionNumber": "2.0",
+      "versionId": "Te91BHKO"
+    },
+    {
+      "projectReference": "40FYwb4z",
+      "versionNumber": "3.2.0+1.20.1",
+      "versionId": "mRry0DgY"
+    },
+    {
+      "projectReference": "yD9qW65f",
+      "versionNumber": "1.8.1",
+      "versionId": "UDrXQjce"
+    },
+    {
+      "projectReference": "fgmhI8kH",
+      "versionNumber": "3.4.14",
+      "versionId": "o7mg6MeV"
+    },
+    {
+      "projectReference": "jJfV67b1",
+      "versionNumber": "2.6.3",
+      "versionId": "lTAAe4sZ"
+    },
+    {
+      "projectReference": "9s6osm5g",
+      "versionNumber": "11.1.136",
+      "versionId": "t8TXrZvZ"
+    },
+    {
+      "projectReference": "OWSRM4vD",
+      "versionNumber": "11.0.2",
+      "versionId": "kglS53Hd"
+    },
+    {
+      "projectReference": "MdwFAVRL",
+      "versionNumber": "1.5.2+1.20.1",
+      "versionId": "vm5zUZAg"
+    },
+    {
+      "projectReference": "rj8uLYP4",
+      "versionNumber": "1.5-forge-1.2.0",
+      "versionId": "nJpIwObx"
+    },
+    {
+      "projectReference": "NPCfuUI4",
+      "versionNumber": "1.0.7",
+      "versionId": "NGn11l6k"
+    },
+    {
+      "projectReference": "LPuJjiQz",
+      "versionNumber": "1.5-forge-1.2.0",
+      "versionId": "Wwus4QWy"
+    },
+    {
+      "projectReference": "wh0wnzrT",
+      "versionNumber": "1.5-forge-1.0.1",
+      "versionId": "H2jqJ6iw"
+    },
+    {
+      "projectReference": "2gq0ALnz",
+      "versionNumber": "4.4.0.528",
+      "versionId": "5zfJEMhM"
+    },
+    {
+      "projectReference": "SaCpeal4",
+      "versionNumber": "6.4.0+1.20.1",
+      "versionId": "gBDsc134"
+    },
+    {
+      "projectReference": "xv94TkTM",
+      "versionNumber": "12.0.2",
+      "versionId": "LH6Bi6Am"
+    },
+    {
+      "projectReference": "ziOp6EO8",
+      "versionNumber": "4.0.3.4",
+      "versionId": "QQhzscay"
+    },
+    {
+      "projectReference": "rLLJ1OZM",
+      "versionNumber": "1.20.1-1.3.7",
+      "versionId": "6rPDKAT8"
+    },
+    {
+      "projectReference": "LNytGWDc",
+      "versionNumber": "6.0.8",
+      "versionId": "8amzvn9x"
+    },
+    {
+      "projectReference": "mYGTCuZY",
+      "versionNumber": "1.5.1-1.20.1",
+      "versionId": "DjaJgxhC"
+    },
+    {
+      "projectReference": "GWp4jCJj",
+      "versionNumber": "5.11.4",
+      "versionId": "ZRgu5o3x"
+    },
+    {
+      "projectReference": "kU1G12Nn",
+      "versionNumber": "1.20.1-1.3.3",
+      "versionId": "9LgyB6Yb"
+    },
+    {
+      "projectReference": "sMvUb4Rb",
+      "versionNumber": "2.0.3-1.20.1-forge",
+      "versionId": "e9gaSRMd"
+    },
+    {
+      "projectReference": "JWGBpFUP",
+      "versionNumber": "1.4.0-for-create-6.0.8",
+      "versionId": "fBncZZdn"
+    },
+    {
+      "projectReference": "L1RT5SJc",
+      "versionNumber": "6.1.1",
+      "versionId": "Nc2Ag5HT"
+    },
+    {
+      "projectReference": "UbFnAd4l",
+      "versionNumber": "4.4.6",
+      "versionId": "Ft2vxKG4"
+    },
+    {
+      "projectReference": "z611fdf7",
+      "versionNumber": "1.3.1",
+      "versionId": "L3PbtqgG"
+    },
+    {
+      "projectReference": "GmjmRQ0A",
+      "versionNumber": "3.6.0",
+      "versionId": "KWLI8Ng7"
+    },
+    {
+      "projectReference": "gJ5afkVv",
+      "versionNumber": "0.4.3-1.20.x",
+      "versionId": "kW8DoegV"
+    },
+    {
+      "projectReference": "btq68HMO",
+      "versionNumber": "1.5.0",
+      "versionId": "Z4kwyYKV"
+    },
+    {
+      "projectReference": "tOucrGJ4",
+      "versionNumber": "0.4",
+      "versionId": "lZrME4mH"
+    },
+    {
+      "projectReference": "Vg5TIO6d",
+      "versionNumber": "1.2.3-mc1.20.1",
+      "versionId": "6gnvaVkN"
+    },
+    {
+      "projectReference": "UT2M39wf",
+      "versionNumber": "3.0.7+mc.1.20.1-forge",
+      "versionId": "z7s54cjL"
+    },
+    {
+      "projectReference": "ZM3tt6p1",
+      "versionNumber": "1.20.1-1.3.12",
+      "versionId": "DTQVvA5H"
+    },
+    {
+      "projectReference": "wT60nf59",
+      "versionNumber": "1.0.0",
+      "versionId": "qil7SYFz"
+    },
+    {
+      "projectReference": "r4Knci2k",
+      "versionNumber": "0.6.0",
+      "versionId": "3Gpm5qDT"
+    },
+    {
+      "projectReference": "BBhCMftF",
+      "versionNumber": "1.2.0",
+      "versionId": "MmHHKvju"
+    },
+    {
+      "projectReference": "FTeXqI9v",
+      "versionNumber": "1.2.0+mc1.20.1",
+      "versionId": "7vnwbouk"
+    },
+    {
+      "projectReference": "ZzjhlDgM",
+      "versionNumber": "1.7.2+forge-mc1.20.1",
+      "versionId": "I6GhUCyk"
+    },
+    {
+      "projectReference": "IAnP4np7",
+      "versionNumber": "0.1.1",
+      "versionId": "XALEBs0a"
+    },
+    {
+      "projectReference": "OsZiaDHq",
+      "versionNumber": "2.12.39",
+      "versionId": "m9VEcxwz"
+    },
+    {
+      "projectReference": "MI1LWe93",
+      "versionNumber": "3.0.2",
+      "versionId": "Ap1DSAzz"
+    },
+    {
+      "projectReference": "cl223EMc",
+      "versionNumber": "1.1.6",
+      "versionId": "DOsSK4NK"
+    },
+    {
+      "projectReference": "Rw1NrDzF",
+      "versionNumber": "7.0.16",
+      "versionId": "xnLznSfT"
+    },
+    {
+      "projectReference": "vvuO3ImH",
+      "versionNumber": "5.14.1+1.20.1",
+      "versionId": "IPQlZkz1"
+    },
+    {
+      "projectReference": "CkqTAIaP",
+      "versionNumber": "17.0.6",
+      "versionId": "kgD2c9Mq"
+    },
+    {
+      "projectReference": "IKARgflD",
+      "versionNumber": "8.1.5",
+      "versionId": "6eK8RyWM"
+    },
+    {
+      "projectReference": "uCdwusMi",
+      "versionNumber": "3.2.0-b",
+      "versionId": "FWGxbEM3"
+    },
+    {
+      "projectReference": "6FtRfnLg",
+      "versionNumber": "3.5.6+1.20.1",
+      "versionId": "VH8QpKA5"
+    },
+    {
+      "projectReference": "h5JyLdjM",
+      "versionNumber": "1.7.1",
+      "versionId": "SGxCLghg"
+    },
+    {
+      "projectReference": "nBqivi8H",
+      "versionNumber": "3.1.2.621",
+      "versionId": "YR33MHbk"
+    },
+    {
+      "projectReference": "tpehi7ww",
+      "versionNumber": "3.0.3.f",
+      "versionId": "ojHpWOrz"
+    },
+    {
+      "projectReference": "ZcR9weSm",
+      "versionNumber": "9.10",
+      "versionId": "zK3mtR2I"
+    },
+    {
+      "projectReference": "LQ3K71Q1",
+      "versionNumber": "3.11.4",
+      "versionId": "EjdIWWqG"
+    },
+    {
+      "projectReference": "OZBR5JT5",
+      "versionNumber": "8.0.2",
+      "versionId": "4pRdDqEb"
+    },
+    {
+      "projectReference": "mSQF1NpT",
+      "versionNumber": "6.4.4+1.20.1",
+      "versionId": "k6lA080t"
+    },
+    {
+      "projectReference": "sk9rgfiA",
+      "versionNumber": "0.3.31+mc1.20.1",
+      "versionId": "UTbfe5d1"
+    },
+    {
+      "projectReference": "oY2B1pjg",
+      "versionNumber": "0.5.4.4+mc1.20.1-build.131",
+      "versionId": "F06DXCMX"
+    },
+    {
+      "projectReference": "UVtY3ZAC",
+      "versionNumber": "17.1.21",
+      "versionId": "OPgBRfTQ"
+    },
+    {
+      "projectReference": "49ZofO4f",
+      "versionNumber": "6.2.18-beta",
+      "versionId": "nJnmg29v"
+    },
+    {
+      "projectReference": "BbrHg80P",
+      "versionNumber": "2.11.0.188",
+      "versionId": "pTEnM5jC"
+    },
+    {
+      "projectReference": "4I1XuqiY",
+      "versionNumber": "3.2.4",
+      "versionId": "VSBDdOOY"
+    },
+    {
+      "projectReference": "BVzZfTc1",
+      "versionNumber": "7.1",
+      "versionId": "GQlTHleX"
+    },
+    {
+      "projectReference": "NNAgCjsB",
+      "versionNumber": "1.10.5",
+      "versionId": "MloBcsQQ"
+    },
+    {
+      "projectReference": "idkvShUy",
+      "versionNumber": "1.20.1-2.0.84",
+      "versionId": "5A5jbWkI"
+    },
+    {
+      "projectReference": "Fb4jn8m6",
+      "versionNumber": "4.3.4",
+      "versionId": "NrtzFkZE"
+    },
+    {
+      "projectReference": "9mtu0sUO",
+      "versionNumber": "1.0.11",
+      "versionId": "WVhGsL3a"
+    },
+    {
+      "projectReference": "uXXizFIs",
+      "versionNumber": "6.0.1",
+      "versionId": "DG5Fn9Sz"
+    },
+    {
+      "projectReference": "H5XMjpHi",
+      "versionNumber": "2.7.2",
+      "versionId": "EK4ESphz"
+    },
+    {
+      "projectReference": "p19vrgc2",
+      "versionNumber": "1.3.9",
+      "versionId": "5ho0wQOa"
+    },
+    {
+      "projectReference": "hYykXjDp",
+      "versionNumber": "0.7.6+1.20.1+forge",
+      "versionId": "7MmXhjWs"
+    },
+    {
+      "projectReference": "8BmcQJ2H",
+      "versionNumber": "4.8.4",
+      "versionId": "aC5KMoNg"
+    },
+    {
+      "projectReference": "hl5OLM95",
+      "versionNumber": "3.6",
+      "versionId": "jDzSPLta"
+    },
+    {
+      "projectReference": "s3dmwKy5",
+      "versionNumber": "0.0.1.1",
+      "versionId": "pYPZ5MNI"
+    },
+    {
+      "projectReference": "Ck4E7v7R",
+      "versionNumber": "20.1.15",
+      "versionId": "i7Tp1AHw"
+    },
+    {
+      "projectReference": "pJmCFF0p",
+      "versionNumber": "3.0.6",
+      "versionId": "N7wZwOFy"
+    },
+    {
+      "projectReference": "Vz96hXMh",
+      "versionNumber": "2.0.1",
+      "versionId": "CJKpdSjT"
+    },
+    {
+      "projectReference": "cVNW5lr6",
+      "versionNumber": "1.1.9",
+      "versionId": "rcQOLnyI"
+    },
+    {
+      "projectReference": "LVnvHVBp",
+      "versionNumber": "2.1.13-1.20.1",
+      "versionId": "EzN8KQYF"
+    },
+    {
+      "projectReference": "5faXoLqX",
+      "versionNumber": "1.1.25",
+      "versionId": "BQ8rJPXV"
+    },
+    {
+      "projectReference": "yPlaLxD1",
+      "versionNumber": "4.1.8",
+      "versionId": "KHAcRQwi"
+    },
+    {
+      "projectReference": "DWIEOniQ",
+      "versionNumber": "7.0.9",
+      "versionId": "lrauJ1WR"
+    },
+    {
+      "projectReference": "nvQzSEkH",
+      "versionNumber": "11.13.3+forge",
+      "versionId": "xJQHCmWJ"
+    },
+    {
+      "projectReference": "9V5kkHHH",
+      "versionNumber": "0.2.1",
+      "versionId": "TmtCd9EB"
+    },
+    {
+      "projectReference": "9Pk89J3g",
+      "versionNumber": "3.0.1",
+      "versionId": "g5N9RqqE"
+    },
+    {
+      "projectReference": "EO27GKs1",
+      "versionNumber": "1.20-2.2.5",
+      "versionId": "jHYonbva"
+    },
+    {
+      "projectReference": "u6dRKJwZ",
+      "versionNumber": "15.20.0.134",
+      "versionId": "ujE6Mlsq"
+    },
+    {
+      "projectReference": "kB56GtWA",
+      "versionNumber": "3.0.1",
+      "versionId": "ANKVJC3T"
+    },
+    {
+      "projectReference": "uEfK2CXF",
+      "versionNumber": "1.4.0.247",
+      "versionId": "jW52tbTk"
+    },
+    {
+      "projectReference": "edU0NbZZ",
+      "versionNumber": "2.0.3+mc1.20.1",
+      "versionId": "JafXa7hr"
+    },
+    {
+      "projectReference": "ordsPcFz",
+      "versionNumber": "Zsh14XeQ",
+      "versionId": "Zsh14XeQ"
+    },
+    {
+      "projectReference": "atHH8NyV",
+      "versionNumber": "1.4.5",
+      "versionId": "JhxD2e6J"
+    },
+    {
+      "projectReference": "XaDC71GB",
+      "versionNumber": "1.4.11",
+      "versionId": "srPoHKt8"
+    },
+    {
+      "projectReference": "9ON3zv6e",
+      "versionNumber": "1.0.8",
+      "versionId": "HEJGfa5J"
+    },
+    {
+      "projectReference": "EltpO5cN",
+      "versionNumber": "0.7.35.94",
+      "versionId": "mWTXC1ZX"
+    },
+    {
+      "projectReference": "Tanquv9C",
+      "versionNumber": "1.20.1-1.6",
+      "versionId": "H4W3gLSc"
+    },
+    {
+      "projectReference": "GURcjz8O",
+      "versionNumber": "3.1.2",
+      "versionId": "KImk0Oo1"
+    },
+    {
+      "projectReference": "kNxa8z3e",
+      "versionNumber": "1.1.5",
+      "versionId": "n8BlIUm3"
+    },
+    {
+      "projectReference": "GmwLse2I",
+      "versionNumber": "1.2.1",
+      "versionId": "HnyfcyJ9"
+    },
+    {
+      "projectReference": "dtWC90iB",
+      "versionNumber": "3.4.1",
+      "versionId": "mvGf4LNK"
+    },
+    {
+      "projectReference": "rH20L2Lp",
+      "versionNumber": "1.1.2",
+      "versionId": "InkaO81N"
+    },
+    {
+      "projectReference": "w4an97C2",
+      "versionNumber": "1.1.5",
+      "versionId": "H1a9Tx4h"
+    },
+    {
+      "projectReference": "s4B19O5h",
+      "versionNumber": "1.20.1-1.6",
+      "versionId": "7jdQzcK3"
+    },
+    {
+      "projectReference": "okE6QVAY",
+      "versionNumber": "1.1.0",
+      "versionId": "MtkSHN09"
+    },
+    {
+      "projectReference": "VRLhWB91",
+      "versionNumber": "1.1.1",
+      "versionId": "yHkcTSFb"
+    },
+    {
+      "projectReference": "B8jaH3P1",
+      "versionNumber": "2.3.2",
+      "versionId": "31e80GhE"
+    },
+    {
+      "projectReference": "iP3wH1ha",
+      "versionNumber": "1.0.2",
+      "versionId": "wL67k7Aj"
+    },
+    {
+      "projectReference": "n2fvCDlM",
+      "versionNumber": "1.1.5",
+      "versionId": "5B4awHaA"
+    },
+    {
+      "projectReference": "C7I0BCni",
+      "versionNumber": "2.4.2",
+      "versionId": "SSIlzrPf"
+    },
+    {
+      "projectReference": "1Zu0uTEE",
+      "versionNumber": "1.20-8.0.8",
+      "versionId": "GIASnLXz"
+    },
+    {
+      "projectReference": "NRjRiSSD",
+      "versionNumber": "1.1.5",
+      "versionId": "3w0IxNtk"
+    },
+    {
+      "projectReference": "1W98a849",
+      "versionNumber": "7.6.28-beta.9+1.20.1",
+      "versionId": "N6D5Ft7Q"
+    },
+    {
+      "projectReference": "nmDcB62a",
+      "versionNumber": "5.27.66+mc1.20.1",
+      "versionId": "ZxDvSMHV"
+    },
+    {
+      "projectReference": "twkfQtEc",
+      "versionNumber": "1.20-2.16.34",
+      "versionId": "43kjMXMx"
+    },
+    {
+      "projectReference": "aC3cM3Vq",
+      "versionNumber": "2.25.1",
+      "versionId": "7JVXOe3K"
+    },
+    {
+      "projectReference": "pl0jGXIx",
+      "versionNumber": "7.0.12",
+      "versionId": "48qKWNA7"
+    },
+    {
+      "projectReference": "C95ReXie",
+      "versionNumber": "7.0.24",
+      "versionId": "EEilTecF"
+    },
+    {
+      "projectReference": "yM94ont6",
+      "versionNumber": "4.4.9+1.20.1",
+      "versionId": "6XEwkJBV"
+    },
+    {
+      "projectReference": "MPCX6s5C",
+      "versionNumber": "1.12.4",
+      "versionId": "buSDqSfQ"
+    },
+    {
+      "projectReference": "GchcoXML",
+      "versionNumber": "1.8.0",
+      "versionId": "iQ1SwGc3"
+    },
+    {
+      "projectReference": "NTi7d3Xc",
+      "versionNumber": "1.8.0",
+      "versionId": "8L5cwpjz"
+    },
+    {
+      "projectReference": "g8NOG5OR",
+      "versionNumber": "1.7.0",
+      "versionId": "AAp1NdQX"
+    },
+    {
+      "projectReference": "XD7XOrAF",
+      "versionNumber": "8.0.1",
+      "versionId": "w90XIUWB"
+    },
+    {
+      "projectReference": "RSeLon5O",
+      "versionNumber": "0.3.3+1.20.1+forge",
+      "versionId": "cFafZfyr"
+    },
+    {
+      "projectReference": "nrikgvxm",
+      "versionNumber": "4.0.0-beta.10",
+      "versionId": "t4FtGT1K"
+    },
+    {
+      "projectReference": "pYFUU6cq",
+      "versionNumber": "1.5.5",
+      "versionId": "yF5bwxik"
+    },
+    {
+      "projectReference": "nU0bVIaL",
+      "versionNumber": "1.20.1-85-FORGE",
+      "versionId": "94dtOLgZ"
+    },
+    {
+      "projectReference": "2xZPITh8",
+      "versionNumber": "15.0.3",
+      "versionId": "PIowXiWC"
+    },
+    {
+      "projectReference": "tagwiZkJ",
+      "versionNumber": "0.49.10+1.20.1",
+      "versionId": "UZBKtFyR"
+    },
+    {
+      "projectReference": "1OE8wbN0",
+      "versionNumber": "1.0.5",
+      "versionId": "FFyss87M"
+    },
+    {
+      "projectReference": "QAGBst4M",
+      "versionNumber": "8.1.33",
+      "versionId": "mIyVGf3d"
+    },
+    {
+      "projectReference": "hIO8IsD8",
+      "versionNumber": "1.20-5.0.7",
+      "versionId": "dYvtIH7M"
+    },
+    {
+      "projectReference": "B0g2vT6l",
+      "versionNumber": "1.2.5",
+      "versionId": "yM2eLjQ4"
+    },
+    {
+      "projectReference": "1Tpwnc5h",
+      "versionNumber": "1.0.1",
+      "versionId": "aw8DRNwO"
+    },
+    {
+      "projectReference": "E6867niZ",
+      "versionNumber": "1.1.1",
+      "versionId": "y67Ftzhj"
+    },
+    {
+      "projectReference": "G1hIVOrD",
+      "versionNumber": "2.1.29",
+      "versionId": "OhsHaCcW"
+    },
+    {
+      "projectReference": "M1953qlQ",
+      "versionNumber": "2.1.3",
+      "versionId": "DERs8u7v"
+    },
+    {
+      "projectReference": "RLzHAoZe",
+      "versionNumber": "1.8.5",
+      "versionId": "RIEhp5Ef"
+    },
+    {
+      "projectReference": "B3pb093D",
+      "versionNumber": "2.1.1",
+      "versionId": "PdGBsNte"
+    },
+    {
+      "projectReference": "IDI5Ie1o",
+      "versionNumber": "3.1.2",
+      "versionId": "DXsZU3VK"
+    },
+    {
+      "projectReference": "P4Xi5huA",
+      "versionNumber": "18.0.4",
+      "versionId": "xJEfMGkW"
+    },
+    {
+      "projectReference": "fuuu3xnx",
+      "versionNumber": "1.0.3",
+      "versionId": "PM9yAW1G"
+    },
+    {
+      "projectReference": "4WWQxlQP",
+      "versionNumber": "1.5.2+1.20.1",
+      "versionId": "rx1c7m6q"
+    },
+    {
+      "projectReference": "2M01OLQq",
+      "versionNumber": "4.0.4+1.20.1",
+      "versionId": "QMp2SF1u"
+    },
+    {
+      "projectReference": "51dAkghQ",
+      "versionNumber": "1.20.1-6.0.0.3",
+      "versionId": "GsmO9nWW"
+    },
+    {
+      "projectReference": "mA7yWMPS",
+      "versionNumber": "1.20.1-6.0.1.2",
+      "versionId": "BgMT8cxQ"
+    },
+    {
+      "projectReference": "8K8WPv8S",
+      "versionNumber": "1.20.1-6.0.0.3",
+      "versionId": "5ezihlcf"
+    },
+    {
+      "projectReference": "TCdrCpf8",
+      "versionNumber": "1.20.1-5.0.0.0",
+      "versionId": "Ny4USVcW"
+    },
+    {
+      "projectReference": "bK3Ubu9p",
+      "versionNumber": "1.56.0-1.20.1",
+      "versionId": "OFYmngee"
+    },
+    {
+      "projectReference": "vqqx0QiE",
+      "versionNumber": "1.0.6",
+      "versionId": "wqmvsekQ"
+    },
+    {
+      "projectReference": "Es5v4eyq",
+      "versionNumber": "1.0.10",
+      "versionId": "d0EFLitO"
+    },
+    {
+      "projectReference": "TyCTlI4b",
+      "versionNumber": "3.24.61.2010",
+      "versionId": "XGacFFnr"
+    },
+    {
+      "projectReference": "nmoqTijg",
+      "versionNumber": "1.3.72.2184",
+      "versionId": "Kum0Dlrd"
+    },
+    {
+      "projectReference": "qyVF9oeo",
+      "versionNumber": "1.20.1-1.5.1",
+      "versionId": "x0sJ9PeR"
+    },
+    {
+      "projectReference": "iRfIGC1s",
+      "versionNumber": "1.1.2+forge.1cda73c",
+      "versionId": "cNa0vkNj"
+    },
+    {
+      "projectReference": "FzyTKtVF",
+      "versionNumber": "8.0.0",
+      "versionId": "bhfQuE7T"
+    },
+    {
+      "projectReference": "LN9BxssP",
+      "versionNumber": "1.1.8",
+      "versionId": "ZKor79dR"
+    },
+    {
+      "projectReference": "rOUBggPv",
+      "versionNumber": "1.1.21",
+      "versionId": "2vPGeoPe"
+    },
+    {
+      "projectReference": "fFEIiSDQ",
+      "versionNumber": "1.20-3.1.43",
+      "versionId": "S0TIJ1hU"
+    },
+    {
+      "projectReference": "kkmrDlKT",
+      "versionNumber": "3.0.1.10",
+      "versionId": "zGconCHG"
+    },
+    {
+      "projectReference": "5beJoehw",
+      "versionNumber": "11.0.1",
+      "versionId": "A2jLUXFB"
+    },
+    {
+      "projectReference": "t8bmWGI2",
+      "versionNumber": "11.0.1",
+      "versionId": "KaJ5ADIU"
+    },
+    {
+      "projectReference": "hmD6rrUJ",
+      "versionNumber": "11.0.1",
+      "versionId": "Ux2Z0ow1"
+    },
+    {
+      "projectReference": "Xvg6q5Wp",
+      "versionNumber": "11.0.6",
+      "versionId": "44ilyZbi"
+    },
+    {
+      "projectReference": "MNgLmnvM",
+      "versionNumber": "11.0.1",
+      "versionId": "pzbezfsE"
+    },
+    {
+      "projectReference": "Ro7yiyD4",
+      "versionNumber": "11.0.1",
+      "versionId": "hFWGuy24"
+    },
+    {
+      "projectReference": "L3eFR8i3",
+      "versionNumber": "11.0.1",
+      "versionId": "nkfnQtdO"
+    },
+    {
+      "projectReference": "CYQ7VYrM",
+      "versionNumber": "1.3.5S-2",
+      "versionId": "ChwyBkOX"
+    },
+    {
+      "projectReference": "DjLobEOy",
+      "versionNumber": "1.12",
+      "versionId": "7ZwnSrVW"
+    },
+    {
+      "projectReference": "rlloIFEV",
+      "versionNumber": "9.1.56",
+      "versionId": "YU3VeLg8"
+    },
+    {
+      "projectReference": "h2jngREY",
+      "versionNumber": "1-B0.6.2",
+      "versionId": "1GsZGXOm"
+    },
+    {
+      "projectReference": "bRAPbNyF",
+      "versionNumber": "1.5.0+1.20.1",
+      "versionId": "qV4B4EMI"
+    },
+    {
+      "projectReference": "kfqD1JRw",
+      "versionNumber": "8.0.1",
+      "versionId": "qaWEHDC3"
+    },
+    {
+      "projectReference": "LOpKHB2A",
+      "versionNumber": "14.1.20",
+      "versionId": "sKoHLGbK"
+    },
+    {
+      "projectReference": "AtB5mHky",
+      "versionNumber": "1.20.1-1.2.3",
+      "versionId": "GpiXMxvP"
+    },
+    {
+      "projectReference": "8DfbfASn",
+      "versionNumber": "2.1.58-1.20.x",
+      "versionId": "6hQpx5Tc"
+    },
+    {
+      "projectReference": "7mLhyqIY",
+      "versionNumber": "1.1",
+      "versionId": "NujdXicM"
+    },
+    {
+      "projectReference": "NcUtCpym",
+      "versionNumber": "1.44.2",
+      "versionId": "kQ06HixR"
+    },
+    {
+      "projectReference": "Ua7DFN59",
+      "versionNumber": "1.20-Forge-4.0.6",
+      "versionId": "PJOYAmAs"
+    },
+    {
+      "projectReference": "XNlO7sBv",
+      "versionNumber": "1.20-Forge-3.0.3",
+      "versionId": "lRK2ZA9U"
+    },
+    {
+      "projectReference": "o1C1Dkj5",
+      "versionNumber": "1.20-Forge-4.0.4",
+      "versionId": "kPiQ6v4q"
+    },
+    {
+      "projectReference": "2BwBOmBQ",
+      "versionNumber": "1.20-Forge-2.0.6",
+      "versionId": "Izqhg3Va"
+    },
+    {
+      "projectReference": "z9Ve58Ih",
+      "versionNumber": "1.20-Forge-2.0.5",
+      "versionId": "CXQc6EnZ"
+    },
+    {
+      "projectReference": "HjmxVlSr",
+      "versionNumber": "1.20-Forge-4.0.4",
+      "versionId": "kVO57zxB"
+    },
+    {
+      "projectReference": "3dT9sgt4",
+      "versionNumber": "1.20-Forge-3.0.4",
+      "versionId": "SN4iZ7wf"
+    },
+    {
+      "projectReference": "t5FRdP87",
+      "versionNumber": "1.20-Forge-3.0.3",
+      "versionId": "mwlYB7rq"
+    },
+    {
+      "projectReference": "cs7iGVq1",
+      "versionNumber": "1.20.1-Forge-2.0.5",
+      "versionId": "UzIwhtOp"
+    },
+    {
+      "projectReference": "rHpb85Mf",
+      "versionNumber": "1.20.1-2.1.45",
+      "versionId": "OIzaNrPI"
+    },
+    {
+      "projectReference": "QBZIhLKb",
+      "versionNumber": "1.20.1-5.0.0.0",
+      "versionId": "3zfoyjgO"
+    },
+    {
+      "projectReference": "qANg5Jrr",
+      "versionNumber": "6.2.0",
+      "versionId": "a9KhgTiJ"
+    },
+    {
+      "projectReference": "l6YH9Als",
+      "versionNumber": "1.10.53",
+      "versionId": "4FXHDE9F"
+    }
+  ]
+}
