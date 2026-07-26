@@ -1,4 +1,13 @@
 {
+  "mods": [
+    {
+      "name": "simpleauth-1.0.0.jar",
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/simpleauth-1.0.0.jar",
+      "sha1": "CC9B31860C36CACDE3D14A2ABB9A283E04F7F7E3",
+      "size": 39830
+    }
+  ],
+  "curseFiles": [],
   "modrinthMods": [
     {
       "projectReference": "zV5r3pPn",
