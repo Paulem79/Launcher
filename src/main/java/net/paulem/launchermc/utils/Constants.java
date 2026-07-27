@@ -30,6 +30,7 @@ public class Constants {
     public static final String CONFIG_ENABLE_FERAL_GAMEMODE = "enableFeralGamemode";
     public static final String CONFIG_ENABLE_ZINK = "enableZink";
     public static final String CONFIG_ENABLE_DGPU = "enableDGPU";
+    public static final String CONFIG_ENABLE_ZGC = "enableZGC";
     // END LINUX ONLY
 
     public static final String RPC_APP_ID = "1266045291161976884";

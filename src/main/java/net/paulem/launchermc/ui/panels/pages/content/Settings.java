@@ -111,6 +111,37 @@ public class Settings extends ContentPanel {
             comboBoxRamValue *= 1024;
             saver.set(Constants.CONFIG_MAXRAM, String.valueOf((int) comboBoxRamValue));
         });
+
+        double emplacementY = 150d;
+
+        // ZGC label + checkbox
+        Label zgcLabel = new Label("ZGC");
+        zgcLabel.getStyleClass().add("settings-labels");
+        setLeft(zgcLabel);
+        setCanTakeAllSize(zgcLabel);
+        setTop(zgcLabel);
+        zgcLabel.setTextAlignment(TextAlignment.LEFT);
+        zgcLabel.setTranslateX(25d);
+        zgcLabel.setTranslateY(emplacementY += 20d);
+        contentPane.getChildren().add(zgcLabel);
+
+        // ZGC checkbox
+        CheckBox zgcCheckBox = new CheckBox();
+        zgcCheckBox.getStyleClass().add("settings-checkbox");
+        setLeft(zgcCheckBox);
+        setCanTakeAllSize(zgcCheckBox);
+        setTop(zgcCheckBox);
+        zgcCheckBox.setTranslateX(35d);
+        zgcCheckBox.setTranslateY(emplacementY += 20d);
+
+        boolean zgc = saver.get(Constants.CONFIG_ENABLE_ZGC, "false").equals("true");
+        zgcCheckBox.setSelected(zgc);
+
+        contentPane.getChildren().add(zgcCheckBox);
+
+        saveSystem.add(() ->
+                saver.set(Constants.CONFIG_ENABLE_ZGC, String.valueOf(zgcCheckBox.isSelected()))
+        );
         
         // check system is linux based
         if (System.getProperty("os.name").toLowerCase().contains("linux")) {
@@ -122,7 +153,7 @@ public class Settings extends ContentPanel {
             setTop(mangohudLabel);
             mangohudLabel.setTextAlignment(TextAlignment.LEFT);
             mangohudLabel.setTranslateX(25d);
-            mangohudLabel.setTranslateY(170d);
+            mangohudLabel.setTranslateY(emplacementY += 20d);
             contentPane.getChildren().add(mangohudLabel);
             
             // MangoHud checkbox
@@ -132,7 +163,7 @@ public class Settings extends ContentPanel {
             setCanTakeAllSize(mangohudCheckBox);
             setTop(mangohudCheckBox);
             mangohudCheckBox.setTranslateX(35d);
-            mangohudCheckBox.setTranslateY(190d);
+            mangohudCheckBox.setTranslateY(emplacementY += 20d);
             
             boolean mangoHud = saver.get(Constants.CONFIG_ENABLE_MANGOHUD, "false").equals("true");
             mangohudCheckBox.setSelected(mangoHud);
@@ -151,7 +182,7 @@ public class Settings extends ContentPanel {
             setTop(zinkLabel);
             zinkLabel.setTextAlignment(TextAlignment.LEFT);
             zinkLabel.setTranslateX(25d);
-            zinkLabel.setTranslateY(210d);
+            zinkLabel.setTranslateY(emplacementY += 20d);
             contentPane.getChildren().add(zinkLabel);
             
             // Zink checkbox
@@ -161,7 +192,7 @@ public class Settings extends ContentPanel {
             setCanTakeAllSize(zinkCheckBox);
             setTop(zinkCheckBox);
             zinkCheckBox.setTranslateX(35d);
-            zinkCheckBox.setTranslateY(230d);
+            zinkCheckBox.setTranslateY(emplacementY += 20d);
             
             boolean zink = saver.get(Constants.CONFIG_ENABLE_ZINK, "false").equals("true");
             zinkCheckBox.setSelected(zink);
@@ -180,7 +211,7 @@ public class Settings extends ContentPanel {
             setTop(gamemodeLabel);
             gamemodeLabel.setTextAlignment(TextAlignment.LEFT);
             gamemodeLabel.setTranslateX(25d);
-            gamemodeLabel.setTranslateY(290d);
+            gamemodeLabel.setTranslateY(emplacementY += 20d);
             contentPane.getChildren().add(gamemodeLabel);
             
             // Feral Gamemode checkbox
@@ -190,7 +221,7 @@ public class Settings extends ContentPanel {
             setCanTakeAllSize(gamemodeCheckBox);
             setTop(gamemodeCheckBox);
             gamemodeCheckBox.setTranslateX(35d);
-            gamemodeCheckBox.setTranslateY(310d);
+            gamemodeCheckBox.setTranslateY(emplacementY += 20d);
             
             boolean gamemode = saver.get(Constants.CONFIG_ENABLE_FERAL_GAMEMODE, "false").equals("true");
             gamemodeCheckBox.setSelected(gamemode);
@@ -209,9 +240,9 @@ public class Settings extends ContentPanel {
             setTop(dgpuLabel);
             dgpuLabel.setTextAlignment(TextAlignment.LEFT);
             dgpuLabel.setTranslateX(25d);
-            dgpuLabel.setTranslateY(250d);
+            dgpuLabel.setTranslateY(emplacementY += 20d);
             contentPane.getChildren().add(dgpuLabel);
-            
+
             // DGPU checkbox
             CheckBox dgpuCheckBox = new CheckBox();
             dgpuCheckBox.getStyleClass().add("settings-checkbox");
@@ -219,13 +250,13 @@ public class Settings extends ContentPanel {
             setCanTakeAllSize(dgpuCheckBox);
             setTop(dgpuCheckBox);
             dgpuCheckBox.setTranslateX(35d);
-            dgpuCheckBox.setTranslateY(270d);
-            
+            dgpuCheckBox.setTranslateY(emplacementY += 20d);
+
             boolean dgpu = saver.get(Constants.CONFIG_ENABLE_DGPU, "false").equals("true");
             dgpuCheckBox.setSelected(dgpu);
-            
+
             contentPane.getChildren().add(dgpuCheckBox);
-            
+
             saveSystem.add(() ->
                     saver.set(Constants.CONFIG_ENABLE_DGPU, String.valueOf(dgpuCheckBox.isSelected()))
             );

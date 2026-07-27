@@ -100,12 +100,12 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
         } catch (Exception e) {
             this.logger.printStackTrace(e);
             this.logger.info("Lancement en mode hors-ligne...");
-            
+
             Platform.runLater(() -> {
                 setProgress(1, 1);
                 setStatus(String.format("%s", StepInfo.OFFLINE.getDetails()));
             });
-            
+
             this.startGame(null, MinecraftInfos.GAME_VERSION);
         }
     }
@@ -125,30 +125,38 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
             String modLoaderVersion = rawModLoaderVersion.split("-").length >= 2
                     ? rawModLoaderVersion.split("-")[1]
                     : rawModLoaderVersion;
-            
+
+            // Ajout des arguments de RAM
             noFramework.getAdditionalVmArgs().add(this.getRamArgsFromSaver());
+
+            String falseStr = "false";
+
+            // Activation de ZGC si l'option est cochée
+            boolean enableZGC = saver.get(Constants.CONFIG_ENABLE_ZGC, falseStr).equals("true");
+            if (enableZGC) {
+                noFramework.getAdditionalVmArgs().add("-XX:+UseZGC");
+            }
 
             noFramework.setLastCallback(externalLauncher -> {
                 List<String> vmArgs = externalLauncher.getVmArgs();
 
                 // Récupération des réglages
-                String falseStr = "false";
                 boolean enableMangoHud = saver.get(Constants.CONFIG_ENABLE_MANGOHUD, falseStr).equals("true");
-                boolean enableGameMode = saver.get(Constants.CONFIG_ENABLE_FERAL_GAMEMODE, falseStr).equals("true"); // Supposant cette constante
+                boolean enableGameMode = saver.get(Constants.CONFIG_ENABLE_FERAL_GAMEMODE, falseStr).equals("true");
                 boolean enableZink = saver.get(Constants.CONFIG_ENABLE_ZINK, falseStr).equals("true");
                 boolean enableDGPU = saver.get(Constants.CONFIG_ENABLE_DGPU, falseStr).equals("true");
 
                 // Détection hardware
                 boolean isNvidia = GameUtils.hasNvidiaGPU();
                 logger.info("NVIDIA GPU detected : " + isNvidia);
-                
+
                 if (enableMangoHud) {
                     vmArgs.add("mangohud");
                 }
                 if (enableGameMode) {
                     vmArgs.add("gamemoderun");
                 }
-                
+
                 if(enableDGPU || enableZink) {
                     vmArgs.add("env");
                 }
@@ -189,7 +197,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
 
                 externalLauncher.setVmArgs(vmArgs);
             });
-            
+
             Process p = noFramework.launch(gameVersion,
                     modLoaderVersion,
                     MinecraftInfos.MODLOADER);
@@ -206,7 +214,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                 Launcher.getInstance().showWindow();
                 home.showPlayButton();
             });
-            
+
             JOptionPane.showMessageDialog(
                     null,
                     "Une erreur est survenue ! Merci d'envoyer ceci à paulem :\n" + Errors.getStackTrace("Une erreur est survenue :", e),
@@ -219,7 +227,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
     private void checkStopped(Process p) {
         try {
             p.waitFor();
-            
+
             home.setDownloadingOrPlaying(false);
             Platform.runLater(() -> {
                 Launcher.getInstance().showWindow();
