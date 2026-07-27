@@ -85,7 +85,6 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
 
             final VanillaVersion vanillaVersion = new VanillaVersion.VanillaVersionBuilder()
                     .withName(MinecraftInfos.GAME_VERSION)
-                    .withSnapshot(false)
                     .build();
 
             final FlowUpdater updater = new FlowUpdater.FlowUpdaterBuilder()
@@ -96,13 +95,6 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                     .build();
 
             updater.update(Launcher.getInstance().getLauncherDir());
-
-            // Fix missing Forge processor JARs if the internal hash check failed
-            ForgeFixer forgeFixer = new ForgeFixer(Launcher.getInstance().getLauncherDir());
-            if (forgeFixer.needsFix()) {
-                this.logger.info("Forge processor files missing, running fixer...");
-                forgeFixer.fix();
-            }
 
             this.startGame(updater, updater.getVanillaVersion().getName());
         } catch (Exception e) {
