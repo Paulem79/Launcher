@@ -815,11 +815,6 @@
       "versionId": "PdGBsNte"
     },
     {
-      "projectReference": "IDI5Ie1o",
-      "versionNumber": "3.1.2",
-      "versionId": "DXsZU3VK"
-    },
-    {
       "projectReference": "P4Xi5huA",
       "versionNumber": "18.0.4",
       "versionId": "xJEfMGkW"
@@ -1073,6 +1068,11 @@
       "projectReference": "l6YH9Als",
       "versionNumber": "1.10.53",
       "versionId": "4FXHDE9F"
+    },
+    {
+      "projectReference": "IDI5Ie1o",
+      "versionNumber": "3.1.6",
+      "versionId": "jcCboNgS"
     }
   ]
 }
