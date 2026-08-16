@@ -8,7 +8,7 @@ plugins {
     id("com.gradleup.shadow") version "9.3.1"
     id("java")
     id("application")
-    id("org.panteleyev.jpackageplugin") version "2.0.0"
+    id("org.panteleyev.jpackageplugin") version "2.1.0"
     id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
