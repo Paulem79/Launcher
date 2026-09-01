@@ -35,8 +35,8 @@ dependencies {
     implementation("com.google.code.gson:gson:2.+")
     implementation("org.jetbrains:annotations:26.+")
 
-    compileOnly("org.projectlombok:lombok:1.18.42")
-    annotationProcessor("org.projectlombok:lombok:1.18.42")
+    compileOnly("org.projectlombok:lombok:1.18.48")
+    annotationProcessor("org.projectlombok:lombok:1.18.48")
 }
 
 application {
