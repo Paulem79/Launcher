@@ -29,7 +29,7 @@ dependencies {
     implementation("fr.flowarg:materialdesignfontfx:7.+")
     implementation("fr.flowarg:flowupdater:1.9.4")
     implementation("fr.flowarg:openlauncherlib:3.2.11")
-    implementation("org.kohsuke:github-api:2.0-rc.6")
+    implementation("org.kohsuke:github-api:2.0.0-alpha-2")
     implementation("club.minnced:java-discord-rpc:2.0.3")
     implementation("io.github.typhon0:AnimateFX:1.3.0")
     implementation("com.google.code.gson:gson:2.+")
