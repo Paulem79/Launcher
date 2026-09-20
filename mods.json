@@ -27,6 +27,14 @@
     {
       "projectID": 384991,
       "fileID": 8505781
+    },
+    {
+      "projectID": 885449,
+      "fileID": 8544496
+    },
+    {
+      "projectID": 549225,
+      "fileID": 8403587
     }
   ],
   "modrinthMods": [
@@ -639,11 +647,6 @@
       "projectReference": "ZX66K16c",
       "versionNumber": "26.2.0",
       "versionId": "DWaZDkc8"
-    },
-    {
-      "projectReference": "gc8OEnCC",
-      "versionNumber": "26.201.2",
-      "versionId": "VD4qwVUF"
     },
     {
       "projectReference": "RiN8rDVs",
