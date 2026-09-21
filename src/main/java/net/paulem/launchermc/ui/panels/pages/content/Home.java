@@ -22,6 +22,7 @@ public class Home extends ContentPanel {
     private final ProgressBar progressBar = new ProgressBar();
     private final Label stepLabel = new Label();
     private final Label fileLabel = new Label();
+    private final GradientButton stopBtn = new GradientButton("ANNULER", 20, 1.05);
 
     @Override
     public String getName() {
@@ -68,6 +69,11 @@ public class Home extends ContentPanel {
         setCenterH(fileLabel);
         setCanTakeAllSize(fileLabel);
 
+        stopBtn.getStyleClass().add("stop-btn");
+        stopBtn.setTranslateY(75);
+        setCenterH(stopBtn);
+        setCenterV(stopBtn);
+
         this.showPlayButton();
     }
 
@@ -104,6 +110,19 @@ public class Home extends ContentPanel {
         super.onShow();
         // Animate content appearance
         new FadeIn(contentPane).setSpeed(0.8).play();
+    }
+
+    /**
+     * Returns the button displayed below the progress bar while the game is launching or running.
+     * Its label and action are set through {@link #setStopAction(String, Runnable)}.
+     */
+    public Button getStopButton() {
+        return stopBtn;
+    }
+
+    public void setStopAction(String text, Runnable action) {
+        stopBtn.setText(text);
+        stopBtn.setOnMouseClicked(e -> action.run());
     }
 
     public boolean isDownloadingOrPlaying() {

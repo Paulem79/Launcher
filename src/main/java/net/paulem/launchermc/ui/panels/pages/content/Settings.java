@@ -5,6 +5,11 @@ import com.sun.management.OperatingSystemMXBean;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import net.paulem.launchermc.Launcher;
+import net.paulem.launchermc.game.minecraft.MinecraftInfos;
+import net.paulem.launchermc.game.minecraft.ModsSource;
 import net.paulem.launchermc.config.SaveSystem;
 import net.paulem.launchermc.ui.components.GradientButton;
 import net.paulem.launchermc.ui.panels.PanelManager;
@@ -20,6 +25,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 import javafx.util.Duration;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.management.ManagementFactory;
 
 public class Settings extends ContentPanel {
@@ -261,6 +268,97 @@ public class Settings extends ContentPanel {
                     saver.set(Constants.CONFIG_ENABLE_DGPU, String.valueOf(dgpuCheckBox.isSelected()))
             );
         }
+
+        /*
+         * Mods list (imported file > custom URL > default URL)
+         */
+        final double modsX = 330d;
+
+        Label modsLabel = new Label("Liste des mods (mods.json)");
+        modsLabel.getStyleClass().add("settings-labels");
+        setLeft(modsLabel);
+        setCanTakeAllSize(modsLabel);
+        setTop(modsLabel);
+        modsLabel.setTextAlignment(TextAlignment.LEFT);
+        modsLabel.setTranslateX(modsX);
+        modsLabel.setTranslateY(100d);
+        contentPane.getChildren().add(modsLabel);
+
+        TextField modsUrlField = new TextField(ModsSource.getCustomUrl(saver));
+        modsUrlField.getStyleClass().add("settings-text-field");
+        modsUrlField.setPromptText(MinecraftInfos.MODS_LIST_URL);
+        modsUrlField.setPrefWidth(420d);
+        setLeft(modsUrlField);
+        setTop(modsUrlField);
+        modsUrlField.setTranslateX(modsX + 10d);
+        modsUrlField.setTranslateY(130d);
+        contentPane.getChildren().add(modsUrlField);
+
+        Label modsStatus = new Label();
+        modsStatus.getStyleClass().add("settings-labels");
+        setLeft(modsStatus);
+        setTop(modsStatus);
+        modsStatus.setTranslateX(modsX + 10d);
+        modsStatus.setTranslateY(230d);
+        contentPane.getChildren().add(modsStatus);
+
+        Runnable refreshModsStatus = () -> {
+            boolean imported = ModsSource.hasImportedFile(saver);
+            modsUrlField.setDisable(imported);
+            modsStatus.setText(imported
+                    ? "Fichier importé utilisé (l'URL est ignorée)"
+                    : "Vide = liste par défaut");
+        };
+        refreshModsStatus.run();
+
+        GradientButton importModsBtn = new GradientButton("Importer un mods.json", 14, 1.06);
+        importModsBtn.getStyleClass().add("save-btn");
+        setLeft(importModsBtn);
+        setTop(importModsBtn);
+        importModsBtn.setTranslateX(modsX + 10d);
+        importModsBtn.setTranslateY(180d);
+        importModsBtn.setOnAction(e -> {
+            FileChooser chooser = new FileChooser();
+            chooser.setTitle("Importer un mods.json");
+            chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("JSON", "*.json"));
+            File file = chooser.showOpenDialog(importModsBtn.getScene().getWindow());
+            if (file == null) return;
+
+            try {
+                ModsSource.importFile(saver, file.toPath());
+            } catch (IOException ex) {
+                Launcher.getInstance().getLogger().printStackTrace(ex);
+                modsStatus.setText("Import impossible : " + ex.getMessage());
+                return;
+            }
+            refreshModsStatus.run();
+        });
+        contentPane.getChildren().add(importModsBtn);
+
+        GradientButton resetModsBtn = new GradientButton("Réinitialiser", 14, 1.06);
+        resetModsBtn.getStyleClass().add("save-btn");
+        setLeft(resetModsBtn);
+        setTop(resetModsBtn);
+        resetModsBtn.setTranslateX(modsX + 260d);
+        resetModsBtn.setTranslateY(180d);
+        resetModsBtn.setOnAction(e -> {
+            try {
+                ModsSource.clearImportedFile(saver);
+            } catch (IOException ex) {
+                Launcher.getInstance().getLogger().printStackTrace(ex);
+            }
+            modsUrlField.clear();
+            saver.remove(Constants.CONFIG_MODS_URL);
+            saver.save();
+            refreshModsStatus.run();
+        });
+        contentPane.getChildren().add(resetModsBtn);
+
+        saveSystem.add(() -> {
+            String url = modsUrlField.getText().trim();
+            if (url.isEmpty()) saver.remove(Constants.CONFIG_MODS_URL);
+            else saver.set(Constants.CONFIG_MODS_URL, url);
+        });
 
         /*
          * Save Button

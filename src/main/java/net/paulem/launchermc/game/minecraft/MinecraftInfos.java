@@ -4,6 +4,9 @@ import fr.flowarg.flowupdater.utils.ModFileDeleter;
 import fr.flowarg.flowupdater.versions.ModLoaderVersionBuilder;
 import fr.flowarg.flowupdater.versions.fabric.FabricVersionBuilder;
 import fr.flowarg.openlauncherlib.NoFramework;
+import fr.theshark34.openlauncherlib.util.Saver;
+
+import java.io.IOException;
 
 public class MinecraftInfos {
 
@@ -17,8 +20,10 @@ public class MinecraftInfos {
 
     public static final String MODS_LIST_URL = "https://raw.githubusercontent.com/Paulem79/Launcher/updater/mods.json";
 
-    public static final ModLoaderVersionBuilder<?, ?> GAME = new FabricVersionBuilder()
-            .withFabricVersion(MinecraftInfos.MODLOADER_VERSION)
-            .withModrinthMods(MinecraftInfos.MODS_LIST_URL)
-            .withFileDeleter(new ModFileDeleter(true));
+    public static ModLoaderVersionBuilder<?, ?> createGame(Saver saver) throws IOException {
+        return new FabricVersionBuilder()
+                .withFabricVersion(MinecraftInfos.MODLOADER_VERSION)
+                .withModrinthMods(ModsSource.load(saver))
+                .withFileDeleter(new ModFileDeleter(true));
+    }
 }

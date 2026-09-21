@@ -27,18 +27,40 @@ import java.nio.file.Path;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, ProgressBar progressBar, Label stepLabel, Label fileLabel) {
     public void play() {
         home.setDownloadingOrPlaying(true);
         boxPane.getChildren().clear();
         setProgress(0, 0);
-        boxPane.getChildren().addAll(progressBar, stepLabel, fileLabel);
+        AtomicBoolean cancelled = new AtomicBoolean(false);
+        Thread thread = new Thread(() -> update(cancelled));
+        home.setStopAction("ANNULER", () -> cancel(cancelled, thread));
+        boxPane.getChildren().addAll(progressBar, stepLabel, fileLabel, home.getStopButton());
 
-        new Thread(this::update).start();
+        thread.start();
     }
 
-    private void update() {
+    /** Cancels a launch that has not started the game yet. */
+    private void cancel(AtomicBoolean cancelled, Thread thread) {
+        cancelled.set(true);
+        thread.interrupt();
+
+        home.setDownloadingOrPlaying(false);
+        try {
+            Launcher.getInstance().getDiscordRPC().editPresence(Constants.RPC_LAUNCHER);
+        } catch (Exception ignored) {}
+        home.showPlayButton();
+    }
+
+    /** Kills the game process (and any child process) immediately. */
+    private void forceStop(Process p) {
+        p.descendants().forEach(ProcessHandle::destroyForcibly);
+        p.destroyForcibly();
+    }
+
+    private void update(AtomicBoolean cancelled) {
         IProgressCallback callback = new IProgressCallback() {
             private final DecimalFormat decimalFormat = new DecimalFormat("#.#");
             private String stepTxt = "";
@@ -89,15 +111,17 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
 
             final FlowUpdater updater = new FlowUpdater.FlowUpdaterBuilder()
                     .withVanillaVersion(vanillaVersion)
-                    .withModLoaderVersion(MinecraftVersion.GAME)
+                    .withModLoaderVersion(MinecraftVersion.create(saver))
                     .withLogger(this.logger)
                     .withProgressCallback(callback)
                     .build();
 
             updater.update(Launcher.getInstance().getLauncherDir());
 
-            this.startGame(updater, updater.getVanillaVersion().getName());
+            if (cancelled.get()) return;
+            this.startGame(updater, updater.getVanillaVersion().getName(), cancelled);
         } catch (Exception e) {
+            if (cancelled.get()) return;
             this.logger.printStackTrace(e);
             this.logger.info("Lancement en mode hors-ligne...");
 
@@ -106,11 +130,11 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                 setStatus(String.format("%s", StepInfo.OFFLINE.getDetails()));
             });
 
-            this.startGame(null, MinecraftInfos.GAME_VERSION);
+            this.startGame(null, MinecraftInfos.GAME_VERSION, cancelled);
         }
     }
 
-    private void startGame(@Nullable FlowUpdater updater, String gameVersion) {
+    private void startGame(@Nullable FlowUpdater updater, String gameVersion, AtomicBoolean cancelled) {
         try {
             NoFramework noFramework = new NoFramework(
                     Launcher.getInstance().getLauncherDir(),
@@ -202,11 +226,21 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                     modLoaderVersion,
                     MinecraftInfos.MODLOADER);
 
+            // Cancelled while the game was being spawned
+            if (cancelled.get()) {
+                forceStop(p);
+                return;
+            }
+
             Launcher.getInstance().getDiscordRPC().editPresence(Constants.RPC_CONNECTED);
-            Platform.runLater(() -> Launcher.getInstance().hideWindow());
+            Platform.runLater(() -> {
+                home.setStopAction("FORCER L'ARRÊT", () -> forceStop(p));
+                Launcher.getInstance().hideWindow();
+            });
 
             new Thread(() -> checkStopped(p)).start();
         } catch (Exception e) {
+            if (cancelled.get()) return;
             this.logger.printStackTrace(e);
 
             home.setDownloadingOrPlaying(false);

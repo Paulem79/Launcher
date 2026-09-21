@@ -27,6 +27,18 @@
 }
 
 
+/* ── Cancel / Force stop Button ── */
+.stop-btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #FFFFFF;
+    -fx-min-width: 180;
+    -fx-min-height: 40;
+    -fx-padding: 8 28;
+    -fx-cursor: hand;
+}
+
 /* ── Play Icon ── */
 .play-icon {
     -fx-fill: #FFFFFF;

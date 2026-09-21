@@ -110,3 +110,16 @@
 .save-icon {
     -fx-fill: #FFFFFF;
 }
+
+/* ── Text Field (mods URL) ── */
+.settings-text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12;
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: #707070;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
+    -fx-padding: 8 12;
+}

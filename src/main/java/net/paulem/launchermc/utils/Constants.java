@@ -31,6 +31,8 @@ public class Constants {
     public static final String CONFIG_ENABLE_ZINK = "enableZink";
     public static final String CONFIG_ENABLE_DGPU = "enableDGPU";
     public static final String CONFIG_ENABLE_ZGC = "enableZGC";
+    public static final String CONFIG_MODS_URL = "modsUrl";
+    public static final String CONFIG_MODS_IMPORTED = "modsImported";
     // END LINUX ONLY
 
     public static final String RPC_APP_ID = "1266045291161976884";

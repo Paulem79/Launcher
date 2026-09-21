@@ -1,6 +1,9 @@
 package net.paulem.launchermc.game.minecraft;
 
 import fr.flowarg.flowupdater.versions.IModLoaderVersion;
+import fr.theshark34.openlauncherlib.util.Saver;
+
+import java.io.IOException;
 
 public class MinecraftVersion {
     /*public static final QuiltVersion GAME = new QuiltVersion.QuiltVersionBuilder()
@@ -9,8 +12,9 @@ public class MinecraftVersion {
             .withFileDeleter(new ModFileDeleter(true))
             .build();*/
 
-    public static IModLoaderVersion GAME = MinecraftInfos.GAME
-            .build();
+    public static IModLoaderVersion create(Saver saver) throws IOException {
+        return MinecraftInfos.createGame(saver).build();
+    }
 
 
     /* ----- POUR FORGE -----
