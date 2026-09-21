@@ -50,7 +50,7 @@ application {
     mainClass.set("$group.Main")
 }
 
-val javaVersion = JavaLanguageVersion.of(21)
+val javaVersion = JavaLanguageVersion.of(25)
 
 tasks.withType<JavaCompile>().configureEach {
     sourceCompatibility = javaVersion.toString()
@@ -66,7 +66,7 @@ java {
 }
 
 javafx {
-    version = "21"
+    version = "25"
     modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.swing", "javafx.media", "javafx.web")
 }
 
