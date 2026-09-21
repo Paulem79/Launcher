@@ -5,6 +5,12 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/almostunified-fabric-26.2-0.0.0.jar",
       "sha1": "19636700BEFF452BB000B240261B551C827020D9",
       "size": 261114
+    },
+    {
+      "name": "exordium-fabric-2.1.1-mc26.2+git.4424d64-dirty.jar",
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/exordium-fabric-2.1.1-mc26.2+git.4424d64-dirty.jar",
+      "sha1": "352A5FC44EE6C6413DDF1811DFA2E4902671D659",
+      "size": 1511166
     }
   ],
   "curseFiles": [
