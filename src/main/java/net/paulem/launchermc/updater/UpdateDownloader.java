@@ -1,139 +1,101 @@
 package net.paulem.launchermc.updater;
 
 import net.paulem.launchermc.Launcher;
-import net.paulem.launchermc.utils.FileUtils;
-import org.jetbrains.annotations.Nullable;
-import org.kohsuke.github.GHAsset;
 
-import javax.swing.*;
-import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
+import java.security.MessageDigest;
+import java.time.Duration;
+import java.util.HexFormat;
+import java.util.function.DoubleConsumer;
 
+/**
+ * Downloads the installer matching the current OS and checks it against the published sha256 file.
+ */
 public class UpdateDownloader {
-    private final List<GHAsset> assets;
-    
-    public UpdateDownloader(List<GHAsset> assets) {
-        this.assets = assets;
+    private final HttpClient http;
+
+    public UpdateDownloader(HttpClient http) {
+        this.http = http;
     }
 
-    @Nullable
-    public GHAsset getOSCorrectAsset() {
-        var os = System.getProperty("os.name").toLowerCase();
+    /**
+     * @return the installer to use on this OS, or null when none is published.
+     */
+    public ReleaseInfo.Asset pickAsset(ReleaseInfo release) {
+        return switch (UpdateInstaller.OS) {
+            case WINDOWS -> release.findAsset(".msi", ".exe");
+            case MAC -> release.findAsset(".dmg");
+            case LINUX -> UpdateInstaller.isRpmBased() && !UpdateInstaller.isDebianBased()
+                    ? release.findAsset(".rpm", ".deb")
+                    : release.findAsset(".deb", ".rpm");
+            case OTHER -> null;
+        };
+    }
 
-        if (os.contains("win")) {
-            return findAsset(".msi", ".exe");
-        } else if (os.contains("mac")) {
-            return findAsset(".dmg");
-        } else if (os.contains("nux")) {
-            // Détection de la famille Linux
-            if (isDebianBased()) {
-                return findAsset(".deb");
-            } else if (isRpmBased()) {
-                return findAsset(".rpm");
-            }
-            
-            // Fallback si rien n'est trouvé : on cherche les deux
-            return findAsset(".deb", ".rpm");
+    public Path download(ReleaseInfo release, ReleaseInfo.Asset asset, DoubleConsumer progress) throws IOException, InterruptedException {
+        Path folder = Launcher.getInstance().getLauncherDir().resolve("launcher-update");
+        Files.createDirectories(folder);
+        // Only keep the current update
+        try (var files = Files.list(folder)) {
+            for (Path old : files.toList()) Files.deleteIfExists(old);
         }
-        return null;
-    }
 
-    private GHAsset findAsset(String... extensions) {
-        return assets.stream()
-                .filter(asset -> {
-                    for (String ext : extensions) {
-                        if (asset.getName().endsWith(ext)) return true;
-                    }
-                    return false;
-                })
-                .findFirst()
-                .orElse(null);
-    }
+        Path target = folder.resolve(asset.name());
+        Launcher.getInstance().getLogger().info("Downloading update from: " + asset.url());
 
-    private boolean isDebianBased() {
-        return new File("/usr/bin/dpkg").exists() || checkOsRelease("debian");
-    }
+        HttpResponse<InputStream> response = http.send(request(asset.url()), HttpResponse.BodyHandlers.ofInputStream());
+        if (response.statusCode() != 200) throw new IOException("HTTP " + response.statusCode() + " for " + asset.url());
 
-    private boolean isRpmBased() {
-        return new File("/usr/bin/rpm").exists() || checkOsRelease("fedora", "suse", "rhel");
-    }
-
-    private boolean checkOsRelease(String... keywords) {
-        File osRelease = new File("/etc/os-release");
-        if (!osRelease.exists()) return false;
-
-        try {
-            String content = org.apache.commons.io.FileUtils.readFileToString(osRelease, "UTF-8").toLowerCase();
-            for (String key : keywords) {
-                if (content.contains(key)) return true;
+        long total = asset.size() > 0 ? asset.size() : response.headers().firstValueAsLong("Content-Length").orElse(-1);
+        MessageDigest digest = sha256();
+        try (InputStream in = response.body(); OutputStream out = Files.newOutputStream(target)) {
+            byte[] buffer = new byte[64 * 1024];
+            long done = 0;
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+                digest.update(buffer, 0, read);
+                done += read;
+                if (total > 0) progress.accept(Math.min(1d, (double) done / total));
             }
-        } catch (Exception ex) {
-            Launcher.getInstance().getLogger().err("Error while checking OS release.");
-            Launcher.getInstance().getLogger().printStackTrace(ex);
-            return false;
         }
-        return false;
+
+        verifyChecksum(release, asset, HexFormat.of().formatHex(digest.digest()));
+        Launcher.getInstance().getLogger().info("Update downloaded successfully to: " + target);
+        return target;
     }
-    
-    public void download() {
-        GHAsset asset = getOSCorrectAsset();
-        if (asset == null) {
-            Launcher.getInstance().getLogger().err("No compatible asset found for the current OS.");
+
+    private void verifyChecksum(ReleaseInfo release, ReleaseInfo.Asset asset, String actual) throws IOException, InterruptedException {
+        ReleaseInfo.Asset checksumAsset = release.findByName(asset.name() + ".sha256");
+        if (checksumAsset == null) {
+            Launcher.getInstance().getLogger().warn("No checksum published for " + asset.name() + ", skipping verification.");
             return;
         }
-        
-        // Download asset
-        try {
-            Launcher.getInstance().getLogger().info("Downloading update from: " + asset.getBrowserDownloadUrl());
-            
-            // Download file in subfolder update of launcher dir
-            Path downloadPath = Launcher.getInstance().getLauncherDir().resolve("launcher-update").resolve(asset.getName());
-            File parentFolder = downloadPath.getParent().toFile();
-            
-            if(parentFolder.exists()) {
-                // Delete old folder
-                deleteOldUpdateFiles(parentFolder);
-            } else {
-                // Create folder
-                boolean created = parentFolder.mkdirs();
-                
-                if (!created) {
-                    Launcher.getInstance().getLogger().warn("Failed to create update folder.");
 
-                    JOptionPane.showMessageDialog(null, "Impossible de créer le dossier de mise à jour !\nTéléchargez-la depuis la page GitHub : " + asset.getBrowserDownloadUrl(), "Erreur de mise à jour", JOptionPane.ERROR_MESSAGE);
-                    return;
-                }
-            }
-            
-            File file = FileUtils.downloadFile(asset.getBrowserDownloadUrl(), downloadPath);
-            
-            Launcher.getInstance().getLogger().info("Update downloaded successfully to: " + downloadPath);
-            
-            // Open file folder in explorer
-            var desktop = java.awt.Desktop.getDesktop();
-            desktop.open(file.getParentFile());
-            
-            // Stop launcher
-            Launcher.getInstance().getLogger().info("Stopping launcher...");
-            Launcher.getInstance().stop();
-        } catch (Exception e) {
-            Launcher.getInstance().getLogger().err("Failed to download the update.");
-            Launcher.getInstance().getLogger().printStackTrace(e);
+        HttpResponse<String> response = http.send(request(checksumAsset.url()), HttpResponse.BodyHandlers.ofString());
+        String expected = response.body().trim().split("\s+")[0];
+        if (response.statusCode() != 200 || !expected.equalsIgnoreCase(actual)) {
+            throw new IOException("Checksum mismatch for " + asset.name());
         }
     }
 
-    private static void deleteOldUpdateFiles(File parentFolder) {
-        try {
-            Launcher.getInstance().getLogger().info("Deleting old update files in: " + parentFolder.getAbsolutePath());
-            org.apache.commons.io.FileUtils.cleanDirectory(parentFolder);
-        } catch (Exception e) {
-            Launcher.getInstance().getLogger().warn("Failed to delete old update files. Old files might be present in the update folder.");
-            Launcher.getInstance().getLogger().printStackTrace(e);
-        }
+    private static HttpRequest request(String url) {
+        return HttpRequest.newBuilder(URI.create(url)).timeout(Duration.ofMinutes(10)).GET().build();
     }
 
-    public void startOnAnotherThread() {
-        new Thread(this::download).start();
+    private static MessageDigest sha256() {
+        try {
+            return MessageDigest.getInstance("SHA-256");
+        } catch (Exception e) {
+            throw new IllegalStateException(e);
+        }
     }
 }

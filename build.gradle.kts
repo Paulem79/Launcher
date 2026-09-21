@@ -13,7 +13,14 @@ plugins {
 }
 
 group = "net.paulem.launchermc"
-version = "1.3.0"
+
+// Numéro de release, fourni par la CI (run_number GitHub, identique au tag "v<N>" de la release).
+// 0 = build local/dev : l'updater est alors désactivé.
+val releaseNumber = (System.getenv("RELEASE_NUMBER") ?: findProperty("releaseNumber")?.toString())
+    ?.toIntOrNull() ?: 0
+// Le dernier chiffre est le numéro de release : les installeurs (MSI, DEB...) exigent une version
+// strictement croissante pour remplacer proprement une installation existante.
+version = "1.3.$releaseNumber"
 
 repositories {
     mavenCentral()
@@ -136,6 +143,14 @@ tasks.register<Zip>("zipPackage") {
 
     // On compresse le contenu du sous-dossier généré par zipjpackage
     from(layout.buildDirectory.dir("dist/appimage/${project.name}"))
+}
+
+tasks.processResources {
+    inputs.property("version", project.version.toString())
+    inputs.property("releaseNumber", releaseNumber)
+    filesMatching("launcher-build.properties") {
+        expand("version" to project.version.toString(), "releaseNumber" to releaseNumber)
+    }
 }
 
 tasks.jar {

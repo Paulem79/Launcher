@@ -21,9 +21,12 @@ import javafx.stage.Stage;
 import net.paulem.launchermc.utils.GameUtils;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Properties;
 import java.util.UUID;
 
 public final class Launcher extends Application {
@@ -57,7 +60,7 @@ public final class Launcher extends Application {
         
         this.logger = new Logger(this.logger.getPrefix(), this.launcherDir.resolve("launcher.log"));
 
-        this.logger.info("Running LauncherMC v" + getVersion());
+        this.logger.info("Running LauncherMC v" + getVersion() + " (release " + getReleaseNumber() + ")");
 
         this.saver = new Saver(this.launcherDir.resolve("config.properties"));
         this.saver.load();
@@ -178,5 +181,19 @@ public final class Launcher extends Application {
     @Nullable
     public String getVersion() {
         return getClass().getPackage().getImplementationVersion();
+    }
+
+    /**
+     * The CI release number this build was made from (tag "v&lt;N&gt;"), or 0 for a local build.
+     */
+    public int getReleaseNumber() {
+        try (InputStream in = getClass().getResourceAsStream("/launcher-build.properties")) {
+            if (in == null) return 0;
+            Properties properties = new Properties();
+            properties.load(in);
+            return Integer.parseInt(properties.getProperty("release", "0").trim());
+        } catch (IOException | NumberFormatException e) {
+            return 0;
+        }
     }
 }
