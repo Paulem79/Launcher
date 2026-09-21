@@ -21,9 +21,13 @@ public class MinecraftInfos {
     public static final String MODS_LIST_URL = "https://raw.githubusercontent.com/Paulem79/Launcher/updater/mods.json";
 
     public static ModLoaderVersionBuilder<?, ?> createGame(Saver saver) throws IOException {
+        ModsSource.ModList list = ModsSource.load(saver);
+
         return new FabricVersionBuilder()
                 .withFabricVersion(MinecraftInfos.MODLOADER_VERSION)
-                .withModrinthMods(ModsSource.load(saver))
+                .withMods(list.mods())
+                .withCurseMods(list.curseFiles())
+                .withModrinthMods(list.modrinthMods())
                 .withFileDeleter(new ModFileDeleter(true));
     }
 }
