@@ -5,6 +5,12 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/almostunified-fabric-26.2-0.0.0.jar",
       "sha1": "19636700BEFF452BB000B240261B551C827020D9",
       "size": 261114
+    },
+    {
+      "name": "exordium-fabric-2.1.1-mc26.2+git.5f51914-dirty.jar",
+      "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/exordium-fabric-2.1.1-mc26.2+git.5f51914-dirty.jar",
+      "sha1": "9B992A1B370F1962D9C87912CE35A93DA4751DB4",
+      "size": 1510501
     }
   ],
   "curseFiles": [
@@ -945,11 +951,6 @@
       "versionId": "bNAT9H23"
     },
     {
-      "projectReference": "K0AkAin6",
-      "versionNumber": "3.103.3+26.2",
-      "versionId": "Em56vi9Q"
-    },
-    {
       "projectReference": "GuE5FpvB",
       "versionNumber": "5.6.0",
       "versionId": "ldF03LkA"
@@ -1058,11 +1059,6 @@
       "projectReference": "P5wB88AS",
       "versionNumber": "8",
       "versionId": "rGUf2vp9"
-    },
-    {
-      "projectReference": "JaNmzvA8",
-      "versionNumber": "v3.0.28-26.2-fabric",
-      "versionId": "C2L8J5lF"
     },
     {
       "projectReference": "zitu8weW",
@@ -1280,16 +1276,6 @@
       "versionId": "YsPVZIsK"
     },
     {
-      "projectReference": "hvSJRj1T",
-      "versionNumber": "4.5",
-      "versionId": "dM8dkKXP"
-    },
-    {
-      "projectReference": "rvZnCrhx",
-      "versionNumber": "4.5",
-      "versionId": "QSsBNRN7"
-    },
-    {
       "projectReference": "ir8okcEA",
       "versionNumber": "1.4.1",
       "versionId": "frFWDcTf"
@@ -1338,6 +1324,466 @@
       "projectReference": "DItE655o",
       "versionNumber": "26.2-5.2.0.2",
       "versionId": "rIjTrpMZ"
+    },
+    {
+      "projectReference": "8oi3bsk5",
+      "versionNumber": "2.6.4",
+      "versionId": "OxfI2n80"
+    },
+    {
+      "projectReference": "HaaH232J",
+      "versionNumber": "102.0.0",
+      "versionId": "f6LeXkm2"
+    },
+    {
+      "projectReference": "DjLobEOy",
+      "versionNumber": "1.13.11",
+      "versionId": "eN3WLQ3P"
+    },
+    {
+      "projectReference": "h2jngREY",
+      "versionNumber": "B0.6.2+mod",
+      "versionId": "OYbFzi8L"
+    },
+    {
+      "projectReference": "fgmhI8kH",
+      "versionNumber": "4.1.0",
+      "versionId": "Vb09nbge"
+    },
+    {
+      "projectReference": "aKCwCJlY",
+      "versionNumber": "1.3.17",
+      "versionId": "TUbwu7eG"
+    },
+    {
+      "projectReference": "j3FONRYr",
+      "versionNumber": "1.0.17",
+      "versionId": "ziO4YIv1"
+    },
+    {
+      "projectReference": "qwvI41y9",
+      "versionNumber": "3.1.4",
+      "versionId": "iPGkJT7H"
+    },
+    {
+      "projectReference": "LPjGiSO4",
+      "versionNumber": "1.2.20",
+      "versionId": "lpsdO6Sg"
+    },
+    {
+      "projectReference": "nGUXvjTa",
+      "versionNumber": "3.1.1",
+      "versionId": "OLTqXnsN"
+    },
+    {
+      "projectReference": "YWVAO3wq",
+      "versionNumber": "1.4.5",
+      "versionId": "hHw6n2T7"
+    },
+    {
+      "projectReference": "RJCLIx7k",
+      "versionNumber": "2.2.0",
+      "versionId": "O20bIWkj"
+    },
+    {
+      "projectReference": "iv9jp2k9",
+      "versionNumber": "1.8.2+mod",
+      "versionId": "aatZx6pq"
+    },
+    {
+      "projectReference": "bQ5TJA1E",
+      "versionNumber": "1.1.14",
+      "versionId": "bVXaqvWr"
+    },
+    {
+      "projectReference": "HSfsxuTo",
+      "versionNumber": "v1.6.5",
+      "versionId": "CuBdAr31"
+    },
+    {
+      "projectReference": "rYlnn25U",
+      "versionNumber": "2.11",
+      "versionId": "bSQbtn5T"
+    },
+    {
+      "projectReference": "jSV9w0J5",
+      "versionNumber": "26.2.0",
+      "versionId": "1EML9Osa"
+    },
+    {
+      "projectReference": "cGvQGRls",
+      "versionNumber": "1.0.5b-mc1.21+",
+      "versionId": "Z3DsEJun"
+    },
+    {
+      "projectReference": "tPe4xnPd",
+      "versionNumber": "1.0.4-fabric-mc26.2",
+      "versionId": "BvfBi9ek"
+    },
+    {
+      "projectReference": "KX1XC0Oo",
+      "versionNumber": "1.0.5c-mc1.21+",
+      "versionId": "jRPqlunS"
+    },
+    {
+      "projectReference": "59rkB3YY",
+      "versionNumber": "2.1.3-26.2",
+      "versionId": "QJ3t6MkY"
+    },
+    {
+      "projectReference": "UYd23ZmY",
+      "versionNumber": "10",
+      "versionId": "dYR6rw0A"
+    },
+    {
+      "projectReference": "tb5O1ssC",
+      "versionNumber": "2.0.2-fabric-26.2",
+      "versionId": "IFO3J0SK"
+    },
+    {
+      "projectReference": "g9fDJQZe",
+      "versionNumber": "3.2.1-26.2",
+      "versionId": "vhEkhTCp"
+    },
+    {
+      "projectReference": "rYocd2LE",
+      "versionNumber": "v2.4.0+mod",
+      "versionId": "PhiBm7he"
+    },
+    {
+      "projectReference": "dGVX5JbJ",
+      "versionNumber": "4.0.0",
+      "versionId": "ALHOnFvJ"
+    },
+    {
+      "projectReference": "DOB2l4oJ",
+      "versionNumber": "5.0.0",
+      "versionId": "AIIk4we2"
+    },
+    {
+      "projectReference": "BuWCQzqf",
+      "versionNumber": "1.2.8",
+      "versionId": "yQi8lOKM"
+    },
+    {
+      "projectReference": "QIt10I7z",
+      "versionNumber": "v3.3+mod",
+      "versionId": "GPXkMYNM"
+    },
+    {
+      "projectReference": "9IxCUYAP",
+      "versionNumber": "1.3.7",
+      "versionId": "N5xm7QNb"
+    },
+    {
+      "projectReference": "lsUDPMOT",
+      "versionNumber": "8.1.0-beta.2",
+      "versionId": "u43c9EQl"
+    },
+    {
+      "projectReference": "II7t6llZ",
+      "versionNumber": "2.7.1",
+      "versionId": "dV5vFVEf"
+    },
+    {
+      "projectReference": "DzZWws4q",
+      "versionNumber": "26.2.1",
+      "versionId": "7OZbCRHr"
+    },
+    {
+      "projectReference": "iGEl6Crx",
+      "versionNumber": "3.7.0-beta.1",
+      "versionId": "qSLRk6dS"
+    },
+    {
+      "projectReference": "bii8qPSt",
+      "versionNumber": "1.4.6",
+      "versionId": "lFd2h8Yh"
+    },
+    {
+      "projectReference": "qSvzu3X3",
+      "versionNumber": "5.1+mod",
+      "versionId": "S2DZNWxh"
+    },
+    {
+      "projectReference": "lNDRiXkY",
+      "versionNumber": "fabric-1.0.26+mc26.2",
+      "versionId": "dOfY3eZf"
+    },
+    {
+      "projectReference": "3GfxWFCy",
+      "versionNumber": "2.1+mod",
+      "versionId": "zg7f1Hac"
+    },
+    {
+      "projectReference": "nWSeFpQt",
+      "versionNumber": "v2.3+mod",
+      "versionId": "CMdKBcpG"
+    },
+    {
+      "projectReference": "piqpXT8s",
+      "versionNumber": "0.1.1",
+      "versionId": "x0cOROlt"
+    },
+    {
+      "projectReference": "pXYChc1a",
+      "versionNumber": "26.2-fabric-35.1.1",
+      "versionId": "EAODVfey"
+    },
+    {
+      "projectReference": "QC4wcUXZ",
+      "versionNumber": "6.1.0-alpha.2",
+      "versionId": "bM8lo55u"
+    },
+    {
+      "projectReference": "z6GJ3ycD",
+      "versionNumber": "2.2.1+mod",
+      "versionId": "pSv7WyCj"
+    },
+    {
+      "projectReference": "spZb29SD",
+      "versionNumber": "2.1.2",
+      "versionId": "1HLHTaPT"
+    },
+    {
+      "projectReference": "DKJltXeY",
+      "versionNumber": "1.1.2+mod",
+      "versionId": "F07TtM3s"
+    },
+    {
+      "projectReference": "oHjYCS0f",
+      "versionNumber": "v2.1+mod",
+      "versionId": "pvrni7rg"
+    },
+    {
+      "projectReference": "btCrWvHr",
+      "versionNumber": "3.0.2",
+      "versionId": "reWdPs2K"
+    },
+    {
+      "projectReference": "bNK1MS7o",
+      "versionNumber": "2.1-mc26.2-fabric",
+      "versionId": "VwpMfwIb"
+    },
+    {
+      "projectReference": "7JTDDmRT",
+      "versionNumber": "v2.1+mod",
+      "versionId": "5CxIf8Tt"
+    },
+    {
+      "projectReference": "Bf0Bim5p",
+      "versionNumber": "1.0.0",
+      "versionId": "zXbSlQFA"
+    },
+    {
+      "projectReference": "8Dbnvm77",
+      "versionNumber": "v3.1+mod",
+      "versionId": "3TBxftsp"
+    },
+    {
+      "projectReference": "IKARgflD",
+      "versionNumber": "26.2.0",
+      "versionId": "XxnvsgPA"
+    },
+    {
+      "projectReference": "oOi0CKes",
+      "versionNumber": "26.2.0",
+      "versionId": "6dcXwYY3"
+    },
+    {
+      "projectReference": "FQgc8dib",
+      "versionNumber": "26.2.0",
+      "versionId": "CPViyp2m"
+    },
+    {
+      "projectReference": "m3pkVbY8",
+      "versionNumber": "26.2.0",
+      "versionId": "8mMohWkR"
+    },
+    {
+      "projectReference": "yD9qW65f",
+      "versionNumber": "1.8.1-FABRIC-26.2",
+      "versionId": "EaROWwX9"
+    },
+    {
+      "projectReference": "1s5x833P",
+      "versionNumber": "3.3.3",
+      "versionId": "ptPJYIjL"
+    },
+    {
+      "projectReference": "lGffrQ3O",
+      "versionNumber": "3.5.2",
+      "versionId": "4QYDnMIc"
+    },
+    {
+      "projectReference": "DyTvM1dv",
+      "versionNumber": "26.2.1",
+      "versionId": "1rqCUXVZ"
+    },
+    {
+      "projectReference": "8pcjMDgj",
+      "versionNumber": "26.2.0",
+      "versionId": "BkvzJ5wm"
+    },
+    {
+      "projectReference": "TaSmHw8V",
+      "versionNumber": "0.8.0+26.2",
+      "versionId": "O0xCRwZP"
+    },
+    {
+      "projectReference": "JrvR9OHr",
+      "versionNumber": "26.2.0-7.2-fabric+forge+neo",
+      "versionId": "uiANFlUz"
+    },
+    {
+      "projectReference": "zCh7omyG",
+      "versionNumber": "26.2.x-1.3.8",
+      "versionId": "Y28XiOH5"
+    },
+    {
+      "projectReference": "EOig9U0j",
+      "versionNumber": "26.2.0",
+      "versionId": "vaBOiOWp"
+    },
+    {
+      "projectReference": "bHJp2GRg",
+      "versionNumber": "26.2.0",
+      "versionId": "FM8m2ljh"
+    },
+    {
+      "projectReference": "VKXzIykF",
+      "versionNumber": "v1.5.1",
+      "versionId": "vU0mXH0A"
+    },
+    {
+      "projectReference": "ncKjyGm3",
+      "versionNumber": "2.0.8-26.2",
+      "versionId": "GfYzYdx8"
+    },
+    {
+      "projectReference": "cudtvDnd",
+      "versionNumber": "9.0.7+26.2-fabric",
+      "versionId": "fyfT98zh"
+    },
+    {
+      "projectReference": "6txNkua3",
+      "versionNumber": "0.7.9+26.2",
+      "versionId": "iW8RbCY9"
+    },
+    {
+      "projectReference": "pzCY6C3e",
+      "versionNumber": "26.2.0",
+      "versionId": "AgnzB7Xb"
+    },
+    {
+      "projectReference": "gu7yAYhd",
+      "versionNumber": "1.120.2",
+      "versionId": "P99UehrV"
+    },
+    {
+      "projectReference": "fdtm99de",
+      "versionNumber": "4.3.0+26.1",
+      "versionId": "kyGtszbV"
+    },
+    {
+      "projectReference": "pYFUU6cq",
+      "versionNumber": "1.5.7",
+      "versionId": "1VSvTbTm"
+    },
+    {
+      "projectReference": "OfKzpbRU",
+      "versionNumber": "2.0.7",
+      "versionId": "fFGGMnVe"
+    },
+    {
+      "projectReference": "KNUSlHiU",
+      "versionNumber": "26.2.0",
+      "versionId": "rXW0xJZF"
+    },
+    {
+      "projectReference": "h3XWIuzM",
+      "versionNumber": "1.6.19",
+      "versionId": "VnFvq3zV"
+    },
+    {
+      "projectReference": "8zYE8DiW",
+      "versionNumber": "1.1+26.2",
+      "versionId": "4p2E74fp"
+    },
+    {
+      "projectReference": "YOs4tZea",
+      "versionNumber": "26.2-1.0.0",
+      "versionId": "GMbSzBYK"
+    },
+    {
+      "projectReference": "laNoi025",
+      "versionNumber": "26.2-fabric-1",
+      "versionId": "id6Yni9S"
+    },
+    {
+      "projectReference": "bbGCtEvb",
+      "versionNumber": "26.2.0",
+      "versionId": "OTrTFyqZ"
+    },
+    {
+      "projectReference": "5ibSyLAz",
+      "versionNumber": "3.0.1+fabric-26.2",
+      "versionId": "D6W3Lrmj"
+    },
+    {
+      "projectReference": "XYnKrsxH",
+      "versionNumber": "3.1.0+26.2+fabric",
+      "versionId": "ll9yicH2"
+    },
+    {
+      "projectReference": "ffLDUGbm",
+      "versionNumber": "1.5.0+26.2+fabric",
+      "versionId": "AMj4XA2a"
+    },
+    {
+      "projectReference": "z440MEwJ",
+      "versionNumber": "Fabric-MC26.2-v1.2.2",
+      "versionId": "qJSCnxEv"
+    },
+    {
+      "projectReference": "HQsBdHGd",
+      "versionNumber": "5.0.2+mod",
+      "versionId": "5OYoqItD"
+    },
+    {
+      "projectReference": "aT8BzaOj",
+      "versionNumber": "1.8.15",
+      "versionId": "a7vcCKc2"
+    },
+    {
+      "projectReference": "Rg9WdvvR",
+      "versionNumber": "2.9.1-26.2",
+      "versionId": "dvsmI3QK"
+    },
+    {
+      "projectReference": "1jvt7RTc",
+      "versionNumber": "1.10.2-fabric-26.1",
+      "versionId": "oBhr7V5c"
+    },
+    {
+      "projectReference": "4QrnfueM",
+      "versionNumber": "1.1.0-fabric-mc26.2",
+      "versionId": "4H9FHFWY"
+    },
+    {
+      "projectReference": "SdT4Yu5L",
+      "versionNumber": "2.1.3+26.2",
+      "versionId": "vTiTG67h"
+    },
+    {
+      "projectReference": "MPAgKQOE",
+      "versionNumber": "3.0.1",
+      "versionId": "48BVdgry"
+    },
+    {
+      "projectReference": "Va8PJBFX",
+      "versionNumber": "1.4.0-alpha.4-fabric+26.2",
+      "versionId": "EJ7KZw6k"
     }
   ]
 }
