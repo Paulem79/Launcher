@@ -98,6 +98,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          # Full history and tags, needed to list the commits since the previous release
+          fetch-depth: 0
 
       - name: Download all artifacts
         uses: actions/download-artifact@v8
@@ -111,11 +114,15 @@ jobs:
           # Plus besoin de filtrer agressivement, la CI a déjà fait le tri !
           find all-artifacts -type f -exec cp {} release-dist/ \;
 
+      - name: Generate release notes
+        run: python3 scripts/release_notes.py > release-notes.md
+
       - name: Create Release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v${{ github.run_number }}"
-          prerelease: false
-          title: "Release v${{ github.run_number }}"
-          files: release-dist/*
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "v${{ github.run_number }}" release-dist/* \
+            --title "Release v${{ github.run_number }}" \
+            --notes-file release-notes.md \
+            --target "${{ github.sha }}"
+

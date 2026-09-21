@@ -31,7 +31,7 @@ import java.util.concurrent.CompletableFuture;
  */
 public class Updater {
     // LAUNCHER_UPDATE_API only exists to point the updater to a fake server when testing
-    private static final String API = System.getenv().getOrDefault("LAUNCHER_UPDATE_API", "https://api.github.com");
+    static final String API = System.getenv().getOrDefault("LAUNCHER_UPDATE_API", "https://api.github.com");
     private static final String LATEST_RELEASE = API + "/repos/Paulem79/Launcher/releases/latest";
 
     private final HttpClient http = HttpClient.newBuilder()

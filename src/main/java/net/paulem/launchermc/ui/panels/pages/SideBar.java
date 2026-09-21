@@ -10,6 +10,7 @@ import net.paulem.launchermc.ui.panels.Panel;
 import net.paulem.launchermc.ui.panels.pages.content.ContentPanel;
 import net.paulem.launchermc.ui.panels.pages.content.Home;
 import net.paulem.launchermc.ui.panels.pages.content.Instances;
+import net.paulem.launchermc.ui.panels.pages.content.News;
 import net.paulem.launchermc.ui.panels.pages.content.Settings;
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
@@ -119,8 +120,7 @@ public class SideBar extends Panel {
         instancesBtn.setOnMouseClicked(e -> setPage(new Instances(), instancesBtn));
 
         newsBtn = createNavButton("Actualités", new MaterialDesignIconView<>(MaterialDesignIcon.N.NEWSPAPER));
-        newsBtn.setDisable(true);
-        newsBtn.setOpacity(0.5);
+        newsBtn.setOnMouseClicked(e -> setPage(new News(), newsBtn));
 
         storeBtn = createNavButton("Boutique", new MaterialDesignIconView<>(MaterialDesignIcon.S.STORE));
         storeBtn.setDisable(true);
