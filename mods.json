@@ -5,12 +5,6 @@
       "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/almostunified-fabric-26.2-0.0.0.jar",
       "sha1": "19636700BEFF452BB000B240261B551C827020D9",
       "size": 261114
-    },
-    {
-      "name": "exordium-fabric-2.1.1-mc26.2+git.fc7c5ab-dirty.jar",
-      "downloadURL": "https://github.com/Paulem79/Launcher/raw/refs/heads/updater/exordium-fabric-2.1.1-mc26.2+git.fc7c5ab-dirty.jar",
-      "sha1": "02A538E3921319E59F3B5E4F4A81157F3961D9AD",
-      "size": 1511120
     }
   ],
   "curseFiles": [
@@ -157,8 +151,8 @@
     },
     {
       "projectReference": "NNAgCjsB",
-      "versionNumber": "1.11.1",
-      "versionId": "5V6jfXWM"
+      "versionNumber": "1.11.2",
+      "versionId": "RWjup6Jf"
     },
     {
       "projectReference": "uXXizFIs",
@@ -447,8 +441,8 @@
     },
     {
       "projectReference": "vE2FN5qn",
-      "versionNumber": "1.26.9.1",
-      "versionId": "UgYCue3W"
+      "versionNumber": "1.26.9.2",
+      "versionId": "VC5LRxai"
     },
     {
       "projectReference": "Gi02250Z",
@@ -697,8 +691,8 @@
     },
     {
       "projectReference": "e0M1UDsY",
-      "versionNumber": "26.2.0-8.39-fabric+forge+neo",
-      "versionId": "M75JwjyS"
+      "versionNumber": "26.2.0-8.40-fabric+forge+neo",
+      "versionId": "k9G2Omhm"
     },
     {
       "projectReference": "POQ2i9zu",
@@ -727,8 +721,8 @@
     },
     {
       "projectReference": "F8BQNPWX",
-      "versionNumber": "2.0.3+26.2-fabric",
-      "versionId": "FTd8Wvxm"
+      "versionNumber": "2.0.5+26.2-fabric",
+      "versionId": "yX10BLCb"
     },
     {
       "projectReference": "6FtRfnLg",
@@ -737,8 +731,8 @@
     },
     {
       "projectReference": "IwCkru1D",
-      "versionNumber": "0.15.2+26.2",
-      "versionId": "3hUl5ch8"
+      "versionNumber": "0.15.3+26.2",
+      "versionId": "gBbqA6lp"
     },
     {
       "projectReference": "CFX9ftUJ",
@@ -822,8 +816,8 @@
     },
     {
       "projectReference": "4A86JsDZ",
-      "versionNumber": "1.10",
-      "versionId": "jotooUUh"
+      "versionNumber": "1.10.1",
+      "versionId": "Ye15YdXH"
     },
     {
       "projectReference": "ydZic5r4",
@@ -877,8 +871,8 @@
     },
     {
       "projectReference": "e0bNACJD",
-      "versionNumber": "26.1.2.0.5",
-      "versionId": "cDGxWy2A"
+      "versionNumber": "26.1.2.0.6",
+      "versionId": "q5mzi8wy"
     },
     {
       "projectReference": "ccKDOlHs",
@@ -1217,13 +1211,13 @@
     },
     {
       "projectReference": "9r4ZkgSN",
-      "versionNumber": "2.1.7-mc26.2",
-      "versionId": "CEH3bXSV"
+      "versionNumber": "2.2-mc26.2-fabric",
+      "versionId": "E0nIunSG"
     },
     {
       "projectReference": "9KawNmQc",
-      "versionNumber": "2.5.3-mc26.2",
-      "versionId": "Ak4sHFuc"
+      "versionNumber": "3.0-mc26.2-fabric",
+      "versionId": "dAbWrFf4"
     },
     {
       "projectReference": "uHWrqYcS",
@@ -1257,8 +1251,8 @@
     },
     {
       "projectReference": "6pku8gW1",
-      "versionNumber": "3.0.0+26.2.x-fabric",
-      "versionId": "wwQ1xdyL"
+      "versionNumber": "3.0.1+26.2.x-fabric",
+      "versionId": "A3hDTNxB"
     },
     {
       "projectReference": "3eMENr4V",
@@ -1532,8 +1526,8 @@
     },
     {
       "projectReference": "spZb29SD",
-      "versionNumber": "2.1.2",
-      "versionId": "1HLHTaPT"
+      "versionNumber": "2.2.0",
+      "versionId": "fjpmujqZ"
     },
     {
       "projectReference": "DKJltXeY",
@@ -1717,13 +1711,13 @@
     },
     {
       "projectReference": "XYnKrsxH",
-      "versionNumber": "3.1.0+26.2+fabric",
-      "versionId": "ll9yicH2"
+      "versionNumber": "3.2.0+26.2+fabric",
+      "versionId": "6fZZmxDU"
     },
     {
       "projectReference": "ffLDUGbm",
-      "versionNumber": "1.5.0+26.2+fabric",
-      "versionId": "AMj4XA2a"
+      "versionNumber": "1.6.0+26.2+fabric",
+      "versionId": "sL8KZEzW"
     },
     {
       "projectReference": "z440MEwJ",
