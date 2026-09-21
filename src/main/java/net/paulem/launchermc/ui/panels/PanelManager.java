@@ -7,6 +7,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Screen;
 import net.paulem.launchermc.Launcher;
+import net.paulem.launchermc.ui.panels.pages.content.Instances;
 import net.paulem.launchermc.ui.panels.pages.content.Settings;
 import net.paulem.launchermc.utils.Background;
 import javafx.geometry.Pos;
@@ -314,7 +315,7 @@ public class PanelManager {
     }
 
     public static void setBackground(Scene scene, @Nullable Panel actualPanel) {
-        if (actualPanel instanceof Settings) return;
+        if (actualPanel instanceof Settings || actualPanel instanceof Instances) return;
 
         Background[] backgroundsValues = Background.values();
         int index = ThreadLocalRandom.current().nextInt(backgroundsValues.length);

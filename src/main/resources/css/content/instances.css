@@ -1,0 +1,161 @@
+/* ============================================
+ *  Instances Page — Dark Theme
+ * ============================================ */
+
+.instances-layout {
+    -fx-background-color: transparent;
+}
+
+.content-pane {
+    -fx-background-color: rgba(24, 24, 24, 0.6);
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 14, 0, 0, 4);
+}
+
+.instances-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+
+.instances-subtitle {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.instances-scroll,
+.instances-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.instances-scroll {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+/* ── Rows ── */
+.instance-row {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.06);
+    -fx-border-radius: 12;
+    -fx-padding: 10 14;
+}
+
+.instance-row-active {
+    -fx-border-color: #FF4500;
+    -fx-background-color: rgba(255, 69, 0, 0.08);
+}
+
+.instance-name {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.instance-details {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
+}
+
+.instance-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.08);
+    -fx-background-radius: 10;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
+    -fx-padding: 6 14;
+    -fx-cursor: hand;
+}
+
+.instance-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.16);
+}
+
+.instance-btn:disabled {
+    -fx-opacity: 0.55;
+}
+
+.instance-btn-danger {
+    -fx-text-fill: #F63737;
+}
+
+.instance-btn-danger:hover {
+    -fx-background-color: rgba(246, 55, 55, 0.18);
+}
+
+/* ── Create form ── */
+.instances-form {
+    -fx-background-color: rgba(255, 255, 255, 0.03);
+    -fx-background-radius: 14;
+    -fx-padding: 14;
+}
+
+.instances-field {
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12;
+    -fx-text-fill: #FFFFFF;
+    -fx-prompt-text-fill: #707070;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
+    -fx-padding: 8 12;
+}
+
+.instances-combo {
+    -fx-min-width: 140px;
+    -fx-min-height: 36px;
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
+}
+
+.instances-combo .arrow-button .arrow {
+    -fx-background-color: #B0B0B0;
+}
+
+.instances-combo .list-view {
+    -fx-background-color: #1E1E1E;
+}
+
+.instances-combo .list-cell {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-family: 'Poppins';
+    -fx-background-color: #1E1E1E;
+    -fx-padding: 6 12;
+}
+
+.instances-combo .list-cell:hover {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: rgba(255, 69, 0, 0.15);
+}
+
+.instances-combo .list-cell:selected {
+    -fx-text-fill: #FF4500;
+    -fx-background-color: rgba(255, 69, 0, 0.1);
+}
+
+.instances-combo > .list-cell {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+}
+
+.instances-create-btn {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: linear-gradient(to right, #8B0000, #FF4500);
+    -fx-background-radius: 14;
+    -fx-padding: 8 26;
+    -fx-cursor: hand;
+}

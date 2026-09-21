@@ -5,12 +5,14 @@ import fr.flowarg.flowupdater.FlowUpdater;
 import fr.flowarg.flowupdater.download.DownloadList;
 import fr.flowarg.flowupdater.download.IProgressCallback;
 import fr.flowarg.flowupdater.download.Step;
+import fr.flowarg.flowupdater.versions.IModLoaderVersion;
 import fr.flowarg.flowupdater.versions.VanillaVersion;
 import fr.flowarg.openlauncherlib.NoFramework;
 import fr.theshark34.openlauncherlib.minecraft.GameFolder;
 import fr.theshark34.openlauncherlib.util.Saver;
 import net.paulem.launchermc.Launcher;
-import net.paulem.launchermc.game.minecraft.MinecraftInfos;
+import net.paulem.launchermc.game.instance.Instance;
+import net.paulem.launchermc.game.instance.InstanceManager;
 import net.paulem.launchermc.game.minecraft.MinecraftVersion;
 import net.paulem.launchermc.ui.panels.pages.content.Home;
 import net.paulem.launchermc.utils.Constants;
@@ -20,7 +22,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.GridPane;
 import net.paulem.launchermc.utils.GameUtils;
-import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.nio.file.Path;
@@ -35,7 +36,10 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
         boxPane.getChildren().clear();
         setProgress(0, 0);
         AtomicBoolean cancelled = new AtomicBoolean(false);
-        Thread thread = new Thread(() -> update(cancelled));
+        // Fixed for the whole launch, even if the selection changes meanwhile
+        Instance instance = InstanceManager.get().getActive();
+        Path gameDir = InstanceManager.get().getDir(instance);
+        Thread thread = new Thread(() -> update(instance, gameDir, cancelled));
         home.setStopAction("ANNULER", () -> cancel(cancelled, thread));
         boxPane.getChildren().addAll(progressBar, stepLabel, fileLabel, home.getStopButton());
 
@@ -60,7 +64,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
         p.destroyForcibly();
     }
 
-    private void update(AtomicBoolean cancelled) {
+    private void update(Instance instance, Path gameDir, AtomicBoolean cancelled) {
         IProgressCallback callback = new IProgressCallback() {
             private final DecimalFormat decimalFormat = new DecimalFormat("#.#");
             private String stepTxt = "";
@@ -95,7 +99,7 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
             public void onFileDownloaded(Path path) {
                 Platform.runLater(() -> {
                     String p = path.toString();
-                    fileLabel.setText("..." + p.replace(Launcher.getInstance().getLauncherDir().toFile().getAbsolutePath(), ""));
+                    fileLabel.setText("..." + p.replace(gameDir.toFile().getAbsolutePath(), ""));
                 });
             }
         };
@@ -106,20 +110,24 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
             } catch (Exception ignored) {}
 
             final VanillaVersion vanillaVersion = new VanillaVersion.VanillaVersionBuilder()
-                    .withName(MinecraftInfos.GAME_VERSION)
+                    .withName(instance.getGameVersion())
                     .build();
 
-            final FlowUpdater updater = new FlowUpdater.FlowUpdaterBuilder()
+            final FlowUpdater.FlowUpdaterBuilder updaterBuilder = new FlowUpdater.FlowUpdaterBuilder()
                     .withVanillaVersion(vanillaVersion)
-                    .withModLoaderVersion(MinecraftVersion.create(saver))
                     .withLogger(this.logger)
-                    .withProgressCallback(callback)
-                    .build();
+                    .withProgressCallback(callback);
 
-            updater.update(Launcher.getInstance().getLauncherDir());
+            final IModLoaderVersion modLoaderVersion = MinecraftVersion.create(instance);
+            if (modLoaderVersion != null) {
+                updaterBuilder.withModLoaderVersion(modLoaderVersion);
+            }
+
+            final FlowUpdater updater = updaterBuilder.build();
+            updater.update(gameDir);
 
             if (cancelled.get()) return;
-            this.startGame(updater, updater.getVanillaVersion().getName(), cancelled);
+            this.startGame(instance, gameDir, cancelled);
         } catch (Exception e) {
             if (cancelled.get()) return;
             this.logger.printStackTrace(e);
@@ -130,25 +138,17 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                 setStatus(String.format("%s", StepInfo.OFFLINE.getDetails()));
             });
 
-            this.startGame(null, MinecraftInfos.GAME_VERSION, cancelled);
+            this.startGame(instance, gameDir, cancelled);
         }
     }
 
-    private void startGame(@Nullable FlowUpdater updater, String gameVersion, AtomicBoolean cancelled) {
+    private void startGame(Instance instance, Path gameDir, AtomicBoolean cancelled) {
         try {
             NoFramework noFramework = new NoFramework(
-                    Launcher.getInstance().getLauncherDir(),
+                    gameDir,
                     Launcher.getInstance().getAuthInfos(),
                     GameFolder.FLOW_UPDATER
             );
-
-            String rawModLoaderVersion = updater != null
-                    ? updater.getModLoaderVersion().getModLoaderVersion()
-                    : MinecraftInfos.MODLOADER_VERSION;
-
-            String modLoaderVersion = rawModLoaderVersion.split("-").length >= 2
-                    ? rawModLoaderVersion.split("-")[1]
-                    : rawModLoaderVersion;
 
             // Ajout des arguments de RAM
             noFramework.getAdditionalVmArgs().add(this.getRamArgsFromSaver());
@@ -222,9 +222,9 @@ public record Launch(Home home, Saver saver, ILogger logger, GridPane boxPane, P
                 externalLauncher.setVmArgs(vmArgs);
             });
 
-            Process p = noFramework.launch(gameVersion,
-                    modLoaderVersion,
-                    MinecraftInfos.MODLOADER);
+            Process p = noFramework.launch(instance.getGameVersion(),
+                    instance.getNoFrameworkLoaderVersion(),
+                    instance.getLoader().getNoFrameworkLoader());
 
             // Cancelled while the game was being spawned
             if (cancelled.get()) {

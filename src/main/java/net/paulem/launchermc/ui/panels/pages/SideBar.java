@@ -9,6 +9,7 @@ import net.paulem.launchermc.ui.panels.PanelManager;
 import net.paulem.launchermc.ui.panels.Panel;
 import net.paulem.launchermc.ui.panels.pages.content.ContentPanel;
 import net.paulem.launchermc.ui.panels.pages.content.Home;
+import net.paulem.launchermc.ui.panels.pages.content.Instances;
 import net.paulem.launchermc.ui.panels.pages.content.Settings;
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
@@ -35,7 +36,7 @@ public class SideBar extends Panel {
     private Node activeLink = null;
     private ContentPanel currentPage = null;
 
-    private Button homeBtn, settingsBtn, newsBtn, storeBtn;
+    private Button homeBtn, instancesBtn, settingsBtn, newsBtn, storeBtn;
 
     private static final double SIDEBAR_COLLAPSED_WIDTH = 62;
     private static final double SIDEBAR_EXPANDED_WIDTH = 220;
@@ -114,6 +115,9 @@ public class SideBar extends Panel {
         homeBtn = createNavButton("Accueil", new MaterialDesignIconView<>(MaterialDesignIcon.H.HOME));
         homeBtn.setOnMouseClicked(e -> setPage(new Home(), homeBtn));
 
+        instancesBtn = createNavButton("Instances", new MaterialDesignIconView<>(MaterialDesignIcon.F.FOLDER));
+        instancesBtn.setOnMouseClicked(e -> setPage(new Instances(), instancesBtn));
+
         newsBtn = createNavButton("Actualités", new MaterialDesignIconView<>(MaterialDesignIcon.N.NEWSPAPER));
         newsBtn.setDisable(true);
         newsBtn.setOpacity(0.5);
@@ -129,7 +133,7 @@ public class SideBar extends Panel {
         VBox spacer = new VBox();
         VBox.setVgrow(spacer, Priority.ALWAYS);
 
-        sidemenu.getChildren().addAll(homeBtn, newsBtn, storeBtn, settingsBtn, spacer);
+        sidemenu.getChildren().addAll(homeBtn, instancesBtn, newsBtn, storeBtn, settingsBtn, spacer);
     }
 
     private Button createNavButton(String text, MaterialDesignIconView<?> iconView) {

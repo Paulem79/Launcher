@@ -52,6 +52,8 @@ public final class ModsSource {
      * and Modrinth versions ("modrinthMods"). Every section is optional.
      */
     public record ModList(List<Mod> mods, List<CurseFileInfo> curseFiles, List<ModrinthVersionInfo> modrinthMods) {
+        public static final ModList EMPTY = new ModList(List.of(), List.of(), List.of());
+
         public int size() {
             return mods.size() + curseFiles.size() + modrinthMods.size();
         }
@@ -88,7 +90,8 @@ public final class ModsSource {
         saver.save();
     }
 
-    private static ModList parse(Path file) throws IOException {
+    /** Reads and validates a mods.json file. */
+    public static ModList parse(Path file) throws IOException {
         try (Reader reader = Files.newBufferedReader(file, StandardCharsets.UTF_8)) {
             return parse(JsonParser.parseReader(reader));
         }

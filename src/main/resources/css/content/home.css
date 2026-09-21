@@ -74,3 +74,45 @@
     -fx-font-family: 'Poppins';
     -fx-font-size: 13px;
 }
+
+/* ── Instance selector ── */
+.instance-selector {
+    -fx-min-width: 320px;
+    -fx-min-height: 36px;
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12;
+    -fx-font-family: 'Poppins';
+    -fx-font-size: 13px;
+}
+
+.instance-selector .arrow-button .arrow {
+    -fx-background-color: #B0B0B0;
+}
+
+.instance-selector > .list-cell {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: transparent;
+}
+
+.instance-selector .list-view {
+    -fx-background-color: #1E1E1E;
+}
+
+.instance-selector .list-cell {
+    -fx-text-fill: #B0B0B0;
+    -fx-font-family: 'Poppins';
+    -fx-background-color: #1E1E1E;
+    -fx-padding: 6 12;
+}
+
+.instance-selector .list-cell:hover {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: rgba(255, 69, 0, 0.15);
+}
+
+.instance-selector .list-cell:selected {
+    -fx-text-fill: #FF4500;
+    -fx-background-color: rgba(255, 69, 0, 0.1);
+}

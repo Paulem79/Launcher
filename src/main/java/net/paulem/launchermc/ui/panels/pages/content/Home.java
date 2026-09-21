@@ -6,6 +6,8 @@ import fr.flowarg.materialdesignfontfx.MaterialDesignIcon;
 import fr.flowarg.materialdesignfontfx.MaterialDesignIconView;
 import net.paulem.launchermc.Launcher;
 import net.paulem.launchermc.game.Launch;
+import net.paulem.launchermc.game.instance.Instance;
+import net.paulem.launchermc.game.instance.InstanceManager;
 import net.paulem.launchermc.ui.components.GradientButton;
 import net.paulem.launchermc.ui.panels.PanelManager;
 import net.paulem.launchermc.utils.Constants;
@@ -92,7 +94,7 @@ public class Home extends ContentPanel {
         playBtn.getStyleClass().add("play-btn");
         playBtn.setOnMouseClicked(e -> launch.play());
 
-        contentPane.getChildren().add(playBtn);
+        contentPane.getChildren().addAll(playBtn, buildInstanceSelector());
 
         // Pulse animation on button appearance, then reset scale
         Pulse pulse = new Pulse(playBtn);
@@ -103,6 +105,33 @@ public class Home extends ContentPanel {
             playBtn.setCache(false);
         });
         pulse.play();
+    }
+
+    /** Lets the user switch the instance that the play button launches. */
+    private ComboBox<Instance> buildInstanceSelector() {
+        InstanceManager manager = InstanceManager.get();
+
+        ComboBox<Instance> selector = new ComboBox<>();
+        selector.getItems().addAll(manager.getAll());
+        selector.setValue(manager.getActive());
+        selector.getStyleClass().add("instance-selector");
+        selector.setCellFactory(list -> new InstanceCell());
+        selector.setButtonCell(new InstanceCell());
+        selector.setOnAction(e -> {
+            if (selector.getValue() != null) manager.setActive(selector.getValue());
+        });
+
+        setLeft(selector);
+        setTop(selector);
+        return selector;
+    }
+
+    private static final class InstanceCell extends ListCell<Instance> {
+        @Override
+        protected void updateItem(Instance item, boolean empty) {
+            super.updateItem(item, empty);
+            setText(empty || item == null ? null : item.getName() + "  ·  " + item.describe());
+        }
     }
 
     @Override

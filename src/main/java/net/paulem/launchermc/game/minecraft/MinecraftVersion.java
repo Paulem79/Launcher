@@ -1,27 +1,44 @@
 package net.paulem.launchermc.game.minecraft;
 
+import fr.flowarg.flowupdater.utils.ModFileDeleter;
 import fr.flowarg.flowupdater.versions.IModLoaderVersion;
-import fr.theshark34.openlauncherlib.util.Saver;
+import fr.flowarg.flowupdater.versions.ModLoaderVersionBuilder;
+import fr.flowarg.flowupdater.versions.fabric.FabricVersionBuilder;
+import fr.flowarg.flowupdater.versions.fabric.QuiltVersionBuilder;
+import fr.flowarg.flowupdater.versions.forge.ForgeVersionBuilder;
+import fr.flowarg.flowupdater.versions.neoforge.NeoForgeVersionBuilder;
+import net.paulem.launchermc.game.instance.Instance;
+import net.paulem.launchermc.game.instance.InstanceManager;
 
 import java.io.IOException;
 
 public class MinecraftVersion {
-    /*public static final QuiltVersion GAME = new QuiltVersion.QuiltVersionBuilder()
-            .withQuiltVersion(MinecraftInfos.MODLOADER_VERSION)
-            .withMods(Mod.getModsFromJson(MinecraftInfos.MODS_LIST_URL))
-            .withFileDeleter(new ModFileDeleter(true))
-            .build();*/
-
-    public static IModLoaderVersion create(Saver saver) throws IOException {
-        return MinecraftInfos.createGame(saver).build();
+    private MinecraftVersion() {
+        /* This utility class should not be instantiated */
     }
 
+    /**
+     * The mod loader FlowUpdater must install for this instance, with its mods.
+     *
+     * @return null for a vanilla instance
+     */
+    public static IModLoaderVersion create(Instance instance) throws IOException {
+        ModsSource.ModList list = InstanceManager.get().getMods(instance);
 
-    /* ----- POUR FORGE -----
-    new ForgeVersionBuilder(MinecraftInfos.FORGE_VERSION_TYPE)
-            .withForgeVersion(MinecraftInfos.FORGE_VERSION)
-            .withMods(Mod.getModsFromJson(MinecraftInfos.MODS_LIST_URL))
-            .withFileDeleter(new ModFileDeleter(true))
-            .build();
-    */
+        ModLoaderVersionBuilder<?, ?> builder = switch (instance.getLoader()) {
+            case VANILLA -> null;
+            case FABRIC -> new FabricVersionBuilder().withFabricVersion(instance.getLoaderVersion());
+            case QUILT -> new QuiltVersionBuilder().withQuiltVersion(instance.getLoaderVersion());
+            case FORGE -> new ForgeVersionBuilder().withForgeVersion(instance.getLoaderVersion());
+            case NEOFORGE -> new NeoForgeVersionBuilder().withNeoForgeVersion(instance.getLoaderVersion());
+        };
+        if (builder == null) return null;
+
+        return builder
+                .withMods(list.mods())
+                .withCurseMods(list.curseFiles())
+                .withModrinthMods(list.modrinthMods())
+                .withFileDeleter(new ModFileDeleter(true))
+                .build();
+    }
 }
