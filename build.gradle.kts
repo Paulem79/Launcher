@@ -20,7 +20,7 @@ val releaseNumber = (System.getenv("RELEASE_NUMBER") ?: findProperty("releaseNum
     ?.toIntOrNull() ?: 0
 // Le dernier chiffre est le numéro de release : les installeurs (MSI, DEB...) exigent une version
 // strictement croissante pour remplacer proprement une installation existante.
-version = "1.3.$releaseNumber"
+version = "1.4.$releaseNumber"
 
 repositories {
     mavenCentral()
